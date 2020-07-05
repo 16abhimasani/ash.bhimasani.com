@@ -30,7 +30,7 @@ const Home: React.FC = () => (
     <PostBox
       icon="http://ash.bhimasani.com/assets/images/ckLogo.svg"
       title="Appsketiers"
-      caption="Director Of Development & UX"
+      caption="Director of Development & UX"
       date="Aug 2017 ~ Aug 2018"
       link="/appsketiers"
     />
@@ -40,6 +40,14 @@ const Home: React.FC = () => (
       caption="Computer Science: Artificial Intelligence & Media"
       date="Aug 2016"
       link="/ga-tech"
+    />
+    <PostBox
+      icon="/dasd-stem.png"
+      title="Downingtown STEM Academy"
+      caption="IB Diploma: Engineering Pathway"
+      date="Aug 2012 ~ Jun 2016"
+      link="//en.wikipedia.org/wiki/Downingtown_STEM_Academy"
+      newTab
     />
   </div>
 );

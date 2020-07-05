@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./footer.module.scss";
+import classes from "./footer.module.scss";
 
 const Header: React.FC = () => (
-  <div className={styles.footer}>
-    <div className={styles.nav}>
+  <div className={classes.footer}>
+    <div className={classes.nav}>
       <a
         className="link"
         href="mailto:ash@bhimasani.com"
@@ -12,7 +12,7 @@ const Header: React.FC = () => (
       >
         Email
       </a>
-      <div className={styles.dot}>·</div>
+      <div className={classes.dot}>·</div>
       <a
         className="link"
         href="https://github.com/16abhimasani"
@@ -21,7 +21,7 @@ const Header: React.FC = () => (
       >
         GitHub
       </a>
-      <div className={styles.dot}>·</div>
+      <div className={classes.dot}>·</div>
       <a
         className="link"
         href="https://dribbble.com/ash-bhimasani"
@@ -30,7 +30,7 @@ const Header: React.FC = () => (
       >
         Dribbble
       </a>
-      <div className={styles.dot}>·</div>
+      <div className={classes.dot}>·</div>
       <a
         className="link"
         href="https://www.linkedin.com/in/ash-bhimasani-b98757139/"
@@ -40,7 +40,9 @@ const Header: React.FC = () => (
         LinkedIn
       </a>
     </div>
-    <div className={styles.copyright}>Made with 💖 by Ash Bhimasani © 2020</div>
+    <div className={classes.copyright}>
+      Made with 💖 by Ash Bhimasani © 2020
+    </div>
   </div>
 );
 

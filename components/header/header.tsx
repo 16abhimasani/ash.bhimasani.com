@@ -1,19 +1,19 @@
 import React from "react";
 import Link from "../link";
-import styles from "./header.module.scss";
+import classes from "./header.module.scss";
 
 const Header: React.FC = () => (
-  <div className={styles.header}>
+  <div className={classes.header}>
     <Link href="/about">
-      <a className={styles.link} style={{ textAlign: "left" }}>
+      <a className={classes.link} style={{ textAlign: "left" }}>
         About Me
       </a>
     </Link>
     <Link href="/">
-      <img className={styles.logo} src="/ab-logo.svg" />
+      <img className={classes.logo} src="/ab-logo.svg" />
     </Link>
     <Link href="/#timeline">
-      <a className={styles.link} style={{ textAlign: "right" }}>
+      <a className={classes.link} style={{ textAlign: "right" }}>
         Timeline
       </a>
     </Link>

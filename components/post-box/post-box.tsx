@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "../link";
-import styles from "./post-box.module.scss";
+import classes from "./post-box.module.scss";
 
 const PostBox: React.FC<{
   icon: string;
@@ -15,16 +15,16 @@ const PostBox: React.FC<{
     <motion.a
       whileHover={{ scale: 0.997 }}
       whileTap={{ scale: 1.01 }}
-      className={styles.box}
+      className={classes.box}
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : ""}
     >
-      <img className={styles.box__icon} src={icon} />
+      <img className={classes.box__icon} src={icon} />
       <div>
-        <div className={styles.box__title}>{title}</div>
-        <div className={styles.box__caption}>{caption}</div>
+        <div className={classes.box__title}>{title}</div>
+        <div className={classes.box__caption}>{caption}</div>
       </div>
-      <div className={styles.box__date}>{date}</div>
+      <div className={classes.box__date}>{date}</div>
     </motion.a>
   </Link>
 );

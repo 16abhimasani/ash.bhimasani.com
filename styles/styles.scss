@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "reset";
 @import "variables";
+@import "mixins";
 
 html,
 body {
@@ -24,9 +25,9 @@ a {
 
 .layout {
   position: relative;
-  max-width: 640px;
+  max-width: 648px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
 }
 
 .body {
