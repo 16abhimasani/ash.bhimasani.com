@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.logo {
+  width: 64px;
+  cursor: pointer;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $Grey;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    color: darken($Grey, 25%);
+  }
+
+  width: 100px;
+}
+
+.name {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 200;
+  color: lighten($Grey, 10%);
+  text-transform: uppercase;
+}

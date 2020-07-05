@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 14px;
+  color: $Grey;
+  margin-top: 20px;
+}
+
+.dot {
+  margin: auto 10px;
+}

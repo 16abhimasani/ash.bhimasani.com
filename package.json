@@ -1,0 +1,42 @@
+{
+  "name": "ash.bhimasani.com",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^1.11.0",
+    "next": "9.4.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.7"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.14",
+    "@types/react": "^16.9.35",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "cz-conventional-changelog": "3.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.2.1",
+    "stylelint-config-prettier": "7",
+    "stylelint-prettier": "^1.1.2",
+    "typescript": "^3.9.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

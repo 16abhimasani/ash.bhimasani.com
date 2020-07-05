@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+
+.box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid $Wire;
+  box-shadow: 0 0 10px 0 $Pale;
+  cursor: pointer;
+  transition: all 300ms ease;
+  transition-property: color, border-color;
+  &:hover {
+    color: $Blue;
+    border-color: $Blue;
+    * {
+      color: $Blue;
+      transition: color 300ms ease;
+    }
+  }
+  &__icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  &__caption {
+    font-size: 15px;
+    font-weight: 400;
+    color: $Grey;
+  }
+  &__date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba($Grey, 0.8);
+  }
+}
