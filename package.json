@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -S -m \"deploy ash.bhimasani.com\" && git subtree push --prefix out upstream gh-pages"
   },
   "dependencies": {
     "framer-motion": "^1.11.0",
@@ -19,7 +20,7 @@
     "@types/react": "^16.9.35",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
-    "cz-conventional-changelog": "3.2.0",
+    "babel-plugin-transform-define": "^2.0.0",
     "eslint": "^7.3.1",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -33,10 +34,5 @@
     "stylelint-config-prettier": "7",
     "stylelint-prettier": "^1.1.2",
     "typescript": "^3.9.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

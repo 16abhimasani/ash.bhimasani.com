@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Link from "../link";
 import styles from "./post-box.module.scss";
 
 const PostBox: React.FC<{
