@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "mixins";
 @import "reset";
 @import "variables";
-@import "mixins";
 
 html,
 body {
@@ -34,6 +34,10 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 56px 0;
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 h1 {
@@ -81,7 +85,15 @@ h4 {
 
 .end-section {
   padding-bottom: 40px;
+
+  @include mobile {
+    padding-bottom: 30px;
+  }
 }
 .begin-section {
   padding-top: 40px;
+
+  @include mobile {
+    padding-top: 30px;
+  }
 }
