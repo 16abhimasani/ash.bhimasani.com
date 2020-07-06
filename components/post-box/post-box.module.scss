@@ -27,16 +27,16 @@
     margin-right: 24px;
 
     @include mobile {
-      width: 50px;
-      height: 50px;
-      margin-right: 20px;
+      width: 48px;
+      height: 48px;
+      margin-right: 18px;
     }
   }
   &__title {
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 
     @include mobile {
       margin-bottom: 4px;
@@ -63,6 +63,7 @@
   }
 
   @include mobile {
+    margin: 24px auto;
     padding: 16px;
   }
 }

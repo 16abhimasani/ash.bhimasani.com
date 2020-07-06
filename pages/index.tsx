@@ -35,14 +35,14 @@ const Home: React.FC = () => (
       link="/appsketiers"
     />
     <PostBox
-      icon="/georgia-tech-seal.svg"
+      icon="/georgia-tech.svg"
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & Media"
       date="Aug 2016"
       link="/ga-tech"
     />
     <PostBox
-      icon="/dasd-stem.png"
+      icon="/dasd-stem.jpg"
       title="Downingtown STEM Academy"
       caption="IB Diploma: Engineering Pathway"
       date="Aug 2012 ~ Jun 2016"
