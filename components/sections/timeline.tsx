@@ -24,7 +24,7 @@ const Timeline: React.FC = () => (
       icon="/logos/georgia-tech.svg"
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & Media"
-      date="Aug 2016"
+      date="2016 ~ 2019"
       link="/gatech"
     />
     <PostBox
@@ -47,7 +47,7 @@ const Timeline: React.FC = () => (
       icon="/logos/dasd-stem.jpg"
       title="Downingtown STEM Academy"
       caption="IB Diploma: Engineering Pathway"
-      date="Aug 2012 ~ Jun 2016"
+      date="2012 ~ 2016"
       link="//en.wikipedia.org/wiki/Downingtown_STEM_Academy"
       newTab
     />

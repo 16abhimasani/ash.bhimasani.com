@@ -1,4 +1,5 @@
 import React from "react";
+import Anchor from "../../components/utils/anchor";
 
 const Photography: React.FC = () => (
   <div className="body">
@@ -12,14 +13,13 @@ const Photography: React.FC = () => (
       <br />
       Interestingly enough, some of these photos got considerable organic
       discovery on
-      <a
-        className="link link--pink"
+      <Anchor
+        content="instagram"
         href="https://www.instagram.com/ash_bhimasani/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        &nbsp;instagram
-      </a>
+        color="pink"
+        newTab
+        spaceBefore
+      />
       .
     </div>
 

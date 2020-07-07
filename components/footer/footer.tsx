@@ -1,44 +1,25 @@
 import React from "react";
+import Anchor from "../utils/anchor";
 import classes from "./footer.module.scss";
 
 const Header: React.FC = () => (
   <div className={classes.footer}>
     <div className={classes.nav}>
-      <a
-        className="link"
-        href="mailto:ash@bhimasani.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Email
-      </a>
+      <Anchor content="Email" href="mailto:ash@bhimasani.com" newTab />
       <div className={classes.dot}>·</div>
-      <a
-        className="link"
-        href="https://github.com/16abhimasani"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
+      <Anchor content="GitHub" href="https://github.com/16abhimasani" newTab />
       <div className={classes.dot}>·</div>
-      <a
-        className="link"
+      <Anchor
+        content="Dribbble"
         href="https://dribbble.com/ash-bhimasani"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Dribbble
-      </a>
+        newTab
+      />
       <div className={classes.dot}>·</div>
-      <a
-        className="link"
+      <Anchor
+        content="LinkedIn"
         href="https://www.linkedin.com/in/ash-bhimasani-b98757139/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
+        newTab
+      />
     </div>
     <div className={classes.copyright}>
       Made with 💖 by Ash Bhimasani © 2020

@@ -1,20 +1,27 @@
 import React from "react";
+import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 
 const BitPay: React.FC = () => (
   <div className="body">
     <h1>BitPay &nbsp;💸</h1>
     <div className="lead end-section">
-      I am a product designer & software engineer with special interests in UX,
-      growth hacking, and business strategy currently working
-      <a
-        className="link"
-        href="https://bitpay.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        &nbsp;@bitpay
-      </a>
+      BitPay is a global cryptocurrency payment processor that also operates an
+      open source
+      <Anchor
+        content="wallet service"
+        href="https://bitpay.com/wallet"
+        newTab
+        spaceBefore
+        spaceAfter
+      />
+      and reloadable
+      <Anchor
+        content="debit card"
+        href="https://bitpay.com/card"
+        newTab
+        spaceBefore
+      />
       .
     </div>
 
