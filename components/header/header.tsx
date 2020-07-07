@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../link";
+import Link from "../utils/link";
 import classes from "./header.module.scss";
 
 const Header: React.FC = () => (
@@ -10,7 +10,7 @@ const Header: React.FC = () => (
       </a>
     </Link>
     <Link href="/">
-      <img className={classes.logo} src="/ab-logo.svg" />
+      <img className={classes.logo} src="/logos/ab-logo.svg" />
     </Link>
     <Link href="/#timeline">
       <a className={classes.link} style={{ textAlign: "right" }}>

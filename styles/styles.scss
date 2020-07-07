@@ -44,6 +44,7 @@ h1 {
   font-size: 32px;
   font-weight: 600;
   color: $Black;
+  margin-bottom: 24px;
 }
 
 h2 {
@@ -80,6 +81,12 @@ h4 {
   &:hover {
     text-decoration: none;
     color: darken($Blue, 25%);
+  }
+  &--pink {
+    color: $Pink;
+    &:hover {
+      color: darken($Pink, 15%);
+    }
   }
 }
 

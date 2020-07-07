@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe: React.FC = () => (
   <div className="body">
-    <h2>Konnichi wa, I'm Ash 👋🏼</h2>
+    <h2>Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
     <div className="lead end-section">
       I am a product designer & software engineer with special interests in UX,
       growth hacking, and business strategy currently working
@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => (
       </a>
       .
     </div>
-    <img className="end-section" width="100%" src="/baby-ash.jpeg" />
+    <img className="end-section" width="100%" src="/imgs/baby-ash.jpeg" />
   </div>
 );
 

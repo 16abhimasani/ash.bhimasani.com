@@ -1,5 +1,6 @@
 import React from "react";
-import PostBox from "../components/post-box/post-box";
+import Timeline from "../components/sections/timeline";
+import Projects from "../components/sections/projects";
 
 const Home: React.FC = () => (
   <div className="body">
@@ -17,38 +18,10 @@ const Home: React.FC = () => (
       </a>
       .
     </div>
-    <h3 className="begin-section" id="timeline">
-      Timeline
-    </h3>
-    <PostBox
-      icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
-      title="BitPay"
-      caption="Product Designer & Frontend Engineer"
-      date="Aug 2018 ~ Present"
-      link="/bitpay"
-    />
-    <PostBox
-      icon="http://ash.bhimasani.com/assets/images/ckLogo.svg"
-      title="Appsketiers"
-      caption="Director of Development & UX"
-      date="Aug 2017 ~ Aug 2018"
-      link="/appsketiers"
-    />
-    <PostBox
-      icon="/georgia-tech.svg"
-      title="Georgia Institute of Technology"
-      caption="Computer Science: Artificial Intelligence & Media"
-      date="Aug 2016"
-      link="/ga-tech"
-    />
-    <PostBox
-      icon="/dasd-stem.jpg"
-      title="Downingtown STEM Academy"
-      caption="IB Diploma: Engineering Pathway"
-      date="Aug 2012 ~ Jun 2016"
-      link="//en.wikipedia.org/wiki/Downingtown_STEM_Academy"
-      newTab
-    />
+
+    <Timeline />
+
+    <Projects />
   </div>
 );
 
