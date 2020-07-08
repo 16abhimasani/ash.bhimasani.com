@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="62" viewBox="0 0 62 62">
+  <defs>
+    <circle id="bitpay-site-a" cx="31" cy="31" r="31"/>
+    <circle id="bitpay-site-c" cx="31" cy="31" r="31"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="bitpay-site-b" fill="#fff">
+      <use xlink:href="#bitpay-site-a"/>
+    </mask>
+    <use fill="#1A2C57" fill-rule="nonzero" xlink:href="#bitpay-site-a"/>
+    <g mask="url(#bitpay-site-b)">
+      <mask id="bitpay-site-d" fill="#fff">
+        <use xlink:href="#bitpay-site-c"/>
+      </mask>
+      <g mask="url(#bitpay-site-d)">
+        <g transform="translate(0 12)">
+          <path fill="#BADEFC" fill-rule="nonzero" d="M29,3 L0,3 L0,36.9428571 C0,38.0789858 0.927410161,39 2.07142857,39 L29,39 L29,3 Z"/>
+          <path fill="#458BC4" fill-rule="nonzero" d="M47,3 L28,3 L28,39 L45,39 C46.1045695,39 47,38.0789858 47,36.9428571 L47,3 Z"/>
+          <path fill="#FFF" fill-rule="nonzero" d="M41 20L34 20C33.4477153 20 33 19.5522847 33 19 33 18.4477153 33.4477153 18 34 18L41 18C41.5522847 18 42 18.4477153 42 19 42 19.5522847 41.5522847 20 41 20zM41 14L34 14C33.4477153 14 33 13.5522847 33 13 33 12.4477153 33.4477153 12 34 12L41 12C41.5522847 12 42 12.4477153 42 13 42 13.5522847 41.5522847 14 41 14zM41 27L34 27C33.4477153 27 33 26.5522847 33 26 33 25.4477153 33.4477153 25 34 25L41 25C41.5522847 25 42 25.4477153 42 26 42 26.5522847 41.5522847 27 41 27zM41 33L34 33C33.4477153 33 33 32.5522847 33 32 33 31.4477153 33.4477153 31 34 31L41 31C41.5522847 31 42 31.4477153 42 32 42 32.5522847 41.5522847 33 41 33z"/>
+          <path fill="#444" fill-rule="nonzero" d="M2.04347826,0 L44.9565217,0 C46.0851036,0 47,0.8954305 47,2 L47,6 L0,6 L0,2 C0,0.8954305 0.914896381,0 2.04347826,0 Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
