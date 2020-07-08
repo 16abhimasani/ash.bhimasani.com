@@ -3,7 +3,7 @@ import Anchor from "../../components/utils/anchor";
 
 const Photography: React.FC = () => (
   <div className="body">
-    <h1>Photography &nbsp;🍬</h1>
+    <h1 className="begin-section pt-0">Photography &nbsp;🍬</h1>
     <div className="lead end-section">
       Around the summer of 2016, I began experimenting with digital photography
       using a Canon EOS 7D. My interest began with a deep admiration of the

@@ -4,7 +4,7 @@ import PostBox from "../../components/post-box/post-box";
 
 const BitPay: React.FC = () => (
   <div className="body">
-    <h1>BitPay &nbsp;💸</h1>
+    <h1 className="begin-section pt-0">BitPay &nbsp;💸</h1>
     <div className="lead end-section">
       BitPay is a global cryptocurrency payment processor that also operates an
       open source
@@ -25,12 +25,10 @@ const BitPay: React.FC = () => (
       .
       <br />
       <br />
-      Below are my major contributions with a deep dive for each.
+      Below are my major contributions with a deep dive for each ~
     </div>
 
-    <h3 className="begin-section" id="timeline">
-      Products
-    </h3>
+    <h3 className="begin-section">Products</h3>
     <PostBox
       icon="/logos/bitpay-ext.svg"
       title="Pay with BitPay"

@@ -44,21 +44,18 @@ h1 {
   font-size: 32px;
   font-weight: 600;
   color: $Black;
-  margin-bottom: 24px;
 }
 
 h2 {
   font-size: 28px;
   font-weight: 600;
   color: $Black;
-  margin-bottom: 24px;
 }
 
 h3 {
   font-size: 24px;
   font-weight: 600;
   color: $Black;
-  margin-bottom: 24px;
 }
 
 h4 {
@@ -99,8 +96,40 @@ h4 {
 }
 .begin-section {
   padding-top: 40px;
+  margin-bottom: 24px;
 
   @include mobile {
     padding-top: 30px;
+  }
+}
+
+.h-align {
+  display: block;
+  margin: auto auto;
+}
+
+.p {
+  &t {
+    &-0 {
+      padding-top: 0;
+    }
+  }
+  &b {
+    &-0 {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.m {
+  &t {
+    &-0 {
+      margin-top: 0;
+    }
+  }
+  &b {
+    &-0 {
+      margin-bottom: 0;
+    }
   }
 }

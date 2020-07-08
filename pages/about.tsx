@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe: React.FC = () => (
   <div className="body">
-    <h2>Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
+    <h2 className="begin-section pt-0">Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
     <div className="lead end-section">
       I am a product designer & software engineer with special interests in UX,
       growth hacking, and business strategy currently working

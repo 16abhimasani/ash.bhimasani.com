@@ -3,9 +3,7 @@ import PostBox from "../post-box/post-box";
 
 const Projects: React.FC = () => (
   <>
-    <h3 className="begin-section" id="timeline">
-      Projects
-    </h3>
+    <h3 className="begin-section">Projects</h3>
     <PostBox
       icon="/logos/instagram.svg"
       title="Photography"
