@@ -23,6 +23,9 @@ const BitPay: React.FC = () => (
         spaceBefore
       />
       .
+      <br />
+      <br />
+      Below are my major contributions with a deep dive for each.
     </div>
 
     <h3 className="begin-section" id="timeline">
@@ -31,12 +34,12 @@ const BitPay: React.FC = () => (
     <PostBox
       icon="/logos/bitpay-ext.svg"
       title="Pay with BitPay"
-      caption="A browser extension that redefines BitPay payments"
+      caption="A browser extension that redefines our payment network"
       date="Mar 2020 ~ Aug 2020"
       link="/bitpay/extension"
     />
     <PostBox
-      icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
+      icon="/logos/bitpay-qr.svg"
       title="Invoice V4"
       caption="Our flagship payment gateway used by major merchants"
       date="Aug 2019 ~ Present"
