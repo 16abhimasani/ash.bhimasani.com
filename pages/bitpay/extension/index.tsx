@@ -141,7 +141,7 @@ const BitPayExtension: React.FC = () => (
         spaceBefore
         spaceAfter
       />
-      , we knew there was something here worthwhile.
+      , we knew there was something here worth pursuing.
       <br />
       <br />
       After some initial discussion with
@@ -154,7 +154,7 @@ const BitPayExtension: React.FC = () => (
       , we were off to the races. Over the course of a month, I designed the
       entire experience end-to-end, making sure to get ample feedback from as
       many people as possible. Above this section, you can find extended
-      breakdowns present in the app.
+      breakdowns of every UI view and behavior present in the app.
     </div>
   </div>
 );

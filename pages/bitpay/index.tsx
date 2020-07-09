@@ -42,6 +42,7 @@ const BitPay: React.FC = () => (
       caption="Flagship payment gateway powering the network"
       date="Aug 2019 ~ Present"
       link="/bitpay/invoice"
+      locked
     />
     <PostBox
       icon="/logos/bitpay-id.svg"

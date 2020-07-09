@@ -10,12 +10,14 @@ const PostBox: React.FC<{
   icon?: string;
   date?: string;
   newTab?: boolean;
-}> = ({ title, caption, link, icon, date, newTab }) => {
+  locked?: boolean;
+}> = ({ title, caption, link, icon, date, newTab, locked }) => {
   const Box = (
     <motion.a
       whileHover={{ scale: 0.997 }}
       whileTap={{ scale: 0.99 }}
       className={classes.box}
+      style={{ pointerEvents: locked ? "none" : "initial" }}
       href={link}
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : ""}
@@ -26,6 +28,15 @@ const PostBox: React.FC<{
         <div className={classes.box__caption}>{caption}</div>
       </div>
       {date && <div className={classes.box__date}>{date}</div>}
+      {locked && (
+        <div className={classes.box__locked}>
+          <img
+            className={classes.box__locked__icon}
+            src="/icons/padlock-white.svg"
+          />
+          Coming Soon
+        </div>
+      )}
     </motion.a>
   );
   return (
