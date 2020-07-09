@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a,b,c){return {"/":[a,b,c],"/bitpay":[a,b,c],"/bitpay/extension":[a,b,c],"/index":[a,b,c]}}("static\u002Fchunks\u002F05d954cf.122f716c42ec718abe14.js","static\u002Fchunks\u002Fa9341000c3038cad9771d1b41e16195bf5f31ddc.8a7009da5abcb446aecf.js","static\u002Fcss\u002F9d09814816a3f6258d25.css"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
