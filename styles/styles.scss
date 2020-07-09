@@ -87,6 +87,51 @@ h4 {
   }
 }
 
+.list {
+  display: block;
+  &__item {
+    display: flex;
+    color: $Blue;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 32px auto;
+    &__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50vh;
+      border: 2px solid $Blue;
+      min-width: 32px;
+      height: 32px;
+      margin-right: 16px;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+blockquote {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 64px auto;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: $Black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: $Pink;
+  }
+  &:before {
+    margin-top: -40px;
+  }
+}
+
 .end-section {
   padding-bottom: 40px;
 
