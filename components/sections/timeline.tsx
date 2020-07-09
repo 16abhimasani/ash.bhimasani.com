@@ -25,30 +25,28 @@ const Timeline: React.FC = () => (
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & Media"
       date="2016 ~ 2019"
-      link="/gatech"
+      link="/posts/gatech"
     />
     <PostBox
       icon="/logos/drexel.png"
       title="Drexel ExCITe Center"
       caption="Music & Entertainment Technology Lab Intern"
       date="Summer 2015"
-      link="/drexel"
-      newTab
+      link="/posts/drexel"
     />
     <PostBox
       icon="/logos/lockheed-martin.svg"
       title="Lockheed Martin Space Systems"
       caption="Engineering Intern"
       date="Summer 2015"
-      link="/lockheed"
-      newTab
+      link="/posts/lockheed"
     />
     <PostBox
       icon="/logos/dasd-stem.jpg"
       title="Downingtown STEM Academy"
       caption="IB Diploma: Engineering Pathway"
       date="2012 ~ 2016"
-      link="//en.wikipedia.org/wiki/Downingtown_STEM_Academy"
+      link="https://en.wikipedia.org/wiki/Downingtown_STEM_Academy"
       newTab
     />
   </>

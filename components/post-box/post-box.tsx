@@ -10,12 +10,13 @@ const PostBox: React.FC<{
   icon?: string;
   date?: string;
   newTab?: boolean;
-}> = ({ title, caption, link, icon, date, newTab }) => (
-  <Link href={link}>
+}> = ({ title, caption, link, icon, date, newTab }) => {
+  const Box = (
     <motion.a
       whileHover={{ scale: 0.997 }}
       whileTap={{ scale: 0.99 }}
       className={classes.box}
+      href={link}
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : ""}
     >
@@ -26,7 +27,10 @@ const PostBox: React.FC<{
       </div>
       {date && <div className={classes.box__date}>{date}</div>}
     </motion.a>
-  </Link>
-);
+  );
+  return (
+    <>{link.includes("://") ? <> {Box} </> : <Link href={link}>{Box}</Link>}</>
+  );
+};
 
 export default PostBox;
