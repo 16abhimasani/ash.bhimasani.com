@@ -15,7 +15,7 @@ const Projects: React.FC = () => (
       title="Cycle 3D"
       caption="Open source 3D printing project to recycle plastics"
       date="2015 ~ 2016"
-      link="/projects/cycle3d"
+      link="/projects/cycle-3d"
     />
   </>
 );

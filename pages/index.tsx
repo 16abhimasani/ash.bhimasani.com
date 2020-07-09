@@ -9,8 +9,7 @@ const Home: React.FC = () => (
     <div className="lead end-section">
       I am a product designer & software engineer with special interests in UX,
       growth hacking, and business strategy currently working
-      <Anchor content="@bitpay" href="https://bitpay.com/" newTab spaceBefore />
-      .
+      <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
     </div>
 
     <Timeline />

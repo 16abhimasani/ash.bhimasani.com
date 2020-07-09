@@ -7,7 +7,7 @@ const Anchor: React.FC<{
   color?: string;
   spaceBefore?: boolean;
   spaceAfter?: boolean;
-}> = ({ content, href, newTab, color, spaceBefore, spaceAfter }) => (
+}> = ({ content, href, color, spaceBefore, spaceAfter, newTab = true }) => (
   <a
     className={`link ${color ? "link--" + color : ""}`}
     href={href}

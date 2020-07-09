@@ -37,7 +37,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/lockheed-martin.svg"
       title="Lockheed Martin Space Systems"
-      caption="Engineering Intern"
+      caption="Engineering Department Intern"
       date="Summer 2015"
       link="/posts/lockheed"
     />

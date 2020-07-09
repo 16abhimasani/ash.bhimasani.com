@@ -6,26 +6,24 @@ const BitPay: React.FC = () => (
   <div className="body">
     <h1 className="begin-section pt-0">BitPay &nbsp;💸</h1>
     <div className="lead end-section">
-      BitPay is a global cryptocurrency payment processor that also operates an
-      open source
-      <Anchor
-        content="wallet service"
-        href="https://bitpay.com/wallet"
-        newTab
-        spaceBefore
-        spaceAfter
-      />
-      and reloadable
-      <Anchor
-        content="debit card"
-        href="https://bitpay.com/card"
-        newTab
-        spaceBefore
-      />
-      .
-      <br />
-      <br />
-      Below are my major contributions with a deep dive for each ~
+      <p>
+        BitPay is a global cryptocurrency payment processor that also operates
+        an open source
+        <Anchor
+          content="wallet service"
+          href="https://bitpay.com/wallet"
+          spaceBefore
+          spaceAfter
+        />
+        and reloadable
+        <Anchor
+          content="debit card"
+          href="https://bitpay.com/card"
+          spaceBefore
+        />
+        .
+      </p>
+      <p>Below are my major contributions with a deep dive for each ~</p>
     </div>
 
     <h3 className="begin-section">Products</h3>
