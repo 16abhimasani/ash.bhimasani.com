@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add --force out/ && git commit -S -m \"deploy ash.bhimasani.com\" && git subtree push --prefix out upstream gh-pages && git reset HEAD~1"
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add --force out/ && git commit -S -m \"deploy ash.bhimasani.com\" && git push upstream `git subtree split --prefix out master`:gh-pages --force && git reset --hard HEAD~1"
   },
   "dependencies": {
     "framer-motion": "^1.11.0",
