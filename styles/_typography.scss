@@ -1,0 +1,98 @@
+@import "variables";
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: $Black;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: $Black;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: $Black;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: $Black;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-size: 18px;
+  color: $Black;
+  line-height: 28px;
+
+  p:not(:first-child) {
+    margin-top: 28px;
+  }
+}
+
+.link {
+  color: $Blue;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: darken($Blue, 25%);
+  }
+  &--pink {
+    color: $Pink;
+    &:hover {
+      color: darken($Pink, 15%);
+    }
+  }
+}
+
+.list {
+  display: block;
+  &__item {
+    display: flex;
+    color: $Black;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 32px auto;
+    &__number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50vh;
+      background-color: $Wire;
+      font-size: 14px;
+      min-width: 28px;
+      height: 28px;
+      margin-right: 18px;
+    }
+  }
+}
+
+blockquote {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 64px auto;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  color: $Black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: $Pink;
+  }
+  &:before {
+    margin-top: -40px;
+  }
+}

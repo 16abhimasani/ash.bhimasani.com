@@ -23,15 +23,10 @@ const BitPayExtension: React.FC = () => (
           content="Pay with BitPay"
           href="https://bitpay.com/extension"
           spaceAfter
+          bold
         />
-        is an
-        <Anchor
-          content="open-source"
-          href="https://github.com/bitpay/bitpay-browser-extension"
-          spaceBefore
-        />
-        , privacy first approach to making crypto easier to use while you browse
-        the web.
+        is an open-source, privacy first approach to making crypto easier to use
+        while you browse the web.
       </p>
     </div>
     <img
@@ -72,9 +67,7 @@ const BitPayExtension: React.FC = () => (
       </p>
     </div>
 
-    <h3 className="begin-section">
-      Incognito mode for everyday spending &nbsp;&nbsp;🕶
-    </h3>
+    <h3 className="begin-section">Incognito Mode for Spending &nbsp;&nbsp;🕶</h3>
     <div className="lead end-section">
       <p>
         Security and privacy is our top priority so we made the extension
@@ -99,6 +92,7 @@ const BitPayExtension: React.FC = () => (
         <Anchor
           content="Download it for Chrome, Brave, Firefox, or Opera"
           href="https://bitpay.com/extension"
+          bold
         />
       </p>
     </div>
@@ -117,7 +111,7 @@ const BitPayExtension: React.FC = () => (
       link="/bitpay/extension/wallet"
     />
 
-    <h4 className="begin-section">Background Info</h4>
+    <h4 className="begin-section">Behind the Scenes</h4>
     <div className="lead end-section">
       <p>
         Like I mentioned previously, the idea for this app has been floated
@@ -139,14 +133,13 @@ const BitPayExtension: React.FC = () => (
           crypto?
         </blockquote>
         An extension seemed like the next obvious step to supercharge our gift
-        card program and brand discovery. We already sold gift cards within our
-        mobile wallet but we needed to bring this capability to the desktop.
-        With the recent acquisition of
+        card program and brand discovery. We already sold gift cards in our
+        mobile wallet for a few years now but we needed to bring this capability
+        to the desktop. With the recent acquisition of
         <Anchor
           content="Honey"
           href="https://techcrunch.com/2019/11/20/paypal-to-acquire-shopping-and-rewards-platform-honey-for-4-billion/"
           spaceBefore
-          spaceAfter
         />
         , we knew there was something here worth pursuing.
       </p>

@@ -26,7 +26,7 @@
   color: $Grey;
   transition: all 250ms ease-in-out;
   &:hover {
-    color: darken($Grey, 25%);
+    color: $Blue;
   }
 
   width: 100px;

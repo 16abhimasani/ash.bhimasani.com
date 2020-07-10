@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "mixins";
 @import "reset";
+@import "typography";
+@import "utils";
 @import "variables";
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -19,10 +25,6 @@ a {
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .layout {
   position: relative;
   max-width: 648px;
@@ -37,148 +39,5 @@ a {
 
   @include mobile {
     padding: 40px 0;
-  }
-}
-
-h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: $Black;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: $Black;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 600;
-  color: $Black;
-}
-
-h4 {
-  font-size: 16px;
-  font-weight: 700;
-  color: $Black;
-  text-transform: uppercase;
-}
-
-.lead {
-  font-size: 18px;
-  color: $Black;
-  line-height: 28px;
-
-  p:not(:first-child) {
-    margin-top: 28px;
-  }
-}
-
-.link {
-  color: $Blue;
-  text-decoration: none;
-  transition: all 250ms ease-in-out;
-  &:hover {
-    text-decoration: none;
-    color: darken($Blue, 25%);
-  }
-  &--pink {
-    color: $Pink;
-    &:hover {
-      color: darken($Pink, 15%);
-    }
-  }
-}
-
-.list {
-  display: block;
-  &__item {
-    display: flex;
-    color: $Blue;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 32px auto;
-    &__number {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50vh;
-      border: 2px solid $Blue;
-      min-width: 32px;
-      height: 32px;
-      margin-right: 16px;
-      transform: translateY(-2px);
-    }
-  }
-}
-
-blockquote {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  margin: 64px auto;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 32px;
-  color: $Black;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 2px;
-    background: $Pink;
-  }
-  &:before {
-    margin-top: -40px;
-  }
-}
-
-.end-section {
-  padding-bottom: 40px;
-
-  @include mobile {
-    padding-bottom: 30px;
-  }
-}
-.begin-section {
-  padding-top: 40px;
-  margin-bottom: 24px;
-
-  @include mobile {
-    padding-top: 30px;
-  }
-}
-
-.h-align {
-  display: block;
-  margin: auto auto;
-}
-
-.p {
-  &t {
-    &-0 {
-      padding-top: 0;
-    }
-  }
-  &b {
-    &-0 {
-      padding-bottom: 0;
-    }
-  }
-}
-
-.m {
-  &t {
-    &-0 {
-      margin-top: 0;
-    }
-  }
-  &b {
-    &-0 {
-      margin-bottom: 0;
-    }
   }
 }
