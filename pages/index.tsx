@@ -4,7 +4,7 @@ import Timeline from "../components/sections/timeline";
 import Projects from "../components/sections/projects";
 
 const Home: React.FC = () => (
-  <div className="body">
+  <main className="body">
     <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
     <div className="lead end-section">
       I am a product designer & software engineer with special interests in UX,
@@ -15,7 +15,7 @@ const Home: React.FC = () => (
     <Timeline />
 
     <Projects />
-  </div>
+  </main>
 );
 
 export default Home;

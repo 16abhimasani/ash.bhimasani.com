@@ -3,7 +3,7 @@ import Anchor from "../utils/anchor";
 import classes from "./footer.module.scss";
 
 const Header: React.FC = () => (
-  <div className={classes.footer}>
+  <footer className={classes.footer}>
     <div className={classes.nav}>
       <Anchor content="Email" href="mailto:ash@bhimasani.com" />
       <div className={classes.dot}>·</div>
@@ -19,7 +19,7 @@ const Header: React.FC = () => (
     <div className={classes.copyright}>
       Made with 💖 by Ash Bhimasani © 2020
     </div>
-  </div>
+  </footer>
 );
 
 export default Header;

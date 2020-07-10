@@ -3,7 +3,7 @@ import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 
 const BitPayExtension: React.FC = () => (
-  <div className="body">
+  <main className="body">
     <a
       href="https://bitpay.com/extension"
       target="_blank"
@@ -42,29 +42,25 @@ const BitPayExtension: React.FC = () => (
         experience as you shop. Either alerting you of direct crypto acceptance
         or ability to purchase store credit.
       </p>
-      <p>
-        With a few clicks while on Amazon, you can:
-        <div className="list">
-          <div className="list__item">
-            <div className="list__item__number">1</div>
-            <div>Generate a payment for the exact amount as your Cart</div>
-          </div>
-          <div className="list__item">
-            <div className="list__item__number">2</div>
-            <div>
-              Pay it with any crypto we support [BTC, BCH, ETH, USDC...]
-            </div>
-          </div>
-          <div className="list__item">
-            <div className="list__item__number">3</div>
-            <div>Receive your store credit code in the app</div>
-          </div>
-          <div className="list__item mb-0">
-            <div className="list__item__number">4</div>
-            <div>Redeem it instantly & checkout</div>
-          </div>
-        </div>
-      </p>
+      <p>With a few clicks while on Amazon, you can:</p>
+      <ol className="list">
+        <li className="list__item">
+          <div className="list__item__number">1</div>
+          <div>Generate a payment for the exact amount as your Cart</div>
+        </li>
+        <li className="list__item">
+          <div className="list__item__number">2</div>
+          <div>Pay it with any crypto we support [BTC, BCH, ETH, USDC...]</div>
+        </li>
+        <li className="list__item">
+          <div className="list__item__number">3</div>
+          <div>Receive your store credit code in the app</div>
+        </li>
+        <li className="list__item mb-0">
+          <div className="list__item__number">4</div>
+          <div>Redeem it instantly & checkout</div>
+        </li>
+      </ol>
     </div>
 
     <h3 className="begin-section">Incognito Mode for Spending &nbsp;&nbsp;🕶</h3>
@@ -128,10 +124,12 @@ const BitPayExtension: React.FC = () => (
         Directory has been getting a lot more traction with our partners so
         naturally we were looking for ways to take the concept to the next
         level.
-        <blockquote>
-          What if you could be prompted automatically during checkout to use
-          crypto?
-        </blockquote>
+      </p>
+      <blockquote>
+        What if you could be prompted automatically during checkout to use
+        crypto?
+      </blockquote>
+      <p>
         An extension seemed like the next obvious step to supercharge our gift
         card program and brand discovery. We already sold gift cards in our
         mobile wallet for a few years now but we needed to bring this capability
@@ -156,7 +154,7 @@ const BitPayExtension: React.FC = () => (
         breakdowns of every UI view and behavior present in the app.
       </p>
     </div>
-  </div>
+  </main>
 );
 
 export default BitPayExtension;

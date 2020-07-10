@@ -2,7 +2,7 @@ import React from "react";
 import PostBox from "../post-box/post-box";
 
 const Projects: React.FC = () => (
-  <>
+  <section>
     <h3 className="begin-section">Projects</h3>
     <PostBox
       icon="/logos/instagram.svg"
@@ -17,7 +17,7 @@ const Projects: React.FC = () => (
       date="2015 ~ 2016"
       link="/projects/cycle-3d"
     />
-  </>
+  </section>
 );
 
 export default Projects;

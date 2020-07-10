@@ -2,7 +2,7 @@ import React from "react";
 import PostBox from "../post-box/post-box";
 
 const Timeline: React.FC = () => (
-  <>
+  <section>
     <h3 className="begin-section" id="timeline">
       Timeline
     </h3>
@@ -49,7 +49,7 @@ const Timeline: React.FC = () => (
       link="https://en.wikipedia.org/wiki/Downingtown_STEM_Academy"
       newTab
     />
-  </>
+  </section>
 );
 
 export default Timeline;

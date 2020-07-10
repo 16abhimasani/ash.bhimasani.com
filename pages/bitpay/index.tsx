@@ -3,7 +3,7 @@ import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 
 const BitPay: React.FC = () => (
-  <div className="body">
+  <main className="body">
     <h1 className="begin-section pt-0">BitPay &nbsp;💸</h1>
     <div className="lead end-section">
       <p>
@@ -77,7 +77,7 @@ const BitPay: React.FC = () => (
       date="May 2018 ~ Aug 2018"
       link="/bitpay/support"
     />
-  </div>
+  </main>
 );
 
 export default BitPay;

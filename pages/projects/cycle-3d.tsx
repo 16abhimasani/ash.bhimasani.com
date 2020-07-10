@@ -2,8 +2,8 @@ import React from "react";
 import Anchor from "../../components/utils/anchor";
 
 const Cycle3D: React.FC = () => (
-  <div className="body">
-    <h1 className="begin-section pt-0">Cycle 3D &nbsp;♼</h1>
+  <main className="body">
+    <h1 className="begin-section pt-0">Cycle 3D &nbsp;♻️</h1>
     <div className="lead end-section">
       <p>
         My first exposure to 3D printing, like many other, came from the Wired
@@ -24,7 +24,7 @@ const Cycle3D: React.FC = () => (
         journey into 3D printing began
       </p>
     </div>
-  </div>
+  </main>
 );
 
 export default Cycle3D;

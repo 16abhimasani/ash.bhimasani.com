@@ -2,7 +2,7 @@ import React from "react";
 import Anchor from "../../components/utils/anchor";
 
 const Photography: React.FC = () => (
-  <div className="body">
+  <main className="body">
     <h1 className="begin-section pt-0">Photography &nbsp;🍬</h1>
     <div className="lead end-section">
       <p>
@@ -29,7 +29,7 @@ const Photography: React.FC = () => (
     <img className="end-section" width="100%" src="/photography/blood.png" />
     <img className="end-section" width="100%" src="/photography/net.jpg" />
     <img className="end-section" width="100%" src="/photography/beads.jpg" />
-  </div>
+  </main>
 );
 
 export default Photography;

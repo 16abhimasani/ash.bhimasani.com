@@ -1,7 +1,7 @@
 import React from "react";
 
 const BitPayExtensionShop: React.FC = () => (
-  <div className="body">
+  <main className="body">
     <a
       href="https://bitpay.com/extension"
       target="_blank"
@@ -14,7 +14,7 @@ const BitPayExtensionShop: React.FC = () => (
       project was a concept brainstormed amongst engineers working on the gift
       card program about 3 years ago and we finally had a chance to build.
     </div>
-  </div>
+  </main>
 );
 
 export default BitPayExtensionShop;
