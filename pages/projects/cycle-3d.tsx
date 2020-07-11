@@ -16,7 +16,7 @@ const Cycle3D: React.FC = () => (
         />
         . The machine looked crude and roughly pieced together, flimsy plastic
         and all. Looking at their site today, its great to see that the machines
-        have evolved in a beautiful, closed systems that are closer to a
+        have evolved into beautiful, closed systems that are closer to a
         mainstream printers and look less like their DIY origins.
       </p>
       <p>
@@ -282,11 +282,31 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h2 className="begin-section">Printed Results</h2>
-    <img width="100%" src="/imgs/cycle-3d/grinder-printed.JPG" />
-    <img width="100%" src="/imgs/cycle-3d/grinder-assembly-printed.jpg" />
-    <img width="100%" src="/imgs/cycle-3d/gear-assembly-printed.JPG" />
-    <img width="100%" src="/imgs/cycle-3d/gear-printed.jpg" />
-    <img width="100%" src="/imgs/cycle-3d/gear-printed-2.jpg" />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/cycle-3d/grinder-printed.JPG"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/cycle-3d/grinder-assembly-printed.jpg"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/cycle-3d/gear-assembly-printed.JPG"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/cycle-3d/gear-printed.jpg"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/cycle-3d/gear-printed-2.jpg"
+    />
   </main>
 );
 
