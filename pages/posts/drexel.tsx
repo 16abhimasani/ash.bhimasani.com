@@ -1,8 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 
 const DrexelMetLab: React.FC = () => (
-  <main className="body">
+  <motion.main className="body" {...fadeInPage}>
     <h2 className="begin-section pt-0">Drexel ExCITe Center &nbsp;🐉</h2>
     <time>Nov 12 2015</time>
     <div className="lead begin-section">
@@ -67,7 +69,7 @@ const DrexelMetLab: React.FC = () => (
         and talk to a variety of people involved in advanced projects.
       </p>
     </div>
-  </main>
+  </motion.main>
 );
 
 export default DrexelMetLab;

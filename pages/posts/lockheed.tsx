@@ -1,8 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 
 const LockheedMartin: React.FC = () => (
-  <main className="body">
+  <motion.main className="body" {...fadeInPage}>
     <h2 className="begin-section pt-0">Lockheed Martin &nbsp;🛰</h2>
     <time>Nov 15 2015</time>
     <div className="lead begin-section">
@@ -51,7 +53,7 @@ const LockheedMartin: React.FC = () => (
         witnessing the development of future aircraft technology.
       </p>
     </div>
-  </main>
+  </motion.main>
 );
 
 export default LockheedMartin;

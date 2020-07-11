@@ -1,9 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 
 const BitPayExtension: React.FC = () => (
-  <main className="body">
+  <motion.main className="body" {...fadeInPage}>
     <a
       href="https://bitpay.com/extension"
       target="_blank"
@@ -94,18 +96,20 @@ const BitPayExtension: React.FC = () => (
     </div>
 
     <h3 className="begin-section">UI Breakdown</h3>
-    <PostBox
-      icon="/logos/bitpay-ext.svg"
-      title="Shop"
-      caption="Primary discovery & purchase flow experience"
-      link="/bitpay/extension/shop"
-    />
-    <PostBox
-      icon="/logos/bitpay-ext.svg"
-      title="Wallet"
-      caption="Store credit redemption & management"
-      link="/bitpay/extension/wallet"
-    />
+    <div className="end-section">
+      <PostBox
+        icon="/logos/bitpay-ext.svg"
+        title="Shop"
+        caption="Primary discovery & purchase flow experience"
+        link="/bitpay/extension/shop"
+      />
+      <PostBox
+        icon="/logos/bitpay-ext.svg"
+        title="Wallet"
+        caption="Store credit redemption & management"
+        link="/bitpay/extension/wallet"
+      />
+    </div>
 
     <h4 className="begin-section">Behind the Scenes</h4>
     <div className="lead end-section">
@@ -154,7 +158,7 @@ const BitPayExtension: React.FC = () => (
         breakdowns of every UI view and behavior present in the app.
       </p>
     </div>
-  </main>
+  </motion.main>
 );
 
 export default BitPayExtension;

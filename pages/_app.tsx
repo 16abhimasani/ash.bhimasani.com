@@ -1,12 +1,13 @@
 import React from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { AnimatePresence } from "framer-motion";
 import "../styles/styles.scss";
 
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 
-const MidnightCash: React.FC<AppProps> = ({ Component, pageProps }) => {
+const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -16,11 +17,13 @@ const MidnightCash: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <div className="layout">
         <Header />
-        <Component {...pageProps} />
+        <AnimatePresence>
+          <Component {...pageProps} />
+        </AnimatePresence>
         <Footer />
       </div>
     </>
   );
 };
 
-export default MidnightCash;
+export default AshBhimasani;

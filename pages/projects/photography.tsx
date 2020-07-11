@@ -1,8 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 
 const Photography: React.FC = () => (
-  <main className="body">
+  <motion.main className="body" {...fadeInPage}>
     <h1 className="begin-section pt-0">Photography &nbsp;🍬</h1>
     <div className="lead end-section">
       <p>
@@ -29,7 +31,7 @@ const Photography: React.FC = () => (
     <img className="end-section" width="100%" src="/photography/blood.png" />
     <img className="end-section" width="100%" src="/photography/net.jpg" />
     <img className="end-section" width="100%" src="/photography/beads.jpg" />
-  </main>
+  </motion.main>
 );
 
 export default Photography;

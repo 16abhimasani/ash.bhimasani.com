@@ -1,7 +1,9 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInPage } from "../../../animations/page";
 
 const BitPayExtensionWallet: React.FC = () => (
-  <main className="body">
+  <motion.main className="body" {...fadeInPage}>
     <a
       href="https://bitpay.com/extension"
       target="_blank"
@@ -14,7 +16,7 @@ const BitPayExtensionWallet: React.FC = () => (
       project was a concept brainstormed amongst engineers working on the gift
       card program about 3 years ago and we finally had a chance to build.
     </div>
-  </main>
+  </motion.main>
 );
 
 export default BitPayExtensionWallet;
