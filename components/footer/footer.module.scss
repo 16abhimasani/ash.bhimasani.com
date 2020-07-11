@@ -5,7 +5,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 24px auto 40px;
+  margin: 24px auto;
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .nav {
