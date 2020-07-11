@@ -80,13 +80,14 @@ blockquote {
   justify-content: center;
   text-align: center;
   position: relative;
-  margin: 64px auto;
+  margin: 64px auto 80px;
   font-weight: 500;
   font-size: 22px;
   line-height: 32px;
   color: $Black;
 
-  &:before {
+  &:before,
+  &:after {
     content: "";
     position: absolute;
     width: 32px;
@@ -94,7 +95,10 @@ blockquote {
     background: $Pink;
   }
   &:before {
-    margin-top: -40px;
+    top: -36px;
+  }
+  &:after {
+    bottom: -40px;
   }
 }
 
