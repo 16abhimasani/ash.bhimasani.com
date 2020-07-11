@@ -16,15 +16,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ## Deploy
 
-Edit these files with your project URL:
-
-```bash
-next.config.js
-# and
-env-config.js
-# and edit remote + branch name
-package.json
-```
+Edit `deploy` script in `package.json` with your project URL + branch name:
 
 Then run:
 
