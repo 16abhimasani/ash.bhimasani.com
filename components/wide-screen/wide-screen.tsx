@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useRefSize } from "../../utils/hooks";
-import classes from "./wide-vid.module.scss";
+import classes from "./wide-screen.module.scss";
 
 const WideScreen: React.FC<{
   src: string;
