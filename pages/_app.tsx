@@ -2,6 +2,7 @@ import React from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
+import "pure-react-carousel/dist/react-carousel.es.css";
 import "../styles/styles.scss";
 
 import Header from "../components/header/header";

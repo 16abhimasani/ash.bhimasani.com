@@ -46,7 +46,14 @@ const BitPayExtensionShop: React.FC = () => (
       </div>
 
       <h2 className="begin-section">Conveniently Checkout on Amazon</h2>
-      <WideScreen src="/vids/extension/amazon-cart-detection.mp4" />
+      <h5 className="end-section">The magic of custom-value gift cards</h5>
+      <WideScreen
+        src={[
+          "/imgs/extension/twitch-brand-page.jpg",
+          "/imgs/extension/apmex-brand-page.png",
+        ]}
+        carousel
+      />
       <div className="lead begin-section end-section">
         <p>
           I'm really excited to share the latest project we've been working on;
@@ -56,7 +63,19 @@ const BitPayExtensionShop: React.FC = () => (
         </p>
       </div>
 
-      <h3 className="begin-section">Use Crypto at 100+ Brands</h3>
+      <h2 className="begin-section">Conveniently Checkout on Amazon</h2>
+      <h5 className="end-section">The magic of custom-value gift cards</h5>
+      {/* <WideScreen src="/vids/extension/amazon-cart-detection.mp4" /> */}
+      <div className="lead begin-section end-section">
+        <p>
+          I'm really excited to share the latest project we've been working on;
+          this project was a concept brainstormed amongst engineers working on
+          the gift card product about 3 years ago and we finally had a chance to
+          build it.
+        </p>
+      </div>
+
+      <h3 className="begin-section">Discover 100+ Major Brands</h3>
       <video className="h-align" width="375" autoPlay muted loop playsInline>
         <source src="/vids/extension/directory.mp4" type="video/mp4" />
       </video>
