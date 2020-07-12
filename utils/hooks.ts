@@ -1,4 +1,5 @@
 import { useEffect, useState, useLayoutEffect, useCallback } from "react";
+import { ResizeObserver as Ponyfill } from "@juggle/resize-observer";
 
 // gets the current size of browser window
 export function useWindowSize(): { width: number; height: number } {
@@ -13,7 +14,7 @@ export function useWindowSize(): { width: number; height: number } {
   useEffect(() => {
     if (!isClient) return;
     const handleResize = () => setWindowSize(getSize());
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -51,15 +52,12 @@ export function useRefSize(
 
   useIsomorphicLayoutEffect(() => {
     if (!ref.current) return;
+    if (!isClient) return;
     handleResize();
-    if (typeof ResizeObserver === "function") {
-      const resizeObserver = new ResizeObserver(() => handleResize());
-      resizeObserver.observe(ref.current);
-      return () => resizeObserver.disconnect();
-    } else {
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
+    const ResizeObserver = window?.ResizeObserver || Ponyfill;
+    const resizeObserver = new ResizeObserver(() => handleResize());
+    resizeObserver.observe(ref.current);
+    return () => resizeObserver.disconnect();
   }, [ref.current]);
 
   return RefSize;
