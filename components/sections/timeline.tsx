@@ -2,10 +2,8 @@ import React from "react";
 import PostBox from "../post-box/post-box";
 
 const Timeline: React.FC = () => (
-  <section>
-    <h3 className="begin-section" id="timeline">
-      Timeline
-    </h3>
+  <section className="begin-section end-section">
+    <h3 id="timeline">Timeline</h3>
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
