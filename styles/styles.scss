@@ -14,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 a {
@@ -26,7 +28,6 @@ a {
 }
 
 .layout {
-  position: relative;
   max-width: 648px;
   margin: 0 auto;
   padding: 0 24px;

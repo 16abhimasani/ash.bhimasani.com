@@ -43,6 +43,9 @@ h5 {
   p:not(:first-child) {
     margin-top: 28px;
   }
+  .link {
+    display: inline-block;
+  }
 }
 
 .link {

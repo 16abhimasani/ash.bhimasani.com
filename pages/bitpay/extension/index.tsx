@@ -25,8 +25,8 @@ const BitPayExtension: React.FC = () => (
       />
     </Head>
     <motion.main className="body" {...fadeInPage}>
-      <h1 className="begin-section pt-0">Pay with BitPay</h1>
-      <h5 className="end-section">Redefining the BitPay payment experience</h5>
+      <h1 className="begin-section pt-0">BitPay Extension</h1>
+      <h5 className="end-section">Redefining the crypto payment experience</h5>
       <div
         style={{
           display: "flex",

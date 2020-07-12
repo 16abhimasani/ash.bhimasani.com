@@ -1,0 +1,16 @@
+@import "mixins";
+@import "variables";
+
+.asset {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin: auto 24px;
+}

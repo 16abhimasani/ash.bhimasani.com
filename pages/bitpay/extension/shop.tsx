@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
+import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayExtensionShop: React.FC = () => (
   <>
@@ -27,20 +28,41 @@ const BitPayExtensionShop: React.FC = () => (
       <h5>Making spending crypto fun</h5>
 
       <div className="lead begin-section mb-0 end-section">
-        I'm really excited to share the latest project we've been working on;
-        this project was a concept brainstormed amongst engineers working on the
-        gift card program about 3 years ago and we finally had a chance to
-        build.
+        <p>
+          The utility of this app at its simplest form is to simply alert the
+          user if BitPay is available as a payment option. So already we have 2
+          major components:
+        </p>
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>A page to view info about the page you're on</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">2</div>
+            <div>A list of all websites we support</div>
+          </li>
+        </ol>
       </div>
 
-      <video
-        style={{ marginTop: 21 }}
-        width="100%"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
+      <h3 className="begin-section">Checkout Seamlessly @ Amazon.com</h3>
+      <WideScreen src="/vids/extension/amazon-cart-detection.mp4" />
+      <div className="lead begin-section end-section">
+        <p>
+          I'm really excited to share the latest project we've been working on;
+          this project was a concept brainstormed amongst engineers working on
+          the gift card product about 3 years ago and we finally had a chance to
+          build it.
+        </p>
+      </div>
+
+      <h3 className="begin-section">Use Crypto @ 100+ Brands</h3>
+      <video className="h-align" width="375" autoPlay muted loop playsInline>
+        <source src="/vids/extension/directory.mp4" type="video/mp4" />
+      </video>
+
+      <h3 className="begin-section">Minimize</h3>
+      <video width="100%" autoPlay muted loop playsInline>
         <source src="/vids/extension/minimize.mp4" type="video/mp4" />
       </video>
     </motion.main>
