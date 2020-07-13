@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   CarouselProvider,
   DotGroup,
@@ -15,8 +15,21 @@ const WideScreen: React.FC<{
 }> = ({ src, carousel }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const asset = useRef<any>(null);
+  const wrapper = useRef<HTMLDivElement>(null);
   const { height } = useRefSize(asset);
   const [ratio, setRatio] = useState({ width: 0, height: 0 });
+  const getPadding = useCallback((): number => {
+    if (!wrapper?.current || typeof window === "undefined") return 0;
+    const top = window
+      .getComputedStyle(wrapper.current)
+      .getPropertyValue("padding-top")
+      .replace("px", "");
+    const bottom = window
+      .getComputedStyle(wrapper.current)
+      .getPropertyValue("padding-bottom")
+      .replace("px", "");
+    return Number(top) + Number(bottom);
+  }, [wrapper]);
   useEffect(() => {
     if (!carousel || typeof window === "undefined") return;
     const img = new Image();
@@ -24,8 +37,8 @@ const WideScreen: React.FC<{
     img.src = src[0];
   }, [src]);
   return (
-    <div style={{ height: height }}>
-      <div className={classes.wrapper}>
+    <div style={{ height: height + getPadding() }}>
+      <div className={classes.wrapper} ref={wrapper}>
         {carousel && src instanceof Array ? (
           <div ref={asset} className={classes.asset}>
             <CarouselProvider

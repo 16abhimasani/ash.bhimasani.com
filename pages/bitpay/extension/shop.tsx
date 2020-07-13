@@ -31,8 +31,8 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="lead begin-section mb-0 end-section">
         <p>
           The utility of this app at its simplest form is to simply alert the
-          user if BitPay is available as a payment option. So already we have 2
-          major components:
+          user if BitPay is available as a payment option. So we have 3 major
+          pieces from this premise:
         </p>
         <ol className="list">
           <li className="list__item">
@@ -42,6 +42,10 @@ const BitPayExtensionShop: React.FC = () => (
           <li className="list__item">
             <div className="list__item__number">2</div>
             <div>A list of all websites we support</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">3</div>
+            <div>Store credit purchase flow (if applicable)</div>
           </li>
         </ol>
         <p>
@@ -122,12 +126,12 @@ const BitPayExtensionShop: React.FC = () => (
           </li>
         </ol>
         <p>
-          With this, we land on the 3 cores of the Shop experience:
-          <span className="f-600">&nbsp;Discover, Spend, & Save</span>.
+          With this, we land on the 3 cores of the Shop experience: <br />
+          <span className="f-600">Discover, Spend, & Save</span>.
         </p>
       </div>
 
-      <h3 className="begin-section">Discover</h3>
+      <h4 className="begin-section">Discover Related Brands</h4>
       <div className="d-flex">
         <img width="375" src="/imgs/extension/twitch-brand-page.svg" />
         <img width="375" src="/imgs/extension/hotels-brand-page-alt.svg" />
@@ -145,12 +149,12 @@ const BitPayExtensionShop: React.FC = () => (
           integrated merchants, I made
           <span className="f-600">&nbsp;Payment Instructions</span> a
           first-class citizen. The details attempt to concisely describe how to
-          find BitPay as a payment on a given site while not taking up too much
-          space if you already know what to look for.
+          find BitPay as a payment option on a given site without taking up too
+          much space.
         </p>
       </div>
 
-      <h3 className="begin-section">Spend</h3>
+      <h4 className="begin-section">Donate or Spend</h4>
       <div className="d-flex">
         <img width="375" src="/imgs/extension/wikipedia-brand-page.svg" />
         <img width="375" src="/imgs/extension/mastercard-brand-page.svg" />
@@ -168,7 +172,7 @@ const BitPayExtensionShop: React.FC = () => (
         </p>
       </div>
 
-      <h3 className="begin-section">Save</h3>
+      <h4 className="begin-section">Save with Crypto</h4>
       <div className="d-flex">
         <img width="375" src="/imgs/extension/apmex-brand-page.svg" />
         <img width="375" src="/imgs/extension/amazon-brand-page.svg" />
@@ -180,6 +184,20 @@ const BitPayExtensionShop: React.FC = () => (
           inspiration was the iOS App Store; you can see the heavy influence in
           the layout of the Title + Caption + Logo as well as the
           <span className="f-600">&nbsp;You Might Also Like</span> section
+        </p>
+      </div>
+
+      <h2 className="begin-section">Directory: Browsing Made Simple</h2>
+      <h5 className="end-section">100+ supported sites at your fingertips</h5>
+      <video className="h-align" width="375" autoPlay muted loop playsInline>
+        <source src="/vids/extension/directory.mp4" type="video/mp4" />
+      </video>
+      <div className="lead begin-section end-section">
+        <p>
+          I'm really excited to share the latest project we've been working on;
+          this project was a concept brainstormed amongst engineers working on
+          the gift card product about 3 years ago and we finally had a chance to
+          build it.
         </p>
       </div>
 
@@ -208,19 +226,6 @@ const BitPayExtensionShop: React.FC = () => (
           build it.
         </p>
       </div>
-
-      {/* <h3 className="begin-section">Discover 100+ Major Brands</h3>
-      <video className="h-align" width="375" autoPlay muted loop playsInline>
-        <source src="/vids/extension/directory.mp4" type="video/mp4" />
-      </video>
-      <div className="lead begin-section end-section">
-        <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
-        </p>
-      </div> */}
     </motion.main>
   </>
 );

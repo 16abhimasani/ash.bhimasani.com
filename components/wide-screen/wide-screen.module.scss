@@ -13,11 +13,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto 24px;
+  padding: 36px 24px;
+  background-color: $Pale;
+
+  @include mobile {
+    padding: 24px;
+  }
 }
 
 .dots {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin: 20px auto -20px;
+
+  @include mobile {
+    margin: 16px auto -10px;
+  }
 }
