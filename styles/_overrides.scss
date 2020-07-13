@@ -1,0 +1,21 @@
+@import "variables";
+
+.carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50vh;
+  background-color: rgba($Wire, 0.5);
+  border: 1px solid rgba($Grey, 0.5);
+  padding: 0;
+  margin: 0 6px;
+  transition: all 250ms ease;
+  &:hover,
+  &:focus {
+    background-color: rgba($Wire, 0.75);
+    border: 1px solid rgba($Grey, 0.75);
+  }
+  &--selected {
+    background-color: $Wire;
+    border: 1px solid $Grey;
+  }
+}

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useRefSize } from "../../utils/hooks";
-import classes from "./wide-screen.module.scss";
-
 import {
   CarouselProvider,
+  DotGroup,
   Slider,
   Slide,
   ImageWithZoom,
 } from "pure-react-carousel";
+import { useRefSize } from "../../utils/hooks";
+import classes from "./wide-screen.module.scss";
 
 const WideScreen: React.FC<{
   src: string | string[];
@@ -32,9 +32,11 @@ const WideScreen: React.FC<{
               naturalSlideWidth={ratio.width}
               naturalSlideHeight={ratio.height}
               totalSlides={src.length}
+              interval={8000}
               isPlaying
               infinite
               lockOnWindowScroll
+              hasMasterSpinner
             >
               <Slider>
                 {src.map((file: string, index: number) => (
@@ -43,6 +45,7 @@ const WideScreen: React.FC<{
                   </Slide>
                 ))}
               </Slider>
+              <DotGroup className={classes.dots} />
             </CarouselProvider>
           </div>
         ) : (

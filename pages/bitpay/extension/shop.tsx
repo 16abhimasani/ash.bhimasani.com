@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
+import Anchor from "../../../components/utils/anchor";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayExtensionShop: React.FC = () => (
@@ -43,48 +44,142 @@ const BitPayExtensionShop: React.FC = () => (
             <div>A list of all websites we support</div>
           </li>
         </ol>
+        <p>
+          A BitPay supported Brand can come in 2 forms: either a direct
+          integration (
+          <Anchor
+            content="Newegg"
+            href="https://kb.newegg.com/knowledge-base/using-bitcoin-on-newegg/"
+          />
+          ,
+          <Anchor
+            content="AT&T"
+            href="https://about.att.com/story/2019/att_bitpay.html"
+            spaceBefore
+          />
+          ,
+          <Anchor
+            content="Microsoft"
+            href="https://support.microsoft.com/en-us/help/13942/microsoft-account-how-to-use-bitcoin-to-add-money-to-your-account"
+            spaceBefore
+          />
+          ), or through a third-party reseller via
+          <Anchor
+            content="gift cards"
+            href="https://bitpay.com/directory/gift-cards"
+            spaceBefore
+            spaceAfter
+          />
+          (Amazon, Delta, DoorDash). A directly integrated merchant has a
+          relationship with BitPay where we take a share of their checkout
+          payment options and accept crypto on their behalf, settling the next
+          day in fiat. Because the initial setup for any integration has a
+          non-zero overhead, many times payment processors clump into
+          aggregators to make selling integrations easier. Similarly, gift card
+          aggregators allow an array of payment methods, BitPay being one of
+          them.
+        </p>
       </div>
 
-      <h2 className="begin-section">Conveniently Checkout on Amazon</h2>
-      <h5 className="end-section">The magic of custom-value gift cards</h5>
+      <h2 className="begin-section">Brand Page</h2>
+      <h5 className="end-section">A compact display of essential info</h5>
       <WideScreen
         src={[
+          "/imgs/extension/amazon-brand-page.jpg",
           "/imgs/extension/twitch-brand-page.jpg",
-          "/imgs/extension/apmex-brand-page.png",
+          "/imgs/extension/apmex-brand-page.jpg",
+          "/imgs/extension/wikipedia-brand-page.jpg",
         ]}
         carousel
       />
       <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          The work to optimize the hop from crypto to store credit to redemption
+          began several years ago in the BitPay Wallet where the emphasis was on
+          in-app or in-store redemption.
+        </p>
+        <p>
+          Now with a desktop browser extension, we had a chance to do something
+          similar with directly integrated merchants.
+        </p>
+        <p>
+          The Brand page for each supported site is the main entry point to the
+          rest of the experience. In the collection above, you can see 3 types
+          of directly integrated merchants:
+        </p>
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">2</div>
+            <div>Twitch: Discover more gaming brands</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>Wikipedia: Donate with crypto</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">3</div>
+            <div>APMEX: Use crypto and save</div>
+          </li>
+        </ol>
+        <p>
+          With this, we land on the 3 cores of the Shop experience:
+          <span className="f-600">&nbsp;Discover, Spend, & Save</span>.
         </p>
       </div>
 
-      <h2 className="begin-section">Conveniently Checkout on Amazon</h2>
-      <h5 className="end-section">The magic of custom-value gift cards</h5>
-      {/* <WideScreen src="/vids/extension/amazon-cart-detection.mp4" /> */}
+      <h3 className="begin-section">Discover</h3>
+      <div className="d-flex">
+        <img width="375" src="/imgs/extension/twitch-brand-page.svg" />
+        <img width="375" src="/imgs/extension/hotels-brand-page-alt.svg" />
+      </div>
       <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          For this page, I placed a heavy emphasis on keeping the user engaged
+          and letting them organically explore. The first place I looked to for
+          inspiration was the iOS App Store; you can see the heavy influence in
+          the layout of the Title + Caption + Logo as well as the
+          <span className="f-600">&nbsp;You Might Also Like</span> section
+        </p>
+        <p>
+          We often get "I didn't know X accept bitcoin?" so for directly
+          integrated merchants, I made
+          <span className="f-600">&nbsp;Payment Instructions</span> a
+          first-class citizen. The details attempt to concisely describe how to
+          find BitPay as a payment on a given site while not taking up too much
+          space if you already know what to look for.
         </p>
       </div>
 
-      <h3 className="begin-section">Discover 100+ Major Brands</h3>
-      <video className="h-align" width="375" autoPlay muted loop playsInline>
-        <source src="/vids/extension/directory.mp4" type="video/mp4" />
-      </video>
+      <h3 className="begin-section">Spend</h3>
+      <div className="d-flex">
+        <img width="375" src="/imgs/extension/wikipedia-brand-page.svg" />
+        <img width="375" src="/imgs/extension/mastercard-brand-page.svg" />
+      </div>
       <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          Optimizing for cases where there are primary Call To Actions was
+          pretty simple: just add a big blue button. You can see the 2 different
+          variations of CTAs I experimented with between this section and the
+          previous: the first style being the iOS-esque slim pill near the top.
+          I ultimately decided to keep things simple while maintaining a
+          fallback for vertical scroll. A fixed footer button with scrolling
+          content underneath turned out to be the only configuration that made
+          sense.
+        </p>
+      </div>
+
+      <h3 className="begin-section">Save</h3>
+      <div className="d-flex">
+        <img width="375" src="/imgs/extension/apmex-brand-page.svg" />
+        <img width="375" src="/imgs/extension/amazon-brand-page.svg" />
+      </div>
+      <div className="lead begin-section end-section">
+        <p>
+          For this page, I placed a heavy emphasis on keeping the user engaged
+          and letting them organically explore. The first place I looked to for
+          inspiration was the iOS App Store; you can see the heavy influence in
+          the layout of the Title + Caption + Logo as well as the
+          <span className="f-600">&nbsp;You Might Also Like</span> section
         </p>
       </div>
 
@@ -101,6 +196,31 @@ const BitPayExtensionShop: React.FC = () => (
           build it.
         </p>
       </div>
+
+      <h2 className="begin-section">Amazon Cart Detection</h2>
+      <h5 className="end-section">The magic of custom-value gift cards</h5>
+      <WideScreen src="/vids/extension/amazon-cart-detection.mp4" />
+      <div className="lead begin-section end-section">
+        <p>
+          I'm really excited to share the latest project we've been working on;
+          this project was a concept brainstormed amongst engineers working on
+          the gift card product about 3 years ago and we finally had a chance to
+          build it.
+        </p>
+      </div>
+
+      {/* <h3 className="begin-section">Discover 100+ Major Brands</h3>
+      <video className="h-align" width="375" autoPlay muted loop playsInline>
+        <source src="/vids/extension/directory.mp4" type="video/mp4" />
+      </video>
+      <div className="lead begin-section end-section">
+        <p>
+          I'm really excited to share the latest project we've been working on;
+          this project was a concept brainstormed amongst engineers working on
+          the gift card product about 3 years ago and we finally had a chance to
+          build it.
+        </p>
+      </div> */}
     </motion.main>
   </>
 );
