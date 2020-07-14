@@ -5,25 +5,29 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 
+export const ExtensionHead = (
+  <Head>
+    <meta
+      property="description"
+      content="Designed by Ash - BitPay Browser Extension"
+      key="description"
+    />
+    <meta
+      property="twitter:image"
+      content="https://bitpay.com/assets/extension-banner.png"
+      key="twitter-image"
+    />
+    <meta
+      property="og:image"
+      content="https://bitpay.com/assets/extension-banner.png"
+      key="og-image"
+    />
+  </Head>
+);
+
 const BitPayExtension: React.FC = () => (
   <>
-    <Head>
-      <meta
-        property="description"
-        content="Designed by Ash - BitPay Browser Extension"
-        key="description"
-      />
-      <meta
-        property="twitter:image"
-        content="https://bitpay.com/assets/extension-banner.png"
-        key="twitter-image"
-      />
-      <meta
-        property="og:image"
-        content="https://bitpay.com/assets/extension-banner.png"
-        key="og-image"
-      />
-    </Head>
+    {ExtensionHead}
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Extension</h1>
       <h5 className="end-section">Redefining the crypto payment experience</h5>

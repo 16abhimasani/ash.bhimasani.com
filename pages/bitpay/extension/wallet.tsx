@@ -1,28 +1,12 @@
 import React from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
+import { ExtensionHead } from "./index";
 import { fadeInPage } from "../../../animations/page";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayExtensionWallet: React.FC = () => (
   <>
-    <Head>
-      <meta
-        property="description"
-        content="Designed by Ash - BitPay Browser Extension"
-        key="description"
-      />
-      <meta
-        property="twitter:image"
-        content="https://bitpay.com/assets/extension-banner.png"
-        key="twitter-image"
-      />
-      <meta
-        property="og:image"
-        content="https://bitpay.com/assets/extension-banner.png"
-        key="og-image"
-      />
-    </Head>
+    {ExtensionHead}
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">Wallet Experience Breakdown</h1>
       <h5>Privately Purchase & Securely Store</h5>
