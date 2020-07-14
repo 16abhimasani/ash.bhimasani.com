@@ -249,7 +249,7 @@ const BitPayExtensionShop: React.FC = () => (
       <h2 className="begin-section">Amazon Cart Detection</h2>
       <h5 className="end-section">The magic of custom-value gift cards</h5>
       <WideScreen src="/vids/extension/amazon-cart-detection.mp4" />
-      <div className="lead begin-section end-section">
+      <div className="lead begin-section">
         <p>
           Since the origins of the gift card program, the idea of pre-filling
           the amount to match your Cart Total exactly has always been enticing.
@@ -283,6 +283,37 @@ const BitPayExtensionShop: React.FC = () => (
       <video className="h-align" width="375" autoPlay muted loop playsInline>
         <source src="/vids/extension/purchase-flow.mp4" type="video/mp4" />
       </video>
+
+      <h4 className="begin-section">Error Handling</h4>
+      <div className="d-flex">
+        <img
+          width="375"
+          src="/imgs/extension/pay-error-toast.svg"
+          alt="Enter Amount: Error Toast"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/pay-invoice-error.svg"
+          alt="Awaiting Payment: Error"
+        />
+      </div>
+      <div className="lead begin-section end-section">
+        <p>
+          As part of the purchase flow, I created 2 types of error styles that
+          we could use depending on the situation. The "Toast" style error
+          message is a flexible way to display specific errors that occur within
+          the extension app. This could be a invalid input or something more
+          severe.
+        </p>
+        <p>
+          Because the gateway to actually pay with crypto is in a separated
+          context (we launch a BitPay Invoice in a popup window similar to
+          PayPal), I created a simple generic "payment gateway error" style that
+          is direct mutation of the "Pay with BitPay" button. This creates an
+          elegant circular animation from "Pay" to "Awaiting" to "Error" back to
+          "Pay" where you can retry.
+        </p>
+      </div>
 
       <h2 className="begin-section">Minimize & Drag</h2>
       <h5 className="end-section">Control your experience elegantly</h5>

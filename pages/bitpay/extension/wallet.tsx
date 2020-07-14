@@ -199,7 +199,7 @@ const BitPayExtensionWallet: React.FC = () => (
         <source src="/vids/extension/gift-card-balance.mp4" type="video/mp4" />
       </video>
 
-      <h4 className="begin-section">Easy Redemption</h4>
+      <h4 className="begin-section">Redemption & Archival</h4>
       <div className="d-flex">
         <img
           width="375"
@@ -208,8 +208,8 @@ const BitPayExtensionWallet: React.FC = () => (
         />
         <img
           width="375"
-          src="/imgs/extension/card-mastercard.svg"
-          alt="Gift Card: Mastercard"
+          src="/imgs/extension/archive.svg"
+          alt="Archived Gift Cards"
         />
       </div>
       <div className="lead begin-section end-section">
@@ -220,32 +220,57 @@ const BitPayExtensionWallet: React.FC = () => (
           <span className="f-600">&nbsp;Redeem Now</span> button is only
           available for brands where we can directly link the user to a
           redemption page. For Amazon, we actually pre-fill the code making it
-          even easier.
+          even easier. You can
+          <span className="f-600">&nbsp;Archive</span> a card after it is
+          completely spent via the 3 dot menu; you can find your old archived
+          cards in Settings.
         </p>
       </div>
 
-      <h4 className="begin-section">Scalable & Functional</h4>
+      <h4 className="begin-section">Highly Functional Management</h4>
       <div className="d-flex">
+        <img
+          width="375"
+          src="/imgs/extension/card-mastercard.svg"
+          alt="Gift Card: Mastercard"
+        />
         <img
           width="375"
           src="/imgs/extension/card-edit-balance.svg"
           alt="Gift Card: Edit Balance"
-        />
-        <img
-          width="375"
-          src="/imgs/extension/archive.svg"
-          alt="Archived Gift Cards"
         />
       </div>
       <div className="lead begin-section end-section">
         <p>
           Like I mentioned previously, one of the expected use cases for gift
           cards is to slowly use it over time. To optimize for this behavior, we
-          built-in a way for a user to simply enter in the amount that they just
-          spent and the app will automatically display the remaining balance.
-          You can
-          <span className="f-600">&nbsp;Archive</span> a card after it is
-          completely spent; you can find your old archived cards in Settings.
+          built-in a <span className="f-600">Edit Balance</span> function so a
+          user can simply enter in the amount that they just spent and the app
+          will automatically calculate the remaining balance.
+        </p>
+      </div>
+
+      <h4 className="begin-section">Delay Handling</h4>
+      <div className="d-flex">
+        <img
+          width="375"
+          src="/imgs/extension/card-pending.svg"
+          alt="Gift Card: Pending Confirmation"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/card-pending-tip.svg"
+          alt="Gift Card: Pending Confirmation Tooltip"
+        />
+      </div>
+      <div className="lead begin-section end-section">
+        <p>
+          Sometimes when paying peer-to-peer with BTC, you can accidentally
+          broadcast the transaction with too low of a miner fee, requiring us to
+          wait for a confirmation before we mark the payment as complete. When
+          this happens, its important to make the user feel comfortable that
+          they have successfully completed everything on their end and are just
+          waiting for finalization.
         </p>
       </div>
     </motion.main>
