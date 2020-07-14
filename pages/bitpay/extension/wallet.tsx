@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
-import Anchor from "../../../components/utils/anchor";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayExtensionWallet: React.FC = () => (
