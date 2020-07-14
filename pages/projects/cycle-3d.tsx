@@ -66,7 +66,7 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h3 className="begin-section">Grinder</h3>
-    <img width="100%" src="/imgs/cycle-3d/grinder.svg" />
+    <img width="100%" src="/imgs/cycle-3d/grinder.svg" alt="Grinder" />
     <div className="lead begin-section">
       <p>
         The Grinder works by first crushing and tearing plastic with the primary
@@ -82,7 +82,7 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h3 className="begin-section">Extruder</h3>
-    <img width="100%" src="/imgs/cycle-3d/extruder.svg" />
+    <img width="100%" src="/imgs/cycle-3d/extruder.svg" alt="Extruder" />
     <div className="lead begin-section">
       <p>
         The Extruder works by intaking granulated plastic and passing it down
@@ -104,7 +104,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Assembly and Cross Section</h4>
-    <img width="100%" src="/imgs/cycle-3d/grinder-assembly.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/grinder-assembly.png"
+      alt="Grinder Assembly"
+    />
     <div className="lead begin-section">
       <p>
         The goal with the grinder was to design a compact grinding solution that
@@ -126,7 +130,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Gear Assembly and Box</h4>
-    <img width="100%" src="/imgs/cycle-3d/gear-box-assembly.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/gear-box-assembly.png"
+      alt="Gear Box Assembly"
+    />
     <div className="lead begin-section">
       <p>
         To drive the grinder and provide adequate torque and speed, I decided to
@@ -146,7 +154,7 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Bearing Mount and Axle Cap</h4>
-    <img width="100%" src="/imgs/cycle-3d/bearing-cap.png" />
+    <img width="100%" src="/imgs/cycle-3d/bearing-cap.png" alt="Bearing Cap" />
     <div className="lead begin-section">
       <p>
         The axle runs all the way through the cylinders and box so I needed a
@@ -162,7 +170,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Rollers</h4>
-    <img width="100%" src="/imgs/cycle-3d/primary-grinder-assembly.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/primary-grinder-assembly.png"
+      alt="Primary Grinder Assembly"
+    />
     <div className="lead begin-section">
       <p>
         The rollers are the part that first processes raw plastic by tearing
@@ -182,7 +194,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Primary Grinder Guards</h4>
-    <img width="100%" src="/imgs/cycle-3d/spikes-assembly.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/spikes-assembly.png"
+      alt="Spikes Assembly"
+    />
     <div className="lead begin-section">
       <p>
         These wall spikes or blocks are really just used to create a tight seal
@@ -195,7 +211,7 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Split Axle</h4>
-    <img width="100%" src="/imgs/cycle-3d/axle.png" />
+    <img width="100%" src="/imgs/cycle-3d/axle.png" alt="Axle" />
     <div className="lead begin-section">
       <p>
         The axle, like many of the parts, is way too big to print so I have to
@@ -210,7 +226,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Roller Pegs</h4>
-    <img width="100%" src="/imgs/cycle-3d/spike-grinder.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/spike-grinder.png"
+      alt="Spike Grinder"
+    />
     <div className="lead begin-section">
       <p>
         The pegs are pretty simple but it took a lot of tuning to get these to
@@ -224,7 +244,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Blades and Shredders</h4>
-    <img width="100%" src="/imgs/cycle-3d/blade-shredder.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/blade-shredder.png"
+      alt="Shredder Blade"
+    />
     <div className="lead begin-section">
       <p>
         These are designed to be sharp and rotate fast in order to reduce
@@ -239,7 +263,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Blades Spacers</h4>
-    <img width="100%" src="/imgs/cycle-3d/spacer-shredder.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/spacer-shredder.png"
+      alt="Shredder Spacer"
+    />
     <div className="lead begin-section">
       <p>
         The spacers are pretty simple, they fit onto the axle and keep a set
@@ -250,7 +278,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Shredder Axle</h4>
-    <img width="100%" src="/imgs/cycle-3d/shredder-axle.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/shredder-axle.png"
+      alt="Shredder Axle"
+    />
     <div className="lead begin-section">
       <p>
         The axle is designed in this weird star shape so I could offset the
@@ -261,7 +293,11 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Secondary Shredder Guards</h4>
-    <img width="100%" src="/imgs/cycle-3d/second-spikes-assembly.png" />
+    <img
+      width="100%"
+      src="/imgs/cycle-3d/second-spikes-assembly.png"
+      alt="Secondary Spikes Assembly"
+    />
     <div className="lead begin-section">
       <p>
         These are very similar to the primary wall spikes but the spacing is
@@ -270,7 +306,7 @@ const Cycle3D: React.FC = () => (
     </div>
 
     <h4 className="begin-section">Filtering Mesh</h4>
-    <img width="100%" src="/imgs/cycle-3d/filter.png" />
+    <img width="100%" src="/imgs/cycle-3d/filter.png" alt="Filter" />
     <div className="lead begin-section">
       <p>
         This filter is what keeps the granular pieces a uniform size. I made the
@@ -288,26 +324,31 @@ const Cycle3D: React.FC = () => (
       className="end-section"
       width="100%"
       src="/imgs/cycle-3d/grinder-printed.JPG"
+      alt="Grinder Printed"
     />
     <img
       className="end-section"
       width="100%"
       src="/imgs/cycle-3d/grinder-assembly-printed.jpg"
+      alt="Grinder Assembly Printed"
     />
     <img
       className="end-section"
       width="100%"
       src="/imgs/cycle-3d/gear-assembly-printed.JPG"
+      alt="Gear Assembly Printed"
     />
     <img
       className="end-section"
       width="100%"
       src="/imgs/cycle-3d/gear-printed.jpg"
+      alt="Gear Printed"
     />
     <img
       className="end-section"
       width="100%"
       src="/imgs/cycle-3d/gear-printed-2.jpg"
+      alt="Gears Printed"
     />
   </motion.main>
 );

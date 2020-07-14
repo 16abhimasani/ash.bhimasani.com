@@ -22,7 +22,7 @@ const PostBox: React.FC<{
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : ""}
     >
-      {icon && <img className={classes.box__icon} src={icon} />}
+      {icon && <img className={classes.box__icon} src={icon} alt={title} />}
       <div>
         <div className={classes.box__title}>{title}</div>
         <div className={classes.box__caption}>{caption}</div>
@@ -33,6 +33,7 @@ const PostBox: React.FC<{
           <img
             className={classes.box__locked__icon}
             src="/icons/padlock-white.svg"
+            alt="locked"
           />
           Coming Soon
         </div>

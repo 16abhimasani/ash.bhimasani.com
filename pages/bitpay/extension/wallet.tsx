@@ -9,7 +9,11 @@ const BitPayExtensionWallet: React.FC = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img width="100%" src="https://bitpay.com/assets/extension-banner.png" />
+      <img
+        width="100%"
+        src="https://bitpay.com/assets/extension-banner.png"
+        alt="Extension Banner"
+      />
     </a>
     <div className="lead begin-section mb-0 end-section">
       I'm really excited to share the latest project we've been working on; this

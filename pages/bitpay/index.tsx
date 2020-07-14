@@ -65,6 +65,7 @@ const BitPay: React.FC = () => (
         caption="Consumer product suite + KYC / AML"
         date="Apr 2019 ~ Aug 2019"
         link="/bitpay/id"
+        locked
       />
       <PostBox
         icon="/logos/bitpay-globe.svg"
@@ -72,6 +73,7 @@ const BitPay: React.FC = () => (
         caption="A curated directory of where to use crypto + promos"
         date="Mar 2019 ~ Apr 2019"
         link="/bitpay/directory"
+        locked
       />
       <PostBox
         icon="/logos/bitpay-emails.svg"
@@ -79,6 +81,7 @@ const BitPay: React.FC = () => (
         caption="Transactional emails for merchants & payers"
         date="Aug 2018 ~ Jan 2019"
         link="/bitpay/email"
+        locked
       />
       <PostBox
         icon="/logos/bitpay-site.svg"
@@ -86,6 +89,7 @@ const BitPay: React.FC = () => (
         caption="Landing, operational, & product pages"
         date="Aug 2018 ~ Jan 2019"
         link="/bitpay/site"
+        locked
       />
       <PostBox
         icon="/logos/bitpay-support.svg"
@@ -93,6 +97,7 @@ const BitPay: React.FC = () => (
         caption="A streamlined customer service platform"
         date="May 2018 ~ Aug 2018"
         link="/bitpay/support"
+        locked
       />
     </motion.main>
   </>

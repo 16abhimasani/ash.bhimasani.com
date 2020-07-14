@@ -113,11 +113,11 @@ const BitPayExtensionShop: React.FC = () => (
         </p>
         <ol className="list">
           <li className="list__item">
-            <div className="list__item__number">2</div>
+            <div className="list__item__number">1</div>
             <div>Twitch: Discover more gaming brands</div>
           </li>
           <li className="list__item">
-            <div className="list__item__number">1</div>
+            <div className="list__item__number">2</div>
             <div>Wikipedia: Donate with crypto</div>
           </li>
           <li className="list__item">
@@ -133,13 +133,21 @@ const BitPayExtensionShop: React.FC = () => (
 
       <h4 className="begin-section">Discover Related Brands</h4>
       <div className="d-flex">
-        <img width="375" src="/imgs/extension/twitch-brand-page.svg" />
-        <img width="375" src="/imgs/extension/hotels-brand-page-alt.svg" />
+        <img
+          width="375"
+          src="/imgs/extension/twitch-brand-page.svg"
+          alt="Twitch Brand Page"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/hotels-brand-page-alt.svg"
+          alt="Hotels.com Brand Page"
+        />
       </div>
       <div className="lead begin-section end-section">
         <p>
-          For this page, I placed a heavy emphasis on keeping the user engaged
-          and letting them organically explore. The first place I looked to for
+          For this page, I placed an emphasis on keeping the user engaged and
+          letting them organically explore. The first place I looked to for
           inspiration was the iOS App Store; you can see the heavy influence in
           the layout of the Title + Caption + Logo as well as the
           <span className="f-600">&nbsp;You Might Also Like</span> section
@@ -156,12 +164,20 @@ const BitPayExtensionShop: React.FC = () => (
 
       <h4 className="begin-section">Donate or Spend</h4>
       <div className="d-flex">
-        <img width="375" src="/imgs/extension/wikipedia-brand-page.svg" />
-        <img width="375" src="/imgs/extension/mastercard-brand-page.svg" />
+        <img
+          width="375"
+          src="/imgs/extension/wikipedia-brand-page.svg"
+          alt="Wikipedia Brand Page"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/mastercard-brand-page.svg"
+          alt="Mastercard Brand Page"
+        />
       </div>
       <div className="lead begin-section end-section">
         <p>
-          Optimizing for cases where there are primary Call To Actions was
+          Optimizing for cases where there are primary Call to Actions was
           pretty simple: just add a big blue button. You can see the 2 different
           variations of CTAs I experimented with between this section and the
           previous: the first style being the iOS-esque slim pill near the top.
@@ -174,16 +190,29 @@ const BitPayExtensionShop: React.FC = () => (
 
       <h4 className="begin-section">Save with Crypto</h4>
       <div className="d-flex">
-        <img width="375" src="/imgs/extension/apmex-brand-page.svg" />
-        <img width="375" src="/imgs/extension/amazon-brand-page.svg" />
+        <img
+          width="375"
+          src="/imgs/extension/apmex-brand-page.svg"
+          alt="APMEX Brand Page"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/amazon-brand-page.svg"
+          alt="Amazon Brand Page"
+        />
       </div>
       <div className="lead begin-section end-section">
         <p>
-          For this page, I placed a heavy emphasis on keeping the user engaged
-          and letting them organically explore. The first place I looked to for
-          inspiration was the iOS App Store; you can see the heavy influence in
-          the layout of the Title + Caption + Logo as well as the
-          <span className="f-600">&nbsp;You Might Also Like</span> section
+          A common way Brands promote crypto as a payment option is to run
+          discounts that are automatically applied; similarly, BitPay runs
+          promotions of gift cards to gain a surge in traffic. With this in
+          mind, I knew that a Discount section would be a core piece of the
+          page.
+        </p>
+        <p>
+          Inspired by the iOS App Store, the Discount pill is prominently
+          featured right after the caption and is color matched to the brand for
+          that extra premier look.
         </p>
       </div>
 
@@ -194,24 +223,26 @@ const BitPayExtensionShop: React.FC = () => (
       </video>
       <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          One of the key features I wanted for this app was mixed categories as
+          opposed to the
+          <Anchor
+            content="Website Directory"
+            href="https://kb.newegg.com/knowledge-base/using-bitcoin-on-newegg/"
+            spaceBefore
+            spaceAfter
+          />
+          where gift cards are kept entirely in a separate category.
+          Additionally, I thought keyword search would be a neat feature that
+          would make browsing more convenient (ex. searching "Gaming").
         </p>
-      </div>
-
-      <h2 className="begin-section">Minimize & Drag</h2>
-      <h5 className="end-section">Control your experience elegantly</h5>
-      <video width="100%" autoPlay muted loop playsInline>
-        <source src="/vids/extension/minimize.mp4" type="video/mp4" />
-      </video>
-      <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          Making this happen came down to brute force; we ended up manually
+          labeling each gift card with keyword tags and then composed categories
+          from those keywords. As a result, the first thing you see on the Home
+          page are
+          <span className="f-600">&nbsp;"Curations"</span> or featured Brands.
+          Below this you can find an exhaustive list of categories as well as a
+          list of all Brands we support.
         </p>
       </div>
 
@@ -220,10 +251,56 @@ const BitPayExtensionShop: React.FC = () => (
       <WideScreen src="/vids/extension/amazon-cart-detection.mp4" />
       <div className="lead begin-section end-section">
         <p>
-          I'm really excited to share the latest project we've been working on;
-          this project was a concept brainstormed amongst engineers working on
-          the gift card product about 3 years ago and we finally had a chance to
-          build it.
+          Since the origins of the gift card program, the idea of pre-filling
+          the amount to match your Cart Total exactly has always been enticing.
+          It was never truly possibly from the mobile app; the in-store purchase
+          flow was seamless enough but you still had to type in the amount. With
+          a browser context, the feature suddenly became a possibility. We have
+          built an expansive index of
+          <span className="f-600">&nbsp;auto-fill capability</span> for many of
+          the gift cards we support.
+        </p>
+        <p>This makes the experience as simple as:</p>
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>Proceed to checkout</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">2</div>
+            <div>Open the app & click "Pay with BitPay"</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">3</div>
+            <div>Pay with crypto to see your voucher</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">4</div>
+            <div>Apply your code & checkout</div>
+          </li>
+        </ol>
+      </div>
+      <video className="h-align" width="375" autoPlay muted loop playsInline>
+        <source src="/vids/extension/purchase-flow.mp4" type="video/mp4" />
+      </video>
+
+      <h2 className="begin-section">Minimize & Drag</h2>
+      <h5 className="end-section">Control your experience elegantly</h5>
+      <video width="100%" autoPlay muted loop playsInline>
+        <source src="/vids/extension/minimize.mp4" type="video/mp4" />
+      </video>
+      <div className="lead begin-section end-section">
+        <p>
+          An idea I had going into this design was to create a universally
+          present component that looked and felt iconic. I think we accomplished
+          this with the Extension's Control Bar. You can drag the app to
+          anywhere on the page you like so you're never obscuring something
+          important.
+        </p>
+        <p>
+          Need to review some more stuff on the page before you pay? No problem,
+          just click the Minimize button and the app elegantly folds into slim
+          tab that you just want to play with.
         </p>
       </div>
     </motion.main>

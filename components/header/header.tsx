@@ -11,7 +11,11 @@ const Header: React.FC = () => (
     </Link>
     <Link href="/">
       <a>
-        <img className={classes.logo} src="/logos/ab-logo.svg" />
+        <img
+          className={classes.logo}
+          src="/logos/ab-logo.svg"
+          alt="Ash's Logo"
+        />
       </a>
     </Link>
     <Link href="/#timeline">

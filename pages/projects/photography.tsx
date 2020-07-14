@@ -26,11 +26,36 @@ const Photography: React.FC = () => (
       </p>
     </div>
 
-    <img className="end-section" width="100%" src="/photography/cig.jpg" />
-    <img className="end-section" width="100%" src="/photography/mask.jpg" />
-    <img className="end-section" width="100%" src="/photography/blood.png" />
-    <img className="end-section" width="100%" src="/photography/net.jpg" />
-    <img className="end-section" width="100%" src="/photography/beads.jpg" />
+    <img
+      className="end-section"
+      width="100%"
+      src="/photography/cig.jpg"
+      alt="Cig"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/photography/mask.jpg"
+      alt="Mask"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/photography/blood.png"
+      alt="Blood"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/photography/net.jpg"
+      alt="Net"
+    />
+    <img
+      className="end-section"
+      width="100%"
+      src="/photography/beads.jpg"
+      alt="Beads"
+    />
   </motion.main>
 );
 

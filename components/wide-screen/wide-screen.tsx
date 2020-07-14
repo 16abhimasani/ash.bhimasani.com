@@ -45,7 +45,7 @@ const WideScreen: React.FC<{
               naturalSlideWidth={ratio.width}
               naturalSlideHeight={ratio.height}
               totalSlides={src.length}
-              interval={8000}
+              interval={10000}
               isPlaying
               infinite
               lockOnWindowScroll

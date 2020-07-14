@@ -24,6 +24,7 @@ const LockheedMartin: React.FC = () => (
         className="begin-section"
         width="100%"
         src="https://www.lockheedmartin.com/content/dam/lockheed-martin/space/photo/robotics/orex-robotics.jpg.pc-adaptive.full.medium.jpeg"
+        alt="Lockheed Martin Space Systems"
       />
       <p>
         During the time I was there, many of the projects discussed and

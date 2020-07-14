@@ -9,7 +9,12 @@ const AboutMe: React.FC = () => (
       I am a product designer & software engineer with special interests in UX,
       growth hacking, and business strategy currently working
     </div>
-    <img className="end-section" width="100%" src="/imgs/baby-ash.jpeg" />
+    <img
+      className="end-section"
+      width="100%"
+      src="/imgs/baby-ash.jpeg"
+      alt="Baby Ash"
+    />
   </motion.main>
 );
 

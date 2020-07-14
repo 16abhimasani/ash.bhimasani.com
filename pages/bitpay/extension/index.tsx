@@ -82,11 +82,9 @@ const BitPayExtension: React.FC = () => (
           use while you browse the web.
         </p>
       </div>
-      <img
-        className="h-align"
-        width="375"
-        src="https://bitpay.com/img/demos/extension-demo.gif"
-      />
+      <video className="h-align" width="375" autoPlay muted loop playsInline>
+        <source src="/vids/extension/purchase-flow.mp4" type="video/mp4" />
+      </video>
 
       <h3 className="begin-section">Checkout Seamlessly &nbsp;&nbsp;⚡️</h3>
       <div className="lead end-section">

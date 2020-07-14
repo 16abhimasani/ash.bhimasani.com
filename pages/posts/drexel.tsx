@@ -31,6 +31,7 @@ const DrexelMetLab: React.FC = () => (
         className="begin-section"
         width="100%"
         src="https://stradallc.com/wp-content/uploads/2014/03/drexel-excite-4.jpg"
+        alt="Drexel ExCITe Center"
       />
       <p>
         The first project I was introduced to was called Dancing Drones. The
