@@ -4,6 +4,7 @@ import {
   DotGroup,
   Slider,
   Slide,
+  Image as ImageWithoutZoom,
   ImageWithZoom,
 } from "pure-react-carousel";
 import { useRefSize } from "../../utils/hooks";
@@ -12,7 +13,8 @@ import classes from "./wide-screen.module.scss";
 const WideScreen: React.FC<{
   src: string | string[];
   carousel?: boolean;
-}> = ({ src, carousel }) => {
+  zoom?: boolean;
+}> = ({ src, carousel, zoom }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const asset = useRef<any>(null);
   const wrapper = useRef<HTMLDivElement>(null);
@@ -54,7 +56,11 @@ const WideScreen: React.FC<{
               <Slider>
                 {src.map((file: string, index: number) => (
                   <Slide index={index} key={index}>
-                    <ImageWithZoom src={file} />
+                    {zoom ? (
+                      <ImageWithZoom src={file} />
+                    ) : (
+                      <ImageWithoutZoom src={file} hasMasterSpinner />
+                    )}
                   </Slide>
                 ))}
               </Slider>

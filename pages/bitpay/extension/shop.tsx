@@ -79,6 +79,7 @@ const BitPayExtensionShop: React.FC = () => (
           "/imgs/extension/apmex-brand-page.jpg",
         ]}
         carousel
+        zoom
       />
       <div className="lead begin-section end-section">
         <p>

@@ -35,6 +35,7 @@ const BitPayExtensionWallet: React.FC = () => (
           "/imgs/extension/wallet-amazon.jpg",
         ]}
         carousel
+        zoom
       />
       <div className="lead begin-section end-section">
         <p>
@@ -120,6 +121,7 @@ const BitPayExtensionWallet: React.FC = () => (
           "/imgs/extension/card-amc.jpg",
         ]}
         carousel
+        zoom
       />
       <div className="lead begin-section end-section">
         <p>

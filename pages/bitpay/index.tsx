@@ -65,7 +65,6 @@ const BitPay: React.FC = () => (
         caption="Consumer product suite + KYC / AML"
         date="Apr 2019 ~ Aug 2019"
         link="/bitpay/id"
-        locked
       />
       <PostBox
         icon="/logos/bitpay-globe.svg"
