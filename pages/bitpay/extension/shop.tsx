@@ -73,10 +73,10 @@ const BitPayExtensionShop: React.FC = () => (
       <h5 className="end-section">A compact display of essential info</h5>
       <WideScreen
         src={[
-          "/imgs/extension/amazon-brand-page.jpg",
           "/imgs/extension/twitch-brand-page.jpg",
-          "/imgs/extension/apmex-brand-page.jpg",
+          "/imgs/extension/amazon-brand-page.jpg",
           "/imgs/extension/wikipedia-brand-page.jpg",
+          "/imgs/extension/apmex-brand-page.jpg",
         ]}
         carousel
       />
