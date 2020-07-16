@@ -61,6 +61,66 @@ const BitPayIDAuth: React.FC = () => (
       </p>
     </div>
 
+    <h3 className="begin-section">Mobile</h3>
+    <div className="d-flex">
+      <img
+        style={{ marginRight: 24 }}
+        width="350"
+        src="/imgs/id/mobile/auth/enter-email.png"
+        alt="Mobile: Enter Email"
+      />
+      <img
+        width="350"
+        src="/imgs/id/mobile/auth/account-type.png"
+        alt="Mobile: Account Selector"
+      />
+    </div>
+    <div className="lead begin-section end-section">
+      <p>
+        For this page, I placed an emphasis on keeping the user engaged and
+        letting them organically explore. The first place I looked to for
+        inspiration was the iOS App Store; you can see the heavy influence in
+        the layout of the Title + Caption + Logo as well as the
+        <span className="f-600">&nbsp;You Might Also Like</span> section
+      </p>
+      <p>
+        We often get "I didn't know X accept bitcoin?" so for directly
+        integrated merchants, I made
+        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
+        citizen. The details attempt to concisely describe how to find BitPay as
+        a payment option on a given site without taking up too much space.
+      </p>
+    </div>
+    <div className="d-flex">
+      <img
+        style={{ marginRight: 24 }}
+        width="350"
+        src="/imgs/id/mobile/auth/create-password.png"
+        alt="Mobile: Enter Email"
+      />
+      <img
+        width="350"
+        src="/imgs/id/mobile/auth/check-inbox.png"
+        alt="Mobile: Account Selector"
+      />
+    </div>
+    <div className="lead begin-section end-section">
+      <p>
+        For this page, I placed an emphasis on keeping the user engaged and
+        letting them organically explore. The first place I looked to for
+        inspiration was the iOS App Store; you can see the heavy influence in
+        the layout of the Title + Caption + Logo as well as the
+        <span className="f-600">&nbsp;You Might Also Like</span> section
+      </p>
+      <p>
+        We often get "I didn't know X accept bitcoin?" so for directly
+        integrated merchants, I made
+        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
+        citizen. The details attempt to concisely describe how to find BitPay as
+        a payment option on a given site without taking up too much space.
+      </p>
+    </div>
+
     <h2 className="begin-section">Sign In</h2>
     <h5 className="end-section">A compact display of essential info</h5>
     <WideScreen
@@ -87,6 +147,42 @@ const BitPayIDAuth: React.FC = () => (
         directly integrated merchants:
       </p>
     </div>
+
+    <h3 className="begin-section">Mobile</h3>
+    <div className="d-flex">
+      <img
+        style={{ marginRight: 24 }}
+        width="350"
+        src="/imgs/id/mobile/auth/enter-password.png"
+        alt="Mobile: Enter Email"
+      />
+      <img
+        width="350"
+        src="/imgs/id/mobile/auth/enter-2fa.png"
+        alt="Mobile: Account Selector"
+      />
+    </div>
+    <div className="lead begin-section end-section">
+      <p>
+        For this page, I placed an emphasis on keeping the user engaged and
+        letting them organically explore. The first place I looked to for
+        inspiration was the iOS App Store; you can see the heavy influence in
+        the layout of the Title + Caption + Logo as well as the
+        <span className="f-600">&nbsp;You Might Also Like</span> section
+      </p>
+      <p>
+        We often get "I didn't know X accept bitcoin?" so for directly
+        integrated merchants, I made
+        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
+        citizen. The details attempt to concisely describe how to find BitPay as
+        a payment option on a given site without taking up too much space.
+      </p>
+    </div>
+
+    <h2 className="begin-section">Animation Examples</h2>
+    <h5 className="end-section">The fun ones</h5>
+    <WideScreen src="/vids/id/2fa-code-input.mp4" />
+    <WideScreen src="/vids/id/check-inbox.mp4" />
   </motion.main>
 );
 
