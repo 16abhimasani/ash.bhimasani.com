@@ -66,11 +66,13 @@ const BitPayIDAuth: React.FC = () => (
       <img
         style={{ marginRight: 24 }}
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/enter-email.png"
         alt="Mobile: Enter Email"
       />
       <img
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/account-type.png"
         alt="Mobile: Account Selector"
       />
@@ -95,11 +97,13 @@ const BitPayIDAuth: React.FC = () => (
       <img
         style={{ marginRight: 24 }}
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/create-password.png"
         alt="Mobile: Enter Email"
       />
       <img
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/check-inbox.png"
         alt="Mobile: Account Selector"
       />
@@ -153,11 +157,13 @@ const BitPayIDAuth: React.FC = () => (
       <img
         style={{ marginRight: 24 }}
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/enter-password.png"
         alt="Mobile: Enter Email"
       />
       <img
         width="350"
+        height="100%"
         src="/imgs/id/mobile/auth/enter-2fa.png"
         alt="Mobile: Account Selector"
       />
