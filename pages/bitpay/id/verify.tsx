@@ -12,9 +12,23 @@ const BitPayIDVerification: React.FC = () => (
     <WideScreen src="/imgs/id/desktop/verify/comp.png" />
     <div className="lead begin-section mb-0 end-section">
       <p>
-        The utility of this app at its simplest form is to simply alert the user
-        if BitPay is available as a payment option. So we have 3 major pieces
-        from this premise:
+        Here is the Verification flow that allows users to receive and make
+        payments over $3000. Verification for high value transactions is a
+        critical step in growing our platform and servicing more users. While
+        KYC is generally a huge friction point; it can still be made convenient.
+      </p>
+      <p>
+        To create a benchmark, we first looked at Airbnb’s host onboarding.
+        Airbnb focused on allowing users to complete the form in chunks with
+        major parts grouped together and progress saved continuously. When
+        manual input is required, saving state continuously seemed like the most
+        significant upgrade you could give a form.
+      </p>
+      <p>
+        While a vital feature, saving form state was substituted with
+        pre-filling for initial launch. We were able to mitigate errors and
+        time-to-completion by using Onfido’s ID upload to parse as much
+        information as possible from a user’s ID and pre-fill the forms.
       </p>
     </div>
 

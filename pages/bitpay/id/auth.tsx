@@ -184,11 +184,6 @@ const BitPayIDAuth: React.FC = () => (
         a payment option on a given site without taking up too much space.
       </p>
     </div>
-
-    <h2 className="begin-section">Animation Examples</h2>
-    <h5 className="end-section">The fun ones</h5>
-    <WideScreen src="/vids/id/2fa-code-input.mp4" />
-    <WideScreen src="/vids/id/check-inbox.mp4" />
   </motion.main>
 );
 
