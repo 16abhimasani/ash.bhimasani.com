@@ -42,7 +42,7 @@ const BitPayID: React.FC = () => (
           spaceAfter
           bold
         />
-        is a major initiative that we launched in the summer of 2019. Up until
+        was a major initiative that we launched in the summer of 2019. Up until
         then, we had a fully segmented account system. Businesses got business
         accounts and debit card users got card accounts. With BitPay ID, we
         wanted to consolidate and pave the way for an immersive consumer

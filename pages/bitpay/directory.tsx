@@ -75,7 +75,7 @@ const BitPayDirectory: React.FC = () => (
     </div>
 
     <h3 className="begin-section">Home Page</h3>
-    <h5 className="end-section">A simple way to optimize for mobile</h5>
+    <h5 className="end-section">An engaging discovery portal</h5>
     <WideScreen src="/imgs/directory/home-page.svg" />
     <div className="lead begin-section end-section">
       <p>
