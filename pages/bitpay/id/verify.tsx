@@ -57,13 +57,13 @@ const BitPayIDVerification: React.FC = () => (
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/start-verify.png"
-        alt="Mobile: Enter Email"
+        alt="Mobile: Start Verify"
       />
       <img
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/personal-info.png"
-        alt="Mobile: Account Selector"
+        alt="Mobile: Personal Info"
       />
     </div>
     <div className="lead begin-section end-section">
@@ -108,13 +108,13 @@ const BitPayIDVerification: React.FC = () => (
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/enter-address.png"
-        alt="Mobile: Enter Email"
+        alt="Mobile: Enter Address"
       />
       <img
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/enter-ssn.png"
-        alt="Mobile: Account Selector"
+        alt="Mobile: Enter SSN"
       />
     </div>
     <div className="lead begin-section end-section">
@@ -139,13 +139,13 @@ const BitPayIDVerification: React.FC = () => (
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/awaiting-approval.png"
-        alt="Mobile: Enter Email"
+        alt="Mobile: Awaiting Approval"
       />
       <img
         width="350"
         height="100%"
         src="/imgs/id/mobile/verify/approved.png"
-        alt="Mobile: Account Selector"
+        alt="Mobile: Approved"
       />
     </div>
     <div className="lead begin-section end-section">
