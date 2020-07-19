@@ -5,7 +5,7 @@ import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayIDVerification: React.FC = () => (
   <motion.main className="body" {...fadeInPage}>
-    <h1 className="begin-section pt-0">Verify Flow Breakdown</h1>
+    <h1 className="begin-section pt-0">Verification Breakdown</h1>
     <h5 className="end-section">
       Platform-wide interface for KYC / AML compliance
     </h5>
@@ -24,16 +24,16 @@ const BitPayIDVerification: React.FC = () => (
         manual input is required, saving state continuously seemed like the most
         significant upgrade you could give a form.
       </p>
-      <p>
+      {/* <p>
         While a vital feature, saving form state was substituted with
         pre-filling for initial launch. We were able to mitigate errors and
         time-to-completion by using Onfido’s ID upload to parse as much
         information as possible from a user’s ID and pre-fill the forms.
-      </p>
+      </p> */}
     </div>
 
-    <h2 className="begin-section">Basic Verification</h2>
-    <h5 className="end-section">A compact display of essential info</h5>
+    <h2 className="begin-section">Onfido ID Upload</h2>
+    <h5 className="end-section">Minimizing error with document parsing</h5>
     <WideScreen
       src={[
         "/imgs/id/desktop/verify/start-verify.svg",
@@ -44,9 +44,25 @@ const BitPayIDVerification: React.FC = () => (
     />
     <div className="lead begin-section end-section">
       <p>
-        The work to optimize the hop from crypto to store credit to redemption
-        began several years ago in the BitPay Wallet where the emphasis was on
-        in-app or in-store redemption.
+        Initially, the design was pieced together assuming that we may need
+        capability for multi-tier flows, with document upload placed after
+        Residential Address. As the project evolved, it became clear that we
+        would only needed to optimize for 1 path.
+      </p>
+      <p>
+        The brilliant engineers at BitPay quickly reversed the flow, placing
+        document upload first while also adding the functionality needed to
+        extract the strings correctly from Onfido's response. This significantly
+        improved the experience while decreasing the error rate of manual user
+        entry.
+      </p>
+      <p>
+        The most difficult challenge in this part of the flow was definitely
+        dealing with address formats for a global userbase. While an age old
+        problem, we found ourself constantly tweaking and tuning address formats
+        to meet the specific needs of any one country. Luckily, we have
+        employees from all over the world who helped us catalog these formats
+        and test the flow.
       </p>
     </div>
 
@@ -68,23 +84,16 @@ const BitPayIDVerification: React.FC = () => (
     </div>
     <div className="lead begin-section end-section">
       <p>
-        For this page, I placed an emphasis on keeping the user engaged and
-        letting them organically explore. The first place I looked to for
-        inspiration was the iOS App Store; you can see the heavy influence in
-        the layout of the Title + Caption + Logo as well as the
-        <span className="f-600">&nbsp;You Might Also Like</span> section
-      </p>
-      <p>
-        We often get "I didn't know X accept bitcoin?" so for directly
-        integrated merchants, I made
-        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
-        citizen. The details attempt to concisely describe how to find BitPay as
-        a payment option on a given site without taking up too much space.
+        Onfido's flow actually works best on mobile because many users don't
+        have a camera on their computer or their phone's camera is much better.
+        The new debit card product highlights this capability to provide a much
+        more native experience within the wallet app using Onfido's iOS and
+        Android SDK.
       </p>
     </div>
 
-    <h2 className="begin-section">Advanced Verification</h2>
-    <h5 className="end-section">A compact display of essential info</h5>
+    <h2 className="begin-section">National identification number</h2>
+    <h5 className="end-section">Last leg of verification</h5>
     <WideScreen
       src={[
         "/imgs/id/desktop/verify/enter-ssn.svg",
@@ -95,9 +104,17 @@ const BitPayIDVerification: React.FC = () => (
     />
     <div className="lead begin-section end-section">
       <p>
-        The work to optimize the hop from crypto to store credit to redemption
-        began several years ago in the BitPay Wallet where the emphasis was on
-        in-app or in-store redemption.
+        The final part of full verification is for a user to enter their
+        national identification number. For Americans, this is their social
+        security number; for the rest of the world, we are only required to
+        record their passport number or if they don't have one.
+      </p>
+      <p>
+        Building UIs around sensitive data entry like this is always tricky; we
+        have to manage both clarity and comfort to make sure we don't spook
+        users. However, in context, we can be less critical. In this case, if
+        you are making a payment over $3k, prompting for this type of
+        information is understandable to the average user.
       </p>
     </div>
 
@@ -119,18 +136,15 @@ const BitPayIDVerification: React.FC = () => (
     </div>
     <div className="lead begin-section end-section">
       <p>
-        For this page, I placed an emphasis on keeping the user engaged and
-        letting them organically explore. The first place I looked to for
-        inspiration was the iOS App Store; you can see the heavy influence in
-        the layout of the Title + Caption + Logo as well as the
-        <span className="f-600">&nbsp;You Might Also Like</span> section
+        A large takeaway I think for form design and scalable interfaces in
+        general is to assume you will probably need to scroll. As you can see
+        here, we are pinning UI elements to corners and edges of the screen
+        while centering all of our main content.
       </p>
       <p>
-        We often get "I didn't know X accept bitcoin?" so for directly
-        integrated merchants, I made
-        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
-        citizen. The details attempt to concisely describe how to find BitPay as
-        a payment option on a given site without taking up too much space.
+        Additionally, things not being in view when scrolling or typing is an
+        ever present problem that can be minimized by simply adding background
+        and foreground.
       </p>
     </div>
     <div className="d-flex">
@@ -150,20 +164,20 @@ const BitPayIDVerification: React.FC = () => (
     </div>
     <div className="lead begin-section end-section">
       <p>
-        For this page, I placed an emphasis on keeping the user engaged and
-        letting them organically explore. The first place I looked to for
-        inspiration was the iOS App Store; you can see the heavy influence in
-        the layout of the Title + Caption + Logo as well as the
-        <span className="f-600">&nbsp;You Might Also Like</span> section
-      </p>
-      <p>
-        We often get "I didn't know X accept bitcoin?" so for directly
-        integrated merchants, I made
-        <span className="f-600">&nbsp;Payment Instructions</span> a first-class
-        citizen. The details attempt to concisely describe how to find BitPay as
-        a payment option on a given site without taking up too much space.
+        After everything was said and done, this project ended up being a huge
+        learning opportunity for me as a designer and engineer. It was my first
+        time really getting into the weeds and working on a highly dynamic
+        project with a plethora of experience problems to solve. Many parts of
+        the design turned out to be a success but I am still looking forward to
+        directly tackling some of the core issues still present with a full
+        upgrade.
       </p>
     </div>
+
+    <h4 className="begin-section">V2 Sneak Peak</h4>
+    <video width="100%" autoPlay muted loop playsInline>
+      <source src="/vids/id/awaiting-approval-v2.mp4" type="video/mp4" />
+    </video>
   </motion.main>
 );
 
