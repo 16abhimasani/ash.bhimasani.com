@@ -14,12 +14,14 @@ const WideScreen: React.FC<{
   src: string | string[];
   carousel?: boolean;
   zoom?: boolean;
-}> = ({ src, carousel, zoom }) => {
+  maxWidth?: number;
+}> = ({ src, carousel, zoom, maxWidth }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const asset = useRef<any>(null);
   const wrapper = useRef<HTMLDivElement>(null);
   const { height } = useRefSize(asset);
   const [ratio, setRatio] = useState({ width: 0, height: 0 });
+  const setWidth = maxWidth ? { maxWidth: maxWidth } : undefined;
   const getPadding = useCallback((): number => {
     if (!wrapper?.current || typeof window === "undefined") return 0;
     const top = window
@@ -42,7 +44,7 @@ const WideScreen: React.FC<{
     <div style={{ height: height + getPadding() }}>
       <div className={classes.wrapper} ref={wrapper}>
         {carousel && src instanceof Array ? (
-          <div ref={asset} className={classes.asset}>
+          <div ref={asset} className={classes.asset} style={setWidth}>
             <CarouselProvider
               naturalSlideWidth={ratio.width}
               naturalSlideHeight={ratio.height}
@@ -75,6 +77,7 @@ const WideScreen: React.FC<{
                   <video
                     ref={asset}
                     className={classes.asset}
+                    style={setWidth}
                     autoPlay
                     muted
                     loop
@@ -83,7 +86,12 @@ const WideScreen: React.FC<{
                     <source src={src} type="video/mp4" />
                   </video>
                 ) : (
-                  <img ref={asset} className={classes.asset} src={src} />
+                  <img
+                    ref={asset}
+                    className={classes.asset}
+                    style={setWidth}
+                    src={src}
+                  />
                 )}
               </>
             )}
