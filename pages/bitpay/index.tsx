@@ -78,8 +78,7 @@ const BitPay: React.FC = () => (
         title="Emails"
         caption="Transactional emails for merchants & payers"
         date="Aug 2018 ~ Jan 2019"
-        link="/bitpay/email"
-        locked
+        link="/bitpay/emails"
       />
       <PostBox
         icon="/logos/bitpay-site.svg"
