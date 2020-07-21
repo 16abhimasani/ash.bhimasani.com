@@ -10,7 +10,7 @@ import {
 import { useRefSize } from "../../utils/hooks";
 import classes from "./wide-screen.module.scss";
 
-type SliderInterfaceEnhanced = SliderInterface & {
+type SliderInterfaceEnhanced = typeof Slider & {
   onClick: () => void;
 };
 
