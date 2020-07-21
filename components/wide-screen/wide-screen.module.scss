@@ -16,6 +16,10 @@
   padding: 36px 24px;
   background-color: $Pale;
 
+  *:focus {
+    outline: none;
+  }
+
   @include mobile {
     padding: 24px;
   }

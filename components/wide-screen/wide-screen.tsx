@@ -10,6 +10,12 @@ import {
 import { useRefSize } from "../../utils/hooks";
 import classes from "./wide-screen.module.scss";
 
+type SliderInterfaceEnhanced = SliderInterface & {
+  onClick: () => void;
+};
+
+const SliderEnhanced = Slider as SliderInterfaceEnhanced;
+
 const WideScreen: React.FC<{
   src: string | string[];
   carousel?: boolean;
@@ -55,7 +61,11 @@ const WideScreen: React.FC<{
               lockOnWindowScroll
               hasMasterSpinner
             >
-              <Slider>
+              <SliderEnhanced
+                onClick={(e: React.MouseEvent<HTMLElement>): void =>
+                  e?.currentTarget?.focus()
+                }
+              >
                 {src.map((file: string, index: number) => (
                   <Slide index={index} key={index}>
                     {zoom ? (
@@ -65,7 +75,7 @@ const WideScreen: React.FC<{
                     )}
                   </Slide>
                 ))}
-              </Slider>
+              </SliderEnhanced>
               <DotGroup className={classes.dots} />
             </CarouselProvider>
           </div>
