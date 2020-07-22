@@ -73,10 +73,10 @@ const BitPayExtensionShop: React.FC = () => (
       <h5 className="end-section">A compact display of essential info</h5>
       <WideScreen
         src={[
-          "/imgs/extension/twitch-brand-page.jpg",
-          "/imgs/extension/amazon-brand-page.jpg",
-          "/imgs/extension/wikipedia-brand-page.jpg",
-          "/imgs/extension/apmex-brand-page.jpg",
+          "/imgs/extension/desktop/twitch-brand-page.jpg",
+          "/imgs/extension/desktop/amazon-brand-page.jpg",
+          "/imgs/extension/desktop/wikipedia-brand-page.jpg",
+          "/imgs/extension/desktop/apmex-brand-page.jpg",
         ]}
         carousel
         zoom
@@ -120,12 +120,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/twitch-brand-page.svg"
+          src="/imgs/extension/brand/twitch-brand-page.svg"
           alt="Twitch Brand Page"
         />
         <img
           width="375"
-          src="/imgs/extension/hotels-brand-page-alt.svg"
+          src="/imgs/extension/brand/hotels-brand-page-alt.svg"
           alt="Hotels.com Brand Page"
         />
       </div>
@@ -151,12 +151,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/wikipedia-brand-page.svg"
+          src="/imgs/extension/brand/wikipedia-brand-page.svg"
           alt="Wikipedia Brand Page"
         />
         <img
           width="375"
-          src="/imgs/extension/mastercard-brand-page.svg"
+          src="/imgs/extension/brand/mastercard-brand-page.svg"
           alt="Mastercard Brand Page"
         />
       </div>
@@ -177,12 +177,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/apmex-brand-page.svg"
+          src="/imgs/extension/brand/apmex-brand-page.svg"
           alt="APMEX Brand Page"
         />
         <img
           width="375"
-          src="/imgs/extension/amazon-brand-page.svg"
+          src="/imgs/extension/brand/amazon-brand-page.svg"
           alt="Amazon Brand Page"
         />
       </div>
@@ -273,12 +273,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/amount-empty.svg"
+          src="/imgs/extension/pay/amount-empty.svg"
           alt="Amount: Empty State"
         />
         <img
           width="375"
-          src="/imgs/extension/amount-awaiting.svg"
+          src="/imgs/extension/pay/amount-awaiting.svg"
           alt="Amount: Awaiting Payment"
         />
       </div>
@@ -303,12 +303,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/amount-discount.svg"
+          src="/imgs/extension/pay/amount-discount.svg"
           alt="Amount: Discount"
         />
         <img
           width="375"
-          src="/imgs/extension/pay-discount.svg"
+          src="/imgs/extension/pay/pay-discount.svg"
           alt="Pay: Discount"
         />
       </div>
@@ -331,10 +331,14 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/amazon-email.svg"
+          src="/imgs/extension/pay/amazon-email.svg"
           alt="Amazon: Enter Email"
         />
-        <img width="375" src="/imgs/extension/settings.svg" alt="Settings" />
+        <img
+          width="375"
+          src="/imgs/extension/settings/settings-email-filled.svg"
+          alt="Settings: Email Filled"
+        />
       </div>
       <div className="lead begin-section end-section">
         <p>
@@ -357,12 +361,12 @@ const BitPayExtensionShop: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/pay-error-toast.svg"
+          src="/imgs/extension/pay/pay-error-toast.svg"
           alt="Enter Amount: Error Toast"
         />
         <img
           width="375"
-          src="/imgs/extension/pay-invoice-error.svg"
+          src="/imgs/extension/pay/pay-invoice-error.svg"
           alt="Awaiting Payment: Error"
         />
       </div>

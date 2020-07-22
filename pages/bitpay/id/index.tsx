@@ -75,7 +75,7 @@ const BitPayID: React.FC = () => (
         login works best when managing multiple accounts (ex. Google). Looking
         forward, key lessons here is to keep things predictable. Forms don’t
         need to be smart; they just need to work. Version 2 will be a full
-        design upgrade that address all usability issues.
+        design upgrade that addresses all usability issues.
       </p>
     </div>
   </motion.main>

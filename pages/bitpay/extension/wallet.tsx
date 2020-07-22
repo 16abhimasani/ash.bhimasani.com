@@ -30,9 +30,9 @@ const BitPayExtensionWallet: React.FC = () => (
       </h5>
       <WideScreen
         src={[
-          "/imgs/extension/wallet-apple.jpg",
-          "/imgs/extension/wallet-nike.jpg",
-          "/imgs/extension/wallet-amazon.jpg",
+          "/imgs/extension/desktop/wallet-apple.jpg",
+          "/imgs/extension/desktop/wallet-nike.jpg",
+          "/imgs/extension/desktop/wallet-amazon.jpg",
         ]}
         carousel
         zoom
@@ -52,12 +52,12 @@ const BitPayExtensionWallet: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/wallet-shop-toast.svg"
+          src="/imgs/extension/wallet/wallet-shop-toast.svg"
           alt="Wallet: Shop Toast"
         />
         <img
           width="375"
-          src="/imgs/extension/wallet-tip-toast.svg"
+          src="/imgs/extension/wallet/wallet-tip-toast.svg"
           alt="Wallet: Tip Toast"
         />
       </div>
@@ -83,12 +83,12 @@ const BitPayExtensionWallet: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/wallet-brand-toast.svg"
+          src="/imgs/extension/wallet/wallet-brand-toast.svg"
           alt="Wallet: Brand Toast"
         />
         <img
           width="375"
-          src="/imgs/extension/wallet-brand-toast-empty.svg"
+          src="/imgs/extension/wallet/wallet-brand-toast-empty.svg"
           alt="Wallet: Empty State"
         />
       </div>
@@ -116,9 +116,9 @@ const BitPayExtensionWallet: React.FC = () => (
       </h5>
       <WideScreen
         src={[
-          "/imgs/extension/card-amazon.jpg",
-          "/imgs/extension/card-delta.jpg",
-          "/imgs/extension/card-amc.jpg",
+          "/imgs/extension/desktop/card-amazon.jpg",
+          "/imgs/extension/desktop/card-delta.jpg",
+          "/imgs/extension/desktop/card-amc.jpg",
         ]}
         carousel
         zoom
@@ -189,12 +189,12 @@ const BitPayExtensionWallet: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/card-amazon.svg"
+          src="/imgs/extension/wallet/card-amazon.svg"
           alt="Gift Card: Amazon"
         />
         <img
           width="375"
-          src="/imgs/extension/archive.svg"
+          src="/imgs/extension/settings/archive.svg"
           alt="Archived Gift Cards"
         />
       </div>
@@ -217,12 +217,12 @@ const BitPayExtensionWallet: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/card-mastercard.svg"
+          src="/imgs/extension/wallet/card-mastercard.svg"
           alt="Gift Card: Mastercard"
         />
         <img
           width="375"
-          src="/imgs/extension/card-edit-balance.svg"
+          src="/imgs/extension/wallet/card-edit-balance.svg"
           alt="Gift Card: Edit Balance"
         />
       </div>
@@ -240,12 +240,12 @@ const BitPayExtensionWallet: React.FC = () => (
       <div className="d-flex">
         <img
           width="375"
-          src="/imgs/extension/card-pending.svg"
+          src="/imgs/extension/wallet/card-pending.svg"
           alt="Gift Card: Pending Confirmation"
         />
         <img
           width="375"
-          src="/imgs/extension/card-pending-tip.svg"
+          src="/imgs/extension/wallet/card-pending-tip.svg"
           alt="Gift Card: Pending Confirmation Tooltip"
         />
       </div>
@@ -257,6 +257,57 @@ const BitPayExtensionWallet: React.FC = () => (
           this happens, its important to make the user feel comfortable that
           they have successfully completed everything on their end and are just
           waiting for finalization.
+        </p>
+      </div>
+
+      <h4 className="begin-section">BitPay ID Perks</h4>
+      <div className="d-flex">
+        <img
+          width="375"
+          src="/imgs/extension/settings/settings.svg"
+          alt="Settings"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/settings/settings-connect-account.svg"
+          alt="Settings: Connect Account"
+        />
+      </div>
+      <div className="lead begin-section end-section">
+        <p>
+          Because we already had consumer accounts in place, I was looking for
+          ways we could add deeper integration to create a cohesive ecosystem.
+          Some of the ideas I had:
+        </p>
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>Sync gift cards across connected devices (mobile wallet)</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">2</div>
+            <div>Immediately push payment to wallet if connected</div>
+          </li>
+        </ol>
+      </div>
+      <div className="d-flex">
+        <img
+          width="375"
+          src="/imgs/extension/settings/settings-awaiting-connection.svg"
+          alt="Settings: Awaiting Connection"
+        />
+        <img
+          width="375"
+          src="/imgs/extension/settings/settings-account-connected.svg"
+          alt="Settings: Account Connected"
+        />
+      </div>
+      <div className="lead begin-section end-section">
+        <p>
+          In the past, I have always been wary of saving data within an
+          extension because I was worried that I could lose something in the
+          case of accidental error. For these types of users, syncing gift cards
+          to an account can provide a degree of comfort.
         </p>
       </div>
     </motion.main>

@@ -45,19 +45,19 @@ const BitPay: React.FC = () => (
 
       <h3 className="begin-section">Products</h3>
       <PostBox
-        icon="/logos/bitpay-ext.svg"
-        title="Pay with BitPay"
-        caption="A browser extension that redefines our payment network"
-        date="Mar 2020 ~ Aug 2020"
-        link="/bitpay/extension"
-      />
-      <PostBox
-        icon="/logos/bitpay-card.svg"
+        icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
         title="Invoice V4"
         caption="Flagship payment gateway powering the network"
         date="Aug 2019 ~ Present"
         link="/bitpay/invoice"
         locked
+      />
+      <PostBox
+        icon="/logos/bitpay-ext.svg"
+        title="Pay with BitPay"
+        caption="A browser extension that redefines our payment network"
+        date="Mar 2020 ~ Aug 2020"
+        link="/bitpay/extension"
       />
       <PostBox
         icon="/logos/bitpay-id.svg"
@@ -86,7 +86,6 @@ const BitPay: React.FC = () => (
         caption="Landing, operational, & product pages"
         date="Aug 2018 ~ Jan 2019"
         link="/bitpay/site"
-        locked
       />
       <PostBox
         icon="/logos/bitpay-support.svg"
