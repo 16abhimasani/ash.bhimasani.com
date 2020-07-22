@@ -3,6 +3,7 @@ import {
   CarouselProvider,
   DotGroup,
   Slider,
+  SliderProps,
   Slide,
   Image as ImageWithoutZoom,
   ImageWithZoom,
@@ -10,11 +11,12 @@ import {
 import { useRefSize } from "../../utils/hooks";
 import classes from "./wide-screen.module.scss";
 
-type SliderInterfaceEnhanced = typeof Slider & {
-  onClick: () => void;
-};
+interface SliderInterfaceEnhanced extends SliderProps {
+  onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
+  children: React.ReactNode;
+}
 
-const SliderEnhanced = Slider as SliderInterfaceEnhanced;
+const SliderEnhanced = Slider as React.ComponentClass<SliderInterfaceEnhanced>;
 
 const WideScreen: React.FC<{
   src: string | string[];
@@ -62,7 +64,7 @@ const WideScreen: React.FC<{
               hasMasterSpinner
             >
               <SliderEnhanced
-                onClick={(e: React.MouseEvent<HTMLElement>): void =>
+                onClick={(e: React.SyntheticEvent<HTMLElement>): void =>
                   e?.currentTarget?.focus()
                 }
               >
