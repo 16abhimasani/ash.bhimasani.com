@@ -39,10 +39,10 @@ export default [
         path: "/bitpay/emails",
         label: "Emails",
       },
-      // {
-      //   path: "/bitpay/site",
-      //   label: "Website",
-      // },
+      {
+        path: "/bitpay/site",
+        label: "Website",
+      },
       // {
       //   path: "/bitpay/support",
       //   label: "Help Desk",
