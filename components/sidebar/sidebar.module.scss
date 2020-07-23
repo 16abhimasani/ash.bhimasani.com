@@ -1,0 +1,49 @@
+@import "mixins";
+@import "variables";
+
+.nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  left: 48px;
+  top: 40px;
+  z-index: 1;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.major {
+  font-size: 16px;
+  font-weight: 400;
+  color: $Blacker;
+  margin: 12px 0;
+  transition: all 250ms ease-in-out;
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+}
+
+.minor {
+  font-size: 14px;
+  font-weight: 400;
+  color: $Grey;
+  margin: 6px 0;
+  transition: all 250ms ease-in-out;
+  transform: translateX(-10px);
+  &:hover {
+    color: $Blue;
+  }
+}
+
+.shift {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(10px);
+}
+
+.active {
+  font-weight: 700;
+  color: $Blacker;
+}

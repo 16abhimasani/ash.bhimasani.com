@@ -2,11 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExtensionHead } from "./index";
 import { fadeInPage } from "../../../animations/page";
+import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayExtensionWallet: React.FC = () => (
   <>
     {ExtensionHead}
+    <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">Wallet Experience Breakdown</h1>
       <h5>Privately Purchase & Securely Store</h5>

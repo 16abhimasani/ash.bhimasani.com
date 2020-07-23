@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
+import SideBar from "../../../components/sidebar/sidebar";
 
 export const ExtensionHead = (
   <Head>
@@ -28,6 +29,7 @@ export const ExtensionHead = (
 const BitPayExtension: React.FC = () => (
   <>
     {ExtensionHead}
+    <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Extension</h1>
       <h5 className="end-section">Redefining the crypto payment experience</h5>

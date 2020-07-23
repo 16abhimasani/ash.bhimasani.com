@@ -25,11 +25,14 @@
   letter-spacing: 1px;
   color: $Grey;
   transition: all 250ms ease-in-out;
+  width: 100px;
   &:hover {
     color: $Blue;
   }
 
-  width: 100px;
+  &__active {
+    color: $Blue;
+  }
 }
 
 .name {

@@ -4,3 +4,10 @@ $mobile-width: 576px;
     @content;
   }
 }
+
+$desktop-width: 1600px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
