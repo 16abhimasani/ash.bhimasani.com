@@ -53,10 +53,10 @@ export default [
         //   },
         // ],
       },
-      // {
-      //   path: "/bitpay/support",
-      //   label: "Help Desk",
-      // },
+      {
+        path: "/bitpay/support",
+        label: "Help Desk",
+      },
     ],
   },
 ];

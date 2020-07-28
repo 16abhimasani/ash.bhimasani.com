@@ -95,7 +95,6 @@ const BitPay: React.FC = () => (
         caption="A streamlined customer service platform"
         date="May 2018 ~ Aug 2018"
         link="/bitpay/support"
-        locked
       />
     </motion.main>
   </>

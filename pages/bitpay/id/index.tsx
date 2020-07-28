@@ -63,7 +63,7 @@ const BitPayID: React.FC = () => (
         </p>
       </div>
       <WideScreen src="/imgs/id/desktop/verify/mac-pro.jpg" />
-      <div className="lead mb-0 begin-section">
+      <div className="lead begin-section">
         <p>
           Stylistically, there were some key restraints: we wanted to definitely
           use a Material theme to stay consistent with the input fields in our
