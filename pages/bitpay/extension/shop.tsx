@@ -205,7 +205,14 @@ const BitPayExtensionShop: React.FC = () => (
 
       <h2 className="begin-section">Directory: Browsing Made Simple</h2>
       <h5 className="end-section">100+ supported sites at your fingertips</h5>
-      <video className="h-align" width="375" autoPlay muted loop playsInline>
+      <video
+        className="h-align d-block"
+        width="375"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
         <source src="/vids/extension/directory.mp4" type="video/mp4" />
       </video>
       <div className="lead begin-section end-section">
@@ -267,7 +274,14 @@ const BitPayExtensionShop: React.FC = () => (
           </li>
         </ol>
       </div>
-      <video className="h-align" width="375" autoPlay muted loop playsInline>
+      <video
+        className="h-align d-block"
+        width="375"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
         <source src="/vids/extension/purchase-flow.mp4" type="video/mp4" />
       </video>
 

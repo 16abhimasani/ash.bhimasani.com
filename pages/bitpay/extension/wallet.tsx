@@ -177,7 +177,7 @@ const BitPayExtensionWallet: React.FC = () => (
         </p>
       </div>
       <video
-        className="h-align end-section"
+        className="h-align d-block end-section"
         width="375"
         autoPlay
         muted

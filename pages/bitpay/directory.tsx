@@ -96,7 +96,7 @@ const BitPayDirectory: React.FC = () => (
 
       <h4 className="begin-section">Merchant Branding</h4>
       <img
-        className="h-align end-section"
+        className="h-align d-block end-section"
         width="100%"
         src="/imgs/directory/merchant-card.svg"
         alt="Directory: Merchant Card"

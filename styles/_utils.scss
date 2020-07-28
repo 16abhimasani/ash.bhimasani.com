@@ -15,7 +15,6 @@
 }
 
 .h-align {
-  display: block;
   margin: auto auto;
 }
 
@@ -54,5 +53,8 @@
 .d {
   &-flex {
     display: flex;
+  }
+  &-block {
+    display: block;
   }
 }

@@ -88,7 +88,14 @@ const BitPayExtension: React.FC = () => (
           use while you browse the web.
         </p>
       </div>
-      <video className="h-align" width="375" autoPlay muted loop playsInline>
+      <video
+        className="h-align d-block"
+        width="375"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
         <source src="/vids/extension/purchase-flow.mp4" type="video/mp4" />
       </video>
 
