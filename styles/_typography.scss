@@ -29,10 +29,30 @@ h3 {
 
 h4 {
   font-size: 16px;
-  font-weight: 700;
-  color: $Black;
-  line-height: 26px;
+  font-weight: 600;
   text-transform: uppercase;
+
+  color: $Black;
+  background-color: $Pale;
+  padding: 12px !important;
+  border-radius: 8px;
+  width: fit-content;
+  height: fit-content;
+
+  &,
+  .begin-section {
+    margin-top: 56px;
+    @include mobile {
+      margin-top: 46px;
+    }
+  }
+  &,
+  .end-section {
+    margin-bottom: 56px;
+    @include mobile {
+      margin-bottom: 46px;
+    }
+  }
 }
 
 h5 {
