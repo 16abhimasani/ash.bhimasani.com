@@ -19,7 +19,7 @@ const BitPayDirectory: React.FC = () => (
           The
           <Anchor
             content="BitPay Directory"
-            href="https://bitpay.com/id/verify?dest=fromWebsite"
+            href="https://bitpay.com/directory"
             spaceBefore
             spaceAfter
             bold

@@ -42,6 +42,16 @@ export default [
       {
         path: "/bitpay/site",
         label: "Website",
+        // children: [
+        //   {
+        //     path: "/bitpay/site/wallet",
+        //     label: "Mobile App",
+        //   },
+        //   {
+        //     path: "/bitpay/site/team",
+        //     label: "Careers",
+        //   },
+        // ],
       },
       // {
       //   path: "/bitpay/support",
