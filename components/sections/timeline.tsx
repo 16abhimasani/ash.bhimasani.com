@@ -16,14 +16,15 @@ const Timeline: React.FC = () => (
       title="Appsketiers"
       caption="Director of Development & UX"
       date="Aug 2017 ~ Aug 2018"
-      link="/appsketiers"
+      link="/"
     />
     <PostBox
       icon="/logos/georgia-tech.svg"
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & Media"
       date="2016 ~ 2019"
-      link="/posts/gatech"
+      link="https://www.usnews.com/best-graduate-schools/top-science-schools/georgia-institute-of-technology-139755"
+      newTab
     />
     <PostBox
       icon="/logos/drexel.png"
