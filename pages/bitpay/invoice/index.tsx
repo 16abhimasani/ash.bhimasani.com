@@ -23,6 +23,7 @@ const BitPayInvoice: React.FC = () => (
         title="Select Wallet"
         caption="User experience tailoring & analytics"
         link="/bitpay/invoice/select"
+        locked
       />
       <PostBox
         icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
@@ -42,48 +43,86 @@ const BitPayInvoice: React.FC = () => (
       <h3 className="begin-section">Overview</h3>
       <div className="lead mb-0 end-section">
         <p>
+          The
           <Anchor
-            content="BitPay Invoice"
-            href="https://bitpay.com/id/verify?dest=fromWebsite"
+            content="Invoice"
+            href="https://bitpay.com/demos"
+            spaceBefore
             spaceAfter
             bold
           />
-          was a major initiative that we launched in the summer of 2019. Up
-          until then, we had a fully segmented account system. Businesses got
-          business accounts and debit card users got card accounts. With BitPay
-          ID, we wanted to consolidate and pave the way for an immersive
-          consumer ecosystem. To do this, we needed a brand new onboarding
-          system that funneled users accordingly and incorporated KYC when
-          applicable.
+          has really been the face of BitPay for a majority of the company's
+          history. Both our
+          <Anchor
+            content="wallet"
+            href="https://bitpay.com/wallet"
+            spaceBefore
+            spaceAfter
+          />
+          and
+          <Anchor
+            content="debit card"
+            href="https://bitpay.com/card"
+            spaceBefore
+            spaceAfter
+          />
+          have a solid user base but we are still mostly known as a blockchain
+          payment processing company.
         </p>
         <p>
-          This was an extremely challenging and fun project that served as my
-          first real confrontation with the balance of aesthetics and
-          experience. At inception, the idea was to create a bare-bones, minimal
-          login flow with single-purpose states. We were confident that by
-          isolating users by their email, we could conveniently funnel users
-          based on their status.
+          Throughout the years, the Invoice has remained as the keystone of the
+          business, serving either as the main interface for businesses to
+          receive crypto payments or as the underlying service for debit / gift
+          cards.
         </p>
+        <p>
+          When are I first joined BitPay, the invoice was a simple utility,
+          allowing a user to enter an email, select BTC or BCH, and then pay
+          with a Payment Protocol compatible wallet. I was actually pretty
+          surprised that we did not support P2P payments but quickly learned the
+          history of the problem.
+        </p>
+        <p>
+          Since then, things have definitely changed and luckily I have had the
+          opportunity to be heavily involved in every major initiative. Below
+          are some noteworthy upgrades since 2018.
+        </p>
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>Coinbase Connect Support (OAuth)</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">2</div>
+            <div>P2P Support (Pay to Address)</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">3</div>
+            <div>ETH, USDC, BUSD, PAX, GUSD (Web3) Support</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">4</div>
+            <div>BitPay Wallet Optimizations</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">5</div>
+            <div>Enhanced Branding (Logos)</div>
+          </li>
+          <li className="list__item">
+            <div className="list__item__number">6</div>
+            <div>XRP Support</div>
+          </li>
+        </ol>
       </div>
       <WideScreen src="/imgs/invoice/pay/universal-mode-desktop.jpg" />
       <div className="lead begin-section">
         <p>
-          Stylistically, there were some key restraints: we wanted to definitely
-          use a Material theme to stay consistent with the input fields in our
-          Wallet; additionally I generally avoided graphics or illustrations to
-          reduce dependencies. Avoiding graphics ended up being the right call
-          for this iteration however, I believe flat material inputs are not
-          well suited to a desktop experience; on mobile they feel great (like
-          writing on lined paper).
+          Above is a mild teaser of the V4 design system for Invoice as well
+          some of the BitPay Wallet optimizations that are coming soon.
         </p>
         <p>
-          There was 1 distinct disadvantage to the single-purpose style that was
-          not immediately obvious; we changed the optimal clicks for login from
-          1 to 2 (assuming password manager in use). In retrospect, this style
-          of login works best when managing multiple accounts (ex. Google).
-          Looking forward, key lessons here is to keep things predictable. Forms
-          don’t need to be smart; they just need to work. Version 2 will be a
-          full design upgrade that addresses all usability issues.
+          The UI Breakdowns above aim to be detailed examinations into the
+          unique challenges of designing a crypto payment experience.
         </p>
       </div>
     </motion.main>

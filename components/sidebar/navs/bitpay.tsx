@@ -7,18 +7,18 @@ export default [
         path: "/bitpay/invoice",
         label: "Invoice",
         children: [
-          {
-            path: "/bitpay/invoice/select",
-            label: "Select",
-          },
-          {
-            path: "/bitpay/invoice/pay",
-            label: "Pay",
-          },
-          {
-            path: "/bitpay/invoice/receipt",
-            label: "Receipt",
-          },
+          // {
+          //   path: "/bitpay/invoice/select",
+          //   label: "Select",
+          // },
+          // {
+          //   path: "/bitpay/invoice/pay",
+          //   label: "Pay",
+          // },
+          // {
+          //   path: "/bitpay/invoice/receipt",
+          //   label: "Receipt",
+          // },
         ],
       },
       {
