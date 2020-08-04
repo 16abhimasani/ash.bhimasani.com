@@ -4,6 +4,24 @@ export default [
     label: "BitPay",
     children: [
       {
+        path: "/bitpay/invoice",
+        label: "Invoice",
+        children: [
+          {
+            path: "/bitpay/invoice/select",
+            label: "Select",
+          },
+          {
+            path: "/bitpay/invoice/pay",
+            label: "Pay",
+          },
+          {
+            path: "/bitpay/invoice/receipt",
+            label: "Receipt",
+          },
+        ],
+      },
+      {
         path: "/bitpay/extension",
         label: "Extension",
         children: [
@@ -23,11 +41,11 @@ export default [
         children: [
           {
             path: "/bitpay/id/auth",
-            label: "Authentication",
+            label: "Authenticate",
           },
           {
             path: "/bitpay/id/verify",
-            label: "Verification",
+            label: "Verify",
           },
         ],
       },
