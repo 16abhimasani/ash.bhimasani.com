@@ -23,7 +23,6 @@ const BitPayInvoice: React.FC = () => (
         title="Select Wallet"
         caption="User experience tailoring & analytics"
         link="/bitpay/invoice/select"
-        locked
       />
       <PostBox
         icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
