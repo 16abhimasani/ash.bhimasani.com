@@ -141,7 +141,9 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
 
       <section>
         <h2 className="begin-section">Payment Tips</h2>
-        <h5 className="end-section">Soft optimizations for P2P support</h5>
+        <h5 className="end-section">
+          Guiding the experience with helpful info
+        </h5>
         <WideScreen
           src={[
             "/imgs/invoice/select/wallet-info--cash-app.png",
@@ -152,9 +154,17 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            To handle the common pitfalls with payments, the Info state is a
+            simple way to chuck in helpful information. Even Payment Protocol
+            enabled wallets like Bitcoin Core / ABC are a bit tricky to use when
+            it comes to pasting in links.
+          </p>
+          <p>
+            For other providers like Cash App, we use this state to prevent
+            common errors we see. In the case of Coinbase Wallet, the best way
+            to ensure an accurate P2P payment experience is to scan the BIP21
+            URI. We often saw users manually entering into the wallet's send
+            flow rather than scanning the QR code.
           </p>
         </div>
       </section>
