@@ -23,9 +23,7 @@ const Anchor: React.FC<{
     target={newTab ? "_blank" : "_self"}
     rel={newTab ? "noopener noreferrer" : ""}
   >
-    {spaceBefore && <>&nbsp;</>}
-    {content}
-    {spaceAfter && <>&nbsp;</>}
+    {`${spaceBefore ? " " : ""}${content}${spaceAfter ? " " : ""}`}
   </a>
 );
 
