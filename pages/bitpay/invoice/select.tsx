@@ -94,7 +94,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
 
       <section>
         <h2 className="begin-section">Coinbase Connect</h2>
-        <h5 className="end-section">A minimal, walkthrough-like experience</h5>
+        <h5 className="end-section">Instant, zero fee payments</h5>
         <WideScreen
           src={[
             "/imgs/invoice/coinbase/coinbase-connect.png",
@@ -107,9 +107,34 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            As soon as we enabled P2P payments via Wallet Selection, we finally
+            had some insight into what was really going on with users' payment
+            experiences. Pretty quickly, Coinbase rose to our 4th most popular
+            payment method but with a ~30% error rate.
+          </p>
+          <p>
+            Basically, around 30% of Coinbase users were making some kind of
+            error when paying due to the decoupled nature of P2P payments (push
+            vs. pull). Common errors included mistakenly entering in a USD
+            amount when withdrawing or a delayed transfer.
+          </p>
+          <p>
+            Coinbase's
+            <Anchor
+              content="Connect API"
+              href="https://developers.coinbase.com/docs/wallet/coinbase-connect"
+              spaceBefore
+              spaceAfter
+            />
+            seemed like the perfect solution to address all our problems. By
+            directly connecting to a user's account, we can initiate an exact
+            withdrawal while still requiring manual authorization by the user
+            (secure & precise).
+          </p>
+          <p>
+            The end result is an instant, errorless payment experience that
+            bypasses the usual issues of dealing with crypto addresses and exact
+            decimal amounts.
           </p>
         </div>
       </section>
