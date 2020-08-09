@@ -171,7 +171,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
 
       <section>
         <h2 className="begin-section">Feedback Loops</h2>
-        <h5 className="end-section">A minimal, walkthrough-like experience</h5>
+        <h5 className="end-section">Figuring out what users want</h5>
         <WideScreen
           src={[
             "/imgs/invoice/select/currency-filtering.png",
@@ -182,16 +182,21 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            As I mentioned previously, a large focus of ours was making sure we
+            were capturing as much as we could about what our users wanted. If
+            you can't find your wallet, I included a bailout option; clicking on
+            "I don't see my wallet" let's the user submit a response.
+          </p>
+          <p>
+            We also keep track of what people are searching so we can
+            preemptively investigate a payment method before a request.
           </p>
         </div>
       </section>
 
       <section>
-        <h2 className="begin-section">Wallet Connections</h2>
-        <h5 className="end-section">A minimal, walkthrough-like experience</h5>
+        <h2 className="begin-section">More Wallet Connections</h2>
+        <h5 className="end-section">Bringing seamless payments to others</h5>
         <WideScreen
           src={[
             "/imgs/invoice/select/metamask-connect.png",
@@ -203,9 +208,10 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            The screens above are a sneak peak of more direct integrations
+            coming soon to the invoice. MetaMask is already a supported wallet
+            but the above is an example of the in-browser "connection pending"
+            UI.
           </p>
         </div>
       </section>
