@@ -322,6 +322,8 @@ const BitPayExtensionShop: React.FC = () => (
           </p>
         </div>
 
+        <WideScreen src="/vids/extension/pay-with-coinbase.mp4" />
+
         <h4 className="begin-section">Discount Handling</h4>
         <div className="d-flex">
           <img
