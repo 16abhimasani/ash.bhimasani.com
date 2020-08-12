@@ -137,12 +137,18 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             decimal amounts.
           </p>
         </div>
-        <img
-          className="end-section"
-          width="100%"
-          src="/imgs/invoice/coinbase/brian-armstrong-bitpay-coinbase-tweet.png"
-          alt="Brian Armstrong's Tweet about Coinbase support from BitPay"
-        />
+        <a
+          href="https://twitter.com/brian_armstrong/status/1293626788472475648"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="end-section"
+            width="100%"
+            src="/imgs/invoice/coinbase/brian-armstrong-bitpay-coinbase-tweet.png"
+            alt="Brian Armstrong's Tweet about Coinbase support from BitPay"
+          />
+        </a>
       </section>
 
       <section>
