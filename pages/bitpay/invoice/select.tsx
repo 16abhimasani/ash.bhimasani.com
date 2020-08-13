@@ -211,6 +211,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         <h5 className="end-section">Bringing seamless payments to others</h5>
         <WideScreen
           src={[
+            "/imgs/invoice/select/wallet-link.png",
             "/imgs/invoice/select/metamask-connect.png",
             "/imgs/invoice/select/wallet-connect.png",
             "/imgs/invoice/select/ledger-connect.png",
