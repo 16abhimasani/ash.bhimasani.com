@@ -151,7 +151,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         </a>
       </section>
 
-      <section>
+      <section className="begin-section">
         <h2 className="begin-section">Payment Tips</h2>
         <h5 className="end-section">
           Guiding the experience with helpful info
@@ -172,16 +172,31 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             it comes to pasting in links.
           </p>
           <p>
+            In the case of Coinbase Wallet, the best way to ensure an accurate
+            P2P payment experience is to scan the BIP21 URI. We often saw users
+            manually entering into the wallet's send flow rather than scanning
+            the QR code.
+          </p>
+        </div>
+        <WideScreen src="/imgs/invoice/select/cash-app-conversion-exception-graph.png" />
+        <div className="lead begin-section end-section">
+          <p>
             For other providers like Cash App, we use this state to prevent
-            common errors we see. In the case of Coinbase Wallet, the best way
-            to ensure an accurate P2P payment experience is to scan the BIP21
-            URI. We often saw users manually entering into the wallet's send
-            flow rather than scanning the QR code.
+            common errors we see. The graph above is demonstration of the
+            effectiveness of this state. The inflection point around February
+            2020 is when we implemented an enhanced Payment Instructions state
+            for Cash App. You can clearly see the uptrend in conversions
+            (actually paying the Invoice) and an overall downtrend in payment
+            errors (sending less or more money than needed).
+          </p>
+          <p>
+            Looking back on the data over the last year, it is definitely
+            amazing what a simple change like this can do!
           </p>
         </div>
       </section>
 
-      <section>
+      <section className="begin-section">
         <h2 className="begin-section">Feedback Loops</h2>
         <h5 className="end-section">Figuring out what users want</h5>
         <WideScreen
@@ -206,7 +221,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
         </div>
       </section>
 
-      <section>
+      <section className="begin-section">
         <h2 className="begin-section">More Wallet Connections</h2>
         <h5 className="end-section">Bringing seamless payments to others</h5>
         <WideScreen
