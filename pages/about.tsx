@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../animations/page";
+import Anchor from "../components/utils/anchor";
 
 const AboutMe: React.FC = () => (
   <motion.main className="body" {...fadeInPage}>
@@ -8,6 +9,7 @@ const AboutMe: React.FC = () => (
     <div className="lead end-section">
       I am a product designer & software engineer with special interests in UX,
       growth hacking, and business strategy currently working
+      <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
     </div>
     <img
       className="end-section"

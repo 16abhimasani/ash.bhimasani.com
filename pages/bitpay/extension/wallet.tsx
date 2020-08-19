@@ -15,15 +15,17 @@ const BitPayExtensionWallet: React.FC = () => (
         <h5>Privately Purchase & Securely Store</h5>
         <div className="lead begin-section mb-0 end-section">
           <p>
-            The cool thing about this form of gift card purchase is that Claim
-            Code lives entirely on the device and is not exposed via email or
-            account like many other gift card services. This means that this is
-            the closest thing to non-custodial conversion of crypto to fiat.
+            The cool thing about gift card purchases is that the Claim Codes
+            live entirely on the device and are not exposed via email or an
+            account like many other services. Because of this unique property,
+            we can treat gift cards as a sort of non-custodial, crypto-to-fiat
+            conversion tool.
           </p>
           <p>
-            To highlight this, I designed a simple Wallet and Gift Card Details
-            views that compactly display everything you need by remaining
-            elegant and branded.
+            In an effort to maximize the gift card purchasing experience, I
+            focused heavily on the Wallet and Card Details views. The result is
+            a compact configuration of everything you need while remaining
+            highly branded.
           </p>
         </div>
       </section>
@@ -44,13 +46,19 @@ const BitPayExtensionWallet: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            One of the surprising but nonetheless interesting things I brought
-            to BitPay was a heavy emphasis on utilizing merchant branding. Until
+            One of the major initiatives I brought to BitPay was a heavy
+            emphasis on utilizing merchant branding wherever possible. Until
             recently, we never presented a merchant's logo on our payment
-            gateway (our flagship product) until I rolled up my sleeves and
-            manually added them. I wanted to take this to the next level with
-            the extension with a beautifully crafted Gift Card Slot for every
-            brand supported.
+            gateway. The Directory project was the first instance of this idea
+            so the branding work I did then laid the foundation for this
+            project.
+          </p>
+          <p>
+            I knew I wanted to use even more branding for this project;
+            imitating the look of a physical gift card turned out to be the
+            perfect way to do this. Luckily, the Wallet app had been doing a
+            version of this for sometime so a lot of the heavy lifting in terms
+            of mastering assets was already taken care of.
           </p>
         </div>
 
@@ -69,19 +77,22 @@ const BitPayExtensionWallet: React.FC = () => (
         </div>
         <div className="lead begin-section end-section">
           <p>
-            For this page, I placed an emphasis on keeping the user engaged and
-            letting them organically explore. The first place I looked to for
-            inspiration was the iOS App Store; you can see the heavy influence
-            in the layout of the Title + Caption + Logo as well as the
-            <span className="f-600">&nbsp;You Might Also Like</span> section
+            An important thing to first note is that the overall structure of
+            the app is broken up into 3 parts: the Wallet, Shop, and Settings
+            tabs at the bottom. Even though users will be spending the majority
+            of their time in the Shop tab, I wanted to deliver an amazing wallet
+            experience that felt on-par with any major finance app.
           </p>
           <p>
-            We often get "I didn't know X accept bitcoin?" so for directly
-            integrated merchants, I made
-            <span className="f-600">&nbsp;Payment Instructions</span> a
-            first-class citizen. The details attempt to concisely describe how
-            to find BitPay as a payment option on a given site without taking up
-            too much space.
+            The tip section at the top aims to be a centralized way to guide a
+            user as they use the app. If the we detect that the user has
+            multiple codes, then we can conveniently inform them about the
+            Archival feature.
+          </p>
+          <p>
+            Alternatively, the default Shop Toast serves as simple "mission
+            statement" of the app; reminding users of the unique capability of
+            the extension.
           </p>
         </div>
 
@@ -100,19 +111,16 @@ const BitPayExtensionWallet: React.FC = () => (
         </div>
         <div className="lead begin-section end-section">
           <p>
-            For this page, I placed an emphasis on keeping the user engaged and
-            letting them organically explore. The first place I looked to for
-            inspiration was the iOS App Store; you can see the heavy influence
-            in the layout of the Title + Caption + Logo as well as the
-            <span className="f-600">&nbsp;You Might Also Like</span> section
+            When you visit a supported site and then open the app, I needed a 2
+            starting states. One would be utilized if the user had no available
+            credits and the other would be the case above where we need to
+            simply display a CTA above your available credits.
           </p>
           <p>
-            We often get "I didn't know X accept bitcoin?" so for directly
-            integrated merchants, I made
-            <span className="f-600">&nbsp;Payment Instructions</span> a
-            first-class citizen. The details attempt to concisely describe how
-            to find BitPay as a payment option on a given site without taking up
-            too much space.
+            The reasoning behind this is pretty simple; we can assume that
+            viewing already available codes is a higher priority than viewing a
+            "Buy Now" flow. For this reason, I kept the Availability Toast very
+            compact, sitting just above the wallet so you don't miss anything.
           </p>
         </div>
       </section>
