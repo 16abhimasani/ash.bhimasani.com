@@ -115,6 +115,33 @@ h5 {
   }
 }
 
+.breakdown {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .col {
+    width: 172px;
+  }
+  hgroup {
+    h5 {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2222229e;
+      margin-bottom: 4px;
+    }
+    color: #222;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+}
+
 blockquote {
   display: flex;
   justify-content: center;

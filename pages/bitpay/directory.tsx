@@ -33,6 +33,34 @@ const BitPayDirectory: React.FC = () => (
           crypto and we finally had a chance to showcase the company's efforts
           over the years.
         </p>
+        <div className="breakdown" style={{ margin: "40px 0" }}>
+          <div className="col">
+            <hgroup>
+              <h5>Role</h5>
+              Designer & Developer
+            </hgroup>
+
+            <hgroup>
+              <h5>Team</h5>Solo
+            </hgroup>
+          </div>
+          <div className="col">
+            <hgroup>
+              <h5>Scope</h5>Mar - Apr 2019
+            </hgroup>
+
+            <hgroup>
+              <h5>What I did</h5>
+              Web Design & Dev, Content, Branding
+            </hgroup>
+          </div>
+          <div className="col">
+            <hgroup>
+              <h5>Stack</h5>
+              Vue, Adobe XD
+            </hgroup>
+          </div>
+        </div>
         <p>
           The task was simple. I needed to design and build a page where we can
           display some high brand value partners (

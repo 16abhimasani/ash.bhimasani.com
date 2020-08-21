@@ -37,6 +37,35 @@ const BitPayEmails: React.FC = () => (
         </p>
       </div>
 
+      <div className="breakdown end-section">
+        <div className="col">
+          <hgroup>
+            <h5>Role</h5>
+            Designer & Developer
+          </hgroup>
+
+          <hgroup>
+            <h5>Team</h5>1 Developer
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Scope</h5>Aug - Jan 2019
+          </hgroup>
+
+          <hgroup>
+            <h5>What I did</h5>
+            Email Design & Dev, Content, Branding
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Stack</h5>
+            Foundation, Adobe XD
+          </hgroup>
+        </div>
+      </div>
+
       <h2 className="begin-section">Emails Receipts</h2>
       <h5 className="end-section">Making crypto feel more familiar</h5>
       <WideScreen

@@ -62,6 +62,34 @@ const BitPayID: React.FC = () => (
           based on their status.
         </p>
       </div>
+      <div className="breakdown end-section">
+        <div className="col">
+          <hgroup>
+            <h5>Role</h5>
+            Lead Product Designer
+          </hgroup>
+
+          <hgroup>
+            <h5>Team</h5>2 Developers
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Scope</h5>Apr - Aug 2019
+          </hgroup>
+
+          <hgroup>
+            <h5>What I did</h5>
+            UX Research, Interface Design
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Stack</h5>
+            Angular + TS, Redux, Sketch, InVision
+          </hgroup>
+        </div>
+      </div>
       <WideScreen src="/imgs/id/desktop/verify/mac-pro.jpg" />
       <div className="lead begin-section">
         <p>

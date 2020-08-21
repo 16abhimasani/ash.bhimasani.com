@@ -11,6 +11,34 @@ const BitPayHelpDesk: React.FC = () => (
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Help Wizard</h1>
       <h5 className="end-section">A streamlined customer service platform</h5>
+      <div className="breakdown end-section">
+        <div className="col">
+          <hgroup>
+            <h5>Role</h5>
+            Designer & Developer
+          </hgroup>
+
+          <hgroup>
+            <h5>Team</h5>Solo
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Scope</h5>July - Aug 2018
+          </hgroup>
+
+          <hgroup>
+            <h5>What I did</h5>
+            Web Design & Dev, Backend, Content
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Stack</h5>
+            Angular, Ionic, Adobe XD
+          </hgroup>
+        </div>
+      </div>
       <WideScreen
         src={[
           "/imgs/support/home.svg",

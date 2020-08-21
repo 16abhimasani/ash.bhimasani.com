@@ -21,7 +21,7 @@ a {
 }
 
 .layout {
-  max-width: 648px;
+  max-width: $MAX_WIDTH;
   margin: 0 auto;
   padding: 0 24px;
 }

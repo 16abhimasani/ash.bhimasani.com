@@ -113,6 +113,34 @@ const BitPayInvoice: React.FC = () => (
           </li>
         </ol>
       </div>
+      <div className="breakdown end-section">
+        <div className="col">
+          <hgroup>
+            <h5>Role</h5>
+            Lead Product Designer, Developer
+          </hgroup>
+
+          <hgroup>
+            <h5>Team</h5>3 Developers
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Scope</h5>Jan 2019 ~
+          </hgroup>
+
+          <hgroup>
+            <h5>What I did</h5>
+            UX Research, Interface Design, Development, Animations, Branding
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Stack</h5>
+            Angular + TS, Redux, Sketch, InVision
+          </hgroup>
+        </div>
+      </div>
       <WideScreen src="/imgs/invoice/pay/universal-mode-desktop.jpg" />
       <div className="lead begin-section">
         <p>

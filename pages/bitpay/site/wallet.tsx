@@ -19,6 +19,34 @@ const BitPayWalletSite: React.FC = () => (
           bold
         />
       </h5>
+      <div className="breakdown end-section">
+        <div className="col">
+          <hgroup>
+            <h5>Role</h5>
+            Designer & Developer
+          </hgroup>
+
+          <hgroup>
+            <h5>Team</h5>1 Developer
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Scope</h5>Jan - Feb 2019
+          </hgroup>
+
+          <hgroup>
+            <h5>What I did</h5>
+            Web Design & Dev, Content, Branding
+          </hgroup>
+        </div>
+        <div className="col">
+          <hgroup>
+            <h5>Stack</h5>
+            Vue, Adobe XD
+          </hgroup>
+        </div>
+      </div>
       <WideScreen src="/imgs/site/wallet-page.png" />
       <div className="lead begin-section end-section">
         <p>

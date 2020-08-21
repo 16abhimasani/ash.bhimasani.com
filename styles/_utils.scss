@@ -18,6 +18,11 @@
   margin: auto auto;
 }
 
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 .p {
   &t {
     &-0 {
