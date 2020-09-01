@@ -11,10 +11,10 @@ export default [
             path: "/bitpay/invoice/select",
             label: "Select",
           },
-          // {
-          //   path: "/bitpay/invoice/pay",
-          //   label: "Pay",
-          // },
+          {
+            path: "/bitpay/invoice/pay",
+            label: "Pay",
+          },
           // {
           //   path: "/bitpay/invoice/receipt",
           //   label: "Receipt",

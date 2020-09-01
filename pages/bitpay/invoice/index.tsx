@@ -27,9 +27,8 @@ const BitPayInvoice: React.FC = () => (
       <PostBox
         icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
         title="Pay with Crypto"
-        caption="Utilitarian interface for acceptance"
+        caption="Compact utility for acceptance"
         link="/bitpay/invoice/pay"
-        locked
       />
       <PostBox
         icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
