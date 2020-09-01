@@ -141,7 +141,7 @@ const BitPayInvoice: React.FC = () => (
           </hgroup>
         </div>
       </div>
-      <WideScreen src="/imgs/invoice/pay/universal-mode-desktop.jpg" />
+      <WideScreen src="/imgs/invoice/pay/universal/mac-pro.jpg" />
       <div className="lead begin-section">
         <p>
           Above is a mild teaser of the V4 design system for Invoice as well
