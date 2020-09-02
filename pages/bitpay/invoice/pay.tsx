@@ -245,7 +245,7 @@ const BitPayInvoicePay: React.FC = () => (
           ]}
           carousel
         />
-        <div className="lead begin-section end-section">
+        <div className="lead begin-section">
           <p>
             The consistency of the upgrade / downgrade experience between PayPro
             and P2P was essential so the main form the Invoice takes is largely
@@ -261,6 +261,14 @@ const BitPayInvoicePay: React.FC = () => (
             Helper Toast to guide the user.
           </p>
         </div>
+        <h4>V3 (Old Design)</h4>
+        <img
+          className="h-align d-block"
+          width="350"
+          height="100%"
+          src="/imgs/invoice/v3/pay.svg"
+          alt="V3 Paid State"
+        />
         <h3 className="begin-section">2 Types of Scanning</h3>
         <div className="lead end-section">
           <ol className="list">
@@ -429,7 +437,7 @@ const BitPayInvoicePay: React.FC = () => (
           width="350"
           height="100%"
           src="/imgs/invoice/pay/universal/mobile.png"
-          alt="PayPro Mobile Toast"
+          alt="Universal Mode Mobile Toast"
         />
       </section>
     </motion.main>

@@ -35,7 +35,6 @@ const BitPayInvoice: React.FC = () => (
         title="Payment Receipt"
         caption="Post-payment handling"
         link="/bitpay/invoice/receipt"
-        locked
       />
 
       <h3 className="begin-section">Overview</h3>
