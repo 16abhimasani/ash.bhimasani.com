@@ -1434,10 +1434,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
-"@types/node@14.6.2":
-  version "14.6.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.6.2.tgz#264b44c5a28dfa80198fc2f7b6d3c8a054b9491f"
-  integrity sha512-onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==
+"@types/node@14.6.4":
+  version "14.6.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.6.4.tgz#a145cc0bb14ef9c4777361b7bbafa5cf8e3acb5a"
+  integrity sha512-Wk7nG1JSaMfMpoMJDKUsWYugliB2Vy55pdjLpmLixeyMi7HizW2I/9QoxsPCkXl3dO+ZOVqPumKaDUv5zJu2uQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -3641,10 +3641,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@2.6.5:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-2.6.5.tgz#a1d5288b264608b34c57ade8b433cfae3ba21fcc"
-  integrity sha512-uOzhDgS5txkm2LEpGSKf97TwMy38G2ZKBvvkOvBPvHOmjrY1YCDTmVkOyMT6NppurCFUdiHKiRvP/FdXfWg3Qw==
+framer-motion@2.6.6:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-2.6.6.tgz#49b52c58cfab708f9e743393c714806980b0030f"
+  integrity sha512-uSglqXNmJJ2YD0lq3x3ZLM7mwgwVNwoo6B3CAjeil4GJFDcENEwKNdGVMB53TbsFZwPiBLlcm9gJPQV1f9144w==
   dependencies:
     framesync "^4.0.4"
     hey-listen "^1.0.8"
@@ -5645,10 +5645,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-pure-react-carousel@^1.27.1:
-  version "1.27.1"
-  resolved "https://registry.yarnpkg.com/pure-react-carousel/-/pure-react-carousel-1.27.1.tgz#33cab58c141a75b138d1715c84369e6f523b37d7"
-  integrity sha512-FAWT9xGzktXBokOmHNxuTY4KzJOyZFtOpU725aPB71yThB/STuVqZXP/WYnG/Uzp2ydbas2HfaFHGAXKy/0ezQ==
+pure-react-carousel@1.27.2:
+  version "1.27.2"
+  resolved "https://registry.yarnpkg.com/pure-react-carousel/-/pure-react-carousel-1.27.2.tgz#1da31e17ba0dc6a76115e1ba21de46d869c8ac31"
+  integrity sha512-/dNrQfEmAYcEf9XAAzztiKxhYDYJzORVou0QE/rzeQDKI4AgDrMreiAluawyUfCMcXLxYQCm0cBjIQEafUDJgA==
   dependencies:
     "@babel/runtime" "^7.5.5"
     deep-freeze "0.0.1"
