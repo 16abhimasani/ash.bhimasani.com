@@ -262,13 +262,17 @@ const BitPayInvoicePay: React.FC = () => (
           </p>
         </div>
         <h4>V3 (Old Design)</h4>
-        <img
-          className="h-align d-block"
-          width="350"
-          height="100%"
-          src="/imgs/invoice/v3/pay.svg"
-          alt="V3 Paid State"
-        />
+        <video
+          className="h-align d-block end-section"
+          width="500"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/invoice/v3-qr.mp4" type="video/mp4" />
+        </video>
+
         <h3 className="begin-section">2 Types of Scanning</h3>
         <div className="lead end-section">
           <ol className="list">
@@ -357,6 +361,16 @@ const BitPayInvoicePay: React.FC = () => (
             Amount, and Miner Fees!
           </p>
         </div>
+        <video
+          className="h-align d-block end-section"
+          width="500"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/invoice/oauth-details.mp4" type="video/mp4" />
+        </video>
 
         <h3 className="begin-section">OAuth Exchanges (Coinbase)</h3>
         <WideScreen
