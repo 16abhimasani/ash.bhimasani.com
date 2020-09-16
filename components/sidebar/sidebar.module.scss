@@ -9,7 +9,7 @@
   top: 40px;
   z-index: 1;
 
-  @include desktop {
+  @media (min-width: $WIDE_MAX_WIDTH + 56px) {
     display: flex;
   }
 }

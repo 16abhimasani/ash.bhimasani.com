@@ -3,7 +3,7 @@
 
 .asset {
   width: 100%;
-  max-width: 1200px;
+  max-width: $WIDE_MAX_WIDTH;
 }
 
 .wrapper {

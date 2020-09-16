@@ -11,6 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  @media (min-width: $WIDE_MAX_WIDTH) and (max-width: $DESKTOP_WIDTH) {
+    zoom: 100% - 15%;
+  }
+}
+
 a {
   color: initial;
   text-decoration: none;

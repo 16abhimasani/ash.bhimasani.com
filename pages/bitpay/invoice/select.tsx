@@ -161,6 +161,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             "/imgs/invoice/select/wallet-info--cash-app.png",
             "/imgs/invoice/select/wallet-info--bitcoin-core.png",
             "/imgs/invoice/select/wallet-info--coinbase-wallet.png",
+            "/imgs/invoice/select/select-currency.png",
           ]}
           carousel
         />
