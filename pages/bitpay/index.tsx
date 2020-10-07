@@ -55,8 +55,8 @@ const BitPay: React.FC = () => (
       />
       <PostBox
         icon="/logos/bitpay-ext.svg"
-        title="Pay with BitPay"
-        caption="A browser extension that redefines our payment network"
+        title="Browser Extension"
+        caption="Convert crypto to prepaid cards instantly & anonymously"
         date="Mar 2020 ~ Aug 2020"
         link="/bitpay/extension"
       />

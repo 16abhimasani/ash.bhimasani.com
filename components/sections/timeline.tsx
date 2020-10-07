@@ -7,7 +7,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
-      caption="Product Designer & Frontend Engineer"
+      caption="Software Engineer & Product Designer"
       date="Aug 2018 ~ Present"
       link="/bitpay"
     />

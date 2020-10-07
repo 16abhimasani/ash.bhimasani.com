@@ -178,8 +178,8 @@ const BitPayInvoiceReceipt: React.FC = () => (
         <WideScreen src="/imgs/invoice/receipt/low-fee.png" />
         <div className="lead begin-section">
           <p>
-            Lastly, for the Low Fee payment state, I wanted to reduce the
-            heavily language while still providing some info to the user of the
+            Lastly, for the Low Fee payment state, I wanted to reduce the heavy
+            language while still providing some info to the user of the
             situation. Again, a simple mutation of the header, color, and icon
             is all that is needed to prompt a "Caution" state. Low fee payments
             can sometimes end up failing when the miner fee network spikes. With
