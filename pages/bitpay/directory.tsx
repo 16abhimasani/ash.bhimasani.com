@@ -9,7 +9,7 @@ const BitPayDirectory: React.FC = () => (
   <>
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
-      <h1 className="begin-section pt-0">BitPay Directory</h1>
+      <h1 className="begin-section pt-0">Merchant Directory</h1>
       <h5 className="end-section">
         A curated directory of where to use crypto
       </h5>
@@ -18,7 +18,7 @@ const BitPayDirectory: React.FC = () => (
         <p>
           The
           <Anchor
-            content="BitPay Directory"
+            content="Merchant Directory"
             href="https://bitpay.com/directory"
             spaceBefore
             spaceAfter

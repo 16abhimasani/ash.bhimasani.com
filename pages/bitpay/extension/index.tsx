@@ -210,7 +210,7 @@ const BitPayExtension: React.FC = () => (
             />
             of our partners and integrations. This was in effort to make it
             easier for people to discover brands and find out how to use crypto.
-            Over the last year, the "BitPay Directory" has been gaining a lot
+            Over the last year, the "Merchant Directory" has been gaining a lot
             more traction with our partners. Naturally we were looking for ways
             to take the concept to the next level.
           </p>

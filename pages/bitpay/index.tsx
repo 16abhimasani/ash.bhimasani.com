@@ -69,7 +69,7 @@ const BitPay: React.FC = () => (
       />
       <PostBox
         icon="/logos/bitpay-globe.svg"
-        title="BitPay Directory"
+        title="Merchant Directory"
         caption="A curated directory of where to use crypto + promos"
         date="Mar 2019 ~ Apr 2019"
         link="/bitpay/directory"
