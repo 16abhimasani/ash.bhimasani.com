@@ -12,7 +12,7 @@
     "@juggle/resize-observer": "^3.2.0",
     "classnames": "^2.2.6",
     "framer-motion": "2.7.8",
-    "next": "9.5.3",
+    "next": "9.5.4",
     "pure-react-carousel": "1.27.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
