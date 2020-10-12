@@ -5,6 +5,7 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
+import ExtensionNavDemo from "../../../components/demos/ext-nav/ext-nav";
 
 export const ExtensionHead = (
   <Head>
@@ -246,6 +247,9 @@ const BitPayExtension: React.FC = () => (
             section.
           </p>
         </div>
+
+        <h4 className="begin-section">Animation Demo</h4>
+        <ExtensionNavDemo />
       </section>
     </motion.main>
   </>
