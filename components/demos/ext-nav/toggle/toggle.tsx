@@ -28,49 +28,45 @@ const Toggle: React.FC<{
   payMode: boolean;
 }> = ({ toggleNormal, togglePay, normal, payMode }) => (
   <div className={classes.header_bar__controls}>
-    <motion.button
+    <motion.svg
+      opacity="1"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      style={{ marginRight: 4, cursor: "pointer" }}
       whileTap={{ scale: 0.96 }}
-      type="button"
       onClick={toggleNormal}
-      className={classes.header_bar__controls__toggle__wrapper}
     >
-      <motion.svg
-        className={classes.header_bar__controls__toggle}
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-      >
-        <motion.g fill="none" fillRule="evenodd">
-          <motion.circle
-            fill={payMode ? "#31436C" : "#F5F5F7"}
-            cx="10"
-            cy="10"
-            r="10"
-          />
-          <motion.g
-            fill="none"
-            animate={normal ? "rotate" : "reset"}
-            variants={animateToggle}
-            initial="reset"
-          >
-            <motion.path
-              fill={payMode ? "#FFFFFF" : "#434D5A"}
-              fillRule="nonzero"
-              transform="rotate(45 9.994 10.003)"
-              d="M7.60615758,13.3552246 C7.43435105,13.5349256 7.1785153,13.607612 6.93767473,13.5451496 C6.69683416,13.4826872 6.50878612,13.2948788 6.44631695,13.0544179 C6.38384779,12.8139571 6.45676135,12.5585816 6.63683555,12.3871378 L12.4027945,6.62929804 C12.672114,6.37155478 13.0983697,6.37587442 13.3623928,6.63902254 C13.6264159,6.90217065 13.6314399,7.32770138 13.3737029,7.59698889 L7.60615758,13.3552246 Z"
-            />
-          </motion.g>
+      <motion.g fill="none" fillRule="evenodd">
+        <motion.circle
+          fill={payMode ? "#31436C" : "#F5F5F7"}
+          cx="10"
+          cy="10"
+          r="10"
+        />
+        <motion.g
+          fill="none"
+          animate={normal ? "rotate" : "reset"}
+          variants={animateToggle}
+          initial="reset"
+        >
           <motion.path
-            animate={normal ? "expand" : "minimize"}
-            variants={animateToggle}
-            initial="minimize"
             fill={payMode ? "#FFFFFF" : "#434D5A"}
             fillRule="nonzero"
+            transform="rotate(45 9.994 10.003)"
             d="M7.60615758,13.3552246 C7.43435105,13.5349256 7.1785153,13.607612 6.93767473,13.5451496 C6.69683416,13.4826872 6.50878612,13.2948788 6.44631695,13.0544179 C6.38384779,12.8139571 6.45676135,12.5585816 6.63683555,12.3871378 L12.4027945,6.62929804 C12.672114,6.37155478 13.0983697,6.37587442 13.3623928,6.63902254 C13.6264159,6.90217065 13.6314399,7.32770138 13.3737029,7.59698889 L7.60615758,13.3552246 Z"
           />
         </motion.g>
-      </motion.svg>
-    </motion.button>
+        <motion.path
+          animate={normal ? "expand" : "minimize"}
+          variants={animateToggle}
+          initial="minimize"
+          fill={payMode ? "#FFFFFF" : "#434D5A"}
+          fillRule="nonzero"
+          d="M7.60615758,13.3552246 C7.43435105,13.5349256 7.1785153,13.607612 6.93767473,13.5451496 C6.69683416,13.4826872 6.50878612,13.2948788 6.44631695,13.0544179 C6.38384779,12.8139571 6.45676135,12.5585816 6.63683555,12.3871378 L12.4027945,6.62929804 C12.672114,6.37155478 13.0983697,6.37587442 13.3623928,6.63902254 C13.6264159,6.90217065 13.6314399,7.32770138 13.3737029,7.59698889 L7.60615758,13.3552246 Z"
+        />
+      </motion.g>
+    </motion.svg>
 
     <motion.svg
       animate={payMode ? "reset" : "rotate"}
