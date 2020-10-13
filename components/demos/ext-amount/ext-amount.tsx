@@ -114,7 +114,10 @@ const ExtensionAmountDemo: React.FC = () => {
     }
   }, [awaiting]);
   return (
-    <motion.div className={classes.container}>
+    <motion.div
+      className={classes.container}
+      onClick={(): void => focusInput()}
+    >
       <div className={classes.header}>
         <ExtensionNavDemo middleMode={true} />
       </div>
