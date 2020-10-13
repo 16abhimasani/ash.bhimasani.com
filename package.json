@@ -9,8 +9,8 @@
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"ash.bhimasani.com\" >> out/CNAME && git add --force out/ && git commit -S -m \"deploy ash.bhimasani.com\" && git push upstream `git subtree split --prefix out master`:gh-pages --force && git reset --hard HEAD~1"
   },
   "dependencies": {
-    "@juggle/resize-observer": "^3.2.0",
-    "classnames": "^2.2.6",
+    "@juggle/resize-observer": "3.2.0",
+    "classnames": "2.2.6",
     "framer-motion": "2.8.0",
     "next": "9.5.5",
     "pure-react-carousel": "1.27.5",
@@ -19,25 +19,25 @@
     "sass": "1.27.0"
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.10",
+    "@types/classnames": "2.2.10",
     "@types/node": "14.11.8",
     "@types/react": "16.9.52",
-    "@types/resize-observer-browser": "^0.1.3",
-    "@typescript-eslint/eslint-plugin": "4.4.0",
-    "@typescript-eslint/parser": "4.4.0",
-    "babel-plugin-transform-define": "^2.0.0",
+    "@types/resize-observer-browser": "0.1.4",
+    "@typescript-eslint/eslint-plugin": "4.4.1",
+    "@typescript-eslint/parser": "4.4.1",
+    "babel-plugin-transform-define": "2.0.0",
     "eslint": "7.11.0",
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "6.12.0",
     "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.21.4",
-    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react-hooks": "4.1.2",
     "prettier": "2.1.2",
     "stylelint": "13.7.2",
     "stylelint-config-prettier": "8.0.2",
-    "stylelint-prettier": "^1.1.2",
+    "stylelint-prettier": "1.1.2",
     "typescript": "4.0.3"
   }
 }
