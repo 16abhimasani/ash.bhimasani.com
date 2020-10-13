@@ -1,12 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import classNames from "classnames/bind";
 import classes from "./ext-amount.module.scss";
 import { motion } from "framer-motion";
 
 import ExtensionNavDemo from "../ext-nav/ext-nav";
 import PayWithBitpayButton from "./bp-button/bp-button";
-
-const cx = classNames.bind(classes);
 
 const shkAmp = 12;
 const precision = 2;
