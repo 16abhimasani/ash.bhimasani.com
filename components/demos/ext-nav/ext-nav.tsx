@@ -9,24 +9,31 @@ import Toggle from "./toggle/toggle";
 
 const cx = classNames.bind(classes);
 
-const ExtensionNavDemo: React.FC = () => {
-  const [normal, normalize] = useState(true);
+const ExtensionNavDemo: React.FC<{ middleMode?: boolean }> = ({
+  middleMode = false,
+}) => {
+  const [normal, normalize] = useState(!middleMode);
   const [payMode, setPayMode] = useState(false);
   const toggleNormal = (): void => {
-    setPayMode(false);
-    normalize(!normal);
+    if (!middleMode) {
+      setPayMode(false);
+      normalize(!normal);
+    }
   };
   const togglePay = (): void => {
-    setPayMode(!payMode);
-    normalize(true);
+    if (!middleMode) {
+      setPayMode(!payMode);
+      normalize(true);
+    }
   };
   return (
     <motion.div
       className={cx({
         bar: true,
         bar__dark: payMode,
+        bar__expanded: middleMode,
       })}
-      whileTap={{ scale: 1.02 }}
+      whileTap={{ scale: middleMode ? 1 : 1.02 }}
     >
       <BackButton show={!normal} onClick={toggleNormal} />
       <BitpayLogo solo={!normal} payMode={payMode} />

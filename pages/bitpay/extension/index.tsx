@@ -6,6 +6,7 @@ import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import ExtensionNavDemo from "../../../components/demos/ext-nav/ext-nav";
+import ExtensionAmountDemo from "../../../components/demos/ext-amount/ext-amount";
 
 export const ExtensionHead = (
   <Head>
@@ -24,6 +25,10 @@ export const ExtensionHead = (
       content="https://bitpay.com/assets/extension-banner.png"
       key="og-image"
     />
+    <script
+      type="text/javascript"
+      src="https://test.bitpay.com/bitpay.min.js"
+    ></script>
   </Head>
 );
 
@@ -194,6 +199,21 @@ const BitPayExtension: React.FC = () => (
               bold
             />
           </p>
+          <p>
+            <a
+              href="https://www.producthunt.com/posts/pay-with-bitpay?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-pay-with-bitpay"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=270485&theme=dark"
+                alt="Pay with BitPay - Convert crypto to store credit seamlessly at checkout | Product Hunt"
+                style={{ width: 250, height: 54 }}
+                width="250"
+                height="54"
+              />
+            </a>
+          </p>
         </div>
       </section>
 
@@ -248,8 +268,13 @@ const BitPayExtension: React.FC = () => (
           </p>
         </div>
 
-        <h4 className="begin-section">Animation Demo</h4>
-        <ExtensionNavDemo />
+        <h4 className="begin-section">Interactive Demos</h4>
+        <section className="begin-section end-section">
+          <ExtensionNavDemo />
+        </section>
+        <section className="end-section">
+          <ExtensionAmountDemo />
+        </section>
       </section>
     </motion.main>
   </>

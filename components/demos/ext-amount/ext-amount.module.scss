@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  width: 300px;
+  height: 360px;
+  background-color: white;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.button_wrapper {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  color: #434d5a;
+  font-weight: 500;
+  text-align: center;
+  height: fit-content;
+}
+
+.pad {
+  width: 100%;
+  padding: 0 20px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  &__amount {
+    font-size: 44px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__value {
+      flex-grow: 1;
+    }
+
+    > button {
+      height: 30px;
+      width: 30px;
+      margin: 0 15px;
+    }
+  }
+
+  &__currency {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__denoms {
+    opacity: 0.75;
+    font-size: 12px;
+    color: #434d5a;
+    margin: 0 auto;
+    max-width: 200px;
+    margin-top: 14px;
+  }
+}
+
+.ghost_input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}

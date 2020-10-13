@@ -16,4 +16,9 @@
   &__dark {
     background-color: #0c204e;
   }
+  &__expanded {
+    border-radius: 0px;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(black, 0.05);
+  }
 }
