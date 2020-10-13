@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames/bind";
 import classes from "./bp-button.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
