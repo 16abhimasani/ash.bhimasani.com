@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
-import classes from "./ex-nav.module.scss";
+import classes from "./ext-nav.module.scss";
 import { motion } from "framer-motion";
 
 import BitpayLogo from "./bp-logo/bp-logo";
