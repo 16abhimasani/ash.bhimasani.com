@@ -1,0 +1,31 @@
+.invoice {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 11px;
+  width: 344px;
+  box-shadow: 0 0 20px 4px rgba(black, 0.08);
+  overflow: hidden;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 32px;
+  color: #303133;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 26px;
+}
+
+.qr {
+  width: 234px;
+  height: 234px;
+  align-self: center;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}

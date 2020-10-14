@@ -1,0 +1,36 @@
+.bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid rgba(#303133, 0.04);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(#d8d8d8, 0.12);
+  border-radius: 50vh;
+  font-weight: 600;
+  font-size: 13px;
+  color: #4f6ef7;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 250ms ease-in-out;
+  &:hover {
+    background-color: rgba(#d8d8d8, 0.24);
+  }
+}
+
+.toggle {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}

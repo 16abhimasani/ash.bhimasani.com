@@ -1,0 +1,40 @@
+.toast {
+  display: flex;
+  background: #081125;
+  box-shadow: 0 0 14px 4px rgba(black, 0.05);
+  border-radius: 9px;
+  padding: 14px 12px 18px;
+  position: relative;
+  margin-top: 26px;
+  user-select: none;
+}
+
+.icon {
+  height: 16px;
+  margin-right: 14px;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.exit {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 15px;
+  color: white;
+  line-height: 21px;
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(white, 0.75);
+  margin-top: 6px;
+}

@@ -5,6 +5,7 @@ import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import InvoicePayDemo from "../../../components/demos/invoice-pay/invoice-pay";
 
 const BitPayInvoice: React.FC = () => (
   <>
@@ -140,7 +141,7 @@ const BitPayInvoice: React.FC = () => (
         </div>
       </div>
       <WideScreen src="/imgs/invoice/pay/universal/mac-pro.jpg" />
-      <div className="lead begin-section">
+      <div className="lead begin-section end-section">
         <p>
           Above is a mild teaser of the V4 design system for Invoice as well
           some of the BitPay Wallet optimizations that are coming soon.
@@ -150,6 +151,11 @@ const BitPayInvoice: React.FC = () => (
           unique challenges of designing a crypto payment experience.
         </p>
       </div>
+
+      <h4 className="begin-section">Interactive Demo</h4>
+      <section className="begin-section wrapper-center">
+        <InvoicePayDemo />
+      </section>
     </motion.main>
   </>
 );
