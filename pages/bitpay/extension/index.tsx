@@ -7,6 +7,7 @@ import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import ExtensionNavDemo from "../../../components/demos/ext-nav/ext-nav";
 import ExtensionAmountDemo from "../../../components/demos/ext-amount/ext-amount";
+import ExtensionReceiptDemo from "../../../components/demos/ext-receipt/ext-receipt";
 
 export const ExtensionHead = (
   <Head>
@@ -274,6 +275,9 @@ const BitPayExtension: React.FC = () => (
         </section>
         <section className="end-section wrapper-center">
           <ExtensionAmountDemo />
+        </section>
+        <section className="begin-section end-section wrapper-center">
+          <ExtensionReceiptDemo />
         </section>
       </section>
     </motion.main>
