@@ -34,10 +34,12 @@ export const animateToast = {
   },
 };
 
-const InvoiceSuperToast: React.FC<{ open: boolean; close: () => void }> = ({
-  open,
-  close,
-}) => {
+const InvoiceSuperToast: React.FC<{
+  open: boolean;
+  close: () => void;
+  title: string;
+  caption: string;
+}> = ({ open, close, title, caption }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {open && (
@@ -51,10 +53,8 @@ const InvoiceSuperToast: React.FC<{ open: boolean; close: () => void }> = ({
         >
           <img className={classes.icon} src="/icons/bp-copy.svg" />
           <div className="col">
-            <div className={classes.title}>Payment Link Copied!</div>
-            <div className={classes.caption}>
-              https://bitpay.com/i/JXvuiMn7YSD3Cy7HCtiQgu
-            </div>
+            <div className={classes.title}>{title}</div>
+            <div className={classes.caption}>{caption}</div>
           </div>
           <motion.img
             className={classes.exit}

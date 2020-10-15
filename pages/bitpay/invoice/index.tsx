@@ -5,7 +5,7 @@ import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice-universal/invoice-universal";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
 
 const BitPayInvoice: React.FC = () => (
   <>
