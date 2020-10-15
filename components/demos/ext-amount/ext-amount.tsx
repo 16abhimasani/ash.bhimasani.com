@@ -20,9 +20,9 @@ const ExtensionAmountDemo: React.FC = () => {
   const [inputDirty, setInputDirty] = useState(false);
 
   const changeVariableAmount = (delta: number): void => {
-    if (amount === 0 && delta < 0) {
+    if ((amount === 0 || amount === 1) && delta < 0) {
       shakeInput();
-      return setAmount(0);
+      return setAmount(amount);
     }
     const newValue = amount + delta;
     // eslint-disable-next-line no-nested-ternary
