@@ -5,7 +5,7 @@ import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import InvoicePayDemo from "../../../components/demos/invoice-pay/invoice-pay";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice-universal/invoice-universal";
 
 const BitPayInvoice: React.FC = () => (
   <>
@@ -154,7 +154,7 @@ const BitPayInvoice: React.FC = () => (
 
       <h4 className="begin-section">Interactive Demo</h4>
       <section className="begin-section wrapper-center">
-        <InvoicePayDemo />
+        <InvoiceUniversalModeDemo />
       </section>
     </motion.main>
   </>

@@ -14,8 +14,8 @@
     "framer-motion": "2.8.0",
     "next": "9.5.5",
     "pure-react-carousel": "1.27.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "sass": "1.27.0"
   },
   "devDependencies": {

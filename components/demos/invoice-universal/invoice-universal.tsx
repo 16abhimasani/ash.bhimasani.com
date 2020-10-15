@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import classes from "./invoice-pay.module.scss";
+import classes from "./invoice-universal.module.scss";
 import { motion } from "framer-motion";
 import { wait } from "../../../utils/utils";
 
@@ -51,7 +51,7 @@ export const animateToast = {
   },
 };
 
-const InvoicePayDemo: React.FC = () => {
+const InvoiceUniversalModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(true);
   const [LAUNCH_WALLET, TOGGLE_WALLET] = useState(false);
   const [COPY_LINK, TOGGLE_COPY] = useState(false);
@@ -103,4 +103,4 @@ const InvoicePayDemo: React.FC = () => {
   );
 };
 
-export default InvoicePayDemo;
+export default InvoiceUniversalModeDemo;
