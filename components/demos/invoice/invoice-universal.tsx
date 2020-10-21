@@ -53,7 +53,7 @@ const InvoiceUniversalModeDemo: React.FC = () => {
   return (
     <div style={{ minHeight: 711 }}>
       <motion.div className={classes.invoice}>
-        <InvoiceDetailsBar />
+        <InvoiceDetailsBar rate="11,382.15 USD" due="0.011861 BTC" />
         <motion.div className={classes.price}>$135.00</motion.div>
         <motion.div
           className={classes.qr__wrapper}

@@ -35,7 +35,10 @@ const animateDetails = {
   },
 };
 
-const InvoiceDetailsBar: React.FC = () => {
+const InvoiceDetailsBar: React.FC<{ rate: string; due: string }> = ({
+  rate,
+  due,
+}) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const details = useRef<HTMLDivElement>(null);
   const getHeight = useCallback((): number => {
@@ -122,7 +125,7 @@ const InvoiceDetailsBar: React.FC = () => {
           </div>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Exchange Rate</div>
-            <div className={classes.details__row__right}>11,382.15 USD</div>
+            <div className={classes.details__row__right}>{rate}</div>
           </div>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Amount Due</div>
@@ -130,7 +133,7 @@ const InvoiceDetailsBar: React.FC = () => {
               className={classes.details__row__right}
               style={{ fontWeight: 600 }}
             >
-              0.011861 BTC
+              {due}
             </div>
           </div>
         </div>
