@@ -111,6 +111,70 @@ const BitPayID: React.FC = () => (
           full design upgrade that addresses all usability issues.
         </p>
       </div>
+
+      <section style={{ overflow: "hidden" }}>
+        <h4 className="begin-section">V2 Sneak Peak</h4>
+        <video
+          className="end-section"
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/awaiting-approval.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="end-section"
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/personal-info.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="end-section"
+          width="100.5%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/sign-up.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="end-section"
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/2fa.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="end-section"
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/verify-email.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="end-section"
+          width="100%"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/vids/id/v2/login.mp4" type="video/mp4" />
+        </video>
+      </section>
     </motion.main>
   </>
 );
