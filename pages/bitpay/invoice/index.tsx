@@ -152,10 +152,22 @@ const BitPayInvoice: React.FC = () => (
         </p>
       </div>
 
-      <h4 className="begin-section">Interactive Demo</h4>
+      <h4 className="begin-section">V4 Interactive Demo</h4>
       <section className="begin-section wrapper-center">
         <InvoiceUniversalModeDemo />
       </section>
+
+      <h4>V3 (Old Design)</h4>
+      <video
+        className="h-align d-block end-section"
+        width="500"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/vids/invoice/v3-qr.mp4" type="video/mp4" />
+      </video>
     </motion.main>
   </>
 );

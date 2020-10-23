@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import classes from "./invoice.module.scss";
 import { motion } from "framer-motion";
 import { wait } from "../../../utils/utils";
@@ -35,6 +35,7 @@ const InvoiceUniversalModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(true);
   const [LAUNCH_WALLET, TOGGLE_WALLET] = useState(false);
   const [COPY_LINK, TOGGLE_COPY] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(900);
   const startWallet = useCallback(async () => {
     if (LAUNCH_WALLET) return;
     TOGGLE_COPY(false);
@@ -50,8 +51,26 @@ const InvoiceUniversalModeDemo: React.FC = () => {
     copyUtil(paymentLink);
     TOGGLE_COPY(true);
   }, [LAUNCH_WALLET, COPY_LINK]);
+  useEffect(() => {
+    if (!timeLeft) return;
+    const intervalId = setInterval(() => {
+      setTimeLeft(timeLeft - 1);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, [timeLeft]);
   return (
     <div style={{ minHeight: 711 }}>
+      <div className={classes.timer}>
+        <img
+          className={classes.timer__icon}
+          src="/icons/invoice-timer.svg"
+          alt="Invoice Timer"
+        />
+        Invoice expires in{" "}
+        {`${Math.floor(timeLeft / 60)}:${
+          timeLeft - Math.floor(timeLeft / 60) * 60
+        }`}
+      </div>
       <motion.div className={classes.invoice}>
         <InvoiceDetailsBar rate="11,382.15 USD" due="0.011861 BTC" />
         <motion.div className={classes.price}>$135.00</motion.div>

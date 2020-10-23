@@ -261,17 +261,6 @@ const BitPayInvoicePay: React.FC = () => (
             Helper Toast to guide the user.
           </p>
         </div>
-        <h4>V3 (Old Design)</h4>
-        <video
-          className="h-align d-block end-section"
-          width="500"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/vids/invoice/v3-qr.mp4" type="video/mp4" />
-        </video>
 
         <h3 className="begin-section">2 Types of Scanning</h3>
         <div className="lead end-section">
