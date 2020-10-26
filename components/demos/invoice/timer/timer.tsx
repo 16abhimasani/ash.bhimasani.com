@@ -6,7 +6,7 @@ const InvoiceTimer: React.FC = () => {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft - minutes * 60;
   useEffect(() => {
-    if (!timeLeft) return;
+    if (timeLeft === 0) setTimeLeft(900);
     const intervalId = setInterval(() => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
