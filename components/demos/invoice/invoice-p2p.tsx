@@ -8,36 +8,13 @@ import InvoiceCopyBar from "./copy-bar/copy-bar";
 import InvoiceTimer from "./timer/timer";
 import InvoiceQR from "./qr/qr";
 
-export const animateToast = {
-  visible: {
-    opacity: 1,
-    rotateX: 0,
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 14,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    rotateX: 30,
-    scale: 0.98,
-    y: 36,
-    transition: {
-      type: "spring",
-      damping: 12,
-    },
-  },
-};
-
 const InvoiceAddressModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(false);
   const [TOAST_CONTENT, SET_TOAST] = useState({
     label: "Address",
     toastTitle: "Payment Address Copied",
     value: "Address",
-    show: false,
+    showToast: false,
   });
   return (
     <div style={{ minHeight: 700 }}>
@@ -66,8 +43,8 @@ const InvoiceAddressModeDemo: React.FC = () => {
       </motion.div>
       <div style={{ position: "relative", marginTop: 26 }}>
         <InvoiceSuperToast
-          open={TOAST_CONTENT.show}
-          close={(): void => SET_TOAST({ ...TOAST_CONTENT, show: false })}
+          open={TOAST_CONTENT.showToast}
+          close={(): void => SET_TOAST({ ...TOAST_CONTENT, showToast: false })}
           title={TOAST_CONTENT.toastTitle}
           caption={TOAST_CONTENT.value}
         />

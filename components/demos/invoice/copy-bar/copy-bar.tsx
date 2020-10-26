@@ -11,7 +11,7 @@ const InvoiceCopyBar: React.FC<{
       label: string;
       toastTitle: string;
       value: string;
-      show: boolean;
+      showToast: boolean;
     }>
   >;
 }> = ({ fields, qrVisible, toggleQR, setToast }) => {

@@ -14,7 +14,7 @@ const InvoiceCopyField: React.FC<{
     label: string;
     value: string;
     toastTitle: string;
-    show: boolean;
+    showToast: boolean;
   }) => void;
 }> = ({ label, value, toastTitle, qrVisible, toggleQR, setToast }) => {
   const processAddress = (str: string, limit = 12): string =>
@@ -24,7 +24,7 @@ const InvoiceCopyField: React.FC<{
     if (copied) return;
     copyUtil(value.split(" ")[0]);
     setCopied(true);
-    setToast({ label, value, toastTitle, show: true });
+    setToast({ label, value, toastTitle, showToast: true });
     await wait(1500);
     setCopied(false);
   }, [copied, value]);
@@ -34,7 +34,6 @@ const InvoiceCopyField: React.FC<{
       <motion.div
         className={classes.copy}
         onTapStart={startCopying}
-        whileTap={{ scale: 1.01 }}
         animate={{ color: copied ? "#4f6ef7" : "#000000" }}
       >
         {label === "Address" ? processAddress(value) : value}
