@@ -1,0 +1,11 @@
+.qr {
+  width: 234px;
+  height: 234px;
+  align-self: center;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+}

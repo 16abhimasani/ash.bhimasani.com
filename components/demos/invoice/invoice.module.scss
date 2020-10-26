@@ -16,29 +16,3 @@
   text-align: center;
   padding: 26px;
 }
-
-.qr {
-  width: 234px;
-  height: 234px;
-  align-self: center;
-  &__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-}
-
-.timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 11px;
-  color: rgba(#565d6e, 0.5);
-  margin-bottom: 12px;
-  &__icon {
-    margin-right: 7px;
-    opacity: 0.75;
-  }
-}
