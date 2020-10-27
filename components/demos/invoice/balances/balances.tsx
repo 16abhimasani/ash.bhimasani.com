@@ -67,12 +67,12 @@ const InvoiceBalances: React.FC<{
                 <motion.div
                   className={classes.balances__item}
                   key={balance.code}
-                  onClick={(): void => selectCurrency(balance)}
+                  onClick={(): Promise<void> => selectCurrency(balance)}
                 >
                   <div className={classes.currency__wrapper}>
                     <img
                       className={classes.currency__icon}
-                      src={`/icons/currencies/${balance.code}.svg`}
+                      src={`/icons/currencies/${balance.code.toLocaleLowerCase()}.svg`}
                     />
                     <div
                       className={classes.currency__name}

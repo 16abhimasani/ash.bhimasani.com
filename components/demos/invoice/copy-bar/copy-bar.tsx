@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import classes from "./copy-bar.module.scss";
 import InvoiceCopyField from "./copy-field";
 
