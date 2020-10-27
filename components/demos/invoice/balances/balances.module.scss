@@ -1,6 +1,8 @@
 .wrapper {
   padding: 18px 24px 26px;
   border-top: 1px solid rgba(#303133, 0.04);
+  background-color: white;
+  position: relative;
 }
 
 .selected {
@@ -23,6 +25,7 @@
   margin-top: 10px;
   height: 40px;
   cursor: pointer;
+  user-select: none;
 }
 
 .connected {
@@ -86,4 +89,13 @@
       transform: translateY(-0.5px);
     }
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(black, 0.4);
 }

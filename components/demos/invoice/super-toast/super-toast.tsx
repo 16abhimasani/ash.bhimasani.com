@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./super-toast.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const animateToast = {
+const animateToast = {
   visible: {
     opacity: 1,
     rotateX: 0,
