@@ -1,0 +1,42 @@
+.wrapper {
+  padding-top: 26px;
+}
+
+.button {
+  background: #4f6ef7;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 300ms ease-in-out;
+}
+
+.action {
+  background: #eef1ff;
+  font-weight: 600;
+  font-size: 16px;
+  color: #4f6ef7;
+  text-align: center;
+
+  &__spinner {
+    animation: spin 1s linear infinite;
+    margin-right: 12px;
+    margin-left: -12px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
