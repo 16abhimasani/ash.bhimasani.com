@@ -33,7 +33,7 @@ const InvoiceUniversalModeDemo: React.FC = () => {
     TOGGLE_COPY(true);
   }, [LAUNCH_WALLET, COPY_LINK]);
   return (
-    <div style={{ minHeight: 711 }}>
+    <div>
       <InvoiceTimer />
       <motion.div className={classes.invoice}>
         <InvoiceDetailsBar rate="11,382.15 USD" due="0.011861 BTC" />

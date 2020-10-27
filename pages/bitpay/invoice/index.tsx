@@ -7,6 +7,7 @@ import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2p";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
 
 const BitPayInvoice: React.FC = () => (
   <>
@@ -153,12 +154,19 @@ const BitPayInvoice: React.FC = () => (
         </p>
       </div>
 
-      <h4 className="begin-section">V4 Interactive Demo</h4>
+      <h4 className="begin-section">V4 Interactive Demos</h4>
       <section className="begin-section end-section wrapper-center">
         <InvoiceUniversalModeDemo />
       </section>
       <section className="begin-section end-section wrapper-center">
-        <InvoiceAddressModeDemo />
+        <div style={{ marginTop: 64 }}>
+          <InvoiceAddressModeDemo />
+        </div>
+      </section>
+      <section className="begin-section end-section wrapper-center">
+        <div style={{ marginTop: 64, marginBottom: 100 }}>
+          <InvoiceConnectModeDemo />
+        </div>
       </section>
 
       <h4>V3 (Old Design)</h4>

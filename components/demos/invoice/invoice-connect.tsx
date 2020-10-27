@@ -15,7 +15,7 @@ const InvoiceConnectModeDemo: React.FC = () => {
     due: "135.00",
   });
   return (
-    <div style={{ minHeight: 500 }}>
+    <div>
       <InvoiceTimer />
       <motion.div className={classes.invoice}>
         <InvoiceDetailsBar

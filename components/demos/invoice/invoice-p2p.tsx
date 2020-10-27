@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import classes from "./invoice.module.scss";
 import { motion } from "framer-motion";
 
@@ -7,6 +7,7 @@ import InvoiceSuperToast from "./super-toast/super-toast";
 import InvoiceCopyBar from "./copy-bar/copy-bar";
 import InvoiceTimer from "./timer/timer";
 import InvoiceQR from "./qr/qr";
+import { wait } from "../../../utils/utils";
 
 const InvoiceAddressModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(false);
@@ -16,8 +17,28 @@ const InvoiceAddressModeDemo: React.FC = () => {
     value: "Address",
     showToast: false,
   });
+  const handleToast = useCallback(
+    async (content: {
+      label: string;
+      toastTitle: string;
+      value: string;
+      showToast: boolean;
+    }) => {
+      if (TOAST_CONTENT) {
+        closeToast();
+        await wait(400);
+        SET_TOAST(content);
+      } else {
+        SET_TOAST(content);
+      }
+    },
+    [TOAST_CONTENT]
+  );
+  const closeToast = (): void => {
+    SET_TOAST({ ...TOAST_CONTENT, showToast: false });
+  };
   return (
-    <div style={{ minHeight: 700 }}>
+    <div>
       <InvoiceTimer />
       <motion.div className={classes.invoice}>
         <InvoiceDetailsBar rate="267.93 USD" due="0.286929 BCH" />
@@ -38,13 +59,13 @@ const InvoiceAddressModeDemo: React.FC = () => {
           ]}
           toggleQR={TOGGLE_QR}
           qrVisible={QR_VISIBLE}
-          setToast={SET_TOAST}
+          setToast={handleToast}
         />
       </motion.div>
       <div style={{ position: "relative", marginTop: 26 }}>
         <InvoiceSuperToast
           open={TOAST_CONTENT.showToast}
-          close={(): void => SET_TOAST({ ...TOAST_CONTENT, showToast: false })}
+          close={closeToast}
           title={TOAST_CONTENT.toastTitle}
           caption={TOAST_CONTENT.value}
         />
