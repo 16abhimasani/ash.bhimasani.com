@@ -12,6 +12,11 @@
     background-color: white;
     position: relative;
     z-index: 1;
+    transition: padding 300ms ease-in-out, margin 300ms ease-in-out;
+    &__open {
+      padding: 16px 26px;
+      margin-bottom: 8px;
+    }
   }
   &__source {
     display: flex;

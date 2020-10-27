@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./balances.module.scss";
 import { motion } from "framer-motion";
+import classNames from "classnames/bind";
+const cx = classNames.bind(classes);
 
 const animateChevron = {
   close: {
@@ -24,7 +26,7 @@ const animateSelected = {
     },
   },
   open: {
-    y: -100,
+    y: -90,
     boxShadow: "0 1px 14px 0 rgba(0,0,0,0.1)",
     transition: {
       type: "spring",
@@ -42,7 +44,10 @@ const InvoiceSelected: React.FC<{
 }> = ({ code, name, balance, open, toggle }) => {
   return (
     <motion.div
-      className={classes.selected__wrapper}
+      className={cx({
+        selected__wrapper: true,
+        selected__wrapper__open: open,
+      })}
       animate={open ? "open" : "close"}
       variants={animateSelected}
     >
