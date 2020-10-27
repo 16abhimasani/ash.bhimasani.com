@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import InvoiceDetailsBar from "./details-bar/details-bar";
 import InvoiceTimer from "./timer/timer";
-import InvoiceBalances from "./balances/balances";
+import InvoiceBalances, { CURRENCIES } from "./balances/balances";
 
 const InvoiceConnectModeDemo: React.FC = () => {
   const [SELECTED_CURRENCY, SET_CURRENCY] = useState({
@@ -23,7 +23,11 @@ const InvoiceConnectModeDemo: React.FC = () => {
           due={`${SELECTED_CURRENCY.due} ${SELECTED_CURRENCY.code}`}
         />
         <motion.div className={classes.price}>$135.00</motion.div>
-        <InvoiceBalances />
+        <InvoiceBalances
+          selected={SELECTED_CURRENCY}
+          balances={CURRENCIES}
+          select={SET_CURRENCY}
+        />
       </motion.div>
     </div>
   );

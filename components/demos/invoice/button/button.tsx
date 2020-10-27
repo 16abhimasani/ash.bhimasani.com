@@ -68,59 +68,57 @@ export const spinAnimation = {
 const InvoiceButton: React.FC = () => {
   const [awaiting, setAwaiting] = useState(false);
   return (
-    <div className={classes.wrapper}>
-      <motion.div
-        onClick={(): void => setAwaiting(!awaiting)}
-        className={cx({
-          button: true,
-          action: awaiting,
-        })}
-      >
-        <AnimatePresence exitBeforeEnter>
-          {awaiting ? (
-            <motion.div
+    <motion.div
+      onClick={(): void => setAwaiting(!awaiting)}
+      className={cx({
+        button: true,
+        action: awaiting,
+      })}
+    >
+      <AnimatePresence exitBeforeEnter>
+        {awaiting ? (
+          <motion.div
+            style={{ display: "flex" }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={buttonAnimation}
+            key="awaiting-payment"
+          >
+            <motion.span
               style={{ display: "flex" }}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={buttonAnimation}
-              key="awaiting-payment"
+              variants={buttonSpinnerAnimation}
+              key="awaiting-payment-wrapper"
             >
-              <motion.span
-                style={{ display: "flex" }}
-                variants={buttonSpinnerAnimation}
-                key="awaiting-payment-wrapper"
-              >
-                <motion.img
-                  className={classes.action__spinner}
-                  src="/icons/spinner.svg"
-                  variants={spinAnimation}
-                  alt="spinner"
-                  key="awaiting-payment-spinner"
-                />
-              </motion.span>
-              <motion.span
-                variants={buttonTextAnimation}
-                key="awaiting-payment-text"
-              >
-                Processing
-              </motion.span>
-            </motion.div>
-          ) : (
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={buttonAnimation}
-              whileTap={{ scale: 0.98 }}
-              key="pay"
+              <motion.img
+                className={classes.action__spinner}
+                src="/icons/spinner.svg"
+                variants={spinAnimation}
+                alt="spinner"
+                key="awaiting-payment-spinner"
+              />
+            </motion.span>
+            <motion.span
+              variants={buttonTextAnimation}
+              key="awaiting-payment-text"
             >
-              Make Payment
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    </div>
+              Processing
+            </motion.span>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={buttonAnimation}
+            whileTap={{ scale: 0.98 }}
+            key="pay"
+          >
+            Make Payment
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

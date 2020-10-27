@@ -14,6 +14,25 @@ const animateChevron = {
   },
 };
 
+const animateSelected = {
+  close: {
+    y: 0,
+    boxShadow: "none",
+    transition: {
+      type: "spring",
+      bounce: 0.25,
+    },
+  },
+  open: {
+    y: -100,
+    boxShadow: "0 1px 14px 0 rgba(0,0,0,0.1)",
+    transition: {
+      type: "spring",
+      bounce: 0.25,
+    },
+  },
+};
+
 const InvoiceSelected: React.FC<{
   code: string;
   name: string;
@@ -22,7 +41,11 @@ const InvoiceSelected: React.FC<{
   toggle: () => void;
 }> = ({ code, name, balance, open, toggle }) => {
   return (
-    <div className={classes.selected__wrapper}>
+    <motion.div
+      className={classes.selected__wrapper}
+      animate={open ? "open" : "close"}
+      variants={animateSelected}
+    >
       <div className={classes.selected__source}>
         <div className={classes.connected}>Connected Wallet</div>
         <div className={classes.wallet__wrapper}>
@@ -36,7 +59,9 @@ const InvoiceSelected: React.FC<{
             className={classes.currency__icon}
             src={`/icons/currencies/${code.toLocaleLowerCase()}.svg`}
           />
-          <div className={classes.currency__selected}>{name}</div>
+          <div className={classes.currency__name} style={{ fontWeight: 600 }}>
+            {name}
+          </div>
         </div>
         <div className={classes.currency__wrapper}>
           <div className={classes.currency__balance}>
@@ -50,7 +75,7 @@ const InvoiceSelected: React.FC<{
           />
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
