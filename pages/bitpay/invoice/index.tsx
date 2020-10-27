@@ -190,6 +190,16 @@ const BitPayInvoice: React.FC = () => (
       >
         <source src="/vids/invoice/v3-p2p.mp4" type="video/mp4" />
       </video>
+      <video
+        className="h-align d-block end-section"
+        width="500"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/vids/invoice/v3-oauth.mp4" type="video/mp4" />
+      </video>
     </motion.main>
   </>
 );
