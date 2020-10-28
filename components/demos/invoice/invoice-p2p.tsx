@@ -53,7 +53,7 @@ const InvoiceAddressModeDemo: React.FC = () => {
             },
             {
               label: "Address",
-              value: "p65ya7rdggr5qsnf4hv38fpt93mcdvhtva9z26awa",
+              value: "bitcoincash:qp65ya7rdggr5qsnf4hv38fpt93mcdvhtva9z26awa",
               toastTitle: "Payment Address Copied!",
             },
           ]}
