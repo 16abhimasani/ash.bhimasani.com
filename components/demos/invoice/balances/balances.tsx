@@ -62,7 +62,7 @@ const InvoiceBalances: React.FC<{
         />
         <div className={classes.balances} style={{ maxHeight: 112 }}>
           {balances.map((balance) => (
-            <>
+            <React.Fragment key={balance.name}>
               {balance.code !== selected.code && (
                 <motion.div
                   className={classes.balances__item}
@@ -88,7 +88,7 @@ const InvoiceBalances: React.FC<{
                   </div>
                 </motion.div>
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className={classes.button_wrapper}>
