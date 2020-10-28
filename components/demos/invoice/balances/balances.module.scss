@@ -141,13 +141,14 @@
   bottom: 0;
   left: 0;
   background-color: rgba(black, 0.4);
-  border-top-right-radius: 11px;
-  border-top-left-radius: 11px;
+  border-radius: 11px;
   cursor: pointer;
 }
 
 .button_wrapper {
   background-color: white;
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
   padding: 2px 20px 20px;
   position: relative;
   z-index: 1;
