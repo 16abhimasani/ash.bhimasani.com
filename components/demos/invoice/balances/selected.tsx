@@ -19,7 +19,6 @@ const animateChevron = {
 const animateSelected = {
   close: {
     y: 0,
-    boxShadow: "none",
     transition: {
       type: "spring",
       bounce: 0.25,
@@ -27,7 +26,6 @@ const animateSelected = {
   },
   open: {
     y: -90,
-    boxShadow: "0 1px 14px 0 rgba(0,0,0,0.1)",
     transition: {
       type: "spring",
       bounce: 0.25,
