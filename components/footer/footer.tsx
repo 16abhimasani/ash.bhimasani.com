@@ -18,7 +18,10 @@ const Header: React.FC = () => (
         href="https://www.linkedin.com/in/ash-bhimasani-b98757139/"
       />
       <div className={classes.dot}>·</div>
-      <Anchor content="Resume" href="/docs/Ash%20Bhimasani%20-%20Resume.pdf" />
+      <Anchor
+        content="Resume"
+        href="https://drive.google.com/file/d/1O-RwPuMubSNX45dI3U_8y50Rku0ZJHjP/view"
+      />
     </div>
     <div className={classes.copyright}>
       Made with 💖 by Ash Bhimasani © 2020
