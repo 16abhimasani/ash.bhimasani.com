@@ -23,8 +23,8 @@ const Timeline: React.FC = () => (
       icon="/logos/appsketiers.png"
       title="Appsketiers"
       caption="Director of Development & UX"
-      date="Aug 2017 ~ Aug 2018"
-      link="/"
+      date="Aug 2017 ~ Feb 2019"
+      link="/posts/appsketiers"
     />
     <PostBox
       icon="/logos/georgia-tech.svg"
