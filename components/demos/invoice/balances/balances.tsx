@@ -1,9 +1,10 @@
 import React, { Dispatch, SetStateAction, useState, useCallback } from "react";
 import classes from "./balances.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import InvoiceSelected from "./selected";
 import InvoiceButton from "../button/button";
+import InvoiceOverlay from "../overlay/overlay";
 import { wait } from "../../../../utils/utils";
 
 export interface BalanceInterface {
@@ -13,15 +14,6 @@ export interface BalanceInterface {
   rate: string;
   due: string;
 }
-
-const animateOverlay = {
-  visible: {
-    opacity: 1,
-  },
-  hidden: {
-    opacity: 0,
-  },
-};
 
 const InvoiceBalances: React.FC<{
   balances: BalanceInterface[];
@@ -39,19 +31,7 @@ const InvoiceBalances: React.FC<{
   );
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
-        {OPEN_BALANCES && (
-          <motion.div
-            className={classes.overlay}
-            key="overlay"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={animateOverlay}
-            onClick={(): void => TOGGLE_BALANCES(false)}
-          ></motion.div>
-        )}
-      </AnimatePresence>
+      <InvoiceOverlay open={OPEN_BALANCES} click={TOGGLE_BALANCES} />
       <div className={classes.wrapper}>
         <InvoiceSelected
           code={selected.code}
