@@ -2,8 +2,8 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import classNames from "classnames/bind";
 import classes from "./code-box.module.scss";
 import { motion } from "framer-motion";
-import copyUtil from "../../../../utils/copy-to-clipboard";
-import { wait } from "../../../../utils/utils";
+import copyUtil from "../../../../../utils/copy-to-clipboard";
+import { wait } from "../../../../../utils/utils";
 
 const cx = classNames.bind(classes);
 
@@ -18,7 +18,7 @@ const animateLabels = {
   },
 };
 
-const CodeBox: React.FC<{ code: string; label: string }> = ({
+const ExtensionCodeBox: React.FC<{ code: string; label: string }> = ({
   code,
   label,
 }) => {
@@ -99,4 +99,4 @@ const CodeBox: React.FC<{ code: string; label: string }> = ({
   );
 };
 
-export default CodeBox;
+export default ExtensionCodeBox;

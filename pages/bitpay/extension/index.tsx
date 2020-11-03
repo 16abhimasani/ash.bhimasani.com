@@ -5,9 +5,9 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
-import ExtensionNavDemo from "../../../components/demos/ext-nav/ext-nav";
-import ExtensionAmountDemo from "../../../components/demos/ext-amount/ext-amount";
-import ExtensionReceiptDemo from "../../../components/demos/ext-receipt/ext-receipt";
+import ExtensionNavDemo from "../../../components/demos/extension/nav/ext-nav";
+import ExtensionAmountDemo from "../../../components/demos/extension/amount/ext-amount";
+import ExtensionReceiptDemo from "../../../components/demos/extension/receipt/ext-receipt";
 
 export const ExtensionHead = (
   <Head>

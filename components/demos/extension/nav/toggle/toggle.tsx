@@ -21,7 +21,7 @@ const animateToggle = {
   },
 };
 
-const Toggle: React.FC<{
+const ExtensionToggle: React.FC<{
   toggleNormal: () => void;
   togglePay: () => void;
   normal: boolean;
@@ -91,4 +91,4 @@ const Toggle: React.FC<{
   </div>
 );
 
-export default Toggle;
+export default ExtensionToggle;

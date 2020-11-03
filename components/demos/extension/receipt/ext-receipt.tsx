@@ -2,8 +2,8 @@ import React from "react";
 import classes from "./ext-receipt.module.scss";
 import { motion } from "framer-motion";
 
-import ExtensionNavDemo from "../ext-nav/ext-nav";
-import CodeBox from "./code-box/code-box";
+import ExtensionNavDemo from "../nav/ext-nav";
+import ExtensionCodeBox from "./code-box/code-box";
 
 const ExtensionReceiptDemo: React.FC = () => {
   return (
@@ -56,7 +56,7 @@ const ExtensionReceiptDemo: React.FC = () => {
           </div>
         </div>
       </div>
-      <CodeBox label="Claim Code" code="29B4-NZ5UW9-DY7C" />
+      <ExtensionCodeBox label="Claim Code" code="29B4-NZ5UW9-DY7C" />
     </motion.div>
   );
 };
