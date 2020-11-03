@@ -1,12 +1,15 @@
+$height: 94px;
+
 .bar {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 94px;
+  height: $height;
   width: 100%;
   padding: 20px;
   border-top: 1px solid rgba(#303133, 0.04);
+  background-color: white;
 }
 
 .button {

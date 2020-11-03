@@ -8,6 +8,7 @@ import WideScreen from "../../../components/wide-screen/wide-screen";
 import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
 
 const BitPayInvoice: React.FC = () => (
   <>
@@ -164,8 +165,13 @@ const BitPayInvoice: React.FC = () => (
         </div>
       </section>
       <section className="begin-section end-section wrapper-center">
-        <div style={{ marginTop: 64, marginBottom: 100 }}>
+        <div style={{ marginTop: 64 }}>
           <InvoiceConnectModeDemo />
+        </div>
+      </section>
+      <section className="begin-section end-section wrapper-center">
+        <div style={{ marginTop: 64, marginBottom: 100 }}>
+          <InvoiceBIP21ModeDemo />
         </div>
       </section>
 
