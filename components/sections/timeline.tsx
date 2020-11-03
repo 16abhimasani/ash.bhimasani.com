@@ -16,7 +16,7 @@ const Timeline: React.FC = () => (
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
       caption="Software Engineer & Lead Product Designer"
-      date="Aug 2018 ~ Present"
+      date="Aug 2018 ~ Dec 2020"
       link="/bitpay"
     />
     <PostBox
