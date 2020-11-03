@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../animations/page";
-import Anchor from "../../components/utils/anchor";
 
 const Appsketiers: React.FC = () => (
   <motion.main className="body" {...fadeInPage}>
