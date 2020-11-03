@@ -35,10 +35,11 @@ const animateDetails = {
   },
 };
 
-const InvoiceDetailsBar: React.FC<{ rate: string; due: string }> = ({
-  rate,
-  due,
-}) => {
+const InvoiceDetailsBar: React.FC<{
+  total?: string;
+  rate: string;
+  due: string;
+}> = ({ total = "135.00 USD", rate, due }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const details = useRef<HTMLDivElement>(null);
   const getHeight = useCallback((): number => {
@@ -121,7 +122,7 @@ const InvoiceDetailsBar: React.FC<{ rate: string; due: string }> = ({
         <div className={classes.details} ref={details}>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Total Price</div>
-            <div className={classes.details__row__right}>135.00 USD</div>
+            <div className={classes.details__row__right}>{total}</div>
           </div>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Exchange Rate</div>
