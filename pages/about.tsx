@@ -7,9 +7,13 @@ const AboutMe: React.FC = () => (
   <motion.main className="body" {...fadeInPage}>
     <h2 className="begin-section pt-0">Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
     <div className="lead end-section">
-      I am a product designer & software engineer with special interests in UX,
-      growth hacking, and business strategy currently working
-      <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
+      <p>
+        I am a product designer & software engineer with special interests in
+        UX, growth hacking, and business strategy.
+      </p>
+      <p>
+        I love Brazilian Jiu Jitsu, watching movies, and imagining the future.
+      </p>
     </div>
     <img
       className="end-section"
