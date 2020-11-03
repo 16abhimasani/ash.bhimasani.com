@@ -5,9 +5,17 @@ const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
     <PostBox
+      icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
+      title="Coinbase"
+      caption="Software Engineering Intern"
+      date="Summer 2021"
+      link="/coinbase"
+      locked
+    />
+    <PostBox
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
-      caption="Software Engineer & Product Designer"
+      caption="Software Engineer & Lead Product Designer"
       date="Aug 2018 ~ Present"
       link="/bitpay"
     />
