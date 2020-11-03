@@ -3,9 +3,9 @@ import classNames from "classnames/bind";
 import classes from "./ext-nav.module.scss";
 import { motion } from "framer-motion";
 
-import BitpayLogo from "./bp-logo/bp-logo";
-import BackButton from "./back-button/back-button";
-import Toggle from "./toggle/toggle";
+import BitpayLogo from "../bp-logo/bp-logo";
+import ExtensionBackButton from "./back-button/back-button";
+import ExtensionToggle from "./toggle/toggle";
 
 const cx = classNames.bind(classes);
 
@@ -35,9 +35,9 @@ const ExtensionNavDemo: React.FC<{ middleMode?: boolean }> = ({
       })}
       whileTap={{ scale: middleMode ? 1 : 1.02 }}
     >
-      <BackButton show={!normal} onClick={toggleNormal} />
+      <ExtensionBackButton show={!normal} onClick={toggleNormal} />
       <BitpayLogo solo={!normal} payMode={payMode} />
-      <Toggle
+      <ExtensionToggle
         toggleNormal={toggleNormal}
         togglePay={togglePay}
         normal={normal}

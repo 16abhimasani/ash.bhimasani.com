@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./back-button.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
-const BackButton: React.FC<{ show: boolean; onClick: () => void }> = ({
+const ExtensionBackButton: React.FC<{ show: boolean; onClick: () => void }> = ({
   show,
   onClick,
 }) => (
@@ -40,4 +40,4 @@ const BackButton: React.FC<{ show: boolean; onClick: () => void }> = ({
   </AnimatePresence>
 );
 
-export default BackButton;
+export default ExtensionBackButton;
