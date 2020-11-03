@@ -18,7 +18,7 @@ const BitPayInvoice: React.FC = () => (
       <h5 className="end-section">
         Flagship gateway powering the payment network
       </h5>
-      <WideScreen src="/imgs/invoice/select/wallet-selection.png" />
+      <WideScreen src="/imgs/invoice/pay/universal/mac-pro.jpg" />
       <h3 className="begin-section" id="breakdown">
         UI Breakdown
       </h3>
@@ -88,6 +88,10 @@ const BitPayInvoice: React.FC = () => (
           opportunity to be heavily involved in every major initiative. Below
           are some noteworthy upgrades since 2018.
         </p>
+        <p>
+          The UI Breakdowns above aim to be detailed examinations into the
+          unique challenges of designing a crypto payment experience.
+        </p>
         <ol className="list">
           <li className="list__item">
             <div className="list__item__number">1</div>
@@ -142,17 +146,6 @@ const BitPayInvoice: React.FC = () => (
             Angular + TS, Redux, Sketch, InVision
           </hgroup>
         </div>
-      </div>
-      <WideScreen src="/imgs/invoice/pay/universal/mac-pro.jpg" />
-      <div className="lead begin-section end-section">
-        <p>
-          Above is a mild teaser of the V4 design system for Invoice as well
-          some of the BitPay Wallet optimizations that are coming soon.
-        </p>
-        <p>
-          The UI Breakdowns above aim to be detailed examinations into the
-          unique challenges of designing a crypto payment experience.
-        </p>
       </div>
 
       <h4 className="begin-section">V4 Interactive Demos</h4>
