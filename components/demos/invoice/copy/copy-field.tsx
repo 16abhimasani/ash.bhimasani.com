@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import classes from "./copy-bar.module.scss";
+import classes from "./copy.module.scss";
 import { motion } from "framer-motion";
 import copyUtil from "../../../../utils/copy-to-clipboard";
 import { wait } from "../../../../utils/utils";
@@ -8,8 +8,8 @@ const InvoiceCopyField: React.FC<{
   label: string;
   value: string;
   toastTitle: string;
-  qrVisible: boolean;
-  toggleQR: (val: boolean) => void;
+  qrVisible?: boolean;
+  toggleQR?: (val: boolean) => void;
   setToast: (val: {
     label: string;
     value: string;
@@ -37,7 +37,7 @@ const InvoiceCopyField: React.FC<{
         animate={{ color: copied ? "#4f6ef7" : "#000000" }}
       >
         {label === "Address" ? processAddress(value) : value}
-        {label === "Address" && (
+        {label === "Address" && toggleQR && (
           <motion.img
             onClick={() => toggleQR(!qrVisible)}
             className={classes.icon__qr}

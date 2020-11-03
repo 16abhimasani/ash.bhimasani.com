@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./copy-bar.module.scss";
+import classes from "./copy.module.scss";
 import InvoiceCopyField from "./copy-field";
 
 const InvoiceCopyBar: React.FC<{

@@ -54,4 +54,32 @@
     right: 42px;
     cursor: pointer;
   }
+  &__exit {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50vh;
+    transition: background-color 300ms ease-in-out;
+    &:hover {
+      background-color: rgba(black, 0.08);
+    }
+  }
+}
+
+.sheet {
+  background-color: white;
+  position: relative;
+  border-radius: 11px 11px 0 0;
+  padding: 20px 22px 26px;
+  &__wrapper {
+    position: absolute;
+    bottom: 94px;
+    left: 0;
+    right: 0;
+  }
 }

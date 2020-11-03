@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import InvoiceDetailsBar from "./details-bar/details-bar";
 import InvoiceSuperToast from "./super-toast/super-toast";
-import InvoiceCopyBar from "./copy-bar/copy-bar";
+import InvoiceCopyBar from "./copy/copy-bar";
 import InvoiceTimer from "./timer/timer";
 import InvoiceQR from "./qr/qr";
 import { wait } from "../../../utils/utils";
