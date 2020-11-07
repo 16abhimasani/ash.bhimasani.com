@@ -13,7 +13,14 @@ import InvoiceCopySheet from "./copy/copy-sheet";
 const InvoiceBIP21ModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(true);
   const [COPY_SHEET, TOGGLE_COPY] = useState(false);
-  const [TOAST_CONTENT, SET_TOAST] = useState({
+  const [TOAST_CONTENT, SET_TOAST] = useState<{
+    label?: string;
+    toastTitle: string;
+    value: string;
+    showToast: boolean;
+    type?: string;
+    buttons?: { text: string; action?: () => void }[];
+  }>({
     label: "Address",
     toastTitle: "Payment Address Copied",
     value: "Address",
@@ -21,10 +28,12 @@ const InvoiceBIP21ModeDemo: React.FC = () => {
   });
   const handleToast = useCallback(
     async (content: {
-      label: string;
+      label?: string;
       toastTitle: string;
       value: string;
       showToast: boolean;
+      type?: string;
+      buttons?: { text: string; action?: () => void }[];
     }) => {
       if (TOAST_CONTENT) {
         closeToast();
@@ -40,7 +49,16 @@ const InvoiceBIP21ModeDemo: React.FC = () => {
     SET_TOAST({ ...TOAST_CONTENT, showToast: false });
   };
   const handleWallet = useCallback(async () => {
-    console.log("open wallet");
+    handleToast({
+      toastTitle: `Uncheck "Subtract by Fee"`,
+      value: `Make sure to uncheck the “Subtract Fee from Amount” option next to your total amount.`,
+      type: "warning",
+      buttons: [
+        { text: "Help Me" },
+        { text: "Copy Payment", action: handleCopy },
+      ],
+      showToast: true,
+    });
   }, []);
   const handleCopy = useCallback(async () => {
     TOGGLE_COPY(!COPY_SHEET);
@@ -90,6 +108,8 @@ const InvoiceBIP21ModeDemo: React.FC = () => {
           close={closeToast}
           title={TOAST_CONTENT.toastTitle}
           caption={TOAST_CONTENT.value}
+          type={TOAST_CONTENT.type}
+          buttons={TOAST_CONTENT.buttons}
         />
       </div>
     </div>
