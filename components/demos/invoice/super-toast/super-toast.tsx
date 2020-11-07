@@ -39,7 +39,9 @@ const InvoiceSuperToast: React.FC<{
   close: () => void;
   title: string;
   caption: string;
-}> = ({ open, close, title, caption }) => {
+  type?: string;
+  buttons?: { text: string; action?: () => void }[];
+}> = ({ open, close, title, caption, type, buttons }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {open && (
@@ -51,11 +53,41 @@ const InvoiceSuperToast: React.FC<{
           exit="exit"
           variants={animateToast}
         >
-          <img className={classes.icon} src="/icons/bp-copy.svg" />
-          <div className="col">
-            <div className={classes.title}>{title}</div>
-            <div className={classes.caption}>{caption}</div>
+          <div style={{ display: "flex" }}>
+            {type === "warning" ? (
+              <img className={classes.icon} src="/icons/info-warning.svg" />
+            ) : (
+              <img className={classes.icon} src="/icons/bp-copy.svg" />
+            )}
+            <div className="col">
+              <div className={classes.title}>{title}</div>
+              <div
+                className={classes.caption}
+                style={{
+                  wordBreak:
+                    caption.split(" ").length === 1
+                      ? "break-all"
+                      : "break-word",
+                }}
+              >
+                {caption}
+              </div>
+            </div>
           </div>
+          {buttons && (
+            <div className={classes.buttons}>
+              {buttons.map((content, index) => (
+                <motion.div
+                  className={classes.button}
+                  key={index}
+                  whileTap={{ scale: 0.96 }}
+                  onClick={(): void => content.action && content.action()}
+                >
+                  {content.text}
+                </motion.div>
+              ))}
+            </div>
+          )}
           <motion.img
             className={classes.exit}
             src="/icons/toast-exit.svg"
