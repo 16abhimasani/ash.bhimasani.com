@@ -50,7 +50,7 @@ const InvoiceBIP21ModeDemo: React.FC = () => {
   };
   const handleWallet = useCallback(async () => {
     handleToast({
-      toastTitle: `Uncheck "Subtract by Fee"`,
+      toastTitle: `Uncheck "Subtract Fee"`,
       value: `Make sure to uncheck the “Subtract Fee from Amount” option next to your total amount.`,
       type: "warning",
       buttons: [
