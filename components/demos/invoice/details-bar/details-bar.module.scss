@@ -14,19 +14,25 @@
   margin-left: 4px;
 }
 
-.view_details {
+.bubble {
   display: flex;
   align-items: center;
   padding: 6px 12px;
   background: #f5f5f7;
   border-radius: 50vh;
-  font-weight: 600;
   font-size: 11px;
-  color: #4f6ef7;
   letter-spacing: 0.2px;
   margin-right: 12px;
   cursor: pointer;
   user-select: none;
+  &__details {
+    font-weight: 600;
+    color: #4f6ef7;
+  }
+  &__time {
+    font-weight: 500;
+    color: rgba(#979aa1, 0.75);
+  }
 }
 
 .details {

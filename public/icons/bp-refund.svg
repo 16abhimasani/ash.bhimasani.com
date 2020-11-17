@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g fill="none" fill-rule="evenodd" stroke="#4F6EF7" stroke-width="1.25" transform="translate(1 1)">
+    <circle cx="2.727" cy="2.727" r="2.727" stroke-linecap="square"/>
+    <circle cx="12.273" cy="12.273" r="2.727" stroke-linecap="square"/>
+    <polyline points="8.182 2.727 13.636 2.727 13.636 6.818"/>
+    <polyline points="6.818 12.273 1.364 12.273 1.364 8.182"/>
+    <polyline stroke-linecap="square" points="10.227 .682 8.182 2.727 10.227 4.773"/>
+    <polyline stroke-linecap="square" points="4.773 10.227 6.818 12.273 4.773 14.318"/>
+  </g>
+</svg>

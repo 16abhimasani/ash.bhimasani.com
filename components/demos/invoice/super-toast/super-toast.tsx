@@ -2,6 +2,9 @@ import React from "react";
 import classes from "./super-toast.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
+import classNames from "classnames/bind";
+const cx = classNames.bind(classes);
+
 const animateToast = {
   visible: {
     opacity: 1,
@@ -36,33 +39,57 @@ const animateToast = {
 
 const InvoiceSuperToast: React.FC<{
   open: boolean;
-  close: () => void;
+  close?: () => void;
   title: string;
   caption: string;
   type?: string;
   buttons?: { text: string; action?: () => void }[];
-}> = ({ open, close, title, caption, type, buttons }) => {
+  lightMode?: boolean;
+}> = ({ open, close, title, caption, type, buttons, lightMode }) => {
+  const iconSrc = () => {
+    switch (type) {
+      case "warning":
+        return "/icons/info-warning.svg";
+      case "feedback":
+        return "https://bitpay.com/img/wallet-logos/bitpay-wallet.svg";
+      case "refund":
+        return "/icons/bp-refund.svg";
+      case "timer":
+        return "/icons/bp-timer-warning.svg";
+      default:
+        return "/icons/bp-copy.svg";
+    }
+  };
   return (
     <AnimatePresence exitBeforeEnter>
       {open && (
         <motion.div
-          className={classes.toast}
           key="super-toast"
           initial="initial"
           animate="visible"
           exit="exit"
           variants={animateToast}
+          className={cx({
+            toast: true,
+            toast__light: lightMode,
+          })}
         >
           <div style={{ display: "flex" }}>
-            {type === "warning" ? (
-              <img className={classes.icon} src="/icons/info-warning.svg" />
-            ) : (
-              <img className={classes.icon} src="/icons/bp-copy.svg" />
-            )}
+            <img className={classes.icon} src={iconSrc()} />
             <div className="col">
-              <div className={classes.title}>{title}</div>
               <div
-                className={classes.caption}
+                className={cx({
+                  title: true,
+                  title__light: lightMode,
+                })}
+              >
+                {title}
+              </div>
+              <div
+                className={cx({
+                  caption: true,
+                  caption__light: lightMode,
+                })}
                 style={{
                   wordBreak:
                     caption.split(" ").length === 1
@@ -74,11 +101,24 @@ const InvoiceSuperToast: React.FC<{
               </div>
             </div>
           </div>
+          {type === "feedback" && (
+            <motion.div
+              className={cx({
+                button: true,
+                button__light: true,
+              })}
+              style={{ marginLeft: 0 }}
+              whileTap={{ scale: 0.96 }}
+            >
+              Leave Feedback
+            </motion.div>
+          )}
           {buttons && (
             <div className={classes.buttons}>
               {buttons.map((content, index) => (
                 <motion.div
                   className={classes.button}
+                  style={buttons.length === 1 ? { marginLeft: 0 } : {}}
                   key={index}
                   whileTap={{ scale: 0.96 }}
                   onClick={(): void => content.action && content.action()}
@@ -88,11 +128,13 @@ const InvoiceSuperToast: React.FC<{
               ))}
             </div>
           )}
-          <motion.img
-            className={classes.exit}
-            src="/icons/toast-exit.svg"
-            onClick={close}
-          />
+          {close && (
+            <motion.img
+              className={classes.exit}
+              src="/icons/toast-exit.svg"
+              onClick={close}
+            />
+          )}
         </motion.div>
       )}
     </AnimatePresence>
