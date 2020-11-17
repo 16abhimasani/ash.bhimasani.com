@@ -4,6 +4,10 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2p";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
 
 const BitPayInvoicePay: React.FC = () => (
   <>
@@ -117,6 +121,14 @@ const BitPayInvoicePay: React.FC = () => (
             collapsed.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoiceAddressModeDemo />
+          </div>
+        </section>
+
         <h3>3 Flows for Exchanges</h3>
         <div className="lead end-section">
           <ol className="list">
@@ -186,6 +198,14 @@ const BitPayInvoicePay: React.FC = () => (
             par with Launch hence the linear "Pay Bar" design.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoiceBIP21ModeDemo />
+          </div>
+        </section>
+
         <h3 className="begin-section">And 3 Flows for Wallets</h3>
         <div className="lead end-section">
           <ol className="list">
@@ -350,16 +370,6 @@ const BitPayInvoicePay: React.FC = () => (
             Amount, and Miner Fees!
           </p>
         </div>
-        <video
-          className="h-align d-block end-section"
-          width="500"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/vids/invoice/oauth-details.mp4" type="video/mp4" />
-        </video>
 
         <h3 className="begin-section">OAuth Exchanges (Coinbase)</h3>
         <WideScreen
@@ -391,6 +401,13 @@ const BitPayInvoicePay: React.FC = () => (
             .
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoiceConnectModeDemo />
+          </div>
+        </section>
 
         <h3 className="begin-section">Hardware Wallets (Ledger)</h3>
         <WideScreen src="/imgs/invoice/pay/direct/hardware/pay.png" />
@@ -435,6 +452,14 @@ const BitPayInvoicePay: React.FC = () => (
             experience that cannot easily be recreated with third-party wallets.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoiceUniversalModeDemo />
+          </div>
+        </section>
+
         <img
           className="h-align d-block begin-section"
           width="350"

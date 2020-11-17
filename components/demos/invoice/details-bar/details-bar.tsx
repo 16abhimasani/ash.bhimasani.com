@@ -1,10 +1,10 @@
 import React, { useState, useRef, useCallback } from "react";
-import classNames from "classnames/bind";
 import classes from "./details-bar.module.scss";
 import { motion } from "framer-motion";
 
 import BitpayLogo from "../../extension/bp-logo/bp-logo";
 
+import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 const detailsTransition = {
@@ -37,9 +37,10 @@ const animateDetails = {
 
 const InvoiceDetailsBar: React.FC<{
   total?: string;
-  rate: string;
-  due: string;
-}> = ({ total = "135.00 USD", rate, due }) => {
+  rate?: string;
+  due?: string;
+  timestamp?: boolean;
+}> = ({ total = "135.00 USD", rate, due, timestamp }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const details = useRef<HTMLDivElement>(null);
   const getHeight = useCallback((): number => {
@@ -48,97 +49,115 @@ const InvoiceDetailsBar: React.FC<{
   }, [details]);
   return (
     <>
-      <motion.div
-        className={cx({
-          bar: true,
-        })}
-      >
+      <motion.div className={classes.bar}>
         <div className={classes.bp_logo}>
           <BitpayLogo solo={false} payMode={false} />
         </div>
-        <motion.div
-          className={classes.view_details}
-          onClick={(): void => setDetailsOpen(!detailsOpen)}
-          whileTap={{ scale: 0.98 }}
-        >
-          <div style={{ marginRight: 8 }}>View details</div>
-          <motion.svg
-            animate={detailsOpen ? "chevronOpen" : "chevronClosed"}
-            variants={animateDetails}
-            initial="chevronClosed"
-            width="8px"
-            height="6px"
-            viewBox="0 0 8 6"
-            version="1.1"
+        {timestamp ? (
+          <div
+            className={cx({
+              bubble: true,
+              bubble__time: true,
+            })}
           >
-            <g
-              id="Symbols"
-              stroke="none"
-              strokeWidth="1"
-              fill="none"
-              fillRule="evenodd"
+            {new Date().toLocaleString([], {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </div>
+        ) : (
+          <motion.div
+            className={cx({
+              bubble: true,
+              bubble__details: true,
+            })}
+            onClick={(): void => setDetailsOpen(!detailsOpen)}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div style={{ marginRight: 8 }}>View details</div>
+            <motion.svg
+              animate={detailsOpen ? "chevronOpen" : "chevronClosed"}
+              variants={animateDetails}
+              initial="chevronClosed"
+              width="8px"
+              height="6px"
+              viewBox="0 0 8 6"
+              version="1.1"
             >
               <g
-                id="Details-Bar---Collapsed"
-                transform="translate(-311.000000, -26.000000)"
+                id="Symbols"
+                stroke="none"
+                strokeWidth="1"
+                fill="none"
+                fillRule="evenodd"
               >
                 <g
-                  id="view-details"
-                  transform="translate(221.000000, 16.000000)"
+                  id="Details-Bar---Collapsed"
+                  transform="translate(-311.000000, -26.000000)"
                 >
-                  <rect
-                    id="bubble"
-                    fill="#F5F5F7"
-                    x="0"
-                    y="0"
-                    width="111"
-                    height="25"
-                    rx="12.5"
-                  ></rect>
                   <g
-                    id="small-triangle-down"
-                    transform="translate(90.000000, 10.500000)"
-                    fill="#4F6EF7"
-                    fillRule="nonzero"
+                    id="view-details"
+                    transform="translate(221.000000, 16.000000)"
                   >
-                    <path
-                      d="M7.33320958,0 L0.666790422,0 C0.424799407,0 0.201474365,0.0985 0.0834787458,0.2575 C-0.0338502313,0.4165 -0.0271838122,0.611 0.101478078,0.765 L3.43468766,4.765 C3.55668313,4.911 3.77000854,5 4,5 C4.22999146,5 4.44331687,4.911 4.56531234,4.765 L7.89852192,0.765 C8.02718381,0.611 8.03385023,0.4165 7.91652125,0.2575 C7.79852564,0.0985 7.57520059,0 7.33320958,0 Z"
-                      id="Shape"
-                    ></path>
+                    <rect
+                      id="bubble"
+                      fill="#F5F5F7"
+                      x="0"
+                      y="0"
+                      width="111"
+                      height="25"
+                      rx="12.5"
+                    ></rect>
+                    <g
+                      id="small-triangle-down"
+                      transform="translate(90.000000, 10.500000)"
+                      fill="#4F6EF7"
+                      fillRule="nonzero"
+                    >
+                      <path
+                        d="M7.33320958,0 L0.666790422,0 C0.424799407,0 0.201474365,0.0985 0.0834787458,0.2575 C-0.0338502313,0.4165 -0.0271838122,0.611 0.101478078,0.765 L3.43468766,4.765 C3.55668313,4.911 3.77000854,5 4,5 C4.22999146,5 4.44331687,4.911 4.56531234,4.765 L7.89852192,0.765 C8.02718381,0.611 8.03385023,0.4165 7.91652125,0.2575 C7.79852564,0.0985 7.57520059,0 7.33320958,0 Z"
+                        id="Shape"
+                      ></path>
+                    </g>
                   </g>
                 </g>
               </g>
-            </g>
-          </motion.svg>
-        </motion.div>
+            </motion.svg>
+          </motion.div>
+        )}
       </motion.div>
-      <motion.div
-        animate={detailsOpen ? "detailsOpen" : "detailsClosed"}
-        variants={animateDetails}
-        custom={getHeight()}
-        initial="detailsClosed"
-        style={{ overflow: "hidden" }}
-      >
-        <div className={classes.details} ref={details}>
-          <div className={classes.details__row}>
-            <div className={classes.details__row__left}>Total Price</div>
-            <div className={classes.details__row__right}>{total}</div>
-          </div>
-          <div className={classes.details__row}>
-            <div className={classes.details__row__left}>Exchange Rate</div>
-            <div className={classes.details__row__right}>{rate}</div>
-          </div>
-          <div className={classes.details__row}>
-            <div className={classes.details__row__left}>Amount Due</div>
-            <div
-              className={classes.details__row__right}
-              style={{ fontWeight: 600 }}
-            >
-              {due}
+      {!timestamp && (
+        <motion.div
+          animate={detailsOpen ? "detailsOpen" : "detailsClosed"}
+          variants={animateDetails}
+          custom={getHeight()}
+          initial="detailsClosed"
+          style={{ overflow: "hidden" }}
+        >
+          <div className={classes.details} ref={details}>
+            <div className={classes.details__row}>
+              <div className={classes.details__row__left}>Total Price</div>
+              <div className={classes.details__row__right}>{total}</div>
+            </div>
+            <div className={classes.details__row}>
+              <div className={classes.details__row__left}>Exchange Rate</div>
+              <div className={classes.details__row__right}>{rate}</div>
+            </div>
+            <div className={classes.details__row}>
+              <div className={classes.details__row__left}>Amount Due</div>
+              <div
+                className={classes.details__row__right}
+                style={{ fontWeight: 600 }}
+              >
+                {due}
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      )}
     </>
   );
 };

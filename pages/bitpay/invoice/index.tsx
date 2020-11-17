@@ -117,6 +117,10 @@ const BitPayInvoice: React.FC = () => (
             <div className="list__item__number">6</div>
             <div>XRP Support</div>
           </li>
+          <li className="list__item">
+            <div className="list__item__number">7</div>
+            <div>KYC / User Account Support</div>
+          </li>
         </ol>
       </div>
       <div className="breakdown end-section">

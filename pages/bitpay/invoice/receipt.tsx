@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import InvoiceReceiptDemo from "../../../components/demos/invoice/invoice-receipt";
 
 const BitPayInvoiceReceipt: React.FC = () => (
   <>
@@ -56,6 +57,14 @@ const BitPayInvoiceReceipt: React.FC = () => (
             buried a level down in the Info icon.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 124 }}>
+            <InvoiceReceiptDemo type="paid" />
+          </div>
+        </section>
+
         <h4>V3 (Old Design)</h4>
         <img
           className="h-align d-block end-section"
@@ -132,6 +141,14 @@ const BitPayInvoiceReceipt: React.FC = () => (
             end.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 124 }}>
+            <InvoiceReceiptDemo type="underpaid" />
+          </div>
+        </section>
+
         <h4>V3 (Old Design)</h4>
         <img
           className="h-align d-block"
@@ -162,6 +179,14 @@ const BitPayInvoiceReceipt: React.FC = () => (
             easily see their mistake.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 124 }}>
+            <InvoiceReceiptDemo type="overpaid" />
+          </div>
+        </section>
+
         <h4>V3 (Old Design)</h4>
         <img
           className="h-align d-block"
@@ -187,6 +212,14 @@ const BitPayInvoiceReceipt: React.FC = () => (
             state.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 124 }}>
+            <InvoiceReceiptDemo type="delayed" />
+          </div>
+        </section>
+
         <h4>V3 (Old Design)</h4>
         <img
           className="h-align d-block"
