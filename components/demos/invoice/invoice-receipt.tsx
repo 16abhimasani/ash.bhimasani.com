@@ -49,7 +49,10 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             })}
           >
             <img
-              className={classes.status__icon}
+              className={cx({
+                status__icon: true,
+                status__blue__pulse: false,
+              })}
               src="/icons/status-refund.svg"
             />
             Refund Available
@@ -63,7 +66,10 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             })}
           >
             <img
-              className={classes.status__icon}
+              className={cx({
+                status__icon: true,
+                status__red__pulse: false,
+              })}
               src="/icons/status-declined.svg"
             />
             Payment Declined

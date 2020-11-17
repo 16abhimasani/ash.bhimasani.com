@@ -18,6 +18,25 @@
   padding: 26px;
 }
 
+@mixin pulse($color) {
+  box-shadow: 0 0 0 0 rgba($color, 1);
+  animation: pulse 2s infinite;
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba($color, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 8px rgba($color, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba($color, 0);
+    }
+  }
+}
+
 .status {
   display: flex;
   flex-direction: column;
@@ -31,18 +50,25 @@
     width: 20px;
     height: 20px;
     margin-bottom: 10px;
+    border-radius: 50vh;
   }
   &__green {
     color: #2fcfa4;
   }
   &__red {
     color: #ef476f;
+    &__pulse {
+      @include pulse(#ef476f);
+    }
   }
   &__orange {
     color: #fdb455;
   }
   &__blue {
     color: #4f6ef7;
+    &__pulse {
+      @include pulse(#4f6ef7);
+    }
   }
 }
 
