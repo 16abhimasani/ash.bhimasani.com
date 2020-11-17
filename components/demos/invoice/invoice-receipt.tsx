@@ -41,7 +41,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             Payment Delayed
           </motion.div>
         )}
-        {type === "overpaid" && (
+        {(type === "overpaid" || type === "refund") && (
           <motion.div
             className={cx({
               status: true,
@@ -69,6 +69,20 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             Payment Declined
           </motion.div>
         )}
+        {type === "processing" && (
+          <motion.div
+            className={cx({
+              status: true,
+              status__blue: true,
+            })}
+          >
+            <img
+              className={classes.status__icon}
+              src="/icons/status-processing.svg"
+            />
+            Refund Processing
+          </motion.div>
+        )}
         <motion.div className={classes.price}>$135.00</motion.div>
         <div className={classes.details}>
           <div className={classes.details__row}>
@@ -90,11 +104,35 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
               style={{ fontWeight: 600, color: "#4f6ef7" }}
             >
               {type === "paid" && <> 0.008226 BTC</>}
-              {type === "delayed" && <> 0.008226 BTC</>}
               {type === "overpaid" && <> 0.009973 BTC</>}
               {type === "underpaid" && <> 0.008001 BTC</>}
+              {(type === "processing" ||
+                type === "refund" ||
+                type === "delayed") && <> 0.008226 BTC</>}
             </div>
           </div>
+          {(type === "processing" || type === "refund") && (
+            <div className={classes.details__row}>
+              <div className={classes.details__row__left}>Refund Due</div>
+              <div
+                className={classes.details__row__right}
+                style={{ fontWeight: 600 }}
+              >
+                135.00 USD
+              </div>
+            </div>
+          )}
+          {type === "processing" && (
+            <div className={classes.details__row}>
+              <div className={classes.details__row__left}>Refund Address</div>
+              <div
+                className={classes.details__row__right}
+                style={{ fontWeight: 600, color: "#4f6ef7" }}
+              >
+                mwXWZj…JUJhT5
+              </div>
+            </div>
+          )}
         </div>
       </motion.div>
       <div style={{ position: "relative", marginTop: 26 }}>
@@ -132,6 +170,23 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             caption="A refund of 0.008001 BTC is available for your underpayment."
             type="refund"
             buttons={[{ text: "Enter Address" }]}
+          />
+        )}
+        {type === "refund" && (
+          <InvoiceSuperToast
+            open={true}
+            title="Here’s your refund"
+            caption="A refund for 135.00 USD has been authorized on Dec 18 2020, 6:00 PM."
+            type="refund"
+            buttons={[{ text: "Enter Address" }]}
+          />
+        )}
+        {type === "processing" && (
+          <InvoiceSuperToast
+            open={true}
+            title="Address Saved!"
+            caption="This refund will be sent to you within 1 to 2 business days."
+            type="info"
           />
         )}
       </div>

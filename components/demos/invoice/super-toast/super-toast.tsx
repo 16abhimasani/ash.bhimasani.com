@@ -56,6 +56,8 @@ const InvoiceSuperToast: React.FC<{
         return "/icons/bp-refund.svg";
       case "timer":
         return "/icons/bp-timer-warning.svg";
+      case "info":
+        return "/icons/info-normal.svg";
       default:
         return "/icons/bp-copy.svg";
     }
