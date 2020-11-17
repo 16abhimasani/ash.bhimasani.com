@@ -110,6 +110,18 @@ const BitPayInvoiceReceipt: React.FC = () => (
             being highly accessible.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 124 }}>
+            <InvoiceReceiptDemo type="refund" />
+          </div>
+        </section>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 76 }}>
+            <InvoiceReceiptDemo type="processing" />
+          </div>
+        </section>
       </section>
 
       <section className="begin-section">
