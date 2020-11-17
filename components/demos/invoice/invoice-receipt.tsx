@@ -103,10 +103,10 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
               className={classes.details__row__right}
               style={{ fontWeight: 600, color: "#4f6ef7" }}
             >
-              {type === "paid" && <> 0.008226 BTC</>}
               {type === "overpaid" && <> 0.009973 BTC</>}
               {type === "underpaid" && <> 0.008001 BTC</>}
-              {(type === "processing" ||
+              {(type === "paid" ||
+                type === "processing" ||
                 type === "refund" ||
                 type === "delayed") && <> 0.008226 BTC</>}
             </div>
