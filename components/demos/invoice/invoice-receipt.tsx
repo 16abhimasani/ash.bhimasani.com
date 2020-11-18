@@ -38,7 +38,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
               className={classes.status__icon}
               src="/icons/status-confirming.svg"
             />
-            Payment Delayed
+            Payment Detected
           </motion.div>
         )}
         {(type === "overpaid" || type === "refund") && (
