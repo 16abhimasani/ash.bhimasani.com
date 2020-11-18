@@ -18,10 +18,10 @@
   padding: 26px;
 }
 
-@mixin pulse($color) {
+@mixin pulse($color, $name) {
   box-shadow: 0 0 0 0 rgba($color, 1);
-  animation: pulse 2s infinite;
-  @keyframes pulse {
+  animation: $name 2s infinite;
+  @keyframes #{$name} {
     0% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba($color, 0.7);
@@ -58,7 +58,7 @@
   &__red {
     color: #ef476f;
     &__pulse {
-      @include pulse(#ef476f);
+      @include pulse(#ef476f, pulseRed);
     }
   }
   &__orange {
@@ -67,7 +67,7 @@
   &__blue {
     color: #4f6ef7;
     &__pulse {
-      @include pulse(#4f6ef7);
+      @include pulse(#4f6ef7, pulseBlue);
     }
   }
 }

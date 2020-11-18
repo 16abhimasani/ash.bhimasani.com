@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./invoice.module.scss";
 import { motion } from "framer-motion";
 
@@ -9,9 +9,18 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
+  const [pulse, togglePulse] = useState(false);
   return (
     <div>
-      <motion.div className={classes.invoice}>
+      <motion.div
+        className={classes.invoice}
+        onClick={(): void => togglePulse(!pulse)}
+        style={
+          type === "underpaid" || type === "overpaid" || type === "refund"
+            ? { cursor: "pointer" }
+            : {}
+        }
+      >
         <InvoiceDetailsBar timestamp />
         {type === "paid" && (
           <motion.div
@@ -51,7 +60,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             <img
               className={cx({
                 status__icon: true,
-                status__blue__pulse: false,
+                status__blue__pulse: pulse,
               })}
               src="/icons/status-refund.svg"
             />
@@ -68,7 +77,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             <img
               className={cx({
                 status__icon: true,
-                status__red__pulse: false,
+                status__red__pulse: pulse,
               })}
               src="/icons/status-declined.svg"
             />
