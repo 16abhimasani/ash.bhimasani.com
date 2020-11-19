@@ -14,7 +14,7 @@ const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => (
       <title>Ash Bhimasani - Designer & Engineer</title>
       <meta
         name="description"
-        content="I am a product designer & software engineer with special interests in UX, growth hacking, and business strategy currently working at BitPay"
+        content="I am a product designer & software engineer. I build my designs."
         key="description"
       />
       <meta
