@@ -49,7 +49,7 @@ const BitPayInvoiceDemos: React.FC = () => (
         >
           <InvoiceBIP21ModeDemo />
         </div>
-        <h4>BitPay Wallet Mode</h4>
+        <h4>BitPay Ecosystem Mode</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceUniversalModeDemo />
         </div>
