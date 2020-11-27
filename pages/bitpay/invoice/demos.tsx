@@ -7,6 +7,7 @@ import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/invoice-receipt";
+import InvoiceSelectDemo from "../../../components/demos/invoice/invoice-select";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -14,6 +15,15 @@ const BitPayInvoiceDemos: React.FC = () => (
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Invoice V4 Demos</h1>
       <h5 className="end-section">Reference UI implementations</h5>
+
+      <section className="end-section">
+        <h3 className="begin-section">Wallet Selection</h3>
+        <h5>Identifying source of funds for an optimal experience</h5>
+        <h4>Search & Selection</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectDemo />
+        </div>
+      </section>
 
       <section className="end-section">
         <h3 className="begin-section">Payment Acceptance</h3>

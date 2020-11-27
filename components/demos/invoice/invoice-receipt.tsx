@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import classes from "./invoice.module.scss";
+import classes from "./invoice-receipt.module.scss";
+import invoiceClasses from "./invoice.module.scss";
 import { motion } from "framer-motion";
 
 import InvoiceDetailsBar from "./details-bar/details-bar";
@@ -13,7 +14,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
   return (
     <div>
       <motion.div
-        className={classes.invoice}
+        className={invoiceClasses.invoice}
         onClick={(): void => togglePulse(!pulse)}
         style={
           type === "underpaid" || type === "overpaid" || type === "refund"
@@ -98,7 +99,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
             Refund Processing
           </motion.div>
         )}
-        <motion.div className={classes.price}>$135.00</motion.div>
+        <motion.div className={invoiceClasses.price}>$135.00</motion.div>
         <div className={classes.details}>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Exchange Rate</div>

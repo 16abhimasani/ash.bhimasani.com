@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 16px;
+  border-bottom: 1px solid rgba(#a3a3a3, 0.1);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f7;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+.input {
+  font-weight: 400;
+  font-size: 12px;
+  color: #434d5a;
+  text-align: left;
+  width: 100%;
+  margin-left: 16px;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #9ba3ae;
+  }
+}
+
+.wallets {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 18px 20px;
+  overflow: scroll;
+  &__title {
+    font-weight: 500;
+    font-size: 13px;
+    color: #979aa1;
+    text-align: left;
+    margin: 12px;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.wallet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  margin: 2px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: darken(#565d6e, 5%);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  &__chevron {
+    position: absolute;
+    right: 16px;
+    height: 12px;
+    opacity: 0.5;
+    transition: transform 300ms ease-in-out;
+  }
+  &:hover {
+    background-color: #f8fbfd;
+    color: #4f6ef7;
+    .wallet__chevron {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(white, 0) 0%, white 100%);
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
