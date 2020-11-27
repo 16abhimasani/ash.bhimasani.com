@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import classes from "./invoice-select.module.scss";
 import invoiceClasses from "./invoice.module.scss";
+import buttonClasses from "./button/button.module.scss";
 import { motion } from "framer-motion";
 
 import classNames from "classnames/bind";
@@ -102,19 +103,40 @@ const InvoiceSelectDemo: React.FC = () => {
             </>
           ) : (
             <>
-              <div className={classes.wallets__title}>Search Results</div>
-              {searchResults().map((wallet) => (
-                <React.Fragment key={`search-${wallet}`}>
-                  <WalletCell
-                    name={WALLETS[wallet].displayName}
-                    icon={WALLETS[wallet].icon}
-                  />
-                </React.Fragment>
-              ))}
+              {searchResults().length > 0 ? (
+                <>
+                  <div className={classes.wallets__title}>Search Results</div>
+                  {searchResults().map((wallet) => (
+                    <React.Fragment key={`search-${wallet}`}>
+                      <WalletCell
+                        name={WALLETS[wallet].displayName}
+                        icon={WALLETS[wallet].icon}
+                      />
+                    </React.Fragment>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <div className={invoiceClasses.title}>No Results</div>
+                  <div className={invoiceClasses.caption}>
+                    Sorry you don’t see your wallet. Let us know what wallet
+                    you’re using and we’ll add it to this list if it’s
+                    compatible.
+                  </div>
+                  <div
+                    className={buttonClasses.button}
+                    style={{ marginTop: 40 }}
+                  >
+                    Leave Feedback
+                  </div>
+                </>
+              )}
             </>
           )}
         </div>
-        <div className={classes.fade}></div>
+        {(inputValue === "" || searchResults().length > 0) && (
+          <div className={classes.fade}></div>
+        )}
       </motion.div>
     </div>
   );
