@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
+import Link from "../../../components/utils/link";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
@@ -151,8 +152,11 @@ const BitPayInvoice: React.FC = () => (
           </hgroup>
         </div>
       </div>
-
-      <h4 className="begin-section">V4 Interactive Demos</h4>
+      <Link href="/bitpay/invoice/demos">
+        <h4 className="begin-section" style={{ cursor: "pointer" }}>
+          V4 Interactive Demos
+        </h4>
+      </Link>
       <section className="begin-section end-section wrapper-center">
         <InvoiceUniversalModeDemo />
       </section>
