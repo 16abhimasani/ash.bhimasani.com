@@ -8,6 +8,7 @@ import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-co
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/invoice-receipt";
 import InvoiceSelectDemo from "../../../components/demos/invoice/invoice-select";
+import InvoiceSelectWeb3Demo from "../../../components/demos/invoice/invoice-web3";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -22,6 +23,9 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>Search & Selection</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectDemo />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectWeb3Demo />
         </div>
       </section>
 
