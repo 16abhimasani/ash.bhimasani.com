@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import classes from "./invoice-select.module.scss";
 import invoiceClasses from "./invoice.module.scss";
 import buttonClasses from "./button/button.module.scss";
@@ -7,7 +7,27 @@ import { motion } from "framer-motion";
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
-import { RECENT, POPULAR, WALLETS } from "./wallets";
+import { RECENT, POPULAR, WALLETS, CURRENCIES } from "./wallets";
+
+const animateSelected = {
+  initial: { borderRadius: 10 },
+  selected: { borderRadius: 100 },
+  selectedContent: {
+    opacity: 1,
+    y: 0,
+  },
+  selectedInitial: {
+    opacity: 0,
+    y: 10,
+  },
+};
+
+const topLevelCurrencies = [
+  { code: "BTC", name: "Bitcoin" },
+  { code: "BCH", name: "Bitcoin Cash" },
+  { code: "ETH", name: "Ethereum" },
+  { code: "XRP", name: "Ripple" },
+];
 
 const WalletCell: React.FC<{ name: string; icon: string }> = ({
   name,
@@ -26,9 +46,16 @@ const WalletCell: React.FC<{ name: string; icon: string }> = ({
 };
 
 const InvoiceSelectDemo: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [currencyFilter, setCurrencyFilter] = useState<{
+    code: string;
+    name: string;
+  } | null>(null);
   const [inputValue, setInputValue] = useState("");
   const clear = (): void => {
+    if (scrollRef && scrollRef.current) scrollRef.current.scrollTop = 0;
     if (inputValue !== "") setInputValue("");
+    if (currencyFilter) setCurrencyFilter(null);
   };
   const Wallets = useCallback((): string[] => {
     return Object.keys(WALLETS).sort((a, b) =>
@@ -36,35 +63,70 @@ const InvoiceSelectDemo: React.FC = () => {
     );
   }, [WALLETS]);
   const searchResults = useCallback((): string[] => {
-    return Wallets().filter((wallet: string) =>
-      WALLETS[wallet].displayName
-        .toLocaleLowerCase()
-        .includes(inputValue.toLocaleLowerCase())
-    );
-  }, [inputValue]);
+    if (scrollRef && scrollRef.current) scrollRef.current.scrollTop = 0;
+    return currencyFilter
+      ? Wallets().filter((wallet: string) =>
+          WALLETS[wallet].currencies.includes(currencyFilter.code)
+        )
+      : Wallets().filter((wallet: string) =>
+          WALLETS[wallet].displayName
+            .toLocaleLowerCase()
+            .includes(inputValue.toLocaleLowerCase())
+        );
+  }, [inputValue, currencyFilter]);
   return (
     <div>
       <motion.div className={invoiceClasses.invoice} style={{ maxHeight: 496 }}>
         <div className={classes.header}>
-          <div className={classes.search}>
-            <input
-              className={classes.input}
-              placeholder="Search Wallet or Exchange"
-              value={inputValue}
-              onChange={(e: React.FormEvent<HTMLInputElement>): void =>
-                setInputValue(e.currentTarget.value)
-              }
-            />
+          <motion.div
+            className={classes.search}
+            initial="initial"
+            animate={currencyFilter ? "selected" : "initial"}
+            variants={animateSelected}
+            onClick={(): void => {
+              if (currencyFilter) clear();
+            }}
+            style={currencyFilter ? { cursor: "pointer" } : {}}
+          >
+            {currencyFilter ? (
+              <motion.div
+                className={classes.search__selected}
+                initial="selectedInitial"
+                animate="selectedContent"
+                variants={animateSelected}
+              >
+                <img
+                  className={classes.search__selected__icon}
+                  src={`/icons/currencies/${currencyFilter.code}.svg`}
+                />
+                {currencyFilter.name}
+              </motion.div>
+            ) : (
+              <input
+                className={classes.input}
+                placeholder="Search Wallet or Exchange"
+                value={inputValue}
+                onChange={(e: React.FormEvent<HTMLInputElement>): void =>
+                  setInputValue(e.currentTarget.value)
+                }
+              />
+            )}
             <motion.img
               className={classes.search__icon}
-              src={`/icons/bp-search${inputValue === "" ? "" : "-clear"}.svg`}
-              style={inputValue === "" ? {} : { cursor: "pointer" }}
+              src={`/icons/bp-search${
+                inputValue === "" && currencyFilter == null ? "" : "-clear"
+              }.svg`}
+              style={
+                inputValue === "" && currencyFilter == null
+                  ? {}
+                  : { cursor: "pointer", transform: "scale(0.8)" }
+              }
               onClick={clear}
             />
-          </div>
+          </motion.div>
         </div>
-        <div className={classes.wallets}>
-          {inputValue === "" ? (
+        <div className={classes.wallets} ref={scrollRef}>
+          {inputValue === "" && currencyFilter == null ? (
             <>
               <div className={classes.wallets__title}>Recently Selected</div>
               {RECENT.map((wallet) => (
@@ -138,6 +200,24 @@ const InvoiceSelectDemo: React.FC = () => {
           <div className={classes.fade}></div>
         )}
       </motion.div>
+      <div className="wrapper-center v-align" style={{ marginTop: 26 }}>
+        {topLevelCurrencies.map((curr) => (
+          <motion.div
+            className={classes.currency}
+            onClick={(): void => setCurrencyFilter(curr)}
+            key={curr.code}
+          >
+            <img
+              className={classes.currency__icon}
+              src={`/icons/currencies/${curr.code.toLocaleLowerCase()}.svg`}
+            />
+            {curr.code}
+          </motion.div>
+        ))}
+        <div className={classes.currency__all}>
+          View {CURRENCIES.length - topLevelCurrencies.length} More
+        </div>
+      </div>
     </div>
   );
 };

@@ -18,6 +18,11 @@
   margin: auto auto;
 }
 
+.v-align {
+  display: flex;
+  align-items: center;
+}
+
 .wrapper-center {
   display: flex;
   justify-content: center;

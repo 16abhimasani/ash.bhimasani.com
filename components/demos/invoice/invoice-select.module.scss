@@ -7,18 +7,31 @@
 }
 
 .search {
+  position: relative;
   display: flex;
   align-items: center;
   background-color: #f5f5f7;
   border-radius: 10px;
   height: 40px;
   width: 100%;
-
   &__icon {
+    position: absolute;
     width: 14px;
     height: 14px;
-    margin-right: 16px;
-    margin-left: 16px;
+    right: 16px;
+  }
+  &__selected {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #565d6e;
+    &__icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
   }
 }
 
@@ -29,6 +42,7 @@
   text-align: left;
   width: 100%;
   margin-left: 16px;
+  margin-right: 40px;
   border: none;
   background-image: none;
   background-color: transparent;
@@ -100,4 +114,37 @@
   background-image: linear-gradient(180deg, rgba(white, 0) 0%, white 100%);
   border-bottom-left-radius: 11px;
   border-bottom-right-radius: 11px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 5px 3px 3px;
+  border-radius: 4px;
+  border: 1px solid rgba(#9ba3ae, 0.14);
+  background-color: rgba(#f6f7fc, 0.16);
+  font-weight: 700;
+  font-size: 10px;
+  color: #9ba3ae;
+  text-transform: uppercase;
+  margin: auto 4px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    color: #4f6ef7;
+    border-color: #4f6ef7;
+  }
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+  &__all {
+    font-weight: 700;
+    font-size: 8px;
+    color: #4f6ef7;
+    margin-left: 6px;
+    cursor: pointer;
+  }
 }
