@@ -4,9 +4,6 @@ import invoiceClasses from "./invoice.module.scss";
 import buttonClasses from "./button/button.module.scss";
 import { motion } from "framer-motion";
 
-import classNames from "classnames/bind";
-const cx = classNames.bind(classes);
-
 import { RECENT, POPULAR, WALLETS, CURRENCIES } from "./wallets";
 
 const animateSelected = {

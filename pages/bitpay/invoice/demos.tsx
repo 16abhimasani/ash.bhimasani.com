@@ -8,7 +8,8 @@ import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-co
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/invoice-receipt";
 import InvoiceSelectDemo from "../../../components/demos/invoice/invoice-select";
-import InvoiceSelectWeb3Demo from "../../../components/demos/invoice/invoice-web3";
+import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/invoice-wallet-connect";
+import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/invoice-wallet-pair";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -24,8 +25,17 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectDemo />
         </div>
+        <h4>Connect Web3 Wallet (Browser)</h4>
         <div className="begin-section end-section wrapper-center">
-          <InvoiceSelectWeb3Demo />
+          <InvoiceSelectWalletConnectDemo type="metamask" />
+        </div>
+        <h4>Connect Web3 Wallet (Mobile)</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectWalletPairDemo />
+        </div>
+        <h4>Connect Hardware Wallet (USB)</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectWalletConnectDemo type="ledger" />
         </div>
       </section>
 

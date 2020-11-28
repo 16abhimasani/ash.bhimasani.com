@@ -6,7 +6,46 @@ import { motion } from "framer-motion";
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
-const InvoiceSelectWeb3Demo: React.FC = () => {
+const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
+  type,
+}) => {
+  const data = (): {
+    logo: string;
+    name: string;
+    theme: string;
+  } => {
+    switch (type) {
+      case "metamask":
+        return {
+          name: "MetaMask",
+          logo: "metamask.svg",
+          theme: "#f79220",
+        };
+      case "ledger":
+        return {
+          name: "Ledger",
+          logo: "ledger-wallet.svg",
+          theme: "#41ccb4",
+        };
+      default:
+        return {
+          name: "MetaMask",
+          logo: "metamask.svg",
+          theme: "#f79220",
+        };
+    }
+  };
+  const hexToRGB = (color: string) => {
+    const hex = Number("0x" + color.substring(1));
+    const r = (hex >> 16) & 0xff;
+    const g = (hex >> 8) & 0xff;
+    const b = hex & 0xff;
+    return `${r}, ${g}, ${b}`;
+  };
+  const color = {
+    backgroundColor: `rgba(${hexToRGB(data().theme)}, 0.02)`,
+    boxShadow: `inset 0 0 12px 0 rgba(${hexToRGB(data().theme)}, 0.16)`,
+  };
   return (
     <div>
       <motion.div className={invoiceClasses.invoice} style={{ height: 420 }}>
@@ -18,9 +57,9 @@ const InvoiceSelectWeb3Demo: React.FC = () => {
             <motion.div className={classes.search__selected}>
               <img
                 className={classes.search__selected__icon}
-                src="https://bitpay.com/img/wallet-logos/metamask.svg"
+                src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
               />
-              MetaMask
+              {data().name}
             </motion.div>
 
             <motion.img
@@ -30,51 +69,63 @@ const InvoiceSelectWeb3Demo: React.FC = () => {
             />
           </motion.div>
         </div>
-        <div className={classes.wallets} style={{ height: "100%" }}>
-          <div className={invoiceClasses.title}>Connect to MetaMask</div>
+        <div
+          className={classes.wallets}
+          style={{ height: "100%", overflow: "hidden" }}
+        >
+          <div className={invoiceClasses.title}>Connect to {data().name}</div>
           <div className={invoiceClasses.caption}>
-            Authorize BitPay to connect to your Web3 wallet to pay.
+            {["metamask"].includes(type) &&
+              "Authorize BitPay to connect to your Web3 wallet to pay."}
+            {type === "ledger" &&
+              "Plug in your device and make sure Browser Support is enabled."}
           </div>
           <div className={classes.pulser}>
             <img
               className={classes.pulser__icon}
-              src="https://bitpay.com/img/wallet-logos/metamask.svg"
+              src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
             />
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__0: true,
               })}
+              style={color}
             ></div>
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__1: true,
               })}
+              style={color}
             ></div>
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__2: true,
               })}
+              style={color}
             ></div>
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__3: true,
               })}
+              style={color}
             ></div>
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__4: true,
               })}
+              style={color}
             ></div>
             <div
               className={cx({
                 pulser__rings: true,
                 pulser__rings__5: true,
               })}
+              style={color}
             ></div>
           </div>
         </div>
@@ -83,4 +134,4 @@ const InvoiceSelectWeb3Demo: React.FC = () => {
   );
 };
 
-export default InvoiceSelectWeb3Demo;
+export default InvoiceSelectWalletConnectDemo;

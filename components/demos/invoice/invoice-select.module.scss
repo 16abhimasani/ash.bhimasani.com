@@ -1,8 +1,11 @@
 .header {
   display: flex;
+  flex: 1 0 auto;
   align-items: center;
   background-color: white;
   padding: 16px;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
   border-bottom: 1px solid rgba(#a3a3a3, 0.1);
   z-index: 1;
 }
@@ -58,7 +61,7 @@
 .wallets {
   display: flex;
   flex-direction: column;
-  padding: 12px 18px 20px;
+  padding: 12px 18px 28px;
   overflow: scroll;
   &__title {
     font-weight: 500;
@@ -75,6 +78,7 @@
 .wallet {
   position: relative;
   display: flex;
+  flex: 1 0 auto;
   align-items: center;
   padding: 10px 12px;
   margin: 2px 0;
@@ -177,8 +181,6 @@
   }
   &__rings {
     position: absolute;
-    background: rgba(#f79220, 0.02);
-    box-shadow: inset 0 0 12px 0 rgba(#f79220, 0.16);
     border-radius: 50%;
     $base: 100px;
     &__0 {
