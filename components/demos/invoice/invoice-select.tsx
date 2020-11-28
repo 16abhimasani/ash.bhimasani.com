@@ -94,7 +94,7 @@ const InvoiceSelectDemo: React.FC = () => {
               >
                 <img
                   className={classes.search__selected__icon}
-                  src={`/icons/currencies/${currencyFilter.code}.svg`}
+                  src={`/icons/currencies/${currencyFilter.code.toLowerCase()}.svg`}
                 />
                 {currencyFilter.name}
               </motion.div>
@@ -206,7 +206,7 @@ const InvoiceSelectDemo: React.FC = () => {
           >
             <img
               className={classes.currency__icon}
-              src={`/icons/currencies/${curr.code.toLocaleLowerCase()}.svg`}
+              src={`/icons/currencies/${curr.code.toLowerCase()}.svg`}
             />
             {curr.code}
           </motion.div>
