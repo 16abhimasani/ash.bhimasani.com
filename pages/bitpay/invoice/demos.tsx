@@ -30,8 +30,11 @@ const BitPayInvoiceDemos: React.FC = () => (
           <InvoiceSelectWalletConnectDemo type="metamask" />
         </div>
         <h4>Connect Web3 Wallet (Mobile)</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletPairDemo type="argent" />
+        </div>
         <div className="begin-section end-section wrapper-center">
-          <InvoiceSelectWalletPairDemo />
+          <InvoiceSelectWalletPairDemo type="coinbaseWallet" />
         </div>
         <h4>Connect Hardware Wallet (USB)</h4>
         <div className="begin-section end-section wrapper-center">

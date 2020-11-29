@@ -2,8 +2,9 @@ import React from "react";
 import classes from "./invoice-select.module.scss";
 import invoiceClasses from "./invoice.module.scss";
 import { motion } from "framer-motion";
+import { WALLETS } from "./wallets";
 
-const InvoiceSelectWalletPairDemo: React.FC = () => {
+const InvoiceSelectWalletPairDemo: React.FC<{ type: string }> = ({ type }) => {
   return (
     <div>
       <motion.div className={invoiceClasses.invoice} style={{ height: 512 }}>
@@ -15,9 +16,9 @@ const InvoiceSelectWalletPairDemo: React.FC = () => {
             <motion.div className={classes.search__selected}>
               <img
                 className={classes.search__selected__icon}
-                src="https://bitpay.com/img/wallet-logos/argent-wallet.svg"
+                src={`https://bitpay.com/img/wallet-logos/${WALLETS[type].icon}`}
               />
-              Argent
+              {WALLETS[type].displayName}
             </motion.div>
 
             <motion.img
@@ -30,11 +31,14 @@ const InvoiceSelectWalletPairDemo: React.FC = () => {
         <div className={classes.wallets} style={{ height: "100%" }}>
           <div className={invoiceClasses.title}>Connect your Wallet</div>
           <div className={invoiceClasses.caption}>
-            Scan the QR code below with your Argent Wallet app to continue.
+            Scan the QR code below with your {WALLETS[type].displayName} app to
+            continue.
           </div>
           <img
             style={{ marginTop: 32 }}
-            src="/imgs/invoice/qr-codes/argent-wallet-connect.svg"
+            src={`/imgs/invoice/qr-codes/${
+              WALLETS[type].displayName.split(" ")[0]
+            }-wallet-connect.svg`}
           />
         </div>
       </motion.div>
