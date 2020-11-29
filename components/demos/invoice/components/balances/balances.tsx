@@ -72,7 +72,7 @@ const InvoiceBalances: React.FC<{
           ))}
         </div>
         <div className={classes.button_wrapper}>
-          <InvoiceButton />
+          <InvoiceButton main="Make Payment" async="Processing" />
           <div className={classes.balances__fade}></div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoic
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
+import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -37,8 +38,18 @@ const BitPayInvoiceDemos: React.FC = () => (
           <InvoiceSelectWalletPairDemo type="coinbaseWallet" />
         </div>
         <h4>Connect Hardware Wallet (USB)</h4>
-        <div className="begin-section end-section wrapper-center">
+        <div className="begin-section wrapper-center">
           <InvoiceSelectWalletConnectDemo type="ledger" />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectWalletConnectDemo type="trezor" />
+        </div>
+        <h4>Connect Exchange Account (OAuth)</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="gemini" />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="coinbase" />
         </div>
       </section>
 

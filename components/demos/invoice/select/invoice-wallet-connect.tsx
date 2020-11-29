@@ -13,6 +13,7 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
     logo: string;
     name: string;
     theme: string;
+    caption: string;
   } => {
     switch (type) {
       case "metamask":
@@ -20,18 +21,30 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
           name: "MetaMask",
           logo: "metamask.svg",
           theme: "#f79220",
+          caption: "Authorize BitPay to connect to your Web3 wallet to pay.",
         };
       case "ledger":
         return {
           name: "Ledger",
           logo: "ledger-wallet.svg",
           theme: "#41ccb4",
+          caption:
+            "Plug in your device and make sure Browser Support is enabled.",
+        };
+      case "trezor":
+        return {
+          name: "Trezor",
+          logo: "trezor-wallet.svg",
+          theme: "#01b757",
+          caption:
+            "Plug in your device and make sure Browser Support is enabled.",
         };
       default:
         return {
           name: "MetaMask",
           logo: "metamask.svg",
           theme: "#f79220",
+          caption: "Authorize BitPay to connect to your Web3 wallet to pay.",
         };
     }
   };
@@ -74,12 +87,7 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
           style={{ height: "100%", overflow: "hidden" }}
         >
           <div className={invoiceClasses.title}>Connect to {data().name}</div>
-          <div className={invoiceClasses.caption}>
-            {["metamask"].includes(type) &&
-              "Authorize BitPay to connect to your Web3 wallet to pay."}
-            {type === "ledger" &&
-              "Plug in your device and make sure Browser Support is enabled."}
-          </div>
+          <div className={invoiceClasses.caption}>{data().caption}</div>
           <div className={classes.pulser}>
             <img
               className={classes.pulser__icon}
