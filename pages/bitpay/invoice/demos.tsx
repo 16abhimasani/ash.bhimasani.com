@@ -76,7 +76,7 @@ const BitPayInvoiceDemos: React.FC = () => (
         >
           <InvoiceAddressModeDemo />
         </div>
-        <h4>Direct Connection Mode (Web3 / OAuth)</h4>
+        <h4>Connect Mode (Web3 / OAuth / USB)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 100 }}
