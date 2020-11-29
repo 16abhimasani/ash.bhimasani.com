@@ -11,6 +11,7 @@ import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
+import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -50,6 +51,18 @@ const BitPayInvoiceDemos: React.FC = () => (
         </div>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="coinbase" />
+        </div>
+      </section>
+
+      <section className="end-section">
+        <h3 className="begin-section">Compliance & Authentication</h3>
+        <h5>Handling regulatory requirements for high-value payments</h5>
+        <h4>KYC Required</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceVerifyDemo />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceVerifyDemo session />
         </div>
       </section>
 

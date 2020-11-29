@@ -142,19 +142,23 @@ const InvoiceDetailsBar: React.FC<{
               <div className={classes.details__row__left}>Total Price</div>
               <div className={classes.details__row__right}>{total}</div>
             </div>
-            <div className={classes.details__row}>
-              <div className={classes.details__row__left}>Exchange Rate</div>
-              <div className={classes.details__row__right}>{rate}</div>
-            </div>
-            <div className={classes.details__row}>
-              <div className={classes.details__row__left}>Amount Due</div>
-              <div
-                className={classes.details__row__right}
-                style={{ fontWeight: 600 }}
-              >
-                {due}
+            {rate && (
+              <div className={classes.details__row}>
+                <div className={classes.details__row__left}>Exchange Rate</div>
+                <div className={classes.details__row__right}>{rate}</div>
               </div>
-            </div>
+            )}
+            {due && (
+              <div className={classes.details__row}>
+                <div className={classes.details__row__left}>Amount Due</div>
+                <div
+                  className={classes.details__row__right}
+                  style={{ fontWeight: 600 }}
+                >
+                  {due}
+                </div>
+              </div>
+            )}
           </div>
         </motion.div>
       )}

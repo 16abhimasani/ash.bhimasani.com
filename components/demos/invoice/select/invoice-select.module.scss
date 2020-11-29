@@ -215,3 +215,25 @@
     }
   }
 }
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid rgba(black, 0.05);
+  border-bottom: 1px solid rgba(black, 0.05);
+  transform: translateX(20px);
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #303133;
+    text-align: left;
+  }
+  &__email {
+    font-weight: 400;
+    font-size: 12px;
+    color: #434d5a;
+    text-align: left;
+    margin-top: 6px;
+  }
+}

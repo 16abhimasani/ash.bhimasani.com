@@ -60,85 +60,83 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
     boxShadow: `inset 0 0 12px 0 rgba(${hexToRGB(data().theme)}, 0.16)`,
   };
   return (
-    <div>
-      <motion.div className={invoiceClasses.invoice} style={{ height: 420 }}>
-        <div className={classes.header}>
-          <motion.div
-            className={classes.search}
-            style={{ cursor: "pointer", borderRadius: 100 }}
-          >
-            <motion.div className={classes.search__selected}>
-              <img
-                className={classes.search__selected__icon}
-                src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
-              />
-              {data().name}
-            </motion.div>
-
-            <motion.img
-              className={classes.search__icon}
-              src="/icons/bp-search-clear.svg"
-              style={{ cursor: "pointer", transform: "scale(0.8)" }}
-            />
-          </motion.div>
-        </div>
-        <div
-          className={classes.wallets}
-          style={{ height: "100%", overflow: "hidden" }}
+    <motion.div className={invoiceClasses.invoice} style={{ height: 420 }}>
+      <div className={classes.header}>
+        <motion.div
+          className={classes.search}
+          style={{ cursor: "pointer", borderRadius: 100 }}
         >
-          <div className={invoiceClasses.title}>Connect to {data().name}</div>
-          <div className={invoiceClasses.caption}>{data().caption}</div>
-          <div className={classes.pulser}>
+          <motion.div className={classes.search__selected}>
             <img
-              className={classes.pulser__icon}
+              className={classes.search__selected__icon}
               src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
             />
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__0: true,
-              })}
-              style={color}
-            ></div>
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__1: true,
-              })}
-              style={color}
-            ></div>
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__2: true,
-              })}
-              style={color}
-            ></div>
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__3: true,
-              })}
-              style={color}
-            ></div>
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__4: true,
-              })}
-              style={color}
-            ></div>
-            <div
-              className={cx({
-                pulser__rings: true,
-                pulser__rings__5: true,
-              })}
-              style={color}
-            ></div>
-          </div>
+            {data().name}
+          </motion.div>
+
+          <motion.img
+            className={classes.search__icon}
+            src="/icons/bp-search-clear.svg"
+            style={{ cursor: "pointer", transform: "scale(0.8)" }}
+          />
+        </motion.div>
+      </div>
+      <div
+        className={classes.wallets}
+        style={{ height: "100%", overflow: "hidden" }}
+      >
+        <div className={invoiceClasses.title}>Connect to {data().name}</div>
+        <div className={invoiceClasses.caption}>{data().caption}</div>
+        <div className={classes.pulser}>
+          <img
+            className={classes.pulser__icon}
+            src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
+          />
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__0: true,
+            })}
+            style={color}
+          ></div>
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__1: true,
+            })}
+            style={color}
+          ></div>
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__2: true,
+            })}
+            style={color}
+          ></div>
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__3: true,
+            })}
+            style={color}
+          ></div>
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__4: true,
+            })}
+            style={color}
+          ></div>
+          <div
+            className={cx({
+              pulser__rings: true,
+              pulser__rings__5: true,
+            })}
+            style={color}
+          ></div>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

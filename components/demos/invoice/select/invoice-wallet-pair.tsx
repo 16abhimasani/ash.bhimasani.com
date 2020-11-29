@@ -6,43 +6,41 @@ import { WALLETS } from "./wallets";
 
 const InvoiceSelectWalletPairDemo: React.FC<{ type: string }> = ({ type }) => {
   return (
-    <div>
-      <motion.div className={invoiceClasses.invoice} style={{ height: 512 }}>
-        <div className={classes.header}>
-          <motion.div
-            className={classes.search}
-            style={{ cursor: "pointer", borderRadius: 100 }}
-          >
-            <motion.div className={classes.search__selected}>
-              <img
-                className={classes.search__selected__icon}
-                src={`https://bitpay.com/img/wallet-logos/${WALLETS[type].icon}`}
-              />
-              {WALLETS[type].displayName}
-            </motion.div>
-
-            <motion.img
-              className={classes.search__icon}
-              src="/icons/bp-search-clear.svg"
-              style={{ cursor: "pointer", transform: "scale(0.8)" }}
+    <motion.div className={invoiceClasses.invoice} style={{ height: 512 }}>
+      <div className={classes.header}>
+        <motion.div
+          className={classes.search}
+          style={{ cursor: "pointer", borderRadius: 100 }}
+        >
+          <motion.div className={classes.search__selected}>
+            <img
+              className={classes.search__selected__icon}
+              src={`https://bitpay.com/img/wallet-logos/${WALLETS[type].icon}`}
             />
+            {WALLETS[type].displayName}
           </motion.div>
-        </div>
-        <div className={classes.wallets} style={{ height: "100%" }}>
-          <div className={invoiceClasses.title}>Connect your Wallet</div>
-          <div className={invoiceClasses.caption}>
-            Scan the QR code below with your {WALLETS[type].displayName} app to
-            continue.
-          </div>
-          <img
-            style={{ marginTop: 32 }}
-            src={`/imgs/invoice/qr-codes/${
-              WALLETS[type].displayName.split(" ")[0]
-            }-wallet-connect.svg`}
+
+          <motion.img
+            className={classes.search__icon}
+            src="/icons/bp-search-clear.svg"
+            style={{ cursor: "pointer", transform: "scale(0.8)" }}
           />
+        </motion.div>
+      </div>
+      <div className={classes.wallets} style={{ height: "100%" }}>
+        <div className={invoiceClasses.title}>Connect your Wallet</div>
+        <div className={invoiceClasses.caption}>
+          Scan the QR code below with your {WALLETS[type].displayName} app to
+          continue.
         </div>
-      </motion.div>
-    </div>
+        <img
+          style={{ marginTop: 32 }}
+          src={`/imgs/invoice/qr-codes/${
+            WALLETS[type].displayName.split(" ")[0]
+          }-wallet-connect.svg`}
+        />
+      </div>
+    </motion.div>
   );
 };
 
