@@ -12,6 +12,7 @@ import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/se
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
+import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -83,12 +84,19 @@ const BitPayInvoiceDemos: React.FC = () => (
         >
           <InvoiceConnectModeDemo />
         </div>
-        <h4>BIP21 Mode</h4>
+        <h4>BIP-21 Mode (P2P)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 100 }}
         >
           <InvoiceBIP21ModeDemo />
+        </div>
+        <h4>BIP-72 Mode (Payment Protocol)</h4>
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 100 }}
+        >
+          <InvoicePayProModeDemo />
         </div>
         <h4>BitPay Ecosystem Mode</h4>
         <div className="begin-section end-section wrapper-center">

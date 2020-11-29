@@ -36,7 +36,7 @@ const InvoiceQR: React.FC<{ qrVisible: boolean; qr: string }> = ({
       <img
         className={classes.qr}
         src={`/imgs/invoice/qr-codes/${qr}.svg`}
-        alt="Universal Mode QR"
+        alt="QR"
       />
     </motion.div>
   );
