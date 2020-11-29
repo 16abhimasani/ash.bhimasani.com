@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import classes from "./invoice-receipt.module.scss";
-import invoiceClasses from "./invoice.module.scss";
+import invoiceClasses from "../invoice.module.scss";
 import { motion } from "framer-motion";
 
-import InvoiceDetailsBar from "./details-bar/details-bar";
-import InvoiceSuperToast from "./super-toast/super-toast";
+import InvoiceDetailsBar from "../components/details-bar/details-bar";
+import InvoiceSuperToast from "../components/super-toast/super-toast";
 
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);

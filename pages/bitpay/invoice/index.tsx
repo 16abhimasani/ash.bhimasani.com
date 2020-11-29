@@ -6,10 +6,10 @@ import Link from "../../../components/utils/link";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
-import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2p";
-import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
-import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 
 const BitPayInvoice: React.FC = () => (
   <>

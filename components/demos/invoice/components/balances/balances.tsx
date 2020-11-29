@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import InvoiceSelected from "./selected";
 import InvoiceButton from "../button/button";
 import InvoiceOverlay from "../overlay/overlay";
-import { wait } from "../../../../utils/utils";
+import { wait } from "../../../../../utils/utils";
 
 export interface BalanceInterface {
   code: string;

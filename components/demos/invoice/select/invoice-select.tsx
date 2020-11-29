@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import classes from "./invoice-select.module.scss";
-import invoiceClasses from "./invoice.module.scss";
-import buttonClasses from "./button/button.module.scss";
+import invoiceClasses from "../invoice.module.scss";
+import buttonClasses from "../components/button/button.module.scss";
 import { motion } from "framer-motion";
 
 import { RECENT, POPULAR, WALLETS, CURRENCIES } from "./wallets";

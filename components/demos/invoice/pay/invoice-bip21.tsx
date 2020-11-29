@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from "react";
-import classes from "./invoice.module.scss";
+import classes from "../invoice.module.scss";
 import { motion } from "framer-motion";
-import { wait } from "../../../utils/utils";
+import { wait } from "../../../../utils/utils";
 
-import InvoiceDetailsBar from "./details-bar/details-bar";
-import InvoiceLaunchBar from "./launch-bar/launch-bar";
-import InvoiceSuperToast from "./super-toast/super-toast";
-import InvoiceTimer from "./timer/timer";
-import InvoiceQR from "./qr/qr";
-import InvoiceCopySheet from "./copy/copy-sheet";
+import InvoiceDetailsBar from "../components/details-bar/details-bar";
+import InvoiceLaunchBar from "../components/launch-bar/launch-bar";
+import InvoiceSuperToast from "../components/super-toast/super-toast";
+import InvoiceTimer from "../components/timer/timer";
+import InvoiceQR from "../components/qr/qr";
+import InvoiceCopySheet from "../components/copy/copy-sheet";
 
 const InvoiceBIP21ModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(true);

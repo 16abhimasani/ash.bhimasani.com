@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import classes from "./invoice.module.scss";
+import classes from "../invoice.module.scss";
 import { motion } from "framer-motion";
 
-import InvoiceDetailsBar from "./details-bar/details-bar";
-import InvoiceTimer from "./timer/timer";
-import InvoiceBalances, { CURRENCIES } from "./balances/balances";
+import InvoiceDetailsBar from "../components/details-bar/details-bar";
+import InvoiceTimer from "../components/timer/timer";
+import InvoiceBalances, { CURRENCIES } from "../components/balances/balances";
 
 const InvoiceConnectModeDemo: React.FC = () => {
   const [SELECTED_CURRENCY, SET_CURRENCY] = useState({

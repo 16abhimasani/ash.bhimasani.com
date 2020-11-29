@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import classes from "./details-bar.module.scss";
 import { motion } from "framer-motion";
 
-import BitpayLogo from "../../extension/bp-logo/bp-logo";
+import BitpayLogo from "../../../extension/bp-logo/bp-logo";
 
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);

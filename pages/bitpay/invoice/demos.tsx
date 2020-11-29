@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import SideBar from "../../../components/sidebar/sidebar";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice/invoice-universal";
-import InvoiceAddressModeDemo from "../../../components/demos/invoice/invoice-p2p";
-import InvoiceConnectModeDemo from "../../../components/demos/invoice/invoice-connect";
-import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/invoice-bip21";
-import InvoiceReceiptDemo from "../../../components/demos/invoice/invoice-receipt";
-import InvoiceSelectDemo from "../../../components/demos/invoice/invoice-select";
-import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/invoice-wallet-connect";
-import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/invoice-wallet-pair";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
+import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
+import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
+import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
