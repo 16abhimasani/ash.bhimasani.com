@@ -35,9 +35,9 @@ const InvoiceSelectWalletPairDemo: React.FC<{ type: string }> = ({ type }) => {
         </div>
         <img
           style={{ marginTop: 32 }}
-          src={`/imgs/invoice/qr-codes/${
-            WALLETS[type].displayName.split(" ")[0]
-          }-wallet-connect.svg`}
+          src={`/imgs/invoice/qr-codes/${WALLETS[type].displayName
+            .split(" ")[0]
+            .toLowerCase()}-wallet-connect.svg`}
         />
       </div>
     </motion.div>
