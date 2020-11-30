@@ -65,7 +65,10 @@ export const spinAnimation = {
   },
 };
 
-const InvoiceButton: React.FC = () => {
+const InvoiceButton: React.FC<{ main: string; async: string }> = ({
+  main,
+  async,
+}) => {
   const [awaiting, setAwaiting] = useState(false);
   return (
     <motion.div
@@ -102,7 +105,7 @@ const InvoiceButton: React.FC = () => {
               variants={buttonTextAnimation}
               key="awaiting-payment-text"
             >
-              Processing
+              {async}
             </motion.span>
           </motion.div>
         ) : (
@@ -114,7 +117,7 @@ const InvoiceButton: React.FC = () => {
             whileTap={{ scale: 0.98 }}
             key="pay"
           >
-            Make Payment
+            {main}
           </motion.div>
         )}
       </AnimatePresence>

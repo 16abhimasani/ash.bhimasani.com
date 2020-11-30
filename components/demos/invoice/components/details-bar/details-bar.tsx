@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from "react";
 import classes from "./details-bar.module.scss";
 import { motion } from "framer-motion";
 
-import BitpayLogo from "../../extension/bp-logo/bp-logo";
+import BitpayLogo from "../../../extension/bp-logo/bp-logo";
 
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
@@ -142,19 +142,23 @@ const InvoiceDetailsBar: React.FC<{
               <div className={classes.details__row__left}>Total Price</div>
               <div className={classes.details__row__right}>{total}</div>
             </div>
-            <div className={classes.details__row}>
-              <div className={classes.details__row__left}>Exchange Rate</div>
-              <div className={classes.details__row__right}>{rate}</div>
-            </div>
-            <div className={classes.details__row}>
-              <div className={classes.details__row__left}>Amount Due</div>
-              <div
-                className={classes.details__row__right}
-                style={{ fontWeight: 600 }}
-              >
-                {due}
+            {rate && (
+              <div className={classes.details__row}>
+                <div className={classes.details__row__left}>Exchange Rate</div>
+                <div className={classes.details__row__right}>{rate}</div>
               </div>
-            </div>
+            )}
+            {due && (
+              <div className={classes.details__row}>
+                <div className={classes.details__row__left}>Amount Due</div>
+                <div
+                  className={classes.details__row__right}
+                  style={{ fontWeight: 600 }}
+                >
+                  {due}
+                </div>
+              </div>
+            )}
           </div>
         </motion.div>
       )}

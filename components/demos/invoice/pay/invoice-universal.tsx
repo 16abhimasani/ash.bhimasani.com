@@ -1,15 +1,15 @@
 import React, { useCallback, useState } from "react";
-import classes from "./invoice.module.scss";
+import classes from "../invoice.module.scss";
 import { motion } from "framer-motion";
-import { wait } from "../../../utils/utils";
+import { wait } from "../../../../utils/utils";
 
-import InvoiceDetailsBar from "./details-bar/details-bar";
-import InvoiceLaunchBar from "./launch-bar/launch-bar";
-import InvoicePushNotification from "./push-notification/push-notification";
-import InvoiceSuperToast from "./super-toast/super-toast";
-import InvoiceTimer from "./timer/timer";
-import InvoiceQR from "./qr/qr";
-import copyUtil from "../../../utils/copy-to-clipboard";
+import InvoiceDetailsBar from "../components/details-bar/details-bar";
+import InvoiceLaunchBar from "../components/launch-bar/launch-bar";
+import InvoicePushNotification from "../components/push-notification/push-notification";
+import InvoiceSuperToast from "../components/super-toast/super-toast";
+import InvoiceTimer from "../components/timer/timer";
+import InvoiceQR from "../components/qr/qr";
+import copyUtil from "../../../../utils/copy-to-clipboard";
 
 const paymentLink = "https://ash.bhimasani.com/bitpay/invoice";
 
