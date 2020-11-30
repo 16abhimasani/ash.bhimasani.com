@@ -4,6 +4,8 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
+import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
 
 const BitPayInvoiceWalletSelection: React.FC = () => (
   <>
@@ -242,6 +244,23 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             but the above is an example of the in-browser "connection pending"
             UI.
           </p>
+        </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletConnectDemo type="metamask" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletPairDemo type="argent" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletPairDemo type="coinbaseWallet" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletConnectDemo type="ledger" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectWalletConnectDemo type="trezor" />
         </div>
       </section>
     </motion.main>
