@@ -20,6 +20,9 @@ const Home: React.FC = () => (
           href="https://coinbase.com/"
           spaceBefore
         />. <br />
+        Designer & engineer
+        <Anchor content="@0x" href="https://0x.org/" spaceBefore />.
+        <br />
         Ex designer & engineer
         <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
         <br />

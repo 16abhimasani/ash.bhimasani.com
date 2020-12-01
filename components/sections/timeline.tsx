@@ -13,6 +13,13 @@ const Timeline: React.FC = () => (
       locked
     />
     <PostBox
+      icon="/logos/0x.svg"
+      title="0x Labs"
+      caption="Software Engineer & Product Designer"
+      date="Dec 2020 ~ Present"
+      link="/0x"
+    />
+    <PostBox
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
       caption="Software Engineer & Lead Product Designer"
