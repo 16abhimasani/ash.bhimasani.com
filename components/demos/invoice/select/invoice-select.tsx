@@ -184,7 +184,7 @@ const InvoiceSelectDemo: React.FC = () => {
                   </div>
                   <div
                     className={buttonClasses.button}
-                    style={{ marginTop: 40 }}
+                    style={{ marginTop: 40, marginBottom: -10 }}
                   >
                     Leave Feedback
                   </div>
