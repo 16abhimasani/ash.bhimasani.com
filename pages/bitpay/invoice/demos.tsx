@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
+import Anchor from "../../../components/utils/anchor";
 import SideBar from "../../../components/sidebar/sidebar";
 import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
@@ -19,7 +20,14 @@ const BitPayInvoiceDemos: React.FC = () => (
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Invoice V4 Demos</h1>
-      <h5 className="end-section">Reference UI implementations</h5>
+      <h5 className="end-section">
+        Reference UI
+        <Anchor
+          content="implementations"
+          href="https://github.com/16abhimasani/ash.bhimasani.com/tree/master/components/demos/invoice"
+          spaceBefore
+        />
+      </h5>
 
       <section className="end-section">
         <h3 className="begin-section">Wallet Selection</h3>
