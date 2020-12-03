@@ -21,7 +21,7 @@ const ZeroX: React.FC = () => (
       <meta property="og:image" content="/banners/0x.png" key="og-image" />
     </Head>
     <motion.main className="body" {...fadeInPage}>
-      <h1 className="begin-section pt-0">0x Labs &nbsp;🔮</h1>
+      <h1 className="begin-section pt-0">0x Labs &nbsp;⚗️</h1>
       <div className="lead end-section">
         <p>
           0x is an
