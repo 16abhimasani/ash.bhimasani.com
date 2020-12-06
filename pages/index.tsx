@@ -11,7 +11,7 @@ const Home: React.FC = () => (
     <div className="lead end-section">
       <p>
         I am a product designer & software engineer with special interests in
-        UX, growth hacking, and business strategy.
+        user experience, growth, and strategy.
       </p>
       <p>
         Incoming intern
