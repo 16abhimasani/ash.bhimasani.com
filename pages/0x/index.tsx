@@ -35,15 +35,23 @@ const ZeroX: React.FC = () => (
           Ethereum blockchain.
         </p>
         <p>
-          The team launched a
+          The 0x protocol is secured and governed by the
+          <Anchor
+            content="ZRX token"
+            href="https://www.coinbase.com/price/0x"
+            spaceBefore
+          />
+          .
+        </p>
+        <p>
+          The team launched their own
           <Anchor
             content="trading platform"
             href="https://matcha.xyz/"
             spaceBefore
             spaceAfter
           />
-          to rethink the crypto experience and onboard the next wave of users
-          globally.
+          to showcase the protocol and onboard the next wave of users globally.
         </p>
       </div>
 
@@ -51,9 +59,15 @@ const ZeroX: React.FC = () => (
       <PostBox
         icon="/logos/matcha.jpg"
         title="Matcha &nbsp;🍵"
-        caption="DEX aggregator for the masses"
-        date="Dec 2020 ~ Present"
+        caption="Decentralized token trading for the masses"
         link="https://matcha.xyz/"
+        newTab
+      />
+      <PostBox
+        icon="/logos/0x.svg"
+        title="ZRX Platform"
+        caption="Earn liquidity rewards and vote on ZEIPS"
+        link="https://0x.org/zrx/staking"
         newTab
       />
     </motion.main>
