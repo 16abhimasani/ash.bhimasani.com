@@ -26,7 +26,7 @@ const Home: React.FC = () => (
         Ex designer & engineer
         <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
         <br />
-        Current CS undergraduate student
+        Computer science student
         <Anchor
           content="@gatech"
           href="https://twitter.com/georgiatech"
