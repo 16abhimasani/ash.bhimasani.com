@@ -29,7 +29,7 @@ const Home: React.FC = () => (
         Computer science student
         <Anchor
           content="@gatech"
-          href="https://twitter.com/georgiatech"
+          href="https://twitter.com/gtcomputing"
           spaceBefore
         />
         .
