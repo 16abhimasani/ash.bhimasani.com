@@ -35,7 +35,14 @@ const ZeroX: React.FC = () => (
           Ethereum blockchain.
         </p>
         <p>
-          The 0x protocol is secured and governed by the
+          The 0x protocol is
+          <Anchor
+            content="secured"
+            href="https://0x.org/zrx/staking"
+            spaceBefore
+            spaceAfter
+          />
+          and governed by the
           <Anchor
             content="ZRX token"
             href="https://www.coinbase.com/price/0x"
