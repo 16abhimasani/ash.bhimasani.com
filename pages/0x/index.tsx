@@ -64,7 +64,7 @@ const ZeroX: React.FC = () => (
 
       <h3 className="begin-section">Products</h3>
       <PostBox
-        icon="/logos/matcha.jpg"
+        icon="/logos/matcha.png"
         title="Matcha &nbsp;🍵"
         caption="Decentralized token trading for the masses"
         link="https://matcha.xyz/"
