@@ -16,21 +16,21 @@ const Timeline: React.FC = () => (
       icon="/logos/0x.svg"
       title="0x Labs"
       caption="Software Engineer & Product Designer"
-      date="Dec 2020 ~ Present"
+      date="Q1 2021"
       link="/0x"
     />
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
       caption="Software Engineer & Lead Product Designer"
-      date="Aug 2018 ~ Jan 2021"
+      date="2018 ~ 2020"
       link="/bitpay"
     />
     <PostBox
       icon="/logos/appsketiers.png"
       title="Appsketiers"
       caption="Director of Development & UX"
-      date="Aug 2017 ~ Feb 2019"
+      date="2017 ~ 2018"
       link="/posts/appsketiers"
     />
     <PostBox
