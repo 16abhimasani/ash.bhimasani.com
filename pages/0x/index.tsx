@@ -66,15 +66,8 @@ const ZeroX: React.FC = () => (
       <PostBox
         icon="/logos/matcha.png"
         title="Matcha &nbsp;🍵"
-        caption="Decentralized token trading for the masses"
+        caption="Decentralized crypto trading for the masses"
         link="https://matcha.xyz/"
-        newTab
-      />
-      <PostBox
-        icon="/logos/0x.svg"
-        title="ZRX Platform"
-        caption="Earn liquidity rewards and vote on ZEIPS"
-        link="https://0x.org/zrx/staking"
         newTab
       />
     </motion.main>
