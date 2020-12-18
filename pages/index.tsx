@@ -17,14 +17,25 @@ const Home: React.FC = () => (
         Incoming intern
         <Anchor
           content="@coinbase"
-          href="https://coinbase.com/"
+          href="https://twitter.com/coinbase"
           spaceBefore
-        />. <br />
+        />
+        . <br />
         Designer & engineer
-        <Anchor content="@0x" href="https://0x.org/" spaceBefore />.
+        <Anchor
+          content="@0x"
+          href="https://twitter.com/0xProject"
+          spaceBefore
+        />
+        .
         <br />
         Ex designer & engineer
-        <Anchor content="@bitpay" href="https://bitpay.com/" spaceBefore />.
+        <Anchor
+          content="@bitpay"
+          href="https://twitter.com/BitPay"
+          spaceBefore
+        />
+        .
         <br />
         Computer science student
         <Anchor

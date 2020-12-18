@@ -27,7 +27,7 @@ const ZeroX: React.FC = () => (
           0x is an
           <Anchor
             content="open protocol"
-            href="https://0x.org/api"
+            href="https://0x.org/"
             spaceBefore
             spaceAfter
           />
@@ -53,7 +53,7 @@ const ZeroX: React.FC = () => (
         <p>
           The team launched their own
           <Anchor
-            content="trading platform"
+            content="p2p trading platform"
             href="https://matcha.xyz/"
             spaceBefore
             spaceAfter
