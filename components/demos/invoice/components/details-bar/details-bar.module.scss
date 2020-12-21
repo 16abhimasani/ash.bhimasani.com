@@ -4,8 +4,11 @@
   justify-content: space-between;
   align-items: center;
   height: 57px;
+  min-height: 57px;
   width: 100%;
   border-bottom: 1px solid rgba(#a3a3a3, 0.1);
+  background-color: white;
+  z-index: 1;
 }
 
 .bp_logo {
@@ -41,9 +44,11 @@
   align-items: center;
   flex-direction: column;
   padding: 22px 36px;
-  background: rgba(#e7e7e7, 0.25);
+  background: #f9f9f9;
   box-shadow: inset 0 0 10px 0 rgba(black, 0.1);
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   &__row {
     display: flex;

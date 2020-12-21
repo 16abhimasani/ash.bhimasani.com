@@ -23,3 +23,11 @@ export async function post(
   const data = await response.json();
   return data;
 }
+
+export const hexToRGB = (color: string): string => {
+  const hex = Number("0x" + color.substring(1));
+  const r = (hex >> 16) & 0xff;
+  const g = (hex >> 8) & 0xff;
+  const b = hex & 0xff;
+  return `${r}, ${g}, ${b}`;
+};

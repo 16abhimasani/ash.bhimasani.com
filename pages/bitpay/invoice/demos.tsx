@@ -14,6 +14,7 @@ import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/selec
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
 import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
+import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -102,9 +103,12 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>BIP-72 Mode (Payment Protocol)</h4>
         <div
           className="begin-section end-section wrapper-center"
-          style={{ marginBottom: 100 }}
+          style={{ marginBottom: 40 }}
         >
           <InvoicePayProModeDemo />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceAwaitingConfDemo type="btc" />
         </div>
         <h4>BitPay Ecosystem Mode</h4>
         <div className="begin-section end-section wrapper-center">
