@@ -34,12 +34,13 @@ const animateSelected = {
 };
 
 const InvoiceSelected: React.FC<{
-  code: string;
+  wallet?: string;
+  icon: string;
   name: string;
   balance: string;
   open: boolean;
   toggle: () => void;
-}> = ({ code, name, balance, open, toggle }) => {
+}> = ({ wallet = "Coinbase", icon, name, balance, open, toggle }) => {
   return (
     <motion.div
       className={cx({
@@ -53,23 +54,18 @@ const InvoiceSelected: React.FC<{
         <div className={classes.connected}>Connected Wallet</div>
         <div className={classes.wallet__wrapper}>
           <div className={classes.status}></div>
-          <div className={classes.wallet}>Coinbase</div>
+          <div className={classes.wallet}>{wallet}</div>
         </div>
       </div>
       <motion.div className={classes.selected} onClick={toggle}>
         <div className={classes.currency__wrapper}>
-          <img
-            className={classes.currency__icon}
-            src={`/icons/currencies/${code.toLocaleLowerCase()}.svg`}
-          />
+          <img className={classes.currency__icon} src={icon} />
           <div className={classes.currency__name} style={{ fontWeight: 600 }}>
             {name}
           </div>
         </div>
         <div className={classes.currency__wrapper}>
-          <div className={classes.currency__balance}>
-            {balance} {code}
-          </div>
+          <div className={classes.currency__balance}>{balance}</div>
           <motion.img
             animate={open ? "open" : "close"}
             variants={animateChevron}

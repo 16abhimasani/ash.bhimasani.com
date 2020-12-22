@@ -6,6 +6,7 @@ import SideBar from "../../../components/sidebar/sidebar";
 import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceFiatConnectModeDemo from "../../../components/demos/invoice/pay/invoice-fiat";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
@@ -92,6 +93,12 @@ const BitPayInvoiceDemos: React.FC = () => (
           style={{ marginBottom: 100 }}
         >
           <InvoiceConnectModeDemo />
+        </div>
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 100 }}
+        >
+          <InvoiceFiatConnectModeDemo />
         </div>
         <h4>BIP-21 Mode (P2P)</h4>
         <div
