@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 import InvoiceButton from "../components/button/button";
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
 
-const InvoiceVerifyDemo: React.FC<{ session?: boolean }> = ({ session }) => {
+const InvoiceVerifyDemo: React.FC<{ session?: boolean; refund?: boolean }> = ({
+  session,
+  refund,
+}) => {
   return (
     <motion.div className={invoiceClasses.invoice}>
       <InvoiceDetailsBar total="4179.25 USD" />
@@ -15,12 +18,23 @@ const InvoiceVerifyDemo: React.FC<{ session?: boolean }> = ({ session }) => {
           width="32px"
           src="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
         />
-        <div className={invoiceClasses.title}>Verification Required</div>
+        <div className={invoiceClasses.title}>
+          {refund ? "Sign in to BitPay" : "Verification Required"}
+        </div>
         <div className={invoiceClasses.caption}>
-          This payment requires ID verification.{" "}
-          {session
-            ? "Continue to complete verification."
-            : "Please sign in or register to continue."}
+          {refund ? (
+            <>
+              To initiate your refund, please sign in or create an account to
+              continue.
+            </>
+          ) : (
+            <>
+              This payment requires ID verification.{" "}
+              {session
+                ? "Continue to complete verification."
+                : "Please sign in or register to continue."}
+            </>
+          )}
         </div>
         {session && (
           <div className={classes.user} style={{ marginTop: 28 }}>

@@ -10,7 +10,8 @@ import { wait } from "../../../../../utils/utils";
 export const InvoiceCryptoBalances: React.FC<{
   selected: CryptoBalanceInterface;
   select: Dispatch<SetStateAction<CryptoBalanceInterface>>;
-}> = ({ selected, select }) => {
+  web3?: boolean;
+}> = ({ selected, select, web3 }) => {
   const [OPEN_BALANCES, TOGGLE_BALANCES] = useState(false);
   const selectCurrency = useCallback(
     async (balance: CryptoBalanceInterface) => {
@@ -25,6 +26,7 @@ export const InvoiceCryptoBalances: React.FC<{
       <InvoiceOverlay open={OPEN_BALANCES} click={TOGGLE_BALANCES} />
       <div className={classes.wrapper}>
         <InvoiceSelected
+          wallet={web3 ? "MetaMask" : "Coinbase"}
           icon={`/icons/currencies/${selected.code.toLocaleLowerCase()}.svg`}
           name={selected.name}
           balance={`${selected.balance} ${selected.code}`}
@@ -32,7 +34,7 @@ export const InvoiceCryptoBalances: React.FC<{
           toggle={(): void => TOGGLE_BALANCES(!OPEN_BALANCES)}
         />
         <div className={classes.balances} style={{ maxHeight: 112 }}>
-          {CURRENCIES.map((balance: CryptoBalanceInterface) => (
+          {(web3 ? WEB3 : EXCHANGE).map((balance: CryptoBalanceInterface) => (
             <React.Fragment key={balance.name}>
               {balance.name !== selected.name && (
                 <motion.div
@@ -70,73 +72,6 @@ export const InvoiceCryptoBalances: React.FC<{
     </>
   );
 };
-
-export interface CryptoBalanceInterface {
-  code: string;
-  name: string;
-  balance: string;
-  rate: string;
-  due: string;
-}
-
-export const CURRENCIES = [
-  {
-    code: "USDC",
-    name: "USD Coin",
-    balance: "1216.38",
-    rate: "1.00 USD",
-    due: "135.00",
-  },
-  {
-    code: "BTC",
-    name: "Bitcoin",
-    balance: "5.789012",
-    rate: "13,386.54 USD",
-    due: "0.010229",
-  },
-  {
-    code: "BCH",
-    name: "Bitcoin Cash",
-    balance: "14.369019",
-    rate: "272.93 USD",
-    due: "0.511928",
-  },
-  {
-    code: "ETH",
-    name: "Ethereum",
-    balance: "32.307812",
-    rate: "441.78 USD",
-    due: "0.334764",
-  },
-  {
-    code: "XRP",
-    name: "Ripple",
-    balance: "784.701385",
-    rate: "0.25 USD",
-    due: "539.411502",
-  },
-  {
-    code: "GUSD",
-    name: "Gemini Dollars",
-    balance: "112.35",
-    rate: "1.00 USD",
-    due: "135.00",
-  },
-  {
-    code: "PAX",
-    name: "Paxos Standard",
-    balance: "2391.42",
-    rate: "1.00 USD",
-    due: "135.00",
-  },
-  {
-    code: "BUSD",
-    name: "Binance Dollar",
-    balance: "174.38",
-    rate: "1.00 USD",
-    due: "135.00",
-  },
-];
 
 export const InvoiceFiatBalances: React.FC<{
   selected: FiatBalanceInterface;
@@ -199,6 +134,167 @@ export const InvoiceFiatBalances: React.FC<{
     </>
   );
 };
+
+export interface CryptoBalanceInterface {
+  code: string;
+  name: string;
+  balance: string;
+  rate: string;
+  due: string;
+}
+
+export const EXCHANGE = [
+  {
+    code: "BTC",
+    name: "Bitcoin",
+    balance: "5.789012",
+    rate: "13,386.54 USD",
+    due: "0.010229",
+  },
+  {
+    code: "BCH",
+    name: "Bitcoin Cash",
+    balance: "14.369019",
+    rate: "272.93 USD",
+    due: "0.511928",
+  },
+  {
+    code: "ETH",
+    name: "Ethereum",
+    balance: "32.307812",
+    rate: "441.78 USD",
+    due: "0.334764",
+  },
+  {
+    code: "XRP",
+    name: "Ripple",
+    balance: "784.701385",
+    rate: "0.25 USD",
+    due: "539.411502",
+  },
+  {
+    code: "LTC",
+    name: "Litecoin",
+    balance: "24.950163",
+    rate: "110.56 USD",
+    due: "1.221056",
+  },
+  {
+    code: "ZEC",
+    name: "Zcash",
+    balance: "8.078102",
+    rate: "71.94 USD",
+    due: "1.876563",
+  },
+  {
+    code: "XLM",
+    name: "Stellar Lumens",
+    balance: "3098.2210",
+    rate: "0.23 USD",
+    due: "586.956521",
+  },
+];
+
+export const WEB3 = [
+  {
+    code: "ETH",
+    name: "Ethereum",
+    balance: "32.307812",
+    rate: "441.78 USD",
+    due: "0.334764",
+  },
+  {
+    code: "USDC",
+    name: "USD Coin",
+    balance: "1216.38",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "GUSD",
+    name: "Gemini Dollars",
+    balance: "112.35",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "PAX",
+    name: "Paxos Standard",
+    balance: "2391.42",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "BUSD",
+    name: "Binance Dollar",
+    balance: "174.38",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "DAI",
+    name: "Dai",
+    balance: "132.250711",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "LINK",
+    name: "Chainlink",
+    balance: "67.081309",
+    rate: "13.65 USD",
+    due: "9.890109",
+  },
+  {
+    code: "DOT",
+    name: "Polkadot",
+    balance: "103.204117",
+    rate: "5.13 USD",
+    due: "26.315789",
+  },
+  {
+    code: "UNI",
+    name: "Uniswap",
+    balance: "304.001903",
+    rate: "3.72 USD",
+    due: "236.290322",
+  },
+  {
+    code: "COMP",
+    name: "Compound",
+    balance: "7.256102",
+    rate: "146.13 USD",
+    due: "0.923834",
+  },
+  {
+    code: "MKR",
+    name: "Maker",
+    balance: "3.020168",
+    rate: "542.50 USD",
+    due: "0.248847",
+  },
+  {
+    code: "OMG",
+    name: "OmiseGo",
+    balance: "112.506117",
+    rate: "2.98 USD",
+    due: "45.302013",
+  },
+  {
+    code: "BAT",
+    name: "Basic Attention Token",
+    balance: "1205.11",
+    rate: "0.22 USD",
+    due: "613.686301",
+  },
+  {
+    code: "ZRX",
+    name: "0x",
+    balance: "45789.026913",
+    rate: "0.38 USD",
+    due: "355.263157",
+  },
+];
 
 export interface FiatBalanceInterface {
   name: string;

@@ -72,8 +72,11 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section wrapper-center">
           <InvoiceVerifyDemo />
         </div>
-        <div className="begin-section end-section wrapper-center">
+        <div className="begin-section wrapper-center">
           <InvoiceVerifyDemo session />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceVerifyDemo refund />
         </div>
       </section>
 
@@ -90,9 +93,15 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>Connect Mode (Web3 / OAuth / USB)</h4>
         <div
           className="begin-section end-section wrapper-center"
-          style={{ marginBottom: 100 }}
+          style={{ marginBottom: 50 }}
         >
           <InvoiceConnectModeDemo />
+        </div>
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 50 }}
+        >
+          <InvoiceConnectModeDemo web3 />
         </div>
         <div
           className="begin-section end-section wrapper-center"
