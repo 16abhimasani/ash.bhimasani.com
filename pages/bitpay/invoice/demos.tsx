@@ -16,6 +16,7 @@ import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select
 import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
 import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
 import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
+import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -171,8 +172,15 @@ const BitPayInvoiceDemos: React.FC = () => (
           <InvoiceReceiptDemo type="underpaid" />
         </div>
         <h4>Low Miner Fee</h4>
-        <div className="begin-section end-section wrapper-center">
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 184 }}
+        >
           <InvoiceReceiptDemo type="delayed" />
+        </div>
+        <h4>Enter Refund Address</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceRefundAddressDemo />
         </div>
       </section>
     </motion.main>

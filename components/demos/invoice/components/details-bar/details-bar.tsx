@@ -40,7 +40,8 @@ const InvoiceDetailsBar: React.FC<{
   rate?: string;
   due?: string;
   timestamp?: boolean;
-}> = ({ total = "135.00 USD", rate, due, timestamp }) => {
+  refund?: boolean;
+}> = ({ total = "135.00 USD", rate, due, timestamp, refund }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const details = useRef<HTMLDivElement>(null);
   const getHeight = useCallback((): number => {
@@ -153,11 +154,33 @@ const InvoiceDetailsBar: React.FC<{
                 <div className={classes.details__row__left}>Amount Due</div>
                 <div
                   className={classes.details__row__right}
-                  style={{ fontWeight: 600 }}
+                  style={{ fontWeight: refund ? 500 : 600 }}
                 >
                   {due}
                 </div>
               </div>
+            )}
+            {refund && (
+              <>
+                <div className={classes.details__row}>
+                  <div className={classes.details__row__left}>Amount Paid</div>
+                  <div
+                    className={classes.details__row__right}
+                    style={{ fontWeight: 600, color: "#4F6EF7" }}
+                  >
+                    {due}
+                  </div>
+                </div>
+                <div className={classes.details__row}>
+                  <div className={classes.details__row__left}>Refund For</div>
+                  <div
+                    className={classes.details__row__right}
+                    style={{ fontWeight: 600 }}
+                  >
+                    {total}
+                  </div>
+                </div>
+              </>
             )}
           </div>
         </motion.div>
