@@ -1,4 +1,4 @@
-@mixin pulse($width, $name) {
+@mixin pulse($width, $name, $opacity: 1) {
   animation: $name 2s linear infinite;
   @keyframes #{$name} {
     0% {
@@ -8,6 +8,7 @@
     100% {
       width: $width * 2;
       height: $width * 2;
+      opacity: $opacity;
     }
   }
 }
@@ -56,7 +57,7 @@
     &__5 {
       width: $base * 8;
       height: $base * 8;
-      @include pulse($base * 8, pulse5);
+      @include pulse($base * 8, pulse5, 0);
     }
   }
 }
