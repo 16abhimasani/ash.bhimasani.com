@@ -11,7 +11,11 @@ const InvoiceVerifyDemo: React.FC<{ session?: boolean; refund?: boolean }> = ({
 }) => {
   return (
     <motion.div className={invoiceClasses.invoice}>
-      <InvoiceDetailsBar total="4179.25 USD" />
+      <InvoiceDetailsBar
+        {...(refund
+          ? { rate: "419.25 USD", due: "0.322003 BCH", refund }
+          : { total: "4179.25 USD" })}
+      />
       <div className={classes.wallets} style={{ padding: "12px 20px 20px" }}>
         <motion.img
           style={{ margin: "12px auto -4px" }}
