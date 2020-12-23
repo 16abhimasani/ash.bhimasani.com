@@ -17,6 +17,7 @@ import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-
 import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
 import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
 import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
+import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -181,6 +182,13 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>Enter Refund Address</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceRefundAddressDemo />
+        </div>
+        <h4>Invoice Expired</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceExpiredDemo />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceExpiredDemo refund />
         </div>
       </section>
     </motion.main>
