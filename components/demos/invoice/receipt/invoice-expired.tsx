@@ -11,7 +11,7 @@ const InvoiceExpiredDemo: React.FC<{ refund?: boolean }> = ({ refund }) => {
       <InvoiceDetailsBar rate="419.25 USD" due="0.322003 BCH" refund={refund} />
       <div className={classes.wallets} style={{ padding: "12px 20px 20px" }}>
         <motion.img
-          style={{ margin: "12px auto -4px" }}
+          style={{ margin: "12px auto -6px" }}
           width="24px"
           src="/icons/status-declined.svg"
         />

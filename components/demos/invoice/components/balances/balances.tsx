@@ -283,7 +283,7 @@ export const WEB3 = [
   {
     code: "BAT",
     name: "Basic Attention Token",
-    balance: "1205.11",
+    balance: "1105",
     rate: "0.22 USD",
     due: "613.686301",
   },
