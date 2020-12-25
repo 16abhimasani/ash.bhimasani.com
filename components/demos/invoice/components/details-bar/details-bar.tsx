@@ -41,7 +41,8 @@ const InvoiceDetailsBar: React.FC<{
   due?: string;
   timestamp?: boolean;
   refund?: boolean;
-}> = ({ total = "135.00 USD", rate, due, timestamp, refund }) => {
+  networkCost?: boolean;
+}> = ({ total = "135.00 USD", rate, due, timestamp, refund, networkCost }) => {
   const [detailsOpen, setDetailsOpen] = useState(false);
   const details = useRef<HTMLDivElement>(null);
   const getHeight = useCallback((): number => {
@@ -147,6 +148,19 @@ const InvoiceDetailsBar: React.FC<{
               <div className={classes.details__row}>
                 <div className={classes.details__row__left}>Exchange Rate</div>
                 <div className={classes.details__row__right}>{rate}</div>
+              </div>
+            )}
+            {networkCost && (
+              <div className={classes.details__row}>
+                <div className={classes.details__row__left}>
+                  Network Cost
+                  <img
+                    style={{ marginLeft: 6 }}
+                    width="12px"
+                    src="/icons/question-icon.svg"
+                  />
+                </div>
+                <div className={classes.details__row__right}>0.000172 BTC</div>
               </div>
             )}
             {due && (
