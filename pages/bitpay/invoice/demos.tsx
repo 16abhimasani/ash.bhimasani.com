@@ -6,6 +6,7 @@ import SideBar from "../../../components/sidebar/sidebar";
 import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceFiatConnectModeDemo from "../../../components/demos/invoice/pay/invoice-fiat";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
@@ -14,6 +15,9 @@ import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/selec
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
 import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
+import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
+import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
+import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
@@ -70,8 +74,11 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section wrapper-center">
           <InvoiceVerifyDemo />
         </div>
-        <div className="begin-section end-section wrapper-center">
+        <div className="begin-section wrapper-center">
           <InvoiceVerifyDemo session />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceVerifyDemo refund />
         </div>
       </section>
 
@@ -88,9 +95,21 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>Connect Mode (Web3 / OAuth / USB)</h4>
         <div
           className="begin-section end-section wrapper-center"
-          style={{ marginBottom: 100 }}
+          style={{ marginBottom: 50 }}
         >
           <InvoiceConnectModeDemo />
+        </div>
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 50 }}
+        >
+          <InvoiceConnectModeDemo web3 />
+        </div>
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 100 }}
+        >
+          <InvoiceFiatConnectModeDemo />
         </div>
         <h4>BIP-21 Mode (P2P)</h4>
         <div
@@ -102,9 +121,12 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4>BIP-72 Mode (Payment Protocol)</h4>
         <div
           className="begin-section end-section wrapper-center"
-          style={{ marginBottom: 100 }}
+          style={{ marginBottom: 40 }}
         >
           <InvoicePayProModeDemo />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceAwaitingConfDemo type="btc" />
         </div>
         <h4>BitPay Ecosystem Mode</h4>
         <div className="begin-section end-section wrapper-center">
@@ -151,8 +173,22 @@ const BitPayInvoiceDemos: React.FC = () => (
           <InvoiceReceiptDemo type="underpaid" />
         </div>
         <h4>Low Miner Fee</h4>
-        <div className="begin-section end-section wrapper-center">
+        <div
+          className="begin-section end-section wrapper-center"
+          style={{ marginBottom: 184 }}
+        >
           <InvoiceReceiptDemo type="delayed" />
+        </div>
+        <h4>Enter Refund Address</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceRefundAddressDemo />
+        </div>
+        <h4>Invoice Expired</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceExpiredDemo />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceExpiredDemo refund />
         </div>
       </section>
     </motion.main>

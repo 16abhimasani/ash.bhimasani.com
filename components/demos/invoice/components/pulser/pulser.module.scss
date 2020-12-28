@@ -1,0 +1,63 @@
+@mixin pulse($width, $name, $opacity: 1) {
+  animation: $name 2s linear infinite;
+  @keyframes #{$name} {
+    0% {
+      width: $width;
+      height: $width;
+    }
+    100% {
+      width: $width * 2;
+      height: $width * 2;
+      opacity: $opacity;
+    }
+  }
+}
+
+.pulser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  &__icon {
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+  }
+  &__rings {
+    position: absolute;
+    border-radius: 50%;
+    $base: 100px;
+    &__0 {
+      width: $base / 4;
+      height: $base / 4;
+      @include pulse($base / 4, pulse0);
+    }
+    &__1 {
+      width: $base / 2;
+      height: $base / 2;
+      @include pulse($base / 2, pulse1);
+    }
+    &__2 {
+      width: $base;
+      height: $base;
+      @include pulse($base, pulse2);
+    }
+    &__3 {
+      width: $base * 2;
+      height: $base * 2;
+      @include pulse($base * 2, pulse3);
+    }
+    &__4 {
+      width: $base * 4;
+      height: $base * 4;
+      @include pulse($base * 4, pulse4);
+    }
+    &__5 {
+      width: $base * 8;
+      height: $base * 8;
+      @include pulse($base * 8, pulse5, 0);
+    }
+  }
+}

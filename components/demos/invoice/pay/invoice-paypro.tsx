@@ -22,7 +22,11 @@ const InvoicePayProModeDemo: React.FC = () => {
     <div>
       <InvoiceTimer />
       <motion.div className={classes.invoice}>
-        <InvoiceDetailsBar rate="11,382.15 USD" due="0.011861 BTC" />
+        <InvoiceDetailsBar
+          rate="11,382.15 USD"
+          due="0.011861 BTC"
+          networkCost
+        />
         <motion.div className={classes.price}>$135.00</motion.div>
         <InvoiceQR qrVisible={QR_VISIBLE} qr="btc" />
         <InvoiceLaunchBar

@@ -137,20 +137,19 @@ const BitPayInvoiceReceipt: React.FC = () => (
         />
         <div className="lead begin-section">
           <p>
-            I main idea I brought to the Underpaid state here is immediately
+            The main idea I brought to the Underpaid state here is immediately
             signaling payment failure. With the launch of P2P, I knew payment
             errors would be something we would deal with more often. The V3
             configuration of this state provides lots of information but does
             not clearly communicate the status.
           </p>
           <p>
-            The main benefit to the receipt UI pattern is that it allows a user
-            to easily see their own mistake. In this case, the user paid about
-            $200 less than they needed to. Underpayments can happen for all
-            sorts of reasons but the most common is that some wallets and
-            exchanges subtract the transaction fee from the amount you enter
-            resulting in a less than intended amount of funds arriving on our
-            end.
+            The benefit to the receipt UI pattern is that it allows a user to
+            easily see their own mistake. In this case, the user paid about $200
+            less than they needed to. Underpayments can happen for all sorts of
+            reasons but the most common is that some wallets and exchanges
+            subtract the transaction fee from the amount you enter resulting in
+            a less than intended amount of funds arriving on our end.
           </p>
         </div>
 

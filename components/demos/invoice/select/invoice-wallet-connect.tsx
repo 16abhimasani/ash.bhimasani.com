@@ -2,9 +2,7 @@ import React from "react";
 import classes from "./invoice-select.module.scss";
 import invoiceClasses from "../invoice.module.scss";
 import { motion } from "framer-motion";
-
-import classNames from "classnames/bind";
-const cx = classNames.bind(classes);
+import InvoicePulser from "../components/pulser/pulser";
 
 const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
   type,
@@ -48,17 +46,6 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
         };
     }
   };
-  const hexToRGB = (color: string) => {
-    const hex = Number("0x" + color.substring(1));
-    const r = (hex >> 16) & 0xff;
-    const g = (hex >> 8) & 0xff;
-    const b = hex & 0xff;
-    return `${r}, ${g}, ${b}`;
-  };
-  const color = {
-    backgroundColor: `rgba(${hexToRGB(data().theme)}, 0.02)`,
-    boxShadow: `inset 0 0 12px 0 rgba(${hexToRGB(data().theme)}, 0.16)`,
-  };
   return (
     <motion.div className={invoiceClasses.invoice} style={{ height: 420 }}>
       <div className={classes.header}>
@@ -87,54 +74,10 @@ const InvoiceSelectWalletConnectDemo: React.FC<{ type: string }> = ({
       >
         <div className={invoiceClasses.title}>Connect to {data().name}</div>
         <div className={invoiceClasses.caption}>{data().caption}</div>
-        <div className={classes.pulser}>
-          <img
-            className={classes.pulser__icon}
-            src={`https://bitpay.com/img/wallet-logos/${data().logo}`}
-          />
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__0: true,
-            })}
-            style={color}
-          ></div>
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__1: true,
-            })}
-            style={color}
-          ></div>
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__2: true,
-            })}
-            style={color}
-          ></div>
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__3: true,
-            })}
-            style={color}
-          ></div>
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__4: true,
-            })}
-            style={color}
-          ></div>
-          <div
-            className={cx({
-              pulser__rings: true,
-              pulser__rings__5: true,
-            })}
-            style={color}
-          ></div>
-        </div>
+        <InvoicePulser
+          icon={`https://bitpay.com/img/wallet-logos/${data().logo}`}
+          theme={data().theme}
+        />
       </div>
     </motion.div>
   );

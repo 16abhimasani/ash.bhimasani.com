@@ -7,46 +7,39 @@ import InvoiceButton from "../button/button";
 import InvoiceOverlay from "../overlay/overlay";
 import { wait } from "../../../../../utils/utils";
 
-export interface BalanceInterface {
-  code: string;
-  name: string;
-  balance: string;
-  rate: string;
-  due: string;
-}
-
-const InvoiceBalances: React.FC<{
-  balances: BalanceInterface[];
-  selected: BalanceInterface;
-  select: Dispatch<SetStateAction<BalanceInterface>>;
-}> = ({ balances, selected, select }) => {
+export const InvoiceCryptoBalances: React.FC<{
+  selected: CryptoBalanceInterface;
+  select: Dispatch<SetStateAction<CryptoBalanceInterface>>;
+  web3?: boolean;
+}> = ({ selected, select, web3 }) => {
   const [OPEN_BALANCES, TOGGLE_BALANCES] = useState(false);
   const selectCurrency = useCallback(
-    async (balance: BalanceInterface) => {
+    async (balance: CryptoBalanceInterface) => {
       TOGGLE_BALANCES(false);
       await wait(350);
       select(balance);
     },
-    [balances]
+    []
   );
   return (
     <>
       <InvoiceOverlay open={OPEN_BALANCES} click={TOGGLE_BALANCES} />
       <div className={classes.wrapper}>
         <InvoiceSelected
-          code={selected.code}
+          wallet={web3 ? "MetaMask" : "Coinbase"}
+          icon={`/icons/currencies/${selected.code.toLocaleLowerCase()}.svg`}
           name={selected.name}
-          balance={selected.balance}
+          balance={`${selected.balance} ${selected.code}`}
           open={OPEN_BALANCES}
           toggle={(): void => TOGGLE_BALANCES(!OPEN_BALANCES)}
         />
         <div className={classes.balances} style={{ maxHeight: 112 }}>
-          {balances.map((balance) => (
+          {(web3 ? WEB3 : EXCHANGE).map((balance: CryptoBalanceInterface) => (
             <React.Fragment key={balance.name}>
-              {balance.code !== selected.code && (
+              {balance.name !== selected.name && (
                 <motion.div
                   className={classes.balances__item}
-                  key={balance.code}
+                  key={balance.name}
                   onClick={(): Promise<void> => selectCurrency(balance)}
                 >
                   <div className={classes.currency__wrapper}>
@@ -80,7 +73,77 @@ const InvoiceBalances: React.FC<{
   );
 };
 
-export const CURRENCIES = [
+export const InvoiceFiatBalances: React.FC<{
+  selected: FiatBalanceInterface;
+  select: Dispatch<SetStateAction<FiatBalanceInterface>>;
+}> = ({ selected, select }) => {
+  const [OPEN_BALANCES, TOGGLE_BALANCES] = useState(false);
+  const selectCurrency = useCallback(async (balance: FiatBalanceInterface) => {
+    TOGGLE_BALANCES(false);
+    await wait(350);
+    select(balance);
+  }, []);
+  return (
+    <>
+      <InvoiceOverlay open={OPEN_BALANCES} click={TOGGLE_BALANCES} />
+      <div className={classes.wrapper}>
+        <InvoiceSelected
+          wallet="PayPal"
+          icon={`/icons/fiat/${selected.icon}`}
+          name={selected.name}
+          balance={`${selected.value}`}
+          open={OPEN_BALANCES}
+          toggle={(): void => TOGGLE_BALANCES(!OPEN_BALANCES)}
+        />
+        <div className={classes.balances} style={{ maxHeight: 112 }}>
+          {FIAT.map((balance: FiatBalanceInterface) => (
+            <React.Fragment key={balance.name}>
+              {balance.name !== selected.name && (
+                <motion.div
+                  className={classes.balances__item}
+                  key={balance.name}
+                  onClick={(): Promise<void> => selectCurrency(balance)}
+                >
+                  <div className={classes.currency__wrapper}>
+                    <img
+                      className={classes.currency__icon}
+                      src={`/icons/fiat/${balance.icon}`}
+                    />
+                    <div
+                      className={classes.currency__name}
+                      style={{ fontWeight: 500 }}
+                    >
+                      {balance.name}
+                    </div>
+                  </div>
+                  <div className={classes.currency__wrapper}>
+                    <div className={classes.currency__balance}>
+                      {balance.value}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+        <div className={classes.button_wrapper}>
+          <InvoiceButton main="Make Payment" async="Processing" />
+          <div className={classes.balances__fade}></div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export interface CryptoBalanceInterface {
+  code: string;
+  name: string;
+  balance: string;
+  rate: string;
+  due: string;
+}
+
+export const EXCHANGE = [
   {
     code: "BTC",
     name: "Bitcoin",
@@ -110,6 +173,37 @@ export const CURRENCIES = [
     due: "539.411502",
   },
   {
+    code: "LTC",
+    name: "Litecoin",
+    balance: "24.950163",
+    rate: "110.56 USD",
+    due: "1.221056",
+  },
+  {
+    code: "ZEC",
+    name: "Zcash",
+    balance: "8.078102",
+    rate: "71.94 USD",
+    due: "1.876563",
+  },
+  {
+    code: "XLM",
+    name: "Stellar Lumens",
+    balance: "3098.2210",
+    rate: "0.23 USD",
+    due: "586.956521",
+  },
+];
+
+export const WEB3 = [
+  {
+    code: "ETH",
+    name: "Ethereum",
+    balance: "32.307812",
+    rate: "441.78 USD",
+    due: "0.334764",
+  },
+  {
     code: "USDC",
     name: "USD Coin",
     balance: "1216.38",
@@ -137,6 +231,101 @@ export const CURRENCIES = [
     rate: "1.00 USD",
     due: "135.00",
   },
+  {
+    code: "DAI",
+    name: "Dai",
+    balance: "132.250711",
+    rate: "1.00 USD",
+    due: "135.00",
+  },
+  {
+    code: "LINK",
+    name: "Chainlink",
+    balance: "67.081309",
+    rate: "13.65 USD",
+    due: "9.890109",
+  },
+  {
+    code: "DOT",
+    name: "Polkadot",
+    balance: "103.204117",
+    rate: "5.13 USD",
+    due: "26.315789",
+  },
+  {
+    code: "UNI",
+    name: "Uniswap",
+    balance: "304.001903",
+    rate: "3.72 USD",
+    due: "236.290322",
+  },
+  {
+    code: "COMP",
+    name: "Compound",
+    balance: "7.256102",
+    rate: "146.13 USD",
+    due: "0.923834",
+  },
+  {
+    code: "MKR",
+    name: "Maker",
+    balance: "3.020168",
+    rate: "542.50 USD",
+    due: "0.248847",
+  },
+  {
+    code: "OMG",
+    name: "OmiseGo",
+    balance: "112.506117",
+    rate: "2.98 USD",
+    due: "45.302013",
+  },
+  {
+    code: "BAT",
+    name: "Basic Attention Token",
+    balance: "1105",
+    rate: "0.22 USD",
+    due: "613.686301",
+  },
+  {
+    code: "ZRX",
+    name: "0x",
+    balance: "45789.026913",
+    rate: "0.38 USD",
+    due: "355.263157",
+  },
 ];
 
-export default InvoiceBalances;
+export interface FiatBalanceInterface {
+  name: string;
+  value: string;
+  icon: string;
+}
+
+export const FIAT = [
+  {
+    name: "Cash Balance",
+    value: "5072.93 USD",
+    icon: "cash.svg",
+  },
+  {
+    name: "Wells Fargo",
+    value: "Checking  •••• 6192",
+    icon: "wells-fargo.svg",
+  },
+  {
+    name: "Bank of America",
+    value: "Checking  •••• 1385",
+    icon: "bank-of-america.svg",
+  },
+  {
+    name: "American Express",
+    value: "Credit  •••• 7013",
+    icon: "amex.svg",
+  },
+  {
+    name: "Chase Sapphire",
+    value: "Credit  •••• 9204",
+    icon: "chase.png",
+  },
+];

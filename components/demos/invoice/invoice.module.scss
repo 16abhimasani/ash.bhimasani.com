@@ -24,6 +24,7 @@
   color: #565d6e;
   text-align: center;
   margin-top: 24px;
+  z-index: 1;
 }
 
 .caption {
@@ -34,4 +35,9 @@
   line-height: 23px;
   margin-top: 16px;
   padding: 0 8px;
+  z-index: 1;
+
+  a {
+    color: #4f6ef7;
+  }
 }

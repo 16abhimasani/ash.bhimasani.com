@@ -107,7 +107,7 @@
   width: 100%;
   top: 4px;
   z-index: 0;
-  padding: 5px 26px;
+  padding: 15px 26px;
   overflow: scroll;
 
   &__item {
@@ -116,8 +116,11 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
-    margin: 20px 0;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: all 300ms ease-in-out;
     &:hover {
+      background-color: #f8fbfd;
       .currency__name {
         color: #4f6ef7;
       }
