@@ -2,6 +2,7 @@
 @import "variables";
 
 $border-radius: 6px;
+$border-width: 1px;
 
 .box {
   display: flex;
@@ -10,12 +11,12 @@ $border-radius: 6px;
   margin: 30px auto;
   padding: 20px;
   border-radius: $border-radius;
-  border: 1px solid $Wire;
+  border: $border-width solid $Wire;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba($Wire, 0.5);
   cursor: pointer;
   transition: all 300ms ease;
-  transition-property: color, border-color;
+  transition-property: color, border-color, transform;
 
   @include mobile {
     margin: 24px auto;
