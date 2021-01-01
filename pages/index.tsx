@@ -14,7 +14,7 @@ const Home: React.FC = () => (
         user experience, growth, and strategy.
       </p>
       <p>
-        Incoming intern
+        Incoming
         <Anchor
           content="@coinbase"
           href="https://twitter.com/coinbase"

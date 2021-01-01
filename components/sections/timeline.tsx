@@ -7,10 +7,10 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
       title="Coinbase"
-      caption="Software Engineering Intern"
+      caption="Software Engineer"
       date="Summer 2021"
-      link="/coinbase"
-      locked
+      link="https://www.coinbase.com/"
+      newTab
     />
     <PostBox
       icon="/logos/0x.svg"
@@ -36,7 +36,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/georgia-tech.svg"
       title="Georgia Institute of Technology"
-      caption="Computer Science: Artificial Intelligence"
+      caption="Computer Science: Artificial Intelligence & HCI"
       date="2016 ~ 2022"
       link="https://www.usnews.com/best-graduate-schools/top-science-schools/georgia-institute-of-technology-139755"
       newTab
