@@ -23,7 +23,7 @@ const topLevelCurrencies = [
   { code: "BTC", name: "Bitcoin" },
   { code: "BCH", name: "Bitcoin Cash" },
   { code: "ETH", name: "Ethereum" },
-  { code: "XRP", name: "Ripple" },
+  { code: "USDC", name: "USD Coin" },
 ];
 
 const WalletCell: React.FC<{ name: string; icon: string }> = ({
@@ -34,7 +34,11 @@ const WalletCell: React.FC<{ name: string; icon: string }> = ({
     <div className={classes.wallet}>
       <img
         className={classes.wallet__icon}
-        src={`https://bitpay.com/img/wallet-logos/${icon}`}
+        src={
+          icon.includes("/")
+            ? `/logos${icon}`
+            : `https://bitpay.com/img/wallet-logos/${icon}`
+        }
       />
       {name}
       <img className={classes.wallet__chevron} src="/icons/right-chevron.svg" />
