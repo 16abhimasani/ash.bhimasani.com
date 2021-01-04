@@ -60,10 +60,10 @@ const BitPayInvoiceDemos: React.FC = () => (
         </div>
         <h4 id="oauth">Connect Exchange Account (OAuth)</h4>
         <div className="begin-section wrapper-center">
-          <InvoiceSelectOauthPairDemo type="gemini" />
+          <InvoiceSelectOauthPairDemo type="coinbase" />
         </div>
         <div className="begin-section end-section wrapper-center">
-          <InvoiceSelectOauthPairDemo type="coinbase" />
+          <InvoiceSelectOauthPairDemo type="venmo" />
         </div>
       </section>
 
