@@ -21,7 +21,7 @@ const ZeroX: React.FC = () => (
       <meta property="og:image" content="/banners/0x.png" key="og-image" />
     </Head>
     <motion.main className="body" {...fadeInPage}>
-      <h1 className="begin-section pt-0">0x Labs &nbsp;⚗️</h1>
+      <h1 className="begin-section pt-0">0x Labs &nbsp;🍵</h1>
       <div className="lead end-section">
         <p>
           0x is an
@@ -31,11 +31,11 @@ const ZeroX: React.FC = () => (
             spaceBefore
             spaceAfter
           />
-          that enables the peer-to-peer exchange of tokenized assets on the
+          that enables the efficient exchange of tokenized assets on the
           Ethereum blockchain.
         </p>
         <p>
-          The 0x protocol is
+          The protocol is
           <Anchor
             content="secured"
             href="https://0x.org/zrx/staking"
@@ -53,12 +53,28 @@ const ZeroX: React.FC = () => (
         <p>
           The team launched their own
           <Anchor
-            content="p2p trading platform"
+            content="trading platform"
             href="https://matcha.xyz/"
             spaceBefore
             spaceAfter
           />
-          to showcase the protocol and onboard the next wave of users globally.
+          as a showcase.
+        </p>
+        <p>
+          I currently work on the
+          <Anchor
+            content="matcha.xyz"
+            href="https://matcha.xyz/"
+            spaceBefore
+            spaceAfter
+          />
+          <Anchor
+            content="team"
+            href="https://www.linkedin.com/company/0x/people/"
+            spaceBefore
+            spaceAfter
+          />
+          ~
         </p>
       </div>
 
@@ -70,6 +86,23 @@ const ZeroX: React.FC = () => (
         link="https://matcha.xyz/"
         newTab
       />
+
+      <h5 className="begin-section">Major contributions</h5>
+      <div className="lead">
+        <ol className="list">
+          <li className="list__item">
+            <div className="list__item__number">1</div>
+            <div>
+              Matcha Moolah:
+              <Anchor
+                content="Referral Contest"
+                href="https://matcha.xyz/blog/refer-your-friends-and-win-eth"
+                spaceBefore
+              />
+            </div>
+          </li>
+        </ol>
+      </div>
     </motion.main>
   </>
 );
