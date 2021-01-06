@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useCallback, useRef } from "react";
 import classes from "./balances.module.scss";
 import { motion } from "framer-motion";
 import classNames from "classnames/bind";
+import { useRefSize } from "../../../../../utils/hooks";
 const cx = classNames.bind(classes);
 
 const animateChevron = {
@@ -41,6 +42,14 @@ const InvoiceSelected: React.FC<{
   open: boolean;
   toggle: () => void;
 }> = ({ wallet = "Coinbase", icon, name, balance, open, toggle }) => {
+  const pill = useRef<HTMLDivElement>(null);
+  const value = useRef<HTMLDivElement>(null);
+  const { width: pillWidth } = useRefSize(pill);
+  const { width: valueWidth } = useRefSize(value);
+  const getMaxWidth = useCallback((): number => {
+    if (!pillWidth || !valueWidth) return 100;
+    return pillWidth - valueWidth - 80;
+  }, [pillWidth, valueWidth]);
   return (
     <motion.div
       className={cx({
@@ -57,15 +66,20 @@ const InvoiceSelected: React.FC<{
           <div className={classes.wallet}>{wallet}</div>
         </div>
       </div>
-      <motion.div className={classes.selected} onClick={toggle}>
+      <motion.div className={classes.selected} onClick={toggle} ref={pill}>
         <div className={classes.currency__wrapper}>
           <img className={classes.currency__icon} src={icon} />
-          <div className={classes.currency__name} style={{ fontWeight: 600 }}>
+          <div
+            className={classes.currency__name}
+            style={{ fontWeight: 600, maxWidth: getMaxWidth() }}
+          >
             {name}
           </div>
         </div>
         <div className={classes.currency__wrapper}>
-          <div className={classes.currency__balance}>{balance}</div>
+          <div className={classes.currency__balance} ref={value}>
+            {balance}
+          </div>
           <motion.img
             animate={open ? "open" : "close"}
             variants={animateChevron}

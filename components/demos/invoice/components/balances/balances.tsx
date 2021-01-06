@@ -1,4 +1,10 @@
-import React, { Dispatch, SetStateAction, useState, useCallback } from "react";
+import React, {
+  Dispatch,
+  SetStateAction,
+  useState,
+  useCallback,
+  useRef,
+} from "react";
 import classes from "./balances.module.scss";
 import { motion } from "framer-motion";
 
@@ -6,6 +12,7 @@ import InvoiceSelected from "./selected";
 import InvoiceButton from "../button/button";
 import InvoiceOverlay from "../overlay/overlay";
 import { wait } from "../../../../../utils/utils";
+import { useRefSize } from "../../../../../utils/hooks";
 
 export const InvoiceCryptoBalances: React.FC<{
   selected: CryptoBalanceInterface;
@@ -37,29 +44,7 @@ export const InvoiceCryptoBalances: React.FC<{
           {(web3 ? WEB3 : EXCHANGE).map((balance: CryptoBalanceInterface) => (
             <React.Fragment key={balance.name}>
               {balance.name !== selected.name && (
-                <motion.div
-                  className={classes.balances__item}
-                  key={balance.name}
-                  onClick={(): Promise<void> => selectCurrency(balance)}
-                >
-                  <div className={classes.currency__wrapper}>
-                    <img
-                      className={classes.currency__icon}
-                      src={`/icons/currencies/${balance.code.toLocaleLowerCase()}.svg`}
-                    />
-                    <div
-                      className={classes.currency__name}
-                      style={{ fontWeight: 500 }}
-                    >
-                      {balance.name}
-                    </div>
-                  </div>
-                  <div className={classes.currency__wrapper}>
-                    <div className={classes.currency__balance}>
-                      {balance.balance} {balance.code}
-                    </div>
-                  </div>
-                </motion.div>
+                <BalanceCell select={selectCurrency} balance={balance} />
               )}
             </React.Fragment>
           ))}
@@ -99,29 +84,11 @@ export const InvoiceFiatBalances: React.FC<{
           {FIAT.map((balance: FiatBalanceInterface) => (
             <React.Fragment key={balance.name}>
               {balance.name !== selected.name && (
-                <motion.div
-                  className={classes.balances__item}
-                  key={balance.name}
-                  onClick={(): Promise<void> => selectCurrency(balance)}
-                >
-                  <div className={classes.currency__wrapper}>
-                    <img
-                      className={classes.currency__icon}
-                      src={`/icons/fiat/${balance.icon}`}
-                    />
-                    <div
-                      className={classes.currency__name}
-                      style={{ fontWeight: 500 }}
-                    >
-                      {balance.name}
-                    </div>
-                  </div>
-                  <div className={classes.currency__wrapper}>
-                    <div className={classes.currency__balance}>
-                      {balance.value}
-                    </div>
-                  </div>
-                </motion.div>
+                <BalanceCell
+                  fiatMode
+                  select={selectCurrency}
+                  balance={balance}
+                />
               )}
             </React.Fragment>
           ))}
@@ -132,6 +99,58 @@ export const InvoiceFiatBalances: React.FC<{
         </div>
       </div>
     </>
+  );
+};
+
+export const BalanceCell: React.FC<{
+  fiatMode?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  balance: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  select: any;
+}> = ({ fiatMode, select, balance }) => {
+  const pill = useRef<HTMLDivElement>(null);
+  const value = useRef<HTMLDivElement>(null);
+  const { width: pillWidth } = useRefSize(pill);
+  const { width: valueWidth } = useRefSize(value);
+  const getMaxWidth = useCallback((): number => {
+    if (!pillWidth || !valueWidth) return 124;
+    return pillWidth - valueWidth - 68;
+  }, [pillWidth, valueWidth]);
+  return (
+    <motion.div
+      className={classes.balances__item}
+      onClick={(): Promise<void> => select(balance)}
+      ref={pill}
+    >
+      <div className={classes.currency__wrapper}>
+        <img
+          className={classes.currency__icon}
+          src={
+            fiatMode
+              ? `/icons/fiat/${balance.icon}`
+              : `/icons/currencies/${balance.code.toLocaleLowerCase()}.svg`
+          }
+        />
+        <div
+          className={classes.currency__name}
+          style={{ fontWeight: 500, maxWidth: getMaxWidth() }}
+        >
+          {balance.name}
+        </div>
+      </div>
+      <div className={classes.currency__wrapper}>
+        <div className={classes.currency__balance} ref={value}>
+          {fiatMode ? (
+            <>{balance.value}</>
+          ) : (
+            <>
+              {balance.balance} {balance.code}
+            </>
+          )}
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
@@ -283,7 +302,7 @@ export const WEB3 = [
   {
     code: "BAT",
     name: "Basic Attention Token",
-    balance: "1105",
+    balance: "1105.9201",
     rate: "0.22 USD",
     due: "613.686301",
   },
