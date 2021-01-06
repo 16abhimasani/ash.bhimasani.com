@@ -36,11 +36,11 @@ const BitPayInvoiceDemos: React.FC = () => (
       <section className="end-section">
         <h3 className="begin-section">Wallet Selection</h3>
         <h5>Identifying source of funds for an optimal experience</h5>
-        <h4>Search & Selection</h4>
+        <h4 id="walletSelection">Search & Selection</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectDemo />
         </div>
-        <h4>Connect Web3 Wallet (Same-Device)</h4>
+        <h4 id="walletConnect">Connect Web3 Wallet (Same-Device)</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectWalletConnectDemo type="metamask" />
         </div>
@@ -51,19 +51,19 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectWalletPairDemo type="coinbaseWallet" />
         </div>
-        <h4>Connect Hardware Wallet (USB)</h4>
+        <h4 id="hardwareConnect">Connect Hardware Wallet (USB)</h4>
         <div className="begin-section wrapper-center">
           <InvoiceSelectWalletConnectDemo type="ledger" />
         </div>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectWalletConnectDemo type="trezor" />
         </div>
-        <h4>Connect Exchange Account (OAuth)</h4>
+        <h4 id="oauth">Connect Exchange Account (OAuth)</h4>
         <div className="begin-section wrapper-center">
-          <InvoiceSelectOauthPairDemo type="gemini" />
+          <InvoiceSelectOauthPairDemo type="coinbase" />
         </div>
         <div className="begin-section end-section wrapper-center">
-          <InvoiceSelectOauthPairDemo type="coinbase" />
+          <InvoiceSelectOauthPairDemo type="venmo" />
         </div>
       </section>
 
@@ -85,14 +85,14 @@ const BitPayInvoiceDemos: React.FC = () => (
       <section className="end-section">
         <h3 className="begin-section">Payment Acceptance</h3>
         <h5>3 mutations optimized for source of funds</h5>
-        <h4>Generic Mode (P2P)</h4>
+        <h4 id="genericMode">Generic Mode (P2P)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 100 }}
         >
           <InvoiceAddressModeDemo />
         </div>
-        <h4>Connect Mode (Web3 / OAuth / USB)</h4>
+        <h4 id="connectMode">Connect Mode (Web3 / OAuth / USB)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 50 }}
@@ -111,14 +111,14 @@ const BitPayInvoiceDemos: React.FC = () => (
         >
           <InvoiceFiatConnectModeDemo />
         </div>
-        <h4>BIP-21 Mode (P2P)</h4>
+        <h4 id="bip21Mode">BIP-21 Mode (P2P)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 100 }}
         >
           <InvoiceBIP21ModeDemo />
         </div>
-        <h4>BIP-72 Mode (Payment Protocol)</h4>
+        <h4 id="bip72Mode">BIP-72 Mode (Payment Protocol)</h4>
         <div
           className="begin-section end-section wrapper-center"
           style={{ marginBottom: 40 }}
@@ -128,14 +128,16 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section end-section wrapper-center">
           <InvoiceAwaitingConfDemo type="btc" />
         </div>
-        <h4>BitPay Ecosystem Mode</h4>
+        <h4 id="bpMode">BitPay Ecosystem Mode</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceUniversalModeDemo />
         </div>
       </section>
 
       <section className="begin-section end-section">
-        <h3 className="begin-section">Payment Receipts</h3>
+        <h3 className="begin-section" id="receipts">
+          Payment Receipts
+        </h3>
         <h5>Singular design to handle all post-payment experiences</h5>
         <h4>Payment Complete</h4>
         <div

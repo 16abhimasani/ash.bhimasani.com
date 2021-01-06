@@ -30,6 +30,9 @@
       }
     }
   }
+  &__label {
+    color: #9b9b9b;
+  }
 }
 
 .form__label,
@@ -38,6 +41,5 @@
   top: 0;
   display: block;
   font-size: 12px;
-  color: #9b9b9b;
   transition: 200ms;
 }

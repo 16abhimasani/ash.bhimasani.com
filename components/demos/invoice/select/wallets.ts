@@ -12,6 +12,8 @@ export const BTC_CHAIN = ["BTC", "BCH"];
 export const P2P_ONLY = ["BTC", "BCH", "XRP"];
 export const TOKENS = ["USDC", "PAX", "BUSD", "GUSD"];
 export const ETH_CHAIN = ["ETH", ...TOKENS];
+export const FIAT = ["USD", "EUR", "GBP"];
+export const MAJOR_CHAINS = ["BTC", "BCH", "XRP", "ETH"];
 
 export const RECENT = ["bitpay", "coinbase"];
 export const POPULAR = [
@@ -19,12 +21,15 @@ export const POPULAR = [
   "coinbase",
   "blockchain",
   "cashApp",
+  "paypal",
   "binance",
   "argent",
   "coinbaseWallet",
   "gemini",
   "brd",
   "metamask",
+  "venmo",
+  "revolut",
 ];
 
 interface Wallet {
@@ -69,6 +74,34 @@ export const WALLETS: { [wallet: string]: Wallet } = {
     icon: "coinbase.svg",
     oauth: true,
     currencies: ["BTC", "BCH", "XRP", "ETH", "USDC"],
+  },
+  paypal: {
+    key: "paypal",
+    displayName: "PayPal",
+    icon: "/paypal.svg",
+    oauth: true,
+    currencies: [...MAJOR_CHAINS, ...FIAT],
+  },
+  venmo: {
+    key: "venmo",
+    displayName: "Venmo",
+    icon: "/venmo.svg",
+    oauth: true,
+    currencies: FIAT,
+  },
+  revolut: {
+    key: "revolut",
+    displayName: "Revolut",
+    icon: "/revolut.svg",
+    oauth: true,
+    currencies: [...MAJOR_CHAINS, ...FIAT],
+  },
+  chime: {
+    key: "chime",
+    displayName: "Chime",
+    icon: "/chime.svg",
+    oauth: true,
+    currencies: FIAT,
   },
   argent: {
     key: "argent",

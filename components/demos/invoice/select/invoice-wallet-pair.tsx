@@ -15,7 +15,11 @@ const InvoiceSelectWalletPairDemo: React.FC<{ type: string }> = ({ type }) => {
           <motion.div className={classes.search__selected}>
             <img
               className={classes.search__selected__icon}
-              src={`https://bitpay.com/img/wallet-logos/${WALLETS[type].icon}`}
+              src={
+                WALLETS[type].icon.includes("/")
+                  ? `/logos${WALLETS[type].icon}`
+                  : `https://bitpay.com/img/wallet-logos/${WALLETS[type].icon}`
+              }
             />
             {WALLETS[type].displayName}
           </motion.div>
