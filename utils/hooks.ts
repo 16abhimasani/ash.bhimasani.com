@@ -2,7 +2,7 @@ import { useEffect, useState, useLayoutEffect, useCallback } from "react";
 import { ResizeObserver as Ponyfill } from "@juggle/resize-observer";
 
 // gets the current size of browser window
-export function useWindowSize(): { width: number; height: number } {
+export const useWindowSize = (): { width: number; height: number } => {
   const getSize = () => {
     return {
       width: window?.innerWidth || 0,
@@ -19,18 +19,17 @@ export function useWindowSize(): { width: number; height: number } {
   }, []);
 
   return windowSize;
-}
+};
 
 // gets the size and relative positioning of a Ref passed ing
-export function useRefSize(
-  ref: React.RefObject<HTMLElement>
-): {
+interface RefSize {
   width: number;
   height: number;
   left: number;
   top: number;
   parent: Element | null;
-} {
+}
+export const useRefSize = (ref: React.RefObject<HTMLElement>): RefSize => {
   const getSize = (el: HTMLElement | null) => {
     return {
       width: el?.offsetWidth || 0,
@@ -61,4 +60,4 @@ export function useRefSize(
   }, [ref.current]);
 
   return RefSize;
-}
+};

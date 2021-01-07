@@ -8,6 +8,7 @@ import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invo
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import Tweet from "../../../components/utils/tweet";
 
 const BitPayInvoicePay: React.FC = () => (
   <>
@@ -404,9 +405,26 @@ const BitPayInvoicePay: React.FC = () => (
 
         <h4 className="begin-section">V4 Reference Implementation</h4>
         <section className="begin-section end-section wrapper-center">
-          <div style={{ marginBottom: 64 }}>
-            <InvoiceConnectModeDemo />
-          </div>
+          <InvoiceConnectModeDemo />
+        </section>
+        <section className="begin-section end-section wrapper-center">
+          <Tweet>
+            <p lang="en" dir="ltr">
+              Nice launch from{" "}
+              <a href="https://twitter.com/BitPay?ref_src=twsrc%5Etfw">
+                @BitPay
+              </a>{" "}
+              making crypto a bit easier to use. Every small improvement adds
+              up! Nice work{" "}
+              <a href="https://twitter.com/spair?ref_src=twsrc%5Etfw">@spair</a>{" "}
+              and team.
+              <a href="https://t.co/YWws9CDotv">https://t.co/YWws9CDotv</a>
+            </p>
+            &mdash; Brian Armstrong (@brian_armstrong){" "}
+            <a href="https://twitter.com/brian_armstrong/status/1293626788472475648?ref_src=twsrc%5Etfw">
+              August 12, 2020
+            </a>
+          </Tweet>
         </section>
 
         <h3 className="begin-section">Hardware Wallets (Ledger)</h3>

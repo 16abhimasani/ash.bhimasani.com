@@ -21,7 +21,7 @@ const Anchor: React.FC<{
     className={`link ${color ? "link--" + color : ""} ${bold ? "f-600" : ""}`}
     href={href}
     target={newTab ? "_blank" : "_self"}
-    rel={newTab ? "noopener noreferrer" : ""}
+    rel="noopener noreferrer"
   >
     {`${spaceBefore ? " " : ""}${content}${spaceAfter ? " " : ""}`}
   </a>

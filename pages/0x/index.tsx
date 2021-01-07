@@ -92,21 +92,12 @@ const ZeroX: React.FC = () => (
       />
 
       <h5 className="begin-section">Major contributions</h5>
-      <div className="lead">
-        <ol className="list">
-          <li className="list__item">
-            <div className="list__item__number">1</div>
-            <div>
-              Matcha Moolah:
-              <Anchor
-                content="Referral Contest"
-                href="https://matcha.xyz/blog/refer-your-friends-and-win-eth"
-                spaceBefore
-              />
-            </div>
-          </li>
-        </ol>
-      </div>
+      <PostBox
+        icon="/imgs/matcha/moolah/avatar.png"
+        title="Matcha Moolah"
+        caption="Referral contest giving away $50,000 in ETH"
+        link="/0x/matcha/moolah"
+      />
     </motion.main>
   </>
 );
