@@ -1,41 +1,27 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import classes from "../invoice.module.scss";
 import { motion } from "framer-motion";
 
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
-import InvoiceSuperToast from "../components/super-toast/super-toast";
+import InvoiceSuperToast, {
+  closeToast,
+  handleToast,
+  SuperToastController,
+} from "../components/super-toast/super-toast";
 import InvoiceCopyBar from "../components/copy/copy-bar";
 import InvoiceTimer from "../components/timer/timer";
 import InvoiceQR from "../components/qr/qr";
-import { wait } from "../../../../utils/utils";
 
 const InvoiceAddressModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(false);
-  const [TOAST_CONTENT, SET_TOAST] = useState({
+  const [TOAST_CONTENT, SET_TOAST] = useState<SuperToastController>({
     label: "Address",
     toastTitle: "Payment Address Copied",
     value: "Address",
     showToast: false,
   });
-  const handleToast = useCallback(
-    async (content: {
-      label: string;
-      toastTitle: string;
-      value: string;
-      showToast: boolean;
-    }) => {
-      if (TOAST_CONTENT) {
-        closeToast();
-        await wait(400);
-        SET_TOAST(content);
-      } else {
-        SET_TOAST(content);
-      }
-    },
-    [TOAST_CONTENT]
-  );
-  const closeToast = (): void => {
-    SET_TOAST({ ...TOAST_CONTENT, showToast: false });
+  const copySheetToastHandler = (content: SuperToastController) => {
+    handleToast(content, TOAST_CONTENT, SET_TOAST);
   };
   return (
     <div>
@@ -59,13 +45,13 @@ const InvoiceAddressModeDemo: React.FC = () => {
           ]}
           toggleQR={TOGGLE_QR}
           qrVisible={QR_VISIBLE}
-          setToast={handleToast}
+          setToast={copySheetToastHandler}
         />
       </motion.div>
       <div style={{ position: "relative", marginTop: 26 }}>
         <InvoiceSuperToast
           open={TOAST_CONTENT.showToast}
-          close={closeToast}
+          close={(): void => closeToast(TOAST_CONTENT, SET_TOAST)}
           title={TOAST_CONTENT.toastTitle}
           caption={TOAST_CONTENT.value}
         />
