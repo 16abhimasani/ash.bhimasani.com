@@ -43,6 +43,10 @@ const ZeroX: React.FC = () => (
             spaceAfter
           />
           and governed by the
+          <img
+            style={{ marginLeft: 8, width: 16, transform: "translateY(1.5px)" }}
+            src="icons/currencies/zrx.svg"
+          />
           <Anchor
             content="ZRX token"
             href="https://www.coinbase.com/price/0x"
@@ -51,14 +55,14 @@ const ZeroX: React.FC = () => (
           .
         </p>
         <p>
-          The team launched their own
+          The team recently launched a
           <Anchor
             content="trading platform"
             href="https://matcha.xyz/"
             spaceBefore
             spaceAfter
           />
-          as a showcase.
+          to showcase their world-class liquidity aggregation.
         </p>
         <p>
           I currently work on the
