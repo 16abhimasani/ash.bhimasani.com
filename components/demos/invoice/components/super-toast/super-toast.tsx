@@ -1,41 +1,9 @@
 import React from "react";
 import classes from "./super-toast.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { wait } from "../../../../../utils/utils";
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
-
-const animateToast = {
-  visible: {
-    opacity: 1,
-    rotateX: 0,
-    scale: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 14,
-    },
-  },
-  initial: {
-    opacity: 0,
-    rotateX: 30,
-    scale: 0.98,
-    y: 36,
-    transition: {
-      type: "spring",
-      damping: 12,
-    },
-  },
-  exit: {
-    opacity: 0,
-    rotateX: -10,
-    y: 28,
-    transition: {
-      type: "spring",
-      damping: 12,
-    },
-  },
-};
 
 const InvoiceSuperToast: React.FC<{
   open: boolean;
@@ -141,6 +109,66 @@ const InvoiceSuperToast: React.FC<{
       )}
     </AnimatePresence>
   );
+};
+
+const animateToast = {
+  visible: {
+    opacity: 1,
+    rotateX: 0,
+    scale: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 14,
+    },
+  },
+  initial: {
+    opacity: 0,
+    rotateX: 30,
+    scale: 0.98,
+    y: 36,
+    transition: {
+      type: "spring",
+      damping: 12,
+    },
+  },
+  exit: {
+    opacity: 0,
+    rotateX: -10,
+    y: 28,
+    transition: {
+      type: "spring",
+      damping: 12,
+    },
+  },
+};
+export interface SuperToastController {
+  label?: string;
+  toastTitle: string;
+  value: string;
+  showToast: boolean;
+  type?: string;
+  buttons?: { text: string; action?: () => void }[];
+}
+
+export const handleToast = async (
+  content: SuperToastController,
+  TOAST_CONTENT: SuperToastController,
+  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>
+): Promise<void> => {
+  if (TOAST_CONTENT) {
+    closeToast(TOAST_CONTENT, SET_TOAST);
+    await wait(400);
+    SET_TOAST(content);
+  } else {
+    SET_TOAST(content);
+  }
+};
+export const closeToast = (
+  TOAST_CONTENT: SuperToastController,
+  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>
+): void => {
+  SET_TOAST({ ...TOAST_CONTENT, showToast: false });
 };
 
 export default InvoiceSuperToast;

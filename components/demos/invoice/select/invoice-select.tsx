@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import classes from "./invoice-select.module.scss";
 import invoiceClasses from "../invoice.module.scss";
 import buttonClasses from "../components/button/button.module.scss";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { RECENT, POPULAR, WALLETS, CURRENCIES } from "./wallets";
 
@@ -16,6 +16,10 @@ const animateSelected = {
   selectedInitial: {
     opacity: 0,
     y: 10,
+  },
+  selectedExit: {
+    opacity: 0,
+    y: 5,
   },
 };
 
@@ -90,18 +94,22 @@ const InvoiceSelectDemo: React.FC = () => {
             style={currencyFilter ? { cursor: "pointer" } : {}}
           >
             {currencyFilter ? (
-              <motion.div
-                className={classes.search__selected}
-                initial="selectedInitial"
-                animate="selectedContent"
-                variants={animateSelected}
-              >
-                <img
-                  className={classes.search__selected__icon}
-                  src={`/icons/currencies/${currencyFilter.code.toLowerCase()}.svg`}
-                />
-                {currencyFilter.name}
-              </motion.div>
+              <AnimatePresence exitBeforeEnter>
+                <motion.div
+                  className={classes.search__selected}
+                  initial="selectedInitial"
+                  animate="selectedContent"
+                  exit="selectedExit"
+                  variants={animateSelected}
+                  key={currencyFilter.code}
+                >
+                  <img
+                    className={classes.search__selected__icon}
+                    src={`/icons/currencies/${currencyFilter.code.toLowerCase()}.svg`}
+                  />
+                  {currencyFilter.name}
+                </motion.div>
+              </AnimatePresence>
             ) : (
               <input
                 className={classes.input}
