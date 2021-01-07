@@ -121,7 +121,7 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4 id="bip72Mode">BIP-72 Mode (Payment Protocol)</h4>
         <div
           className="begin-section end-section wrapper-center"
-          style={{ marginBottom: 40 }}
+          style={{ marginBottom: 80 }}
         >
           <InvoicePayProModeDemo />
         </div>

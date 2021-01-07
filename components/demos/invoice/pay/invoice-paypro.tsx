@@ -14,6 +14,15 @@ import InvoiceQR from "../components/qr/qr";
 import copyUtil from "../../../../utils/copy-to-clipboard";
 
 const paymentLink = "https://ash.bhimasani.com/bitpay/invoice";
+const BIP21_URI = (): string => {
+  const address = "bitcoin:1GnVjxpvak4CSJRAF6FFRHuboBA5uA8BTR";
+  const amount = 0.011861;
+  const label = "Ash Bhimasani";
+  const message = "🍓🤠🚀";
+  return `${address}?amount=${amount}&label=${encodeURI(
+    label
+  )}&message=${encodeURI(message)}`;
+};
 
 const InvoicePayProModeDemo: React.FC = () => {
   const [QR_VISIBLE, TOGGLE_QR] = useState(true);
@@ -23,25 +32,7 @@ const InvoicePayProModeDemo: React.FC = () => {
     showToast: false,
   });
   const handleWallet = () => {
-    fetch("https://test.bitpay.com/invoices", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        price: "135.00",
-        currency: "USD",
-        token: "DAuGbs4T8ASv2wfZT7pqnyiFufz4j2XYFxf88yMPxFA8",
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => data.data)
-      .then((data) => {
-        console.log(`bitcoin:?r=https://test.bitpay.com/i/${data.id}`);
-        window.open(`bitcoin:?r=https://test.bitpay.com/i/${data.id}`, "_self");
-      })
-      .catch((err) => console.error(err));
+    window.open(BIP21_URI(), "_self");
     handleToast(
       {
         toastTitle: `Uncheck "Subtract Fee"`,
