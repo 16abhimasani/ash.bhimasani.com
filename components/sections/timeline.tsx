@@ -16,7 +16,7 @@ const Timeline: React.FC = () => (
       icon="/logos/0x.svg"
       title="0x Labs"
       caption="Software Engineer & Product Designer"
-      date="Q1 2021"
+      date="Spring 2021"
       link="/0x"
     />
     <PostBox
