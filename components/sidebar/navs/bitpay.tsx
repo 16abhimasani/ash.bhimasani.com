@@ -19,6 +19,10 @@ export default [
             path: "/bitpay/invoice/receipt",
             label: "Receipt",
           },
+          {
+            path: "/bitpay/invoice/demos",
+            label: "Demos",
+          },
         ],
       },
       {

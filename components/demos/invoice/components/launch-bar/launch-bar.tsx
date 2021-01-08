@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./launch-bar.module.scss";
 import { motion } from "framer-motion";
+import classNames from "classnames/bind";
+const cx = classNames.bind(classes);
 
 const animateLaunchBar = {
   qrHidden: {
@@ -31,11 +33,20 @@ const InvoiceLaunchBar: React.FC<{
       >
         Open in Wallet
       </motion.div>
-      <motion.img
-        className={classes.toggle}
+      <motion.div
+        className={classes.qr__wrapper}
         onClick={(): void => qrToggle(!qrVisible)}
-        src={`/icons/${qrVisible ? "hide" : "show"}-qr.svg`}
-      />
+      >
+        <motion.img
+          className={cx({
+            qr: true,
+            qr__hide: qrVisible,
+            qr__show: !qrVisible,
+          })}
+          src={`/icons/${qrVisible ? "hide" : "show"}-qr.svg`}
+          style={{ transform: `translateX(${qrVisible ? 0.5 : 0.5}px)` }}
+        />
+      </motion.div>
       <motion.div
         className={classes.button}
         whileTap={{ scale: 0.96 }}

@@ -63,7 +63,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(white, 0.13);
+  background-color: rgba(white, 0.12);
+  border: 1px solid transparent;
   border-radius: 6px;
   font-weight: 600;
   font-size: 13px;
@@ -75,11 +76,20 @@
   &:not(:first-child) {
     margin-left: 11px;
   }
+  transition: background-color, border-color 350ms ease-in-out;
+  &:hover {
+    background-color: rgba(white, 0.14);
+    border-color: rgba(white, 0.2);
+  }
   &__light {
     background-color: rgba(#4f6ef7, 0.1);
     font-weight: 600;
     font-size: 13px;
     color: #4f6ef7;
     margin-top: 16px;
+    &:hover {
+      background-color: rgba(#4f6ef7, 0.12);
+      border-color: transparent;
+    }
   }
 }

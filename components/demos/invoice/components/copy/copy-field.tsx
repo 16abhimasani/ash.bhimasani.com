@@ -20,14 +20,16 @@ const InvoiceCopyField: React.FC<{
   const processAddress = (str: string, limit = 12): string =>
     `${str.substring(0, limit)}...${str.substring(str.length - limit)}`;
   const [copied, setCopied] = useState(false);
+  const [hoveringQR, setHoveringQR] = useState(false);
   const startCopying = useCallback(async () => {
     if (copied) return;
+    if (hoveringQR) return;
     copyUtil(value.split(" ")[0]);
     setCopied(true);
     setToast({ label, value, toastTitle, showToast: true });
     await wait(1500);
     setCopied(false);
-  }, [copied, value]);
+  }, [copied, value, hoveringQR]);
   return (
     <div className={classes.item}>
       <div className={classes.title}>{label}</div>
@@ -40,6 +42,8 @@ const InvoiceCopyField: React.FC<{
         {label === "Address" && toggleQR && (
           <motion.img
             onClick={() => toggleQR(!qrVisible)}
+            onHoverStart={() => setHoveringQR(true)}
+            onHoverEnd={() => setHoveringQR(false)}
             className={classes.icon__qr}
             src={`/icons/${qrVisible ? "hide" : "show"}-qr-round.svg`}
           />
