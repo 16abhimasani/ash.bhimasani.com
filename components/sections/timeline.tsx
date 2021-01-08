@@ -38,7 +38,7 @@ const Timeline: React.FC = () => (
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & HCI"
       date="2016 ~ 2022"
-      link="https://www.usnews.com/best-graduate-schools/top-science-schools/georgia-institute-of-technology-139755"
+      link="https://www.gatech.edu/about/rankings#:~:text=Computer%20Science%20ranks%20%231%20by,Guardian's%20QS%20World%20University%20Rankings."
       newTab
     />
     <PostBox
