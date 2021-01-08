@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-const Tweet: React.FC<{ children: unknown }> = ({ children }) => {
+const Tweet: React.FC<{ src: string }> = ({ src }) => {
+  const tweet = useRef(null);
   useEffect(() => {
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (window as any)?.twttr.widgets?.load();
+      (window as any)?.twttr.widgets?.load(tweet?.current);
     } catch {
       const s = document.createElement("script");
       s.setAttribute("src", "https://platform.twitter.com/widgets.js");
@@ -13,8 +14,8 @@ const Tweet: React.FC<{ children: unknown }> = ({ children }) => {
     }
   }, []);
   return (
-    <blockquote className="twitter-tweet" data-theme="light">
-      {children}
+    <blockquote className="twitter-tweet" data-theme="light" ref={tweet}>
+      <a href={src}></a>
     </blockquote>
   );
 };

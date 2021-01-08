@@ -323,31 +323,7 @@ const BitPayExtensionShop: React.FC = () => (
           </p>
         </div>
         <div className="wrapper-center end-section">
-          <Tweet>
-            <p lang="en" dir="ltr">
-              <a href="https://twitter.com/hashtag/PrimeDay?src=hash&amp;ref_src=twsrc%5Etfw">
-                #PrimeDay
-              </a>{" "}
-              is here! Use the Pay with BitPay extension to purchase your deals.
-              New TV, gaming system or the perfect Christmas gift for mom, buy
-              it seamlessly with crypto. Download the extension:{" "}
-              <a href="https://t.co/HW0tljgoyN">https://t.co/HW0tljgoyN</a>{" "}
-              <a href="https://twitter.com/hashtag/amazon?src=hash&amp;ref_src=twsrc%5Etfw">
-                #amazon
-              </a>{" "}
-              <a href="https://twitter.com/hashtag/amazonprime?src=hash&amp;ref_src=twsrc%5Etfw">
-                #amazonprime
-              </a>{" "}
-              <a href="https://twitter.com/hashtag/amazonprimeday2020?src=hash&amp;ref_src=twsrc%5Etfw">
-                #amazonprimeday2020
-              </a>{" "}
-              <a href="https://t.co/AGWlu1iqgO">pic.twitter.com/AGWlu1iqgO</a>
-            </p>
-            &mdash; BitPay (@BitPay){" "}
-            <a href="https://twitter.com/BitPay/status/1316058461071958018?ref_src=twsrc%5Etfw">
-              October 13, 2020
-            </a>
-          </Tweet>
+          <Tweet src="https://twitter.com/BitPay/status/1316058461071958018" />
         </div>
 
         <h4 className="begin-section">Discount Handling</h4>

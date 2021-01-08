@@ -48,34 +48,7 @@ const MatchaMoolah: React.FC = () => (
       carousel
     />
     <div className="begin-section wrapper-center">
-      <Tweet>
-        <p lang="en" dir="ltr">
-          Today we’re launching
-          <a href="https://twitter.com/hashtag/MatchaMoolah?src=hash&amp;ref_src=twsrc%5Etfw">
-            #MatchaMoolah
-          </a>
-          to ring in the New Year! 🎉
-          <br />
-          <br />
-          Between now and the Chinese New Year (2/12)🧧...
-          <br />
-          <br />
-          1⃣ Sign up:
-          <a href="https://t.co/tlB43WEN5M">https://t.co/tlB43WEN5M</a>
-          <br />
-          2⃣ Share your link
-          <br />
-          3⃣ Track your place for over $50K in prizes on the public leaderboard
-          <br />
-          <br />
-          Good luck! 🍵🙏
-          <a href="https://t.co/JZfYDdZFFu">pic.twitter.com/JZfYDdZFFu</a>
-        </p>
-        &mdash; Matcha 🍵 (@matchaxyz)
-        <a href="https://twitter.com/matchaxyz/status/1346253769282002944?ref_src=twsrc%5Etfw">
-          January 5, 2021
-        </a>
-      </Tweet>
+      <Tweet src="https://twitter.com/matchaxyz/status/1346253769282002944" />
     </div>
   </motion.main>
 );

@@ -23,78 +23,82 @@ const BitPay: React.FC = () => (
     </Head>
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
-      <h1 className="begin-section pt-0">BitPay &nbsp;💸</h1>
-      <div className="lead end-section">
-        <p>
-          BitPay is a global cryptocurrency payment processor that also operates
-          an open source
-          <Anchor
-            content="wallet service"
-            href="https://bitpay.com/wallet"
-            spaceBefore
-            spaceAfter
-          />
-          and reloadable
-          <Anchor
-            content="debit card"
-            href="https://bitpay.com/card"
-            spaceBefore
-          />
-          .
-        </p>
-        <p>Below are my major contributions with a deep dive for each ~</p>
-      </div>
+      <section className="end-section">
+        <h1 className="begin-section pt-0">BitPay &nbsp;💸</h1>
+        <div className="lead">
+          <p>
+            BitPay is a global cryptocurrency payment processor that also
+            operates an open source
+            <Anchor
+              content="wallet service"
+              href="https://bitpay.com/wallet"
+              spaceBefore
+              spaceAfter
+            />
+            and reloadable
+            <Anchor
+              content="debit card"
+              href="https://bitpay.com/card"
+              spaceBefore
+            />
+            .
+          </p>
+          <p>Below are my major contributions with a deep dive for each ~</p>
+        </div>
+      </section>
 
-      <h3 className="begin-section">Products</h3>
-      <PostBox
-        icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
-        title="Invoice V4"
-        caption="Flagship payment gateway powering the network"
-        date="Aug 2019 ~ Dec 2020"
-        link="/bitpay/invoice"
-      />
-      <PostBox
-        icon="/logos/bitpay-ext.svg"
-        title="Browser Extension"
-        caption="Convert crypto to prepaid cards instantly & anonymously"
-        date="Mar 2020 ~ Aug 2020"
-        link="/bitpay/extension"
-      />
-      <PostBox
-        icon="/logos/bitpay-id.svg"
-        title="BitPay ID"
-        caption="Consumer product suite + KYC / AML"
-        date="Apr 2019 ~ Aug 2019"
-        link="/bitpay/id"
-      />
-      <PostBox
-        icon="/logos/bitpay-globe.svg"
-        title="Merchant Directory"
-        caption="A curated directory of where to use crypto + promos"
-        date="Mar 2019 ~ Apr 2019"
-        link="/bitpay/directory"
-      />
-      <PostBox
-        icon="/logos/bitpay-emails.svg"
-        title="Emails"
-        caption="Transactional emails for merchants & payers"
-        date="Aug 2018 ~ Jan 2019"
-        link="/bitpay/emails"
-      />
-      <PostBox
-        icon="/logos/bitpay-site.svg"
-        title="Website"
-        caption="Landing, operational, & product pages"
-        date="Aug 2018 ~ Jan 2019"
-        link="/bitpay/site"
-      />
-      <PostBox
-        icon="/logos/bitpay-support.svg"
-        title="Support Desk"
-        caption="A streamlined customer service platform"
-        date="May 2018 ~ Aug 2018"
-        link="/bitpay/support"
-      />
+      <section>
+        <h3 className="begin-section">Products</h3>
+        <PostBox
+          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
+          title="Invoice V4"
+          caption="Flagship payment gateway powering the network"
+          date="Aug 2019 ~ Dec 2020"
+          link="/bitpay/invoice"
+        />
+        <PostBox
+          icon="/logos/bitpay-ext.svg"
+          title="Browser Extension"
+          caption="Convert crypto to prepaid cards instantly & anonymously"
+          date="Mar 2020 ~ Aug 2020"
+          link="/bitpay/extension"
+        />
+        <PostBox
+          icon="/logos/bitpay-id.svg"
+          title="BitPay ID"
+          caption="Consumer product suite + KYC / AML"
+          date="Apr 2019 ~ Aug 2019"
+          link="/bitpay/id"
+        />
+        <PostBox
+          icon="/logos/bitpay-globe.svg"
+          title="Merchant Directory"
+          caption="A curated directory of where to use crypto + promos"
+          date="Mar 2019 ~ Apr 2019"
+          link="/bitpay/directory"
+        />
+        <PostBox
+          icon="/logos/bitpay-emails.svg"
+          title="Emails"
+          caption="Transactional emails for merchants & payers"
+          date="Aug 2018 ~ Jan 2019"
+          link="/bitpay/emails"
+        />
+        <PostBox
+          icon="/logos/bitpay-site.svg"
+          title="Website"
+          caption="Landing, operational, & product pages"
+          date="Aug 2018 ~ Jan 2019"
+          link="/bitpay/site"
+        />
+        <PostBox
+          icon="/logos/bitpay-support.svg"
+          title="Support Desk"
+          caption="A streamlined customer service platform"
+          date="May 2018 ~ Aug 2018"
+          link="/bitpay/support"
+        />
+      </section>
     </motion.main>
   </>
 );
