@@ -1,11 +1,10 @@
 import React, { useState, useRef, useCallback } from "react";
 import classes from "./details-bar.module.scss";
 import { motion } from "framer-motion";
-
-import BitpayLogo from "../../../extension/bp-logo/bp-logo";
-
 import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
+import copyUtil from "../../../../../utils/copy-to-clipboard";
+import BitpayLogo from "../../../extension/bp-logo/bp-logo";
 
 const detailsTransition = {
   transition: {
@@ -49,6 +48,13 @@ const InvoiceDetailsBar: React.FC<{
     if (!details.current) return 0;
     return details.current.clientHeight;
   }, [details]);
+  const currentDate = new Date().toLocaleString([], {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   return (
     <>
       <motion.div className={classes.bar}>
@@ -56,20 +62,15 @@ const InvoiceDetailsBar: React.FC<{
           <BitpayLogo solo={false} payMode={false} />
         </div>
         {timestamp ? (
-          <div
+          <motion.div
             className={cx({
               bubble: true,
               bubble__time: true,
             })}
+            onClick={(): void => copyUtil(currentDate)}
           >
-            {new Date().toLocaleString([], {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
-          </div>
+            {currentDate}
+          </motion.div>
         ) : (
           <motion.div
             className={cx({

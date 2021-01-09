@@ -78,7 +78,7 @@ const InvoiceSuperToast: React.FC<{
                 button__light: true,
               })}
               style={{ marginLeft: 0 }}
-              whileTap={{ scale: 0.96 }}
+              whileTap={{ scale: 0.98 }}
             >
               Leave Feedback
             </motion.div>
@@ -90,7 +90,7 @@ const InvoiceSuperToast: React.FC<{
                   className={classes.button}
                   style={buttons.length === 1 ? { marginLeft: 0 } : {}}
                   key={index}
-                  whileTap={{ scale: 0.96 }}
+                  whileTap={{ scale: 0.98 }}
                   onClick={(): void => content.action && content.action()}
                 >
                   {content.text}
