@@ -23,7 +23,7 @@ const Timeline: React.FC = () => (
       icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
       title="BitPay"
       caption="Software Engineer & Lead Product Designer"
-      date="2018 ~ 2020"
+      date="2018 ~ 2021"
       link="/bitpay"
     />
     <PostBox
@@ -44,14 +44,14 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/drexel.png"
       title="Drexel ExCITe Center"
-      caption="Music & Entertainment Technology Lab Intern"
+      caption="Music & Entertainment Technology Lab"
       date="Summer 2015"
       link="/posts/drexel"
     />
     <PostBox
       icon="/logos/lockheed-martin.svg"
       title="Lockheed Martin Space Systems"
-      caption="Engineering Department Intern"
+      caption="Engineering Department"
       date="Summer 2015"
       link="/posts/lockheed"
     />
