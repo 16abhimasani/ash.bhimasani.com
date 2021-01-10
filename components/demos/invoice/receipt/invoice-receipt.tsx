@@ -115,9 +115,11 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
           </div>
           <div className={classes.details__row}>
             <div className={classes.details__row__left}>Amount Paid</div>
-            <div
+            <a
               className={classes.details__row__right}
-              style={{ fontWeight: 600, color: "#4f6ef7" }}
+              href="https://explorer.bitcoin.com/btc/tx/29a3efd3ef04f9153d47a990bd7b048a4b2d213daaa5fb8ed670fb85f13bdbcf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {type === "overpaid" && <> 0.009973 BTC</>}
               {type === "underpaid" && <> 0.008001 BTC</>}
@@ -125,7 +127,7 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
                 type === "processing" ||
                 type === "refund" ||
                 type === "delayed") && <> 0.008226 BTC</>}
-            </div>
+            </a>
           </div>
           {(type === "processing" || type === "refund") && (
             <div className={classes.details__row}>
@@ -141,12 +143,14 @@ const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
           {type === "processing" && (
             <div className={classes.details__row}>
               <div className={classes.details__row__left}>Refund Address</div>
-              <div
+              <a
                 className={classes.details__row__right}
-                style={{ fontWeight: 600, color: "#4f6ef7" }}
+                href="https://explorer.bitcoin.com/btc/address/1GnVjxpvak4CSJRAF6FFRHuboBA5uA8BTR"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                mwXWZj…JUJhT5
-              </div>
+                1GnVjx…uA8BTR
+              </a>
             </div>
           )}
         </div>
