@@ -3,11 +3,11 @@ import PostBox from "../post-box/post-box";
 
 const Projects: React.FC = () => (
   <section>
-    <h3>Projects &nbsp;/&nbsp; Portfolio</h3>
+    <h3>Other Stuff</h3>
     <PostBox
       icon="/logos/dribbble.svg"
       title="Product Design"
-      caption="My design highlights on Dribbble"
+      caption="Some design highlights on Dribbble"
       link="https://dribbble.com/ash-bhimasani"
       newTab
     />

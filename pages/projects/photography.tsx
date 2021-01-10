@@ -25,37 +25,66 @@ const Photography: React.FC = () => (
         .
       </p>
     </div>
-
-    <img
-      className="end-section"
-      width="100%"
-      src="/photography/cig.jpg"
-      alt="Cig"
-    />
-    <img
-      className="end-section"
-      width="100%"
-      src="/photography/mask.jpg"
-      alt="Mask"
-    />
-    <img
-      className="end-section"
-      width="100%"
-      src="/photography/blood.png"
-      alt="Blood"
-    />
-    <img
-      className="end-section"
-      width="100%"
-      src="/photography/net.jpg"
-      alt="Net"
-    />
-    <img
-      className="end-section"
-      width="100%"
-      src="/photography/beads.jpg"
-      alt="Beads"
-    />
+    <a
+      href="https://www.instagram.com/p/BK17oIRAkxZ/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        className="end-section"
+        width="100%"
+        src="/photography/cig.jpg"
+        alt="Cig"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/p/BI-8qZVjteB/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        className="end-section"
+        width="100%"
+        src="/photography/mask.jpg"
+        alt="Mask"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/p/BgwmN_hFAP3/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        className="end-section"
+        width="100%"
+        src="/photography/blood.png"
+        alt="Blood"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/p/BIxIgutDLWp/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        className="end-section"
+        width="100%"
+        src="/photography/net.jpg"
+        alt="Net"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/p/BInm8Puj5xk/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        className="end-section"
+        width="100%"
+        src="/photography/beads.jpg"
+        alt="Beads"
+      />
+    </a>
   </motion.main>
 );
 

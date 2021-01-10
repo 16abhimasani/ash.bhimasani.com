@@ -26,15 +26,8 @@ const ZeroX: React.FC = () => (
         <h1 className="begin-section pt-0">0x Labs &nbsp;🍵</h1>
         <div className="lead">
           <p>
-            0x is an
-            <Anchor
-              content="open protocol"
-              href="https://0x.org/"
-              spaceBefore
-              spaceAfter
-            />
-            that enables the efficient exchange of tokenized assets on the
-            Ethereum blockchain.
+            <Anchor content="0x" href="https://0x.org/" spaceAfter />
+            is an liquidity aggregation API for decentralized exchange.
           </p>
           <p>
             The protocol is
@@ -61,26 +54,21 @@ const ZeroX: React.FC = () => (
             .
           </p>
           <p>
-            The team recently launched a
-            <Anchor
-              content="trading platform"
-              href="https://matcha.xyz/"
-              spaceBefore
-              spaceAfter
-            />
-            to showcase their world-class liquidity aggregation.
-          </p>
-          <p>
-            I currently work on the
-            <Anchor
-              content="matcha.xyz"
-              href="https://matcha.xyz/"
-              spaceBefore
-              spaceAfter
-            />
+            The
             <Anchor
               content="team"
               href="https://www.linkedin.com/company/0x/people/"
+              spaceBefore
+              spaceAfter
+            />
+            recently launched their own trading platform to showcase a
+            world-class DEX experience.
+          </p>
+          <p>
+            I currently work on
+            <Anchor
+              content="matcha.xyz"
+              href="https://matcha.xyz/"
               spaceBefore
               spaceAfter
             />
