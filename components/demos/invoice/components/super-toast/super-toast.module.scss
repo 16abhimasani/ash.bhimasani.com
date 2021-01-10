@@ -76,7 +76,7 @@
   &:not(:first-child) {
     margin-left: 11px;
   }
-  transition: background-color, border-color 350ms ease-in-out;
+  transition: all 300ms ease;
   &:hover {
     background-color: rgba(white, 0.14);
     border-color: rgba(white, 0.2);
@@ -88,7 +88,7 @@
     color: #4f6ef7;
     margin-top: 16px;
     &:hover {
-      background-color: rgba(#4f6ef7, 0.12);
+      background-color: rgba(#4f6ef7, 0.14);
       border-color: transparent;
     }
   }
