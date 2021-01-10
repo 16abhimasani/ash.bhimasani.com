@@ -37,7 +37,7 @@ const ZeroX: React.FC = () => (
               spaceBefore
               spaceAfter
             />
-            and governed by the
+            by the
             <img
               style={{
                 marginLeft: 8,
@@ -54,15 +54,8 @@ const ZeroX: React.FC = () => (
             .
           </p>
           <p>
-            The
-            <Anchor
-              content="team"
-              href="https://www.linkedin.com/company/0x/people/"
-              spaceBefore
-              spaceAfter
-            />
-            recently launched their own trading platform to showcase a
-            world-class DEX experience.
+            To showcase the experience, the team launched their own world-class
+            trading platform.
           </p>
           <p>
             I currently work on
