@@ -10,7 +10,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 const InvoiceReceiptDemo: React.FC<{ type: string }> = ({ type }) => {
-  const [pulse, togglePulse] = useState(false);
+  const [pulse, togglePulse] = useState(true);
   return (
     <div>
       <motion.div
