@@ -9,6 +9,7 @@ import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoic
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import Tweet from "../../../components/utils/tweet";
+import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
 
 const BitPayInvoicePay: React.FC = () => (
   <>
@@ -283,6 +284,13 @@ const BitPayInvoicePay: React.FC = () => (
           </p>
         </div>
 
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoicePayProModeDemo />
+          </div>
+        </section>
+
         <h3 className="begin-section">2 Types of Scanning</h3>
         <div className="lead end-section">
           <ol className="list">
@@ -372,6 +380,11 @@ const BitPayInvoicePay: React.FC = () => (
           </p>
         </div>
 
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceConnectModeDemo web3 />
+        </div>
+
         <h3 className="begin-section">OAuth Exchanges (Coinbase)</h3>
         <WideScreen
           src={[
@@ -404,12 +417,12 @@ const BitPayInvoicePay: React.FC = () => (
         </div>
 
         <h4 className="begin-section">V4 Reference Implementation</h4>
-        <section className="begin-section end-section wrapper-center">
+        <div className="begin-section end-section wrapper-center">
           <InvoiceConnectModeDemo />
-        </section>
-        <section className="begin-section end-section wrapper-center">
+        </div>
+        <div className="begin-section end-section wrapper-center">
           <Tweet src="https://twitter.com/brian_armstrong/status/1293626788472475648" />
-        </section>
+        </div>
 
         <h3 className="begin-section">Hardware Wallets (Ledger)</h3>
         <WideScreen src="/imgs/invoice/pay/direct/hardware/pay.png" />
