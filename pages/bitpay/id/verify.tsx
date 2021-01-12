@@ -73,13 +73,13 @@ const BitPayIDVerification: React.FC = () => (
         <div className="d-flex">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/start-verify.png"
             alt="Mobile: Start Verify"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/personal-info.png"
             alt="Mobile: Personal Info"
@@ -127,13 +127,13 @@ const BitPayIDVerification: React.FC = () => (
         <div className="d-flex">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/enter-address.png"
             alt="Mobile: Enter Address"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/enter-ssn.png"
             alt="Mobile: Enter SSN"
@@ -155,13 +155,13 @@ const BitPayIDVerification: React.FC = () => (
         <div className="d-flex">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/awaiting-approval.png"
             alt="Mobile: Awaiting Approval"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/id/mobile/verify/approved.png"
             alt="Mobile: Approved"

@@ -156,13 +156,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/exchange/mobile.png"
             alt="P2P No URI Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/exchange/mobile-toast.png"
             alt="P2P No URI Mobile Toast"
@@ -242,13 +242,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/wallet/mobile.png"
             alt="P2P URI Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/wallet/mobile-toast.png"
             alt="P2P URI Mobile Toast"
@@ -340,13 +340,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/paypro/mobile.png"
             alt="PayPro Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/paypro/mobile-toast.png"
             alt="PayPro Mobile Toast"
