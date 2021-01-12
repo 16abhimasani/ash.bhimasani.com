@@ -6,21 +6,25 @@ import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import SideBar from "../../components/sidebar/sidebar";
 
+export const BitPayHead = (
+  <Head>
+    <meta
+      property="description"
+      content="BitPay - Blockchain Payment Processor"
+      key="description"
+    />
+    <meta
+      property="twitter:image"
+      content="/banners/bitpay.jpg"
+      key="twitter-image"
+    />
+    <meta property="og:image" content="/banners/bitpay.jpg" key="og-image" />
+  </Head>
+);
+
 const BitPay: React.FC = () => (
   <>
-    <Head>
-      <meta
-        property="description"
-        content="BitPay - Blockchain Payment Processor"
-        key="description"
-      />
-      <meta
-        property="twitter:image"
-        content="/banners/bitpay.jpg"
-        key="twitter-image"
-      />
-      <meta property="og:image" content="/banners/bitpay.jpg" key="og-image" />
-    </Head>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section className="end-section">

@@ -4,9 +4,11 @@ import { fadeInPage } from "../../../animations/page";
 import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import { BitPayHead } from "..";
 
 const BitPayIDAuth: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>

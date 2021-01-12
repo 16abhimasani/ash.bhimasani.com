@@ -18,9 +18,11 @@ import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice
 import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
 import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
 import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
+import { BitPayHead } from "..";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Invoice V4 Demos</h1>
