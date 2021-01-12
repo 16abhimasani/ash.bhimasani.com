@@ -85,7 +85,7 @@ const ZeroX: React.FC = () => (
           link="https://matcha.xyz/"
           newTab
         />
-        <h5 className="begin-section">Major contributions</h5>
+        <h5 className="begin-section">Contributions</h5>
         <PostBox
           icon="/imgs/matcha/moolah/avatar.png"
           title="Matcha Moolah"
