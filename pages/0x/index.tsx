@@ -5,22 +5,28 @@ import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import Tweet from "../../components/utils/tweet";
+import SideBar from "../../components/sidebar/sidebar";
+
+export const ZeroXHead = (
+  <Head>
+    <meta
+      property="description"
+      content="0x Labs - Powering Decentralized Exchange"
+      key="description"
+    />
+    <meta
+      property="twitter:image"
+      content="/banners/0x.png"
+      key="twitter-image"
+    />
+    <meta property="og:image" content="/banners/0x.png" key="og-image" />
+  </Head>
+);
 
 const ZeroX: React.FC = () => (
   <>
-    <Head>
-      <meta
-        property="description"
-        content="0x Labs - Powering Decentralized Exchange"
-        key="description"
-      />
-      <meta
-        property="twitter:image"
-        content="/banners/0x.png"
-        key="twitter-image"
-      />
-      <meta property="og:image" content="/banners/0x.png" key="og-image" />
-    </Head>
+    {ZeroXHead}
+    <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section className="end-section">
         <h1 className="begin-section pt-0">0x Labs &nbsp;🍵</h1>
