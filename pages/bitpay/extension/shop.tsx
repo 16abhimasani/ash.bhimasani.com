@@ -5,6 +5,7 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
+import Tweet from "../../../components/utils/tweet";
 
 const BitPayExtensionShop: React.FC = () => (
   <>
@@ -321,8 +322,9 @@ const BitPayExtensionShop: React.FC = () => (
             interesting at the very least.
           </p>
         </div>
-
-        <WideScreen src="/vids/extension/pay-with-coinbase.mp4" />
+        <div className="wrapper-center end-section">
+          <Tweet src="https://twitter.com/BitPay/status/1316058461071958018" />
+        </div>
 
         <h4 className="begin-section">Discount Handling</h4>
         <div className="d-flex">

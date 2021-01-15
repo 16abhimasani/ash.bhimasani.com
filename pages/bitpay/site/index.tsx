@@ -4,9 +4,11 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
+import { BitPayHead } from "..";
 
 const BitPaySite: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Website</h1>

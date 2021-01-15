@@ -3,21 +3,25 @@ import { useRouter } from "next/router";
 import Link from "../utils/link";
 import classNames from "classnames/bind";
 import classes from "./sidebar.module.scss";
-
 const cx = classNames.bind(classes);
 
+import BitPayNav from "./navs/bitpay";
+import ZeroXNav from "./navs/0x";
 interface PagePath {
   path: string;
   label: string;
   children?: PagePath[];
 }
 
-import BitPayNav from "./navs/bitpay";
+const isLink = (link: string): boolean => {
+  return /^https?:\/\//.test(link);
+};
 
 const SideBar: React.FC = () => {
   const router = useRouter();
   const navigation = (): PagePath[] => {
     if (router.pathname.includes("bitpay")) return BitPayNav;
+    if (router.pathname.includes("0x")) return ZeroXNav;
     return [];
   };
   const nav = (route: PagePath) => {
@@ -36,7 +40,12 @@ const SideBar: React.FC = () => {
               <a style={{ opacity: 0.25 }}>Ash &nbsp;/&nbsp;&nbsp;</a>
             </Link>
             <Link href={route.path}>
-              <a>{route.label}</a>
+              <a
+                target={isLink(route.path) ? "_blank" : ""}
+                rel="noopener noreferrer"
+              >
+                {route.label}
+              </a>
             </Link>
           </div>
         ) : (
@@ -46,6 +55,8 @@ const SideBar: React.FC = () => {
                 minor: true,
                 active: router.pathname === route.path,
               })}
+              target={isLink(route.path) ? "_blank" : ""}
+              rel="noopener noreferrer"
             >
               {route.label}
             </a>

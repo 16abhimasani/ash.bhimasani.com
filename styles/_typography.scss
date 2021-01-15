@@ -7,30 +7,31 @@ body {
 }
 
 h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: $Black;
-  line-height: 42px;
-}
-
-h2 {
   font-size: 28px;
   font-weight: 600;
   color: $Black;
-  line-height: 38px;
+  line-height: 32px;
 }
 
-h3 {
+h2 {
   font-size: 24px;
   font-weight: 600;
   color: $Black;
   line-height: 34px;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: $Black;
+  line-height: 30px;
+}
+
 h4 {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 
   color: $Black;
   background-color: $Pale;
@@ -63,12 +64,12 @@ h5 {
 }
 
 .lead {
-  font-size: 18px;
+  font-size: 16px;
   color: $Black;
-  line-height: 30px;
+  line-height: 28px;
 
   p:not(:first-child) {
-    margin-top: 28px;
+    margin-top: 26px;
   }
   .link {
     display: inline;
@@ -97,9 +98,9 @@ h5 {
   &__item {
     display: flex;
     color: $Black;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    margin: 32px auto;
+    margin: 28px auto;
     &__number {
       display: flex;
       justify-content: center;
@@ -110,7 +111,7 @@ h5 {
       min-width: 28px;
       height: 28px;
       margin-right: 18px;
-      transform: translateY(1px);
+      transform: translateY(0.5px);
     }
   }
 }

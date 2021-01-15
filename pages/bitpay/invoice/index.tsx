@@ -10,9 +10,11 @@ import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invo
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import { BitPayHead } from "..";
 
 const BitPayInvoice: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Invoice V4</h1>

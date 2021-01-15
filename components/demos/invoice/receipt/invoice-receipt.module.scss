@@ -80,5 +80,14 @@
     &:not(:first-child) {
       margin-top: 17px;
     }
+    a {
+      font-weight: 600;
+      color: #4f6ef7;
+      text-decoration: none;
+      transition: color 300ms ease;
+      &:hover {
+        color: darken(#4f6ef7, 5%);
+      }
+    }
   }
 }

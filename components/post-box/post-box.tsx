@@ -1,7 +1,23 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimationProps, motion } from "framer-motion";
 import Link from "../utils/link";
 import classes from "./post-box.module.scss";
+
+const LogoAnimations: {
+  [icon: string]: AnimationProps;
+} = {
+  "/logos/0x.svg": {
+    animate: { rotate: 90 },
+    transition: {
+      delay: 2,
+      repeatDelay: 2,
+      repeat: Infinity,
+      type: "spring",
+      mass: 2,
+      damping: 20,
+    },
+  },
+};
 
 const PostBox: React.FC<{
   title: string;
@@ -22,7 +38,23 @@ const PostBox: React.FC<{
       target={newTab ? "_blank" : "_self"}
       rel={newTab ? "noopener noreferrer" : ""}
     >
-      {icon && <img className={classes.box__icon} src={icon} alt={title} />}
+      {icon && (
+        <motion.img
+          animate={
+            LogoAnimations.hasOwnProperty(icon)
+              ? LogoAnimations[icon].animate
+              : {}
+          }
+          transition={
+            LogoAnimations.hasOwnProperty(icon)
+              ? LogoAnimations[icon].transition
+              : {}
+          }
+          className={classes.box__icon}
+          src={icon}
+          alt={title}
+        />
+      )}
       <div>
         <div className={classes.box__title}>{title}</div>
         <div className={classes.box__caption}>{caption}</div>

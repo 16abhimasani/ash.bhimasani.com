@@ -18,9 +18,11 @@ import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice
 import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
 import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
 import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
+import { BitPayHead } from "..";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Invoice V4 Demos</h1>
@@ -61,6 +63,15 @@ const BitPayInvoiceDemos: React.FC = () => (
         <h4 id="oauth">Connect Exchange Account (OAuth)</h4>
         <div className="begin-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="coinbase" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="gemini" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="binance" />
+        </div>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="paypal" />
         </div>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="venmo" />

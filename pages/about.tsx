@@ -7,12 +7,10 @@ const AboutMe: React.FC = () => (
     <h2 className="begin-section pt-0">Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
     <div className="lead end-section">
       <p>
-        I am a product designer & software engineer with special interests in
-        UX, growth hacking, and business strategy.
+        I am a product designer & software engineer interested in building
+        experiences people love.
       </p>
-      <p>
-        I love Brazilian Jiu Jitsu, watching movies, and imagining the future.
-      </p>
+      <p>My hobbies include BJJ, watching movies, and imagining the future.</p>
     </div>
     <img
       className="end-section"

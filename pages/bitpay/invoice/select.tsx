@@ -6,9 +6,14 @@ import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
+import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
+import Tweet from "../../../components/utils/tweet";
+import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
+import { BitPayHead } from "..";
 
 const BitPayInvoiceWalletSelection: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>
@@ -92,6 +97,10 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             lot more capability than we initially set out to solve.
           </p>
         </div>
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <div className="begin-section wrapper-center">
+          <InvoiceSelectDemo />
+        </div>
       </section>
 
       <section>
@@ -139,18 +148,13 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             decimal amounts.
           </p>
         </div>
-        <a
-          href="https://twitter.com/brian_armstrong/status/1293626788472475648"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="end-section"
-            width="100%"
-            src="/imgs/invoice/coinbase/brian-armstrong-bitpay-coinbase-tweet.png"
-            alt="Brian Armstrong's Tweet about Coinbase support from BitPay"
-          />
-        </a>
+        <h4>V4 Reference Implementation</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceSelectOauthPairDemo type="coinbase" />
+        </div>
+        <div className="wrapper-center">
+          <Tweet src="https://twitter.com/brian_armstrong/status/1293626788472475648" />
+        </div>
       </section>
 
       <section className="begin-section">

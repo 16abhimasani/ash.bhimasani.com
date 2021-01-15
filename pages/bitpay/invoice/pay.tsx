@@ -8,9 +8,13 @@ import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invo
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import Tweet from "../../../components/utils/tweet";
+import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
+import { BitPayHead } from "..";
 
 const BitPayInvoicePay: React.FC = () => (
   <>
+    {BitPayHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>
@@ -152,13 +156,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/exchange/mobile.png"
             alt="P2P No URI Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/exchange/mobile-toast.png"
             alt="P2P No URI Mobile Toast"
@@ -238,13 +242,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/wallet/mobile.png"
             alt="P2P URI Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/wallet/mobile-toast.png"
             alt="P2P URI Mobile Toast"
@@ -281,6 +285,13 @@ const BitPayInvoicePay: React.FC = () => (
             Helper Toast to guide the user.
           </p>
         </div>
+
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <section className="begin-section end-section wrapper-center">
+          <div style={{ marginBottom: 64 }}>
+            <InvoicePayProModeDemo />
+          </div>
+        </section>
 
         <h3 className="begin-section">2 Types of Scanning</h3>
         <div className="lead end-section">
@@ -329,13 +340,13 @@ const BitPayInvoicePay: React.FC = () => (
         <div className="d-flex begin-section">
           <img
             style={{ marginRight: 24 }}
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/paypro/mobile.png"
             alt="PayPro Mobile"
           />
           <img
-            width="350"
+            width="300"
             height="100%"
             src="/imgs/invoice/pay/paypro/mobile-toast.png"
             alt="PayPro Mobile Toast"
@@ -371,6 +382,11 @@ const BitPayInvoicePay: React.FC = () => (
           </p>
         </div>
 
+        <h4 className="begin-section">V4 Reference Implementation</h4>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceConnectModeDemo web3 />
+        </div>
+
         <h3 className="begin-section">OAuth Exchanges (Coinbase)</h3>
         <WideScreen
           src={[
@@ -403,11 +419,12 @@ const BitPayInvoicePay: React.FC = () => (
         </div>
 
         <h4 className="begin-section">V4 Reference Implementation</h4>
-        <section className="begin-section end-section wrapper-center">
-          <div style={{ marginBottom: 64 }}>
-            <InvoiceConnectModeDemo />
-          </div>
-        </section>
+        <div className="begin-section end-section wrapper-center">
+          <InvoiceConnectModeDemo />
+        </div>
+        <div className="begin-section end-section wrapper-center">
+          <Tweet src="https://twitter.com/brian_armstrong/status/1293626788472475648" />
+        </div>
 
         <h3 className="begin-section">Hardware Wallets (Ledger)</h3>
         <WideScreen src="/imgs/invoice/pay/direct/hardware/pay.png" />

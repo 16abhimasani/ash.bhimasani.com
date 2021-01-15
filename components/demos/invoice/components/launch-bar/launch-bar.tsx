@@ -44,7 +44,6 @@ const InvoiceLaunchBar: React.FC<{
             qr__show: !qrVisible,
           })}
           src={`/icons/${qrVisible ? "hide" : "show"}-qr.svg`}
-          style={{ transform: `translateX(${qrVisible ? 0.5 : 0.5}px)` }}
         />
       </motion.div>
       <motion.div

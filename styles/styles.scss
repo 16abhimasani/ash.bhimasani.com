@@ -11,12 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-html {
-  @media (min-width: $WIDE_MAX_WIDTH) and (max-width: $DESKTOP_WIDTH) {
-    zoom: 100% - 15%;
-  }
-}
-
 a {
   color: initial;
   text-decoration: none;
@@ -35,9 +29,9 @@ a {
 .body {
   width: 100%;
   margin: 0 auto;
-  padding: 56px 0;
+  padding: 48px 0;
 
   @include mobile {
-    padding: 40px 0;
+    padding: 32px 0;
   }
 }
