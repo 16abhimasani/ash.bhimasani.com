@@ -11,6 +11,8 @@ const Header: React.FC = () => (
         <Anchor content="GitHub" href="https://github.com/16abhimasani" />
         <div className={classes.dot}>·</div>
         <Anchor content="Dribbble" href="https://dribbble.com/ash-bhimasani" />
+        <div className={classes.dot}>·</div>
+        <Anchor content="Twitter" href="https://twitter.com/ash_bhimasani" />
       </div>
       <div className={classes.dot}>·</div>
       <Anchor
