@@ -153,9 +153,16 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            Probably the coolest part of these new forms is the split-input. It
+            was a bit tricky to build but when I got it working, the
+            concatenation on blur just felt right. Here, I'm doing much of the
+            same, focusing entirely on consolidation. A big reason for the
+            split-input was to save 2-3 rows (first, middle, and last name).
+          </p>
+          <p>
+            Nice thing about encapsulated inputs is that it makes it real easy
+            to show error states, here I'm having fun with the colors to
+            indicate password strength.
           </p>
         </div>
         <div
@@ -190,10 +197,18 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            The consolidation with this form was quite an improvement over the
+            original. Much less overwhelming and the split-input makes the
+            experience fun.
+          </p>
+          <p>
+            Also, date pickers served as an endless source of confusion and bugs
+            so I decided to simplify things with a dropdown. Errorless and the
+            order can be obviously switched based on locality.
+          </p>
+          <p>
+            The flag icons by the country also adds a nice level of polish and
+            makes the whole thing feel just a bit more personalized.
           </p>
         </div>
         <video
@@ -208,7 +223,7 @@ const BitPayIDV2: React.FC = () => (
         </video>
       </section>
 
-      <section className="end-section">
+      <section>
         <h2 className="begin-section">Address Verification</h2>
         <h5 className="end-section">Easy to fill forms</h5>
         <WideScreen
@@ -220,10 +235,14 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            Much of the same but here I focused on optimizing for browser
+            autofill. I absolutely hate typing in addresses so its important to
+            me that any Address form supports auto-fill entirely.
+          </p>
+          <p>
+            On a technical note, Address forms really made us realize how hard
+            it is to deal with international address formats. Ultimately, the
+            best experience is actually freeform fields.
           </p>
         </div>
       </section>
@@ -240,10 +259,9 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            Here are the Onfido awaiting states that we use when verifying a
+            user's ID. This pulse animation was inspired by Mollie, but I later
+            heavily reuse this pattern in Invoice V4.
           </p>
         </div>
         <video
@@ -271,10 +289,9 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            Finally we have the End states of the verification process. Pretty
+            straightforward, but this time I wanted the messaging to be much
+            more obvious by encapsulating all the content.
           </p>
         </div>
       </section>
