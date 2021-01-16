@@ -21,9 +21,8 @@ const BitPayID: React.FC = () => (
       <PostBox
         icon="/logos/bitpay-id.svg"
         title="Version 2.0"
-        caption="Full upgrade to onboarding & verification"
-        link="/bitpay/extension/shop"
-        locked
+        caption="Full refresh to onboarding & verification"
+        link="/bitpay/id/v2"
       />
       <PostBox
         icon="/logos/bitpay-id.svg"

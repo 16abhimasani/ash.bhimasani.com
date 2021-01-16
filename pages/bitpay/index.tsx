@@ -70,7 +70,7 @@ const BitPay: React.FC = () => (
         <PostBox
           icon="/logos/bitpay-id.svg"
           title="BitPay ID"
-          caption="Consumer product suite + KYC / AML"
+          caption="Consumer onboarding + KYC / AML"
           date="Apr 2019 ~ Aug 2019"
           link="/bitpay/id"
         />

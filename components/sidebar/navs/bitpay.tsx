@@ -41,15 +41,19 @@ export default [
       },
       {
         path: "/bitpay/id",
-        label: "ID",
+        label: "Onboarding",
         children: [
           {
             path: "/bitpay/id/auth",
-            label: "Authenticate",
+            label: "Auth",
           },
           {
             path: "/bitpay/id/verify",
             label: "Verify",
+          },
+          {
+            path: "/bitpay/id/v2",
+            label: "V2.0",
           },
         ],
       },
