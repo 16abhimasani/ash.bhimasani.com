@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import SideBar from "../../../components/sidebar/sidebar";
-import Anchor from "../../../components/utils/anchor";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import { BitPayHead } from "..";
 
