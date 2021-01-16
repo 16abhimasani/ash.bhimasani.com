@@ -19,30 +19,27 @@ const BitPayIDV2: React.FC = () => (
         </div>
         <div className="lead begin-section mb-0 end-section">
           <p>
-            In early 2019, I was wrapping up the
-            <Anchor
-              content="Directory"
-              href="/bitpay/directory"
-              spaceAfter
-              spaceBefore
-            />
-            project and BitPay ID was just about to begin development work. The
-            circumstances of this project left us on a extremely tight time
-            frame to finalize requirements, create designs, and then build it
-            all out.
+            Almost immediately after we launched BitPay ID, I got to work
+            designing the next version, making sure to solve all the issues
+            along the way. At first, I definitely like Material flat inputs but
+            quickly realized that they are best suited for small containers or
+            ideally for mobile. Encapsulated input fields are easier to skim,
+            interact fit, and build patterns around.
           </p>
           <p>
-            This project was also unique in its strategy for rollout. Instead of
-            building out a full consumer dashboard experience, we opted to start
-            small and only build the Authentication and Verification portion
-            that could be dropped into our payment gateway (Invoice). This would
-            allow us to meet our risk management for high value invoices while
-            maintaining a minimally complex new system.
+            Here we can immediately see the clear benefit of an entire input's
+            logic living inside a boxed capsulation. The "Forgot password"
+            helper action is easily accessible and can handle error messaging.
+          </p>
+          <p>
+            The card layout is also naturally extensible; here I added OAuth
+            login options underneath the main body while retaining an elegant
+            structure.
           </p>
         </div>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Sign In</h2>
         <h5 className="end-section">Single state login</h5>
         <WideScreen
@@ -51,10 +48,16 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            We created two huge issues for ourselves when we split the Email and
+            Password fields into 2 separate states. To prevent email validation
+            attacks, we had to employ strict reCAPTCHA. Normals users would
+            encounter this and be forced into a brutal Login experience. Also,
+            the split caused credential auto-filling to work less than ideal.
+          </p>
+          <p>
+            The easy solution was to consolidate the forms; now no need for
+            reCAPTCHA and browser auto-fill transforms the form into a 1-click
+            experience.
           </p>
         </div>
         <video
@@ -69,7 +72,7 @@ const BitPayIDV2: React.FC = () => (
         </video>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">2-Step Verification</h2>
         <h5 className="end-section">Making security fun</h5>
         <WideScreen
@@ -82,10 +85,12 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            The two-step verification states were pretty straightforward,
+            however I was determined to keep the V2 design system extremely
+            simple with as few components as possible. Thus, I use the
+            "optional" Header in the Auth flow to indicate state and status. The
+            pending spinner adds to the feeling that the form is waiting for the
+            user to take an action before we reach the finish line.
           </p>
         </div>
         <video
@@ -110,7 +115,7 @@ const BitPayIDV2: React.FC = () => (
         </video>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Reset Password</h2>
         <h5 className="end-section">Simple actions & patterns</h5>
         <WideScreen
@@ -122,15 +127,17 @@ const BitPayIDV2: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Like I mentioned previously, this was the first time we would be
-            trying a split state for Email and Password fields. The additional
-            complexity here is doing it in way that prevents enumeration attacks
-            without excessively utilizing reCAPTCHA.
+            Here we see an example of the sticky notification footer inspired by
+            Adobe XD. I wanted to use an unconventional style for global
+            notifications that was responsive but elegant. The tight grouping of
+            the page aids the user's focus while remaining balanced with the
+            screen. Any additional helper actions can be appended to the bottom
+            of the card for simplicity.
           </p>
         </div>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Create an Account</h2>
         <h5 className="end-section">Consolidated forms optimized for speed</h5>
         <WideScreen
@@ -152,7 +159,7 @@ const BitPayIDV2: React.FC = () => (
           </p>
         </div>
         <div
-          className="begin-section end-section col wrapper-center"
+          className="end-section col wrapper-center"
           style={{ overflow: "hidden" }}
         >
           <video
@@ -169,7 +176,7 @@ const BitPayIDV2: React.FC = () => (
         </div>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Personal Info Verification</h2>
         <h5 className="end-section">Easy to fill forms</h5>
         <WideScreen
@@ -201,7 +208,7 @@ const BitPayIDV2: React.FC = () => (
         </video>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Address Verification</h2>
         <h5 className="end-section">Easy to fill forms</h5>
         <WideScreen
@@ -221,7 +228,7 @@ const BitPayIDV2: React.FC = () => (
         </div>
       </section>
 
-      <section>
+      <section className="end-section">
         <h2 className="begin-section">Document Verification</h2>
         <h5 className="end-section">Delightful awaiting states</h5>
         <WideScreen
