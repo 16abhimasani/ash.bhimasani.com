@@ -13,8 +13,8 @@ const BitPayIDV2: React.FC = () => (
       <section>
         <h1 className="begin-section pt-0">Onboarding V2</h1>
         <h5 className="end-section">A refreshed, consolidated design system</h5>
-        <div className="begin-section end-section wrapper-center">
-          <img src="/imgs/id/v2/cards/login-oauth.svg" />
+        <div className="end-section wrapper-center col">
+          <img width="100%" src="/imgs/id/v2/cards/login-oauth.svg" />
         </div>
         <div className="lead begin-section mb-0 end-section">
           <p>
@@ -42,7 +42,7 @@ const BitPayIDV2: React.FC = () => (
         <h2 className="begin-section">Sign In</h2>
         <h5 className="end-section">Single state login</h5>
         <WideScreen
-          src={["/imgs/id/v2/login-oauth.svg", "/imgs/id/v2/login.svg"]}
+          src={["/imgs/id/v2/login-oauth.jpg", "/imgs/id/v2/login.jpg"]}
           carousel
         />
         <div className="lead begin-section end-section">
@@ -76,9 +76,9 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Making security fun</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/2fa-pin.svg",
-            "/imgs/id/v2/2fa-email.svg",
-            "/imgs/id/v2/2fa-backup.svg",
+            "/imgs/id/v2/2fa-pin.jpg",
+            "/imgs/id/v2/2fa-email.jpg",
+            "/imgs/id/v2/2fa-backup.jpg",
           ]}
           carousel
         />
@@ -119,8 +119,8 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Simple actions & patterns</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/recovery-link.svg",
-            "/imgs/id/v2/reset-password.svg",
+            "/imgs/id/v2/recovery-link.jpg",
+            "/imgs/id/v2/reset-password.jpg",
           ]}
           carousel
         />
@@ -141,12 +141,12 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Consolidated forms optimized for speed</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/register-type.svg",
-            "/imgs/id/v2/register-personal.svg",
-            "/imgs/id/v2/register-merchant.svg",
-            "/imgs/id/v2/register-email-verify.svg",
-            "/imgs/id/v2/register-errors.svg",
-            "/imgs/id/v2/register-basic.svg",
+            "/imgs/id/v2/register-type.jpg",
+            "/imgs/id/v2/register-personal.jpg",
+            "/imgs/id/v2/register-merchant.jpg",
+            "/imgs/id/v2/register-email-verify.jpg",
+            "/imgs/id/v2/register-errors.jpg",
+            "/imgs/id/v2/register-basic.jpg",
           ]}
           carousel
         />
@@ -178,7 +178,7 @@ const BitPayIDV2: React.FC = () => (
           >
             <source src="/vids/id/v2/sign-up.mp4" type="video/mp4" />
           </video>
-          <img src="/imgs/id/v2/cards/register-personal.svg" />
+          <img width="100%" src="/imgs/id/v2/cards/register-personal.svg" />
         </div>
       </section>
 
@@ -187,10 +187,10 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Easy to fill forms</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/verify-personal-us.svg",
-            "/imgs/id/v2/verify-personal-int.svg",
-            "/imgs/id/v2/verify-personal-na.svg",
-            "/imgs/id/v2/verify-personal-error.svg",
+            "/imgs/id/v2/verify-personal-us.jpg",
+            "/imgs/id/v2/verify-personal-int.jpg",
+            "/imgs/id/v2/verify-personal-na.jpg",
+            "/imgs/id/v2/verify-personal-error.jpg",
           ]}
           carousel
         />
@@ -227,8 +227,8 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Easy to fill forms</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/verify-addr-us.svg",
-            "/imgs/id/v2/verify-addr-int.svg",
+            "/imgs/id/v2/verify-addr-us.jpg",
+            "/imgs/id/v2/verify-addr-int.jpg",
           ]}
           carousel
         />
@@ -280,9 +280,9 @@ const BitPayIDV2: React.FC = () => (
         <h5 className="end-section">Status notifications</h5>
         <WideScreen
           src={[
-            "/imgs/id/v2/verify-good.svg",
-            "/imgs/id/v2/verify-pending.svg",
-            "/imgs/id/v2/verify-fail.svg",
+            "/imgs/id/v2/verify-good.jpg",
+            "/imgs/id/v2/verify-pending.jpg",
+            "/imgs/id/v2/verify-fail.jpg",
           ]}
           carousel
         />
