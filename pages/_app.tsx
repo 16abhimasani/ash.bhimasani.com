@@ -26,6 +26,10 @@ const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => (
       <meta name="author" content="Ash Bhimasani" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="shortcut icon" href="/favicon.ico" />
+      <meta
+        name="keywords"
+        content="Ashutosh Bhimasani, Ash Bhimasani, Georgia Tech, Atlanta, CS"
+      />
     </Head>
     <div className="layout">
       <Header />
