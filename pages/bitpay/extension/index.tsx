@@ -269,7 +269,9 @@ const BitPayExtension: React.FC = () => (
           </p>
         </div>
 
-        <h4 className="begin-section">Interactive Demos</h4>
+        <h4 className="begin-section" id="demos">
+          Interactive Demos
+        </h4>
         <section className="begin-section end-section wrapper-center">
           <ExtensionNavDemo />
         </section>
