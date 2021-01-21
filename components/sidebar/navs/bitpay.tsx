@@ -41,7 +41,7 @@ export default [
       },
       {
         path: "/bitpay/id",
-        label: "Onboarding",
+        label: "Onboard",
         children: [
           {
             path: "/bitpay/id/auth",
@@ -81,7 +81,7 @@ export default [
       },
       {
         path: "/bitpay/support",
-        label: "Help Desk",
+        label: "Support",
       },
     ],
   },
