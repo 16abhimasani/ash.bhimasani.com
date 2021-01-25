@@ -34,7 +34,8 @@ const InvoiceSelectOauthPairDemo: React.FC<{ type: string }> = ({ type }) => {
       </div>
       <div className={classes.wallets} style={{ padding: "12px 20px 20px" }}>
         <motion.img
-          style={{ marginTop: 12 }}
+          style={{ margin: "12px auto 0 auto" }}
+          width={120}
           src={`/icons/connect-${type}.svg`}
         />
         <div className={invoiceClasses.title}>
