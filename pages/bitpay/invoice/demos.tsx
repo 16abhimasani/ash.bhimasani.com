@@ -64,10 +64,10 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="coinbase" />
         </div>
-        <div className="begin-section wrapper-center">
+        <div className="begin-section end-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="gemini" />
         </div>
-        <div className="begin-section wrapper-center">
+        {/* <div className="begin-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="binance" />
         </div>
         <div className="begin-section wrapper-center">
@@ -75,7 +75,7 @@ const BitPayInvoiceDemos: React.FC = () => (
         </div>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectOauthPairDemo type="venmo" />
-        </div>
+        </div> */}
       </section>
 
       <section className="end-section">
