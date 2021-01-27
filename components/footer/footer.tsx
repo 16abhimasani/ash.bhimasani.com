@@ -6,11 +6,9 @@ const Header: React.FC = () => (
   <footer className={classes.footer}>
     <div className={classes.nav}>
       <Anchor content="Email" href="mailto:ash@bhimasani.com" />
+      <div className={classes.dot}>·</div>
+      <Anchor content="Calendly" href="https://calendly.com/ash-bhimasani" />
       <div className={classes.nav__hide}>
-        <div className={classes.dot}>·</div>
-        <Anchor content="GitHub" href="https://github.com/16abhimasani" />
-        <div className={classes.dot}>·</div>
-        <Anchor content="Dribbble" href="https://dribbble.com/ash-bhimasani" />
         <div className={classes.dot}>·</div>
         <Anchor content="Twitter" href="https://twitter.com/ash_bhimasani" />
       </div>
