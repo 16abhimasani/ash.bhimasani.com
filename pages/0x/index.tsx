@@ -99,6 +99,9 @@ const ZeroX: React.FC = () => (
         <br />
         <br />
         <Tweet src="https://twitter.com/0xProject/status/1352752762740592641" />
+        <br />
+        <br />
+        <Tweet src="https://twitter.com/BChillman/status/1354245209870098433" />
       </section>
     </motion.main>
   </>
