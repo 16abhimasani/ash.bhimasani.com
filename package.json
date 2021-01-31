@@ -12,12 +12,12 @@
     "@juggle/resize-observer": "3.2.0",
     "classnames": "2.2.6",
     "framer-motion": "3.2.1",
-    "next": "10.0.5",
+    "next": "10.0.6",
     "pure-react-carousel": "1.27.6",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "sass": "1.32.5",
-    "swr": "0.4.0"
+    "swr": "0.4.1"
   },
   "devDependencies": {
     "@types/classnames": "2.2.11",
@@ -27,7 +27,7 @@
     "@typescript-eslint/eslint-plugin": "4.14.1",
     "@typescript-eslint/parser": "4.14.1",
     "babel-plugin-transform-define": "2.0.0",
-    "eslint": "7.18.0",
+    "eslint": "7.19.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-import": "2.22.1",
