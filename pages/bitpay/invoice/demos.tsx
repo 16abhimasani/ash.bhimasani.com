@@ -42,11 +42,11 @@ const BitPayInvoiceDemos: React.FC = () => (
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectDemo />
         </div>
-        <h4 id="walletConnect">Connect Web3 Wallet (Same-Device)</h4>
+        <h4 id="browserConnect">Connect Web3 Wallet (Same-Device)</h4>
         <div className="begin-section end-section wrapper-center">
           <InvoiceSelectWalletConnectDemo type="metamask" />
         </div>
-        <h4>Connect Web3 Wallet (Cross-Device)</h4>
+        <h4 id="walletConnect">Connect Web3 Wallet (Cross-Device)</h4>
         <div className="begin-section wrapper-center">
           <InvoiceSelectWalletPairDemo type="argent" />
         </div>
@@ -79,7 +79,9 @@ const BitPayInvoiceDemos: React.FC = () => (
       </section>
 
       <section className="end-section">
-        <h3 className="begin-section">Compliance & Authentication</h3>
+        <h3 className="begin-section" id="kyc">
+          Compliance & Authentication
+        </h3>
         <h5>Handling regulatory requirements for high-value payments</h5>
         <h4>KYC Required</h4>
         <div className="begin-section wrapper-center">
