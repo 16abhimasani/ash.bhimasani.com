@@ -41,6 +41,7 @@
   text-align: left;
   overflow: hidden;
   cursor: copy;
+  transition: transform 300ms ease;
 }
 
 .icon {

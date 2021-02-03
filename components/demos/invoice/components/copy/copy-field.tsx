@@ -37,6 +37,8 @@ const InvoiceCopyField: React.FC<{
         className={classes.copy}
         onTapStart={startCopying}
         animate={{ color: copied ? "#4f6ef7" : "#000000" }}
+        whileHover={{ scale: 0.99 }}
+        whileTap={{ scale: 1.01 }}
       >
         {label === "Address" ? processAddress(value) : value}
         {label === "Address" && toggleQR && (
