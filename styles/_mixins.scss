@@ -5,3 +5,7 @@
     @content;
   }
 }
+
+@mixin invert {
+  filter: invert(100%) hue-rotate(180deg);
+}
