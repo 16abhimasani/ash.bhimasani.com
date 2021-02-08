@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           })}
           style={{ textAlign: "left" }}
         >
-          About Me
+          <h6>About Me</h6>
         </a>
       </Link>
       <Link href="/">
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
       </Link>
       <Link href="/#timeline">
         <a className={classes.link} style={{ textAlign: "right" }}>
-          Timeline
+          <h6>Timeline</h6>
         </a>
       </Link>
     </header>

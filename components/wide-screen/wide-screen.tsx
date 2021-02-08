@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import {
   CarouselProvider,
   DotGroup,
@@ -10,6 +16,9 @@ import {
 } from "pure-react-carousel";
 import { useRefSize } from "../../utils/hooks";
 import classes from "./wide-screen.module.scss";
+import classNames from "classnames/bind";
+import { ThemeContext } from "../../pages/_app";
+const cx = classNames.bind(classes);
 
 interface SliderInterfaceEnhanced extends SliderProps {
   onClick?: (e: React.SyntheticEvent<HTMLElement>) => void;
@@ -24,6 +33,7 @@ const WideScreen: React.FC<{
   zoom?: boolean;
   maxWidth?: number;
 }> = ({ src, carousel, zoom, maxWidth }) => {
+  const theme = useContext(ThemeContext);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const asset = useRef<any>(null);
   const wrapper = useRef<HTMLDivElement>(null);
@@ -50,7 +60,13 @@ const WideScreen: React.FC<{
   }, [src]);
   return (
     <div style={{ height: height + getPadding() }}>
-      <div className={classes.wrapper} ref={wrapper}>
+      <div
+        className={cx({
+          wrapper: true,
+          wrapper__dark: theme.dark,
+        })}
+        ref={wrapper}
+      >
         {carousel && src instanceof Array ? (
           <div ref={asset} className={classes.asset} style={setWidth}>
             <CarouselProvider

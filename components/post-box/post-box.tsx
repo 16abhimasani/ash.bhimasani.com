@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AnimationProps, motion } from "framer-motion";
 import Link from "../utils/link";
-import classes from "./post-box.module.scss";
+import { ThemeContext } from "../../pages/_app";
 
-const LogoAnimations: {
-  [icon: string]: AnimationProps;
+import classes from "./post-box.module.scss";
+import classNames from "classnames/bind";
+const cx = classNames.bind(classes);
+
+interface LogoConfig extends AnimationProps {
+  invertible: boolean;
+}
+const LogoConfigs: {
+  [icon: string]: LogoConfig;
 } = {
   "/logos/0x.svg": {
     animate: { rotate: 90 },
@@ -16,6 +23,7 @@ const LogoAnimations: {
       mass: 2,
       damping: 20,
     },
+    invertible: true,
   },
 };
 
@@ -28,11 +36,15 @@ const PostBox: React.FC<{
   newTab?: boolean;
   locked?: boolean;
 }> = ({ title, caption, link, icon, date, newTab, locked }) => {
+  const theme = useContext(ThemeContext);
   const Box = (
     <motion.a
       whileHover={{ scale: 0.997 }}
       whileTap={{ scale: 0.99 }}
-      className={classes.box}
+      className={cx({
+        box: true,
+        dark: theme.dark,
+      })}
       style={{ pointerEvents: locked ? "none" : "initial" }}
       href={link}
       target={newTab ? "_blank" : "_self"}
@@ -41,16 +53,15 @@ const PostBox: React.FC<{
       {icon && (
         <motion.img
           animate={
-            LogoAnimations.hasOwnProperty(icon)
-              ? LogoAnimations[icon].animate
-              : {}
+            LogoConfigs.hasOwnProperty(icon) ? LogoConfigs[icon].animate : {}
           }
           transition={
-            LogoAnimations.hasOwnProperty(icon)
-              ? LogoAnimations[icon].transition
-              : {}
+            LogoConfigs.hasOwnProperty(icon) ? LogoConfigs[icon].transition : {}
           }
-          className={classes.box__icon}
+          className={cx({
+            box__icon: true,
+            invert: LogoConfigs[icon]?.invertible && theme.dark,
+          })}
           src={icon}
           alt={title}
         />

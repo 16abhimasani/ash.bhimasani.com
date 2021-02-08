@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { ThemeContext } from "../../pages/_app";
 
 const Tweet: React.FC<{ src: string }> = ({ src }) => {
   const tweet = useRef(null);
@@ -14,9 +15,17 @@ const Tweet: React.FC<{ src: string }> = ({ src }) => {
     }
   }, []);
   return (
-    <blockquote className="twitter-tweet" data-theme="light" ref={tweet}>
-      <a href={src}></a>
-    </blockquote>
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <blockquote
+          className="twitter-tweet"
+          data-theme={theme.dark ? "dark" : "light"}
+          ref={tweet}
+        >
+          <a href={src}></a>
+        </blockquote>
+      )}
+    </ThemeContext.Consumer>
   );
 };
 

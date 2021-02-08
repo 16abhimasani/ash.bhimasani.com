@@ -1,0 +1,37 @@
+@import "mixins";
+@import "variables";
+
+.dark-mode {
+  background-color: black;
+  h1,
+  h2,
+  h3,
+  h4,
+  h6,
+  blockquote,
+  .lead,
+  .list__item {
+    color: invert($Black);
+  }
+
+  time,
+  h5,
+  cite {
+    color: invert($Grey);
+  }
+
+  .link {
+    color: #58a6ff;
+    &:hover {
+      color: lighten(#58a6ff, 25%);
+    }
+  }
+
+  .breakdown {
+    @include invert;
+  }
+
+  h4 {
+    background-color: rgba($Pale, 0.15);
+  }
+}

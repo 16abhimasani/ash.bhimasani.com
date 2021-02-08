@@ -4,6 +4,25 @@
 $border-radius: 6px;
 $border-width: 1px;
 
+.dark {
+  background-color: black !important;
+  border-color: rgba($Wire, 0.2) !important;
+  box-shadow: 0 0 10px 0 rgba($Wire, 0) !important;
+  .box__title {
+    color: white;
+  }
+  .box__caption {
+    color: invert($Grey);
+  }
+  .box__date {
+    @include invert;
+  }
+}
+
+.invert {
+  @include invert;
+}
+
 .box {
   display: flex;
   position: relative;
@@ -17,7 +36,8 @@ $border-width: 1px;
   box-shadow: 0 0 10px 0 rgba($Wire, 0.5);
   cursor: pointer;
   transition: all 300ms ease;
-  transition-property: color, border-color, transform;
+  transition-property: color, border-color, background-color, transform,
+    box-shadow, filter;
 
   @include mobile {
     margin: 24px auto;
