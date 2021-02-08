@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
@@ -7,12 +7,16 @@ import "../styles/styles.scss";
 
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
-import DayNightToggle, {
-  ThemeContext,
-} from "../components/day-night-toggle/day-night-toggle";
+import DarkModeToggle from "../components/dark-mode/dark-mode";
+
+export const ThemeContext = React.createContext({ dark: false });
 
 const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = useState({ dark: false });
+  useEffect(() => {
+    const body = document.body.classList;
+    theme.dark ? body.add("dark-mode") : body.remove("dark-mode");
+  }, [theme]);
   return (
     <>
       <Head>
@@ -37,15 +41,13 @@ const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
       </Head>
       <ThemeContext.Provider value={theme}>
-        <main className={`app ${theme.dark && "darkMode"}`}>
-          <div className="layout">
-            <Header />
-            <AnimatePresence>
-              <Component {...pageProps} />
-            </AnimatePresence>
-            <Footer />
-            <DayNightToggle setTheme={setTheme} />
-          </div>
+        <main className="layout">
+          <Header />
+          <AnimatePresence>
+            <Component {...pageProps} />
+          </AnimatePresence>
+          <Footer />
+          <DarkModeToggle setTheme={setTheme} />
         </main>
       </ThemeContext.Provider>
     </>

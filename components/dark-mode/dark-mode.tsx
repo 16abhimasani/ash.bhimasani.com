@@ -1,10 +1,9 @@
 import React, { Dispatch, SetStateAction, useContext, useEffect } from "react";
+import { ThemeContext } from "../../pages/_app";
 import { useLocalStorage } from "../../utils/hooks";
-import classes from "./day-night-toggle.module.scss";
+import classes from "./dark-mode.module.scss";
 
-export const ThemeContext = React.createContext({ dark: false });
-
-const DayNightToggle: React.FC<{
+const DarkModeToggle: React.FC<{
   setTheme: Dispatch<SetStateAction<{ dark: boolean }>>;
 }> = ({ setTheme }) => {
   const theme = useContext(ThemeContext);
@@ -26,4 +25,4 @@ const DayNightToggle: React.FC<{
   );
 };
 
-export default DayNightToggle;
+export default DarkModeToggle;

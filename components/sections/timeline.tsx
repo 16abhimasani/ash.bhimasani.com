@@ -56,7 +56,7 @@ const Timeline: React.FC = () => (
       link="/posts/lockheed"
     />
     <PostBox
-      icon="/logos/dasd-stem.jpg"
+      icon="/logos/dasd-stem.png"
       title="Downingtown STEM Academy"
       caption="IB Diploma: Engineering Pathway"
       date="2012 ~ 2016"

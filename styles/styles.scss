@@ -11,10 +11,8 @@ body {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: "smooth";
-}
-
-.app {
   background-color: white;
+  transition: background-color 400ms ease, color 400ms ease;
 }
 
 .layout {

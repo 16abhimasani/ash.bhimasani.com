@@ -1,17 +1,24 @@
 @import "mixins";
+@import "variables";
 
-.app {
-  transition: background-color 400ms ease, filter 400ms ease;
-}
-.darkMode {
-  background-color: black !important;
+.dark-mode {
+  background-color: black;
   h1,
   h2,
   h3,
   h4,
-  h5,
   h6,
-  p {
+  blockquote,
+  .lead,
+  .list__item {
+    color: invert($Black);
+  }
+  h4 {
+    background-color: rgba($Pale, 0.15);
+  }
+  h5,
+  .link,
+  .breakdown {
     @include invert;
   }
 }
