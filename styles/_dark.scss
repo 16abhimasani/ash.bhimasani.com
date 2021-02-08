@@ -13,12 +13,25 @@
   .list__item {
     color: invert($Black);
   }
-  h4 {
-    background-color: rgba($Pale, 0.15);
-  }
+
+  time,
   h5,
-  .link,
+  cite {
+    color: invert($Grey);
+  }
+
+  .link {
+    color: #58a6ff;
+    &:hover {
+      color: lighten(#58a6ff, 25%);
+    }
+  }
+
   .breakdown {
     @include invert;
+  }
+
+  h4 {
+    background-color: rgba($Pale, 0.15);
   }
 }

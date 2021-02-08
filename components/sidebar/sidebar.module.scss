@@ -1,6 +1,10 @@
 @import "mixins";
 @import "variables";
 
+.dark {
+  @include invert;
+}
+
 .nav {
   display: none;
   flex-direction: column;

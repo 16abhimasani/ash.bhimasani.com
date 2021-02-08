@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Link from "../utils/link";
 import classNames from "classnames/bind";
@@ -7,6 +7,7 @@ const cx = classNames.bind(classes);
 
 import BitPayNav from "./navs/bitpay";
 import ZeroXNav from "./navs/0x";
+import { ThemeContext } from "../../pages/_app";
 interface PagePath {
   path: string;
   label: string;
@@ -18,6 +19,7 @@ const isLink = (link: string): boolean => {
 };
 
 const SideBar: React.FC = () => {
+  const theme = useContext(ThemeContext);
   const router = useRouter();
   const navigation = (): PagePath[] => {
     if (router.pathname.includes("bitpay")) return BitPayNav;
@@ -37,7 +39,9 @@ const SideBar: React.FC = () => {
         {navigation().some((r) => r.path === route.path) ? (
           <div className={classes.major}>
             <Link href="/">
-              <a style={{ opacity: 0.25 }}>Ash &nbsp;/&nbsp;&nbsp;</a>
+              <a style={{ opacity: theme.dark ? 0.4 : 0.25 }}>
+                Ash &nbsp;/&nbsp;&nbsp;
+              </a>
             </Link>
             <Link href={route.path}>
               <a
@@ -70,7 +74,12 @@ const SideBar: React.FC = () => {
     );
   };
   return (
-    <nav className={classes.nav}>
+    <nav
+      className={cx({
+        nav: true,
+        dark: theme.dark,
+      })}
+    >
       {navigation().map((route: PagePath, index: number) => (
         <React.Fragment key={index}>{nav(route)}</React.Fragment>
       ))}

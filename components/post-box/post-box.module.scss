@@ -8,8 +8,12 @@ $border-width: 1px;
   background-color: black !important;
   border-color: rgba($Wire, 0.2) !important;
   box-shadow: 0 0 10px 0 rgba($Wire, 0) !important;
-  .box__title,
-  .box__caption,
+  .box__title {
+    color: white;
+  }
+  .box__caption {
+    color: invert($Grey);
+  }
   .box__date {
     @include invert;
   }

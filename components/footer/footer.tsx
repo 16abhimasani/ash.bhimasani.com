@@ -23,9 +23,9 @@ const Header: React.FC = () => (
         href="https://drive.google.com/file/d/1O-RwPuMubSNX45dI3U_8y50Rku0ZJHjP/view"
       />
     </div>
-    <div className={classes.copyright}>
+    <cite className={classes.copyright}>
       Made with 💖 by Ash Bhimasani © 2020
-    </div>
+    </cite>
   </footer>
 );
 
