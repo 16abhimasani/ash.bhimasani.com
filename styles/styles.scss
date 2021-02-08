@@ -4,22 +4,17 @@
 @import "typography";
 @import "utils";
 @import "overrides";
+@import "dark";
 
 html,
 body {
   position: relative;
   overflow-x: hidden;
   scroll-behavior: "smooth";
-  background-color: white;
 }
 
-a {
-  color: initial;
-  text-decoration: none;
-  &:hover {
-    color: initial;
-    text-decoration: none;
-  }
+.app {
+  background-color: white;
 }
 
 .layout {
@@ -35,5 +30,14 @@ a {
 
   @include mobile {
     padding: 32px 0;
+  }
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+  &:hover {
+    color: initial;
+    text-decoration: none;
   }
 }

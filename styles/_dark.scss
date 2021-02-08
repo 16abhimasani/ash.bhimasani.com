@@ -1,0 +1,17 @@
+@import "mixins";
+
+.app {
+  transition: background-color 400ms ease, filter 400ms ease;
+}
+.darkMode {
+  background-color: black !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @include invert;
+  }
+}
