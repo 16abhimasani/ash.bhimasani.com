@@ -17,7 +17,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "sass": "1.32.6",
-    "swr": "0.4.1"
+    "swr": "0.4.2"
   },
   "devDependencies": {
     "@types/classnames": "2.2.11",
