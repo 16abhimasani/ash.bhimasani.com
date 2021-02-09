@@ -5,9 +5,11 @@ $border-radius: 6px;
 $border-width: 1px;
 
 .dark {
-  background-color: black !important;
-  border-color: rgba($Wire, 0.2) !important;
-  box-shadow: 0 0 10px 0 rgba($Wire, 0) !important;
+  .box {
+    background-color: black;
+    border-color: rgba($Wire, 0.2);
+    box-shadow: 0 0 10px 0 rgba($Wire, 0);
+  }
   .box__title {
     color: white;
   }
