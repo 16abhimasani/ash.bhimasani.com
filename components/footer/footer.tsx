@@ -7,7 +7,10 @@ const Header: React.FC = () => (
     <div className={classes.nav}>
       <Anchor content="Email" href="mailto:ash@bhimasani.com" />
       <div className={classes.dot}>·</div>
-      <Anchor content="Calendly" href="https://calendly.com/ash-bhimasani" />
+      <Anchor
+        content="Calendly"
+        href="https://calendly.com/ash-bhimasani/30min"
+      />
       <div className={classes.nav__hide}>
         <div className={classes.dot}>·</div>
         <Anchor content="Twitter" href="https://twitter.com/ash_bhimasani" />
