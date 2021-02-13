@@ -91,6 +91,7 @@ const ZeroX: React.FC = () => (
           title="Matcha Moolah"
           caption="Referral contest giving away $50,000 in ETH"
           link="/0x/matcha/moolah"
+          date="Dec 2020"
         />
       </section>
 

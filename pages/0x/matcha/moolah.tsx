@@ -68,8 +68,11 @@ const MatchaMoolah: React.FC = () => (
         ]}
         carousel
       />
-      <div className="begin-section wrapper-center">
+      <div className="begin-section wrapper-center v-align col">
         <Tweet src="https://twitter.com/matchaxyz/status/1346253769282002944" />
+        <br />
+        <br />
+        <Tweet src="https://twitter.com/matchaxyz/status/1360358206841626624" />
       </div>
     </motion.main>
   </>
