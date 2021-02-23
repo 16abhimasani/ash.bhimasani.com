@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AnimationProps, motion } from "framer-motion";
-import Link from "../utils/link";
 import { ThemeContext } from "../../pages/_app";
+import Link from "../utils/link";
 
 import classes from "./post-box.module.scss";
 import classNames from "classnames/bind";
