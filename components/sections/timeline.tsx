@@ -5,6 +5,14 @@ const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
     <PostBox
+      icon="/logos/pob.svg"
+      title="Proof of Beauty"
+      caption="Co-Founder"
+      date="2021"
+      link="https://twitter.com/prrfbeauty"
+      newTab
+    />
+    <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
       title="Coinbase"
       caption="Software Engineer"
