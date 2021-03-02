@@ -9,7 +9,7 @@ const Timeline: React.FC = () => (
       title="Proof of Beauty"
       caption="Co-Founder"
       date="2021"
-      link="https://twitter.com/prrfbeauty"
+      link="/pob"
       newTab
     />
     <PostBox
