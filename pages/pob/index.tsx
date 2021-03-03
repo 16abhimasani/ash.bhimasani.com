@@ -35,10 +35,17 @@ const POB: React.FC = () => {
           <h1 className="begin-section pt-0">Proof of Beauty &nbsp;💄</h1>
           <div className="lead">
             <p>
-              We are an experimental <Anchor content="digital experience studio" href="https://pob.studio/" spaceBefore />.
+              We are an experimental{" "}
+              <Anchor
+                content="digital experience studio"
+                href="https://pob.studio/"
+                spaceBefore
+              />
+              .
             </p>
             <p>
-              Our first project tokenizes Ethereum's history into beautiful works of art.
+              Our first project tokenizes Ethereum's history into beautiful
+              works of art.
             </p>
           </div>
         </section>
@@ -63,25 +70,21 @@ const POB: React.FC = () => {
           />
         </section>
 
-        {/* <section className="begin-section wrapper-center v-align col">
-          <Tweet src="https://twitter.com/0xProject/status/1278014784747659270" />
+        <section className="begin-section wrapper-center v-align col">
+          <Tweet src="https://twitter.com/prrfbeauty/status/1366424062503882761" />
           <br />
           <br />
-          <Tweet src="https://twitter.com/0xProject/status/1352752762740592641" />
+          <Tweet src="https://twitter.com/timrix/status/1365006217018400770" />
           <br />
           <br />
-          <Tweet src="https://twitter.com/BChillman/status/1354245209870098433" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/PanteraCapital/status/1357743064010289152" />
         </section>
 
         <section className="wrapper-center">
           <img
-            width={312}
-            src={`/imgs/matcha/0x-${theme.dark ? "dark" : "light"}.png`}
+            width="100%"
+            src={`/banners/pob-${theme.dark ? "dark" : "light"}.jpg`}
           />
-        </section> */}
+        </section>
       </motion.main>
     </>
   );
