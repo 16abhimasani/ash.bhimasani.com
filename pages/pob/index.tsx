@@ -62,7 +62,16 @@ const POB: React.FC = () => {
           <h5 className="begin-section">Releases</h5>
           <PostBox
             icon="/logos/pob.svg"
-            title="S0: Genesis"
+            title="S1: SAGA"
+            caption="Mint your TXs | Only 10,000 will exist"
+            link="https://pob.studio/"
+            newTab
+            date="April 2021"
+            locked
+          />
+          <PostBox
+            icon="/logos/pob.svg"
+            title="S0: GENESIS"
             caption="Mint any TX | Only 2555 will exist"
             link="https://pob.studio/"
             newTab
