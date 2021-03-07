@@ -57,49 +57,49 @@ const BitPay: React.FC = () => (
           icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
           title="Invoice V4"
           caption="Flagship payment gateway powering the network"
-          date="Aug 2019 ~ Dec 2020"
+          date="2019 ~ 2020"
           link="/bitpay/invoice"
         />
         <PostBox
           icon="/logos/bitpay-ext.svg"
           title="Browser Extension"
           caption="Convert crypto to prepaid cards instantly & anonymously"
-          date="Mar 2020 ~ Aug 2020"
+          date="Q2 2020"
           link="/bitpay/extension"
         />
         <PostBox
           icon="/logos/bitpay-light-gradient.svg"
           title="BitPay ID"
           caption="Consumer onboarding + KYC / AML"
-          date="Apr 2019 ~ Aug 2019"
+          date="Q2 ~ Q3 2019"
           link="/bitpay/id"
         />
         <PostBox
           icon="/logos/bitpay-globe.svg"
           title="Merchant Directory"
           caption="A curated directory of where to use crypto + promos"
-          date="Mar 2019 ~ Apr 2019"
+          date="Q2 2019"
           link="/bitpay/directory"
         />
         <PostBox
           icon="/logos/bitpay-emails.svg"
           title="Emails"
           caption="Transactional emails for merchants & payers"
-          date="Aug 2018 ~ Jan 2019"
+          date="Fall 2018"
           link="/bitpay/emails"
         />
         <PostBox
           icon="/logos/bitpay-site.svg"
           title="Website"
           caption="Landing, operational, & product pages"
-          date="Aug 2018 ~ Jan 2019"
+          date="Q3 2018 ~ Q1 2019"
           link="/bitpay/site"
         />
         <PostBox
           icon="/logos/bitpay-support.svg"
           title="Support Desk"
           caption="A streamlined customer service platform"
-          date="May 2018 ~ Aug 2018"
+          date="Summer 2018"
           link="/bitpay/support"
         />
       </section>
