@@ -29,30 +29,16 @@ const Portfolio: React.FC = () => (
     <motion.main className="body" {...fadeInPage}>
       <section className="end-section">
         <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
-        <div className="lead end-section">
+        <div className="lead">
           <p>
             I am a product designer & software engineer with special interests
             in user experience, growth, and strategy.
           </p>
           <p>
-            Building
+            Currently building
             <Anchor
               content="@pob.studio"
               href="https://twitter.com/prrfbeauty"
-              spaceBefore
-            />
-            <br />
-            Designer & engineer
-            <Anchor
-              content="@matcha"
-              href="https://twitter.com/matchaxyz"
-              spaceBefore
-              spaceAfter
-            />
-            |
-            <Anchor
-              content="@bitpay"
-              href="https://twitter.com/BitPay"
               spaceBefore
             />
           </p>
