@@ -91,14 +91,14 @@ const Portfolio: React.FC = () => (
           link="/bitpay/invoice"
         />
         <PostBox
-          icon="/logos/bitpay-id.svg"
+          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
           title="BitPay ID"
           caption="Consumer onboarding + KYC / AML"
           date="Apr 2019 ~ Aug 2019"
           link="/bitpay/id"
         />
         <PostBox
-          icon="/logos/bitpay-globe.svg"
+          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
           title="Merchant Directory"
           caption="A curated directory of where to use crypto + promos"
           date="Mar 2019 ~ Apr 2019"
