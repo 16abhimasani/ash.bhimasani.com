@@ -67,7 +67,7 @@ const ZeroX: React.FC = () => {
               world-class trading platform.
             </p>
             <p>
-              I currently work on
+              I worked on
               <Anchor
                 content="matcha.xyz"
                 href="https://matcha.xyz/"

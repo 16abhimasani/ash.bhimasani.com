@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           />
         </a>
       </Link>
-      <Link href="/bitpay">
+      <Link href="/portfolio">
         <a className={classes.link} style={{ textAlign: "right" }}>
           <h6>Portfolio</h6>
         </a>
