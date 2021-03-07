@@ -78,31 +78,24 @@ const Portfolio: React.FC = () => (
         />
         <PostBox
           icon="/logos/bitpay-ext.svg"
-          title="Browser Extension"
+          title="BitPay Extension"
           caption="Convert crypto to prepaid cards instantly & anonymously"
           date="Mar 2020 ~ Aug 2020"
           link="/bitpay/extension"
         />
         <PostBox
           icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
-          title="Invoice V4"
+          title="BitPay Invoice V4"
           caption="Flagship payment gateway powering the network"
           date="Aug 2019 ~ Dec 2020"
           link="/bitpay/invoice"
         />
         <PostBox
-          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
+          icon="/logos/bitpay-light-gradient.svg"
           title="BitPay ID"
           caption="Consumer onboarding + KYC / AML"
           date="Apr 2019 ~ Aug 2019"
           link="/bitpay/id"
-        />
-        <PostBox
-          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
-          title="Merchant Directory"
-          caption="A curated directory of where to use crypto + promos"
-          date="Mar 2019 ~ Apr 2019"
-          link="/bitpay/directory"
         />
       </section>
     </motion.main>
