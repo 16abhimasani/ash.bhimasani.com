@@ -40,6 +40,13 @@ const Portfolio: React.FC = () => (
               content="@pob.studio"
               href="https://twitter.com/prrfbeauty"
               spaceBefore
+              spaceAfter
+            />
+            &
+            <Anchor
+              content="@matcha.xyz"
+              href="https://twitter.com/matchaxyz"
+              spaceBefore
             />
           </p>
         </div>

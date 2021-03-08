@@ -22,13 +22,13 @@ const Home: React.FC = () => (
         />
         <br />
         Designer & engineer
-        <Anchor
+        {/* <Anchor
           content="@coinbase"
           href="https://twitter.com/coinbase"
           spaceBefore
           spaceAfter
         />
-        |
+        | */}
         <Anchor
           content="@0x"
           href="https://twitter.com/0xProject"
