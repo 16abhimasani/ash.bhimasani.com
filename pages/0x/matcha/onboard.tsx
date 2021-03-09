@@ -50,7 +50,7 @@ const MatchaOnboard: React.FC = () => (
           This beautiful design is by
           <Anchor
             content="Patryk Adas"
-            href="https://patrykadas.com/"
+            href="https://twitter.com/patrykadas"
             spaceBefore
           />
           .
