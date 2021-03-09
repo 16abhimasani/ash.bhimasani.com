@@ -33,10 +33,10 @@ const MatchaMoolah: React.FC = () => (
       <img
         className="begin-section"
         width="100%"
-        src="/imgs/matcha/moolah/banner.jpg"
+        src="/imgs/matcha/moolah/banner-3.png"
         alt="Moolah Banner"
       />
-      <div className="lead begin-section">
+      <div className="lead begin-section end-section">
         <p>
           In order to further promote Matcha and get existing DEX users to
           switch over, the team designed a

@@ -95,7 +95,6 @@ const ZeroX: React.FC = () => {
             caption="0-to-1 walkthrough into DeFi"
             link="/0x/matcha/onboard"
             date="Q1 2021"
-            locked
           />
           <PostBox
             icon="/imgs/matcha/moolah/avatar.png"

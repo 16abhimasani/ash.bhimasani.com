@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
-import Tweet from "../../../components/utils/tweet";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import SideBar from "../../../components/sidebar/sidebar";
 import Head from "next/head";
@@ -16,7 +15,7 @@ export const MatchaHead = (
     />
     <meta
       property="twitter:image"
-      content="/banners/matcha.png"
+      content="/banners/matcha-3.png"
       key="twitter-image"
     />
     <meta property="og:image" content="/banners/matcha.png" key="og-image" />
@@ -33,21 +32,19 @@ const MatchaOnboard: React.FC = () => (
       <img
         className="begin-section"
         width="100%"
-        src="/banners/matcha-3.png"
+        src="/banners/hello-matcha.png"
         alt="Moolah Banner"
       />
-      <div className="lead begin-section">
+      <h3 className="begin-section">Mission:</h3>
+      <div className="lead end-section">
         <p>
-          In order to further promote Matcha and get existing DEX users to
-          switch over, the team designed a
-          <Anchor
-            content="Referral Contest"
-            href="https://matcha.xyz/blog/refer-your-friends-and-win-eth"
-            spaceBefore
-            spaceAfter
-          />
-          with up to <span className="f-600">$50,000 in ETH</span> being given
-          away.
+          It’s critical that we design the best possible onboarding experience
+          for anybody who is interested in entering the DeFi space. If last year
+          is any indication, millions of new users will enter the space and we
+          need to be the go-to-place for them to get up and running. Whether our
+          new users are coming from Uniswap, a CEX, or they’re brand new, we
+          should guide them through the steps required to make their first trade
+          on Matcha.
         </p>
         <p>
           This beautiful design is by
@@ -61,9 +58,18 @@ const MatchaOnboard: React.FC = () => (
       </div>
 
       <section>
-        <h2 className="begin-section">Setup Wallet</h2>
+        <h2 className="begin-section">Exchange Funnel</h2>
         <h5 className="end-section">A walkthrough in to self custody</h5>
-        <WideScreen src={["/imgs/matcha/moolah/home-banner.png"]} carousel />
+        <WideScreen
+          src={[
+            "/imgs/matcha/onboarding/log-in.png",
+            "/imgs/matcha/onboarding/start.png",
+            "/imgs/matcha/onboarding/exchange-coinbase.png",
+            "/imgs/matcha/onboarding/exchange-binance.png",
+            "/imgs/matcha/onboarding/exchange-gemini.png",
+          ]}
+          carousel
+        />
         <div className="lead begin-section end-section">
           <p>
             Obviously, the first part of any Authentication flow is the Account
@@ -71,17 +77,41 @@ const MatchaOnboard: React.FC = () => (
             payment gateway when making a transaction over $3k USD.
           </p>
         </div>
-        <div className="begin-section end-section wrapper-center v-align col">
-          <Tweet src="https://twitter.com/matchaxyz/status/1346253769282002944" />
+      </section>
+
+      <section className="begin-section">
+        <h2 className="begin-section">Select Wallet</h2>
+        <h5 className="end-section">Leveraging familiar brands and flow</h5>
+        <WideScreen
+          src={[
+            "/imgs/matcha/onboarding/select-generic.png",
+            "/imgs/matcha/onboarding/select-coinbase.png",
+            "/imgs/matcha/onboarding/select-argent.png",
+            "/imgs/matcha/onboarding/select-trust.png",
+          ]}
+          carousel
+        />
+        <div className="lead begin-section end-section">
+          <p>
+            Obviously, the first part of any Authentication flow is the Account
+            Creation flow. This would be utilized whenever a user visits our
+            payment gateway when making a transaction over $3k USD.
+          </p>
         </div>
       </section>
 
-      <section>
-        <h2 className="begin-section">Fund Wallet</h2>
-        <h5 className="end-section">
-          Direct exchange integration & credit card support
-        </h5>
-        <WideScreen src={["/imgs/matcha/moolah/home-banner.png"]} carousel />
+      <section className="begin-section">
+        <h2 className="begin-section">Download Wallet</h2>
+        <h5 className="end-section">Guiding you through setup</h5>
+        <WideScreen
+          src={[
+            "/imgs/matcha/onboarding/download-metamask.png",
+            "/imgs/matcha/onboarding/download-coinbase.png",
+            "/imgs/matcha/onboarding/download-argent.png",
+            "/imgs/matcha/onboarding/download-trust.png",
+          ]}
+          carousel
+        />
         <div className="lead begin-section end-section">
           <p>
             Obviously, the first part of any Authentication flow is the Account
