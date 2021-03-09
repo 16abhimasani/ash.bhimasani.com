@@ -91,7 +91,7 @@ const ZeroX: React.FC = () => {
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/matcha/onboarding/coinbase-matcha-avatar.png"
-            title="Enhanced Onboarding"
+            title="Onboarding V2"
             caption="0-to-1 walkthrough into DeFi"
             link="/0x/matcha/onboard"
             date="Q1 2021"

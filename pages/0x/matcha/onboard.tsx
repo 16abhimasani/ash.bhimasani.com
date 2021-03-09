@@ -27,7 +27,7 @@ const MatchaOnboard: React.FC = () => (
     {MatchaHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
-      <h2 className="begin-section pt-0">Enhanced Onboarding</h2>
+      <h2 className="begin-section pt-0">Matcha Onboarding V2</h2>
       <time>UI Engineering</time>
       <img
         className="begin-section"
@@ -42,9 +42,9 @@ const MatchaOnboard: React.FC = () => (
           for anybody who is interested in entering the DeFi space. If last year
           is any indication, millions of new users will enter the space and we
           need to be the go-to-place for them to get up and running. Whether our
-          new users are coming from Uniswap, a CEX, or they’re brand new, we
-          should guide them through the steps required to make their first trade
-          on Matcha.
+          new users are coming from Uniswap, a Centralized Exchange, or they’re
+          brand new, we should guide them through the steps required to make
+          their first trade on Matcha.
         </p>
         <p>
           This beautiful design is by
@@ -59,7 +59,7 @@ const MatchaOnboard: React.FC = () => (
 
       <section>
         <h2 className="begin-section">Exchange Funnel</h2>
-        <h5 className="end-section">A walkthrough in to self custody</h5>
+        <h5 className="end-section">A walkthrough into self custody</h5>
         <WideScreen
           src={[
             "/imgs/matcha/onboarding/log-in.png",
@@ -72,16 +72,20 @@ const MatchaOnboard: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            It’s critical that we design the best possible onboarding experience
+            for anybody who is interested in entering the DeFi space. If last
+            year is any indication, millions of new users will enter the space
+            and we need to be the go-to-place for them to get up and running.
+            Whether our new users are coming from Uniswap, a Centralized
+            Exchange, or they’re brand new, we should guide them through the
+            steps required to make their first trade on Matcha.
           </p>
         </div>
       </section>
 
       <section className="begin-section">
         <h2 className="begin-section">Select Wallet</h2>
-        <h5 className="end-section">Leveraging familiar brands and flow</h5>
+        <h5 className="end-section">Leveraging familiar brands and flows</h5>
         <WideScreen
           src={[
             "/imgs/matcha/onboarding/select-generic.png",
@@ -93,9 +97,13 @@ const MatchaOnboard: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            It’s critical that we design the best possible onboarding experience
+            for anybody who is interested in entering the DeFi space. If last
+            year is any indication, millions of new users will enter the space
+            and we need to be the go-to-place for them to get up and running.
+            Whether our new users are coming from Uniswap, a Centralized
+            Exchange, or they’re brand new, we should guide them through the
+            steps required to make their first trade on Matcha.
           </p>
         </div>
       </section>
@@ -114,12 +122,48 @@ const MatchaOnboard: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            Obviously, the first part of any Authentication flow is the Account
-            Creation flow. This would be utilized whenever a user visits our
-            payment gateway when making a transaction over $3k USD.
+            It’s critical that we design the best possible onboarding experience
+            for anybody who is interested in entering the DeFi space. If last
+            year is any indication, millions of new users will enter the space
+            and we need to be the go-to-place for them to get up and running.
+            Whether our new users are coming from Uniswap, a Centralized
+            Exchange, or they’re brand new, we should guide them through the
+            steps required to make their first trade on Matcha.
           </p>
         </div>
       </section>
+
+      <section className="begin-section">
+        <h2 className="begin-section">Connect Wallet</h2>
+        <h5 className="end-section">Pairing made intuitive & native</h5>
+        <WideScreen
+          src={[
+            "/imgs/matcha/onboarding/connect-metamask.png",
+            "/imgs/matcha/onboarding/connect-coinbase.png",
+            "/imgs/matcha/onboarding/connect-argent.png",
+            "/imgs/matcha/onboarding/connect-trust.png",
+          ]}
+          carousel
+        />
+        <div className="lead begin-section end-section">
+          <p>
+            It’s critical that we design the best possible onboarding experience
+            for anybody who is interested in entering the DeFi space. If last
+            year is any indication, millions of new users will enter the space
+            and we need to be the go-to-place for them to get up and running.
+            Whether our new users are coming from Uniswap, a Centralized
+            Exchange, or they’re brand new, we should guide them through the
+            steps required to make their first trade on Matcha.
+          </p>
+        </div>
+      </section>
+
+      <img
+        className="begin-section"
+        width="100%"
+        src="/banners/matcha-3.png"
+        alt="Moolah Banner"
+      />
     </motion.main>
   </>
 );
