@@ -12,15 +12,15 @@ export const POBHead = (
   <Head>
     <meta
       property="description"
-      content="0x Labs - Powering Decentralized Exchange"
+      content="POB - Proof of Beauty"
       key="description"
     />
     <meta
       property="twitter:image"
-      content="/banners/0x.png"
+      content="/banners/pob-light.jpg"
       key="twitter-image"
     />
-    <meta property="og:image" content="/banners/0x.png" key="og-image" />
+    <meta property="og:image" content="/banners/pob-light.jpg" key="og-image" />
   </Head>
 );
 
@@ -88,12 +88,10 @@ const POB: React.FC = () => {
           <br />
         </section>
 
-        <section className="wrapper-center">
-          <img
-            width="100%"
-            src={`/banners/pob-${theme.dark ? "dark" : "light"}.jpg`}
-          />
-        </section>
+        <img
+          width="100%"
+          src={`/banners/pob-${theme.dark ? "dark" : "light"}.jpg`}
+        />
       </motion.main>
     </>
   );
