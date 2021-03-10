@@ -45,7 +45,7 @@ const Timeline: React.FC = () => (
       icon="/logos/georgia-tech.svg"
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & HCI"
-      date="2016 ~ 2022"
+      date="2016 ~ 2021"
       link="https://www.gatech.edu/about/rankings#:~:text=Computer%20Science%20ranks%20%231%20by,Guardian's%20QS%20World%20University%20Rankings."
       newTab
     />

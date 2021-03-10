@@ -70,17 +70,6 @@ const MatchaOnboard: React.FC = () => (
           ]}
           carousel
         />
-        <div className="lead begin-section end-section">
-          <p>
-            It’s critical that we design the best possible onboarding experience
-            for anybody who is interested in entering the DeFi space. If last
-            year is any indication, millions of new users will enter the space
-            and we need to be the go-to-place for them to get up and running.
-            Whether our new users are coming from Uniswap, a Centralized
-            Exchange, or they’re brand new, we should guide them through the
-            steps required to make their first trade on Matcha.
-          </p>
-        </div>
       </section>
 
       <section className="begin-section">
@@ -95,17 +84,6 @@ const MatchaOnboard: React.FC = () => (
           ]}
           carousel
         />
-        <div className="lead begin-section end-section">
-          <p>
-            It’s critical that we design the best possible onboarding experience
-            for anybody who is interested in entering the DeFi space. If last
-            year is any indication, millions of new users will enter the space
-            and we need to be the go-to-place for them to get up and running.
-            Whether our new users are coming from Uniswap, a Centralized
-            Exchange, or they’re brand new, we should guide them through the
-            steps required to make their first trade on Matcha.
-          </p>
-        </div>
       </section>
 
       <section className="begin-section">
@@ -122,13 +100,23 @@ const MatchaOnboard: React.FC = () => (
         />
         <div className="lead begin-section end-section">
           <p>
-            It’s critical that we design the best possible onboarding experience
-            for anybody who is interested in entering the DeFi space. If last
-            year is any indication, millions of new users will enter the space
-            and we need to be the go-to-place for them to get up and running.
-            Whether our new users are coming from Uniswap, a Centralized
-            Exchange, or they’re brand new, we should guide them through the
-            steps required to make their first trade on Matcha.
+            Here you can really clearly see I was able to plug and play the
+            <Anchor
+              content="Pretty QRs"
+              href="https://github.com/16abhimasani/pretty-qr-code"
+              spaceBefore
+              spaceAfter
+            />
+            from BitPay, originally developed by
+            <Anchor
+              content="Jason Dreyzehner"
+              href="https://twitter.com/bitjson"
+              spaceBefore
+            />
+            . They are quite remarkable looking and you can animate them as long
+            as you have some way to detect scan. In this case we can add an
+            animation when the user connects their wallet and then smoothly
+            animate to the next state.
           </p>
         </div>
       </section>
@@ -145,17 +133,6 @@ const MatchaOnboard: React.FC = () => (
           ]}
           carousel
         />
-        <div className="lead begin-section end-section">
-          <p>
-            It’s critical that we design the best possible onboarding experience
-            for anybody who is interested in entering the DeFi space. If last
-            year is any indication, millions of new users will enter the space
-            and we need to be the go-to-place for them to get up and running.
-            Whether our new users are coming from Uniswap, a Centralized
-            Exchange, or they’re brand new, we should guide them through the
-            steps required to make their first trade on Matcha.
-          </p>
-        </div>
       </section>
 
       <img
