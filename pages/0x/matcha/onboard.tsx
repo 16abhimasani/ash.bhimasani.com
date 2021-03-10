@@ -145,6 +145,20 @@ const MatchaOnboard: React.FC = () => (
         />
       </section>
 
+      <section className="begin-section">
+        <h2 className="begin-section">Wallet Connected</h2>
+        <h5 className="end-section">Starting the next phase</h5>
+        <WideScreen
+          src={[
+            "/imgs/matcha/onboarding/connected-coinbase.png",
+            "/imgs/matcha/onboarding/connected-argent.png",
+            "/imgs/matcha/onboarding/connected-trust.png",
+            "/imgs/matcha/onboarding/connected-metamask.png",
+          ]}
+          carousel
+        />
+      </section>
+
       <img
         className="begin-section"
         width="100%"
