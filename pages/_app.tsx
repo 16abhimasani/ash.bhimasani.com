@@ -31,12 +31,12 @@ const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
         <meta
           name="twitter:image"
-          content={`/banners/ash-${theme.dark ? "dark" : "light"}.png`}
+          content="/banners/ash-dark.png"
           key="twitter-image"
         />
         <meta
           property="og:image"
-          content={`/banners/ash-${theme.dark ? "dark" : "light"}.png`}
+          content="/banners/ash-dark.png"
           key="og-image"
         />
         <meta name="author" content="Ash Bhimasani" />

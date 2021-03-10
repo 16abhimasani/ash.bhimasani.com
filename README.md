@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ash.bhimasani.com/banners/ash-light.png" />
+  <img src="https://ash.bhimasani.com/banners/ash-dark.png" />
 </p>
 
 <hr />
