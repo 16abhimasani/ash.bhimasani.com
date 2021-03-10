@@ -58,12 +58,22 @@ const MatchaOnboard: React.FC = () => (
       </div>
 
       <section>
-        <h2 className="begin-section">Exchange Funnel</h2>
-        <h5 className="end-section">A walkthrough into self custody</h5>
+        <h2 className="begin-section">Get Started</h2>
+        <h5 className="end-section">Catching users during Connect</h5>
         <WideScreen
           src={[
             "/imgs/matcha/onboarding/log-in.png",
             "/imgs/matcha/onboarding/start.png",
+          ]}
+          carousel
+        />
+      </section>
+
+      <section>
+        <h2 className="begin-section">Exchange Funnel</h2>
+        <h5 className="end-section">A walkthrough into self custody</h5>
+        <WideScreen
+          src={[
             "/imgs/matcha/onboarding/exchange-coinbase.png",
             "/imgs/matcha/onboarding/exchange-binance.png",
             "/imgs/matcha/onboarding/exchange-gemini.png",
