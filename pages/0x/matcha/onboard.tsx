@@ -75,8 +75,8 @@ const MatchaOnboard: React.FC = () => (
         <WideScreen
           src={[
             "/imgs/matcha/onboarding/exchange-coinbase.png",
-            "/imgs/matcha/onboarding/exchange-binance.png",
             "/imgs/matcha/onboarding/exchange-gemini.png",
+            "/imgs/matcha/onboarding/exchange-binance.png",
           ]}
           carousel
         />
@@ -87,10 +87,10 @@ const MatchaOnboard: React.FC = () => (
         <h5 className="end-section">Leveraging familiar brands and flows</h5>
         <WideScreen
           src={[
-            "/imgs/matcha/onboarding/select-generic.png",
             "/imgs/matcha/onboarding/select-coinbase.png",
             "/imgs/matcha/onboarding/select-argent.png",
             "/imgs/matcha/onboarding/select-trust.png",
+            "/imgs/matcha/onboarding/select-generic.png",
           ]}
           carousel
         />
@@ -101,10 +101,10 @@ const MatchaOnboard: React.FC = () => (
         <h5 className="end-section">Guiding you through setup</h5>
         <WideScreen
           src={[
-            "/imgs/matcha/onboarding/download-metamask.png",
             "/imgs/matcha/onboarding/download-coinbase.png",
             "/imgs/matcha/onboarding/download-argent.png",
             "/imgs/matcha/onboarding/download-trust.png",
+            "/imgs/matcha/onboarding/download-metamask.png",
           ]}
           carousel
         />
@@ -136,10 +136,10 @@ const MatchaOnboard: React.FC = () => (
         <h5 className="end-section">Pairing made intuitive & native</h5>
         <WideScreen
           src={[
-            "/imgs/matcha/onboarding/connect-metamask.png",
             "/imgs/matcha/onboarding/connect-coinbase.png",
             "/imgs/matcha/onboarding/connect-argent.png",
             "/imgs/matcha/onboarding/connect-trust.png",
+            "/imgs/matcha/onboarding/connect-metamask.png",
           ]}
           carousel
         />
