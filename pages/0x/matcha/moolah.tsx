@@ -16,7 +16,7 @@ export const MatchaHead = (
     />
     <meta
       property="twitter:image"
-      content="/banners/matcha.png"
+      content="/banners/matcha-3.png"
       key="twitter-image"
     />
     <meta property="og:image" content="/banners/matcha.png" key="og-image" />
