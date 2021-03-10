@@ -121,6 +121,7 @@ const ZeroX: React.FC = () => {
         <section className="wrapper-center">
           <img
             width={312}
+            height="100%"
             src={`/imgs/matcha/0x-${theme.dark ? "dark" : "light"}.png`}
           />
         </section>

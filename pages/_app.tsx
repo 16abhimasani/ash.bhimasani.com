@@ -31,10 +31,14 @@ const AshBhimasani: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
         <meta
           name="twitter:image"
-          content="/banners/logo.jpg"
+          content="/banners/ash-light.png"
           key="twitter-image"
         />
-        <meta property="og:image" content="/banners/logo.jpg" key="og-image" />
+        <meta
+          property="og:image"
+          content="/banners/ash-light.png"
+          key="og-image"
+        />
         <meta name="author" content="Ash Bhimasani" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" href="/favicon.ico" />
