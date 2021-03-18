@@ -77,7 +77,7 @@ const PostBox: React.FC<{
             alt={title}
           />
         )}
-        <div>
+        <div className={classes.box__content}>
           <div className={classes.box__title}>{title}</div>
           <div className={classes.box__caption}>{caption}</div>
         </div>

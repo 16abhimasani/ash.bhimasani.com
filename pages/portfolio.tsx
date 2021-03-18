@@ -35,7 +35,7 @@ const Portfolio: React.FC = () => (
             in user experience, growth, and strategy.
           </p>
           <p>
-            Currently building
+            Working on
             <Anchor
               content="@pob.studio"
               href="https://twitter.com/prrfbeauty"
@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => (
       </section>
 
       <section>
-        <h3 className="begin-section">Recent Work</h3>
+        <h3 className="begin-section">Recent Stuff</h3>
         <PostBox
           icon="/logos/pob.svg"
           title="Proof of Beauty"
@@ -73,7 +73,7 @@ const Portfolio: React.FC = () => (
           icon="/logos/bitpay-ext.svg"
           title="BitPay Extension"
           caption="Convert crypto to prepaid cards instantly & anonymously"
-          date="Q2 2020"
+          date="2020"
           link="/bitpay/extension"
         />
         <PostBox
@@ -87,7 +87,7 @@ const Portfolio: React.FC = () => (
           icon="/logos/bitpay-light-gradient.svg"
           title="BitPay ID"
           caption="Consumer onboarding + KYC / AML"
-          date="Q2 ~ Q3 2019"
+          date="2019"
           link="/bitpay/id"
         />
       </section>

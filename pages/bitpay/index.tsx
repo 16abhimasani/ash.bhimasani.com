@@ -64,35 +64,35 @@ const BitPay: React.FC = () => (
           icon="/logos/bitpay-ext.svg"
           title="Browser Extension"
           caption="Convert crypto to prepaid cards instantly & anonymously"
-          date="Q2 2020"
+          date="2020"
           link="/bitpay/extension"
         />
         <PostBox
           icon="/logos/bitpay-light-gradient.svg"
           title="BitPay ID"
           caption="Consumer onboarding + KYC / AML"
-          date="Q2 ~ Q3 2019"
+          date="2019"
           link="/bitpay/id"
         />
         <PostBox
           icon="/logos/bitpay-globe.svg"
           title="Merchant Directory"
           caption="A curated directory of where to use crypto + promos"
-          date="Q2 2019"
+          date="2019"
           link="/bitpay/directory"
         />
         <PostBox
           icon="/logos/bitpay-emails.svg"
           title="Emails"
           caption="Transactional emails for merchants & payers"
-          date="Fall 2018"
+          date="2018"
           link="/bitpay/emails"
         />
         <PostBox
           icon="/logos/bitpay-site.svg"
           title="Website"
           caption="Landing, operational, & product pages"
-          date="Q3 2018 ~ Q1 2019"
+          date="2018"
           link="/bitpay/site"
         />
         <PostBox

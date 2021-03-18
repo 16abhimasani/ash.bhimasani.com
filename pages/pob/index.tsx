@@ -54,9 +54,10 @@ const POB: React.FC = () => {
           <h3 className="begin-section">Projects</h3>
           <PostBox
             icon="/logos/pob.svg"
-            title="$HASH"
+            title="$HASH &nbsp;#️⃣"
             caption="Generative art powered by on-chain metadata"
             link="https://pob.studio/"
+            date="2021"
             newTab
           />
           <h5 className="begin-section">Releases</h5>
@@ -65,8 +66,8 @@ const POB: React.FC = () => {
             title="S1: SAGA"
             caption="Mint your TXs | Only 10,000 will exist"
             link="https://pob.studio/"
+            date="Apr 2021"
             newTab
-            date="April 2021"
             locked
           />
           <PostBox
@@ -74,8 +75,8 @@ const POB: React.FC = () => {
             title="S0: GENESIS"
             caption="Mint any TX | Only 2555 will exist"
             link="https://pob.studio/"
-            newTab
             date="Jan ~ Feb 2021"
+            newTab
           />
         </section>
 

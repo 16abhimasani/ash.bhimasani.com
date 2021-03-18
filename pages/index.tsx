@@ -14,7 +14,7 @@ const Home: React.FC = () => (
         user experience, growth, and strategy.
       </p>
       <p>
-        Building
+        Co-creating
         <Anchor
           content="@pob.studio"
           href="https://twitter.com/prrfbeauty"

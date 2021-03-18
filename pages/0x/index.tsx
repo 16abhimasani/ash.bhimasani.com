@@ -41,7 +41,7 @@ const ZeroX: React.FC = () => {
             <p>
               The protocol is
               <Anchor
-                content="secured"
+                content="governed"
                 href="https://0x.org/zrx/staking"
                 spaceBefore
                 spaceAfter
@@ -63,8 +63,8 @@ const ZeroX: React.FC = () => {
               .
             </p>
             <p>
-              To showcase the experience, the team launched their own
-              world-class trading platform.
+              To showcase the experience and redefine DEXs, the team launched
+              their own trading platform in mid 2020.
             </p>
             <p>
               I worked on
@@ -116,6 +116,12 @@ const ZeroX: React.FC = () => {
           <br />
           <br />
           <Tweet src="https://twitter.com/PanteraCapital/status/1357743064010289152" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/0xProject/status/1370484153251106817" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/0xProject/status/1372361470424489988" />
         </section>
 
         <section className="wrapper-center">

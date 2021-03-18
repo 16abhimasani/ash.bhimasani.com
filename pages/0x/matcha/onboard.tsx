@@ -55,23 +55,24 @@ const MatchaOnboard: React.FC = () => (
           />
           .
         </p>
+        <p>
+          <Anchor
+            content="matcha.xyz/onboard/start"
+            href="https://matcha.xyz/onboard/start"
+            spaceBefore
+          />
+        </p>
       </div>
 
-      <section>
+      <section className="begin-section">
         <h2 className="begin-section">Get Started</h2>
-        <h5 className="end-section">Catching users during Connect</h5>
-        <WideScreen
-          src={[
-            "/imgs/matcha/onboarding/log-in.png",
-            "/imgs/matcha/onboarding/start.png",
-          ]}
-          carousel
-        />
+        <h5 className="end-section">A walkthrough into self custody</h5>
+        <WideScreen src="/imgs/matcha/onboarding/start.png" />
       </section>
 
-      <section>
-        <h2 className="begin-section">Exchange Funnel</h2>
-        <h5 className="end-section">A walkthrough into self custody</h5>
+      <section className="begin-section">
+        <h2 className="begin-section">Direct linking</h2>
+        <h5 className="end-section">Exchange specific landing pages</h5>
         <WideScreen
           src={[
             "/imgs/matcha/onboarding/exchange-coinbase.png",
@@ -80,6 +81,15 @@ const MatchaOnboard: React.FC = () => (
           ]}
           carousel
         />
+        <div className="lead begin-section">
+          <p>
+            <Anchor
+              content="matcha.xyz/onboard/exchange"
+              href="https://matcha.xyz/onboard/exchange?exchange=gemini"
+              spaceBefore
+            />
+          </p>
+        </div>
       </section>
 
       <section className="begin-section">
@@ -163,7 +173,7 @@ const MatchaOnboard: React.FC = () => (
         className="begin-section"
         width="100%"
         src="/banners/matcha-3.png"
-        alt="Moolah Banner"
+        alt="Matcha Banner"
       />
     </motion.main>
   </>
