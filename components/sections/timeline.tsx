@@ -4,14 +4,14 @@ import PostBox from "../post-box/post-box";
 const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
-    <PostBox
+    {/* <PostBox
       icon="/logos/pob.svg"
       title="Proof of Beauty"
       caption="Experimental NFT projects"
       date="2021"
       link="/pob"
       newTab
-    />
+    /> */}
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
       title="Coinbase"
