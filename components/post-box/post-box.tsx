@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AnimationProps, motion } from "framer-motion";
+import { AnimationProps, motion, MotionStyle } from "framer-motion";
 import { ThemeContext } from "../../pages/_app";
 import Link from "../utils/link";
 
@@ -8,7 +8,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 interface LogoConfig extends AnimationProps {
-  invertible: boolean;
+  invertible?: boolean;
 }
 const LogoConfigs: {
   [icon: string]: LogoConfig;
@@ -25,6 +25,11 @@ const LogoConfigs: {
     },
     invertible: true,
   },
+  "/logos/pob.svg": {
+    animate: {},
+    transition: {},
+    invertible: true,
+  },
 };
 
 const PostBox: React.FC<{
@@ -37,13 +42,19 @@ const PostBox: React.FC<{
   locked?: boolean;
 }> = ({ title, caption, link, icon, date, newTab, locked }) => {
   const theme = useContext(ThemeContext);
+  const lockedStyles: MotionStyle = {
+    pointerEvents: "none",
+    userSelect: "none",
+  };
   const Box = (
-    <motion.div className={cx({ dark: theme.dark })}>
+    <motion.div
+      className={cx({ dark: theme.dark })}
+      style={locked ? lockedStyles : undefined}
+    >
       <motion.a
         whileHover={{ scale: 0.997 }}
         whileTap={{ scale: 0.99 }}
         className={classes.box}
-        style={{ pointerEvents: locked ? "none" : "initial" }}
         href={link}
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noopener noreferrer" : ""}
@@ -66,7 +77,7 @@ const PostBox: React.FC<{
             alt={title}
           />
         )}
-        <div>
+        <div className={classes.box__content}>
           <div className={classes.box__title}>{title}</div>
           <div className={classes.box__caption}>{caption}</div>
         </div>

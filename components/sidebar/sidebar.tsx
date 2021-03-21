@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
+import { ThemeContext } from "../../pages/_app";
 import Link from "../utils/link";
 import classNames from "classnames/bind";
 import classes from "./sidebar.module.scss";
@@ -7,7 +8,8 @@ const cx = classNames.bind(classes);
 
 import BitPayNav from "./navs/bitpay";
 import ZeroXNav from "./navs/0x";
-import { ThemeContext } from "../../pages/_app";
+import Portfolio from "./navs/portfolio";
+
 interface PagePath {
   path: string;
   label: string;
@@ -24,6 +26,7 @@ const SideBar: React.FC = () => {
   const navigation = (): PagePath[] => {
     if (router.pathname.includes("bitpay")) return BitPayNav;
     if (router.pathname.includes("0x")) return ZeroXNav;
+    if (router.pathname.includes("portfolio")) return Portfolio;
     return [];
   };
   const nav = (route: PagePath) => {

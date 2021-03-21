@@ -20,9 +20,22 @@ const Home: React.FC = () => (
           href="https://twitter.com/coinbase"
           spaceBefore
         />
-        .
         <br />
+        {/* Co-creating
+        <Anchor
+          content="@pob.studio"
+          href="https://twitter.com/prrfbeauty"
+          spaceBefore
+        />
+        <br /> */}
         Designer & engineer
+        {/* <Anchor
+          content="@coinbase"
+          href="https://twitter.com/coinbase"
+          spaceBefore
+          spaceAfter
+        />
+        | */}
         <Anchor
           content="@0x"
           href="https://twitter.com/0xProject"
@@ -35,15 +48,6 @@ const Home: React.FC = () => (
           href="https://twitter.com/BitPay"
           spaceBefore
         />
-        .
-        <br />
-        Computer science student
-        <Anchor
-          content="@gatech"
-          href="https://twitter.com/gtcomputing"
-          spaceBefore
-        />
-        .
       </p>
     </div>
 

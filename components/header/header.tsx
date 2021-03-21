@@ -30,8 +30,14 @@ const Header: React.FC = () => {
           />
         </a>
       </Link>
-      <Link href="/bitpay">
-        <a className={classes.link} style={{ textAlign: "right" }}>
+      <Link href="/portfolio">
+        <a
+          className={cx({
+            link: true,
+            link__active: router.pathname === "/portfolio",
+          })}
+          style={{ textAlign: "right" }}
+        >
           <h6>Portfolio</h6>
         </a>
       </Link>

@@ -41,7 +41,7 @@ const ZeroX: React.FC = () => {
             <p>
               The protocol is
               <Anchor
-                content="secured"
+                content="governed"
                 href="https://0x.org/zrx/staking"
                 spaceBefore
                 spaceAfter
@@ -63,11 +63,11 @@ const ZeroX: React.FC = () => {
               .
             </p>
             <p>
-              To showcase the experience, the team launched their own
-              world-class trading platform.
+              To showcase the experience and redefine DEXs, the team launched
+              their own trading platform in mid 2020.
             </p>
             <p>
-              I currently work on
+              I worked on
               <Anchor
                 content="matcha.xyz"
                 href="https://matcha.xyz/"
@@ -91,11 +91,10 @@ const ZeroX: React.FC = () => {
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/matcha/onboarding/coinbase-matcha-avatar.png"
-            title="Enhanced Onboarding"
+            title="Onboarding V2"
             caption="0-to-1 walkthrough into DeFi"
             link="/0x/matcha/onboard"
             date="Q1 2021"
-            locked
           />
           <PostBox
             icon="/imgs/matcha/moolah/avatar.png"
@@ -117,11 +116,18 @@ const ZeroX: React.FC = () => {
           <br />
           <br />
           <Tweet src="https://twitter.com/PanteraCapital/status/1357743064010289152" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/0xProject/status/1370484153251106817" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/0xProject/status/1372361470424489988" />
         </section>
 
         <section className="wrapper-center">
           <img
             width={312}
+            height="100%"
             src={`/imgs/matcha/0x-${theme.dark ? "dark" : "light"}.png`}
           />
         </section>

@@ -4,6 +4,14 @@ import PostBox from "../post-box/post-box";
 const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
+    {/* <PostBox
+      icon="/logos/pob.svg"
+      title="Proof of Beauty"
+      caption="Experimental NFT projects"
+      date="2021"
+      link="/pob"
+      newTab
+    /> */}
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
       title="Coinbase"
@@ -37,7 +45,7 @@ const Timeline: React.FC = () => (
       icon="/logos/georgia-tech.svg"
       title="Georgia Institute of Technology"
       caption="Computer Science: Artificial Intelligence & HCI"
-      date="2016 ~ 2022"
+      date="2016 ~ 2021"
       link="https://www.gatech.edu/about/rankings#:~:text=Computer%20Science%20ranks%20%231%20by,Guardian's%20QS%20World%20University%20Rankings."
       newTab
     />
