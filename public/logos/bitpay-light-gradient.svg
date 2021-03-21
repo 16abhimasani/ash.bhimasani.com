@@ -1,6 +1,5 @@
 <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="BitPay - Light" clip-path="url(#clip0)">
-<rect width="72" height="72" fill="white"/>
 <g id="Group">
 <g id="Mask" filter="url(#filter0_d)">
 <rect width="72" height="72" rx="36" fill="url(#paint0_linear)"/>
@@ -20,7 +19,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear" x1="-36" y1="36" x2="36" y2="108" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4F6EF7" stop-opacity="0.75"/>
+<stop stop-color="#97AAFF"/>
 <stop offset="1" stop-color="#1A3B8B"/>
 </linearGradient>
 <clipPath id="clip0">
