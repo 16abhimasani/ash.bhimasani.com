@@ -44,8 +44,8 @@ const POB: React.FC = () => {
               .
             </p>
             <p>
-              Our first project tokenizes Ethereum's history into beautiful
-              works of art.
+              Our first project tokenizes Ethereum's atomic units of history
+              into beautiful works of art.
             </p>
           </div>
         </section>
@@ -55,8 +55,8 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="$HASH &nbsp;#️⃣"
-            caption="Generative art powered by on-chain metadata"
-            link="https://pob.studio/"
+            caption="Generative art powered by on-chain TX metadata"
+            link="https://hash.pob.studio/"
             date="2021"
             newTab
           />
@@ -64,27 +64,35 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="S1: SAGA"
-            caption="Mint your TXs | Only 10,000 will exist"
-            link="https://pob.studio/"
+            caption="Mint your TXs | Only 33,333 will exist"
+            link="https://hash.pob.studio/"
             date="Apr 2021"
             newTab
-            locked
           />
           <PostBox
             icon="/logos/pob.svg"
             title="S0: GENESIS"
             caption="Mint any TX | Only 2555 will exist"
-            link="https://pob.studio/"
+            link="https://hash.pob.studio/"
             date="Jan ~ Feb 2021"
             newTab
           />
         </section>
 
         <section className="begin-section wrapper-center v-align col">
+          <Tweet src="https://twitter.com/prrfbeauty/status/1382711132306219008" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1366424062503882761" />
           <br />
           <br />
           <Tweet src="https://twitter.com/timrix/status/1365006217018400770" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1376555470169772042" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1379111650104647685" />
           <br />
           <br />
         </section>

@@ -36,13 +36,13 @@ const Portfolio: React.FC = () => (
           </p>
           <p>
             Working on
-            {/* <Anchor
+            <Anchor
               content="@pob.studio"
               href="https://twitter.com/prrfbeauty"
               spaceBefore
               spaceAfter
             />
-            & */}
+            &
             <Anchor
               content="@matcha.xyz"
               href="https://twitter.com/matchaxyz"
@@ -54,14 +54,14 @@ const Portfolio: React.FC = () => (
 
       <section>
         <h3 className="begin-section">Recent Stuff</h3>
-        {/* <PostBox
+        <PostBox
           icon="/logos/pob.svg"
           title="Proof of Beauty"
-          caption="Experimental NFT projects"
+          caption="NFT experiments"
           date="2021"
           link="/pob"
           newTab
-        /> */}
+        />
         <PostBox
           icon="/logos/matcha.png"
           title="Matcha &nbsp;🍵"

@@ -2,9 +2,10 @@ export default [
   {
     path: "/0x",
     label: "0x",
+    header: true,
     children: [
       {
-        path: "https://matcha.xyz/",
+        path: "/0x",
         label: "Matcha",
         children: [
           {

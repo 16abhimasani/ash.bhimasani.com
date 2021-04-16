@@ -13,6 +13,7 @@ import Portfolio from "./navs/portfolio";
 interface PagePath {
   path: string;
   label: string;
+  header?: boolean;
   children?: PagePath[];
 }
 
@@ -39,7 +40,7 @@ const SideBar: React.FC = () => {
     );
     return (
       <>
-        {navigation().some((r) => r.path === route.path) ? (
+        {route.header ? (
           <div className={classes.major}>
             <Link href="/">
               <a style={{ opacity: theme.dark ? 0.4 : 0.25 }}>

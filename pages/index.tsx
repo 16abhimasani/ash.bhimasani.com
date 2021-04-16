@@ -30,6 +30,13 @@ const Home: React.FC = () => (
         <br /> */}
         Designer & engineer
         {/* <Anchor
+          content="@pob.studio"
+          href="https://twitter.com/prrfbeauty"
+          spaceBefore
+          spaceAfter
+        />
+        | */}
+        {/* <Anchor
           content="@coinbase"
           href="https://twitter.com/coinbase"
           spaceBefore

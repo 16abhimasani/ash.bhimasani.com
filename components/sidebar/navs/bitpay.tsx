@@ -2,6 +2,7 @@ export default [
   {
     path: "/bitpay",
     label: "BitPay",
+    header: true,
     children: [
       {
         path: "/bitpay/invoice",
