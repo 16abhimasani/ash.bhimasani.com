@@ -88,6 +88,20 @@ const ZeroX: React.FC = () => {
             link="https://matcha.xyz/"
             newTab
           />
+          <div className="lead end-section">
+            <p>
+              If you take a look at the product, it's really incredible to see
+              how far decentralized applications have come. This is what{" "}
+              <Anchor
+                content="DEXs looked like"
+                href="https://files.gitter.im/etherdelta/etherdelta.github.io/V8n3/Screen-Shot-2017-12-16-at-9.59.59-AM.png"
+                spaceBefore
+                spaceAfter
+              />
+              when I first heard about them in 2017.
+            </p>
+          </div>
+
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/matcha/onboarding/coinbase-matcha-avatar.png"
