@@ -64,7 +64,7 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="S1: SAGA"
-            caption="Mint your TXs | Only 33,333 will exist"
+            caption="Your history | Only 15,306 will exist"
             link="https://hash.pob.studio/"
             date="Apr 2021"
             newTab
@@ -72,7 +72,7 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="S0: GENESIS"
-            caption="Mint any TX | Only 2555 will exist"
+            caption="Our history | Only 2,555 will exist"
             link="https://hash.pob.studio/"
             date="Jan ~ Feb 2021"
             newTab
