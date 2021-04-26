@@ -9,12 +9,12 @@ export default [
         label: "Matcha",
         children: [
           {
-            path: "/0x/matcha/moolah",
-            label: "Moolah",
-          },
-          {
             path: "/0x/matcha/onboard",
             label: "Onboard",
+          },
+          {
+            path: "/0x/matcha/moolah",
+            label: "Moolah",
           },
         ],
       },

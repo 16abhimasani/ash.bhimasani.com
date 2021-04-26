@@ -35,7 +35,7 @@ const POB: React.FC = () => {
           <h1 className="begin-section pt-0">Proof of Beauty &nbsp;💄</h1>
           <div className="lead">
             <p>
-              We are an experimental{" "}
+              We are a{" "}
               <Anchor
                 content="digital experience studio"
                 href="https://pob.studio/"
@@ -45,7 +45,7 @@ const POB: React.FC = () => {
             </p>
             <p>
               Our first project tokenizes Ethereum's atomic units of history
-              into beautiful works of art.
+              (transactions) into beautiful works of art.
             </p>
           </div>
         </section>
