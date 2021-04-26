@@ -64,7 +64,7 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="S1: SAGA"
-            caption="Your history | Only 15,306 will exist"
+            caption="Your history | Only 25,555+ will exist"
             link="https://hash.pob.studio/"
             date="Apr 2021"
             newTab
