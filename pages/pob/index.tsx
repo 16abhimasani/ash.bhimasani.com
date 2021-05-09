@@ -64,7 +64,7 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="S1: SAGA"
-            caption="Your history | Only 25,555+ will exist"
+            caption="Your history | Only 10,312 will exist"
             link="https://hash.pob.studio/"
             date="Apr 2021"
             newTab
@@ -80,13 +80,25 @@ const POB: React.FC = () => {
         </section>
 
         <section className="begin-section wrapper-center v-align col">
-          <Tweet src="https://twitter.com/prrfbeauty/status/1382711132306219008" />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1386713061332078593" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/deanna_mosca/status/1390829244041682946" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1388153968703025153" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/timrix/status/1386737614191947776" />
           <br />
           <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1366424062503882761" />
           <br />
           <br />
           <Tweet src="https://twitter.com/timrix/status/1365006217018400770" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/timrix/status/1364996681025024004" />
           <br />
           <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1376555470169772042" />
