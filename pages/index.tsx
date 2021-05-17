@@ -14,35 +14,21 @@ const Home: React.FC = () => (
         user experience, growth, and strategy.
       </p>
       <p>
-        Incoming
+        Building
         <Anchor
-          content="@coinbase"
-          href="https://twitter.com/coinbase"
+          content="@pob.studio"
+          href="https://twitter.com/prrfbeauty"
           spaceBefore
         />
         <br />
-        {/* Co-creating
-        <Anchor
-          content="@pob.studio"
-          href="https://twitter.com/prrfbeauty"
-          spaceBefore
-        />
-        <br /> */}
         Designer & engineer
         <Anchor
-          content="@pob.studio"
-          href="https://twitter.com/prrfbeauty"
+          content="@coinbase"
+          href="https://twitter.com/coinbase"
           spaceBefore
           spaceAfter
         />
         |
-        {/* <Anchor
-          content="@coinbase"
-          href="https://twitter.com/coinbase"
-          spaceBefore
-          spaceAfter
-        />
-        | */}
         <Anchor
           content="@0x"
           href="https://twitter.com/0xProject"

@@ -44,8 +44,8 @@ const Portfolio: React.FC = () => (
             />
             &
             <Anchor
-              content="@matcha.xyz"
-              href="https://twitter.com/matchaxyz"
+              content="@coinbase.custody"
+              href="https://twitter.com/CoinbaseInsto"
               spaceBefore
             />
           </p>
