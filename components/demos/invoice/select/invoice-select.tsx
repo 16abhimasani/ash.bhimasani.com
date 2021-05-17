@@ -52,10 +52,11 @@ const WalletCell: React.FC<{ name: string; icon: string }> = ({
 
 const InvoiceSelectDemo: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [currencyFilter, setCurrencyFilter] = useState<{
-    code: string;
-    name: string;
-  } | null>(null);
+  const [currencyFilter, setCurrencyFilter] =
+    useState<{
+      code: string;
+      name: string;
+    } | null>(null);
   const [inputValue, setInputValue] = useState("");
   const clear = (): void => {
     if (scrollRef && scrollRef.current) scrollRef.current.scrollTop = 0;
