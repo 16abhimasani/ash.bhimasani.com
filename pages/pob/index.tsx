@@ -44,8 +44,8 @@ const POB: React.FC = () => {
               .
             </p>
             <p>
-              Our first project tokenizes Ethereum's atomic units of history
-              (transactions) into beautiful works of art.
+              Our first platform archives Ethereum's units of history
+              (transactions) as beautiful works of art.
             </p>
           </div>
         </section>
@@ -55,7 +55,7 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="$HASH &nbsp;#️⃣"
-            caption="Generative art powered by on-chain TX metadata"
+            caption="Generative NFTs powered by on-chain TX metadata"
             link="https://hash.pob.studio/"
             date="2021"
             newTab
@@ -66,7 +66,7 @@ const POB: React.FC = () => {
             title="S1: SAGA"
             caption="Your history | Only 10,312 will exist"
             link="https://hash.pob.studio/"
-            date="Apr 2021"
+            date="Summer 2021"
             newTab
           />
           <PostBox
@@ -74,7 +74,7 @@ const POB: React.FC = () => {
             title="S0: GENESIS"
             caption="Our history | Only 2,555 will exist"
             link="https://hash.pob.studio/"
-            date="Jan ~ Feb 2021"
+            date="Q1 2021"
             newTab
           />
         </section>

@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => (
         <PostBox
           icon="/logos/pob.svg"
           title="Proof of Beauty"
-          caption="NFT experiments"
+          caption="NFT Experiences ✨"
           date="2021"
           link="/pob"
           newTab
