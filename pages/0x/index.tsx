@@ -6,17 +6,13 @@ import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import Tweet from "../../components/utils/tweet";
 import SideBar from "../../components/sidebar/sidebar";
-import { BANNER_ROOT } from "../../utils/constants";
-import { WebsiteHead } from "../../components/seo-heads";
+import { ZeroXHead } from "../../components/seo-heads";
 
 const ZeroX: React.FC = () => {
   const theme = useContext(ThemeContext);
   return (
     <>
-      <WebsiteHead
-        description={`0x Labs - Powering Decentralized Exchange`}
-        banner={`${BANNER_ROOT}/0x.png`}
-      />
+      {ZeroXHead}
       <SideBar />
       <motion.main className="body" {...fadeInPage}>
         <section className="end-section">

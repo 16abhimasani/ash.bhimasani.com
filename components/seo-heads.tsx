@@ -96,6 +96,13 @@ export const BitPayExtHead = (
   </>
 );
 
+export const ZeroXHead = (
+  <WebsiteHead
+    title={`Ash - 0x Labs - Powering Decentralized Exchange`}
+    banner={`${BANNER_ROOT}/0x.png`}
+  />
+);
+
 export const MatchaHead = (
   <WebsiteHead
     title={`Ash - Matcha - DeFi for the masses`}
