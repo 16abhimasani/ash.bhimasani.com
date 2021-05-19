@@ -9,11 +9,11 @@ import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/selec
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
 import Tweet from "../../../components/utils/tweet";
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
-import { BitPayHead } from "..";
+import { BitPayInvoiceHead } from "../../../components/seo-heads";
 
 const BitPayInvoiceWalletSelection: React.FC = () => (
   <>
-    {BitPayHead}
+    {BitPayInvoiceHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>

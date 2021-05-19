@@ -1,26 +1,10 @@
 import React from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import SideBar from "../../components/sidebar/sidebar";
-
-export const BitPayHead = (
-  <Head>
-    <meta
-      property="description"
-      content="BitPay - Blockchain Payment Processor"
-      key="description"
-    />
-    <meta
-      property="twitter:image"
-      content="/banners/bitpay.jpg"
-      key="twitter-image"
-    />
-    <meta property="og:image" content="/banners/bitpay.jpg" key="og-image" />
-  </Head>
-);
+import { BitPayHead } from "../../components/seo-heads";
 
 const BitPay: React.FC = () => (
   <>

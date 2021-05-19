@@ -4,11 +4,11 @@ import { fadeInPage } from "../../../animations/page";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
-import { BitPayHead } from "..";
+import { BitPayInvoiceHead } from "../../../components/seo-heads";
 
 const BitPayInvoiceReceipt: React.FC = () => (
   <>
-    {BitPayHead}
+    {BitPayInvoiceHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>

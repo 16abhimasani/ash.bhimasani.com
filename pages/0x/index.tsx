@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../_app";
 import { fadeInPage } from "../../animations/page";
@@ -7,28 +6,17 @@ import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import Tweet from "../../components/utils/tweet";
 import SideBar from "../../components/sidebar/sidebar";
-
-export const ZeroXHead = (
-  <Head>
-    <meta
-      property="description"
-      content="0x Labs - Powering Decentralized Exchange"
-      key="description"
-    />
-    <meta
-      property="twitter:image"
-      content="/banners/0x.png"
-      key="twitter-image"
-    />
-    <meta property="og:image" content="/banners/0x.png" key="og-image" />
-  </Head>
-);
+import { BANNER_ROOT } from "../../utils/constants";
+import { WebsiteHead } from "../../components/seo-heads";
 
 const ZeroX: React.FC = () => {
   const theme = useContext(ThemeContext);
   return (
     <>
-      {ZeroXHead}
+      <WebsiteHead
+        description={`0x Labs - Powering Decentralized Exchange`}
+        banner={`${BANNER_ROOT}/0x.png`}
+      />
       <SideBar />
       <motion.main className="body" {...fadeInPage}>
         <section className="end-section">

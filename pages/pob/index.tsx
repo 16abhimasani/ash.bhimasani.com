@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../_app";
 import { fadeInPage } from "../../animations/page";
@@ -7,22 +6,7 @@ import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
 import Tweet from "../../components/utils/tweet";
 import SideBar from "../../components/sidebar/sidebar";
-
-export const POBHead = (
-  <Head>
-    <meta
-      property="description"
-      content="POB - Proof of Beauty"
-      key="description"
-    />
-    <meta
-      property="twitter:image"
-      content="/banners/pob-light.jpg"
-      key="twitter-image"
-    />
-    <meta property="og:image" content="/banners/pob-light.jpg" key="og-image" />
-  </Head>
-);
+import { POBHead } from "../../components/seo-heads";
 
 const POB: React.FC = () => {
   const theme = useContext(ThemeContext);

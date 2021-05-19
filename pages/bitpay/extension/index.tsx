@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
@@ -8,34 +7,11 @@ import SideBar from "../../../components/sidebar/sidebar";
 import ExtensionNavDemo from "../../../components/demos/extension/nav/ext-nav";
 import ExtensionAmountDemo from "../../../components/demos/extension/amount/ext-amount";
 import ExtensionReceiptDemo from "../../../components/demos/extension/receipt/ext-receipt";
-
-export const ExtensionHead = (
-  <Head>
-    <meta
-      property="description"
-      content="Designed by Ash - BitPay Browser Extension"
-      key="description"
-    />
-    <meta
-      property="twitter:image"
-      content="https://bitpay.com/assets/extension-banner.png"
-      key="twitter-image"
-    />
-    <meta
-      property="og:image"
-      content="https://bitpay.com/assets/extension-banner.png"
-      key="og-image"
-    />
-    <script
-      type="text/javascript"
-      src="https://test.bitpay.com/bitpay.min.js"
-    ></script>
-  </Head>
-);
+import { BitPayExtHead } from "../../../components/seo-heads";
 
 const BitPayExtension: React.FC = () => (
   <>
-    {ExtensionHead}
+    {BitPayExtHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <h1 className="begin-section pt-0">BitPay Extension</h1>

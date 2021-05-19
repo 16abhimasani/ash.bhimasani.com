@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExtensionHead } from "./index";
 import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import Tweet from "../../../components/utils/tweet";
+import { BitPayExtHead } from "../../../components/seo-heads";
 
 const BitPayExtensionShop: React.FC = () => (
   <>
-    {ExtensionHead}
+    {BitPayExtHead}
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
       <section>

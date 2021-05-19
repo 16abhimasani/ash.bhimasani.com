@@ -5,23 +5,7 @@ import Anchor from "../../../components/utils/anchor";
 import Tweet from "../../../components/utils/tweet";
 import WideScreen from "../../../components/wide-screen/wide-screen";
 import SideBar from "../../../components/sidebar/sidebar";
-import Head from "next/head";
-
-export const MatchaHead = (
-  <Head>
-    <meta
-      property="description"
-      content="Matcha - DEX trading for the masses "
-      key="description"
-    />
-    <meta
-      property="twitter:image"
-      content="/banners/matcha-3.png"
-      key="twitter-image"
-    />
-    <meta property="og:image" content="/banners/matcha.png" key="og-image" />
-  </Head>
-);
+import { MatchaHead } from "../../../components/seo-heads";
 
 const MatchaMoolah: React.FC = () => (
   <>

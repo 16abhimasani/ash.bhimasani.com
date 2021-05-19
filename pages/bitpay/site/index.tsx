@@ -4,7 +4,7 @@ import { fadeInPage } from "../../../animations/page";
 import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
 import SideBar from "../../../components/sidebar/sidebar";
-import { BitPayHead } from "..";
+import { BitPayHead } from "../../../components/seo-heads";
 
 const BitPaySite: React.FC = () => (
   <>
