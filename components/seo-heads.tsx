@@ -113,6 +113,7 @@ export const MatchaHead = (
 export const POBHead = (
   <WebsiteHead
     title={`Ash - Proof of Beauty Studios`}
+    description={`NFT Experiences ✨. Archiving Ethereum's history w/ generative art`}
     banner={`https://hash.pob.studio/banner/saga.png`}
   />
 );
