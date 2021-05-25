@@ -67,7 +67,16 @@ const POB: React.FC = () => {
           <Tweet src="https://twitter.com/prrfbeauty/status/1386713061332078593" />
           <br />
           <br />
+          <Tweet src="https://twitter.com/rainbowdotme/status/1395810218731261959" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1395172586330460162" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/viamirror/status/1395160909300084742" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1395757706699497474" />
           <br />
           <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1394693724567973893" />
