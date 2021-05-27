@@ -5,7 +5,7 @@ export default class extends Document {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" dir="ltr">
         <Head>
           <link
             rel="shortcut icon"
@@ -35,6 +35,7 @@ export default class extends Document {
             href="/favicon/safari-pinned-tab.svg"
             color="#FF85B4"
           />
+          <link rel="shortcut icon" href="/favicon/favicon.ico" />
           <meta name="msapplication-TileColor" content="#FF85B4" />
           <meta
             name="msapplication-config"
