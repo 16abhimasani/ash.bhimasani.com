@@ -104,6 +104,9 @@ const POB: React.FC = () => {
           <Tweet src="https://twitter.com/viamirror/status/1395160909300084742" />
           <br />
           <br />
+          <Tweet src="https://twitter.com/ash_bhimasani/status/1398105628351082497" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1395757706699497474" />
           <br />
           <br />
