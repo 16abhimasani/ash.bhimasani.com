@@ -22,7 +22,7 @@ const POB: React.FC = () => {
               We are a{" "}
               <Anchor
                 content="digital experience studio"
-                href="https://pob.studio/"
+                href="https://pob.studio/projects"
                 spaceBefore
               />
               .
@@ -30,6 +30,34 @@ const POB: React.FC = () => {
             <p>
               Our first project archives Ethereum's units of history
               (transactions) with generative art.
+            </p>
+            <p>
+              <Anchor
+                content="opensea"
+                href="https://opensea.io/collection/proof-of-beauty"
+                spaceBefore
+                spaceAfter
+              />
+              |
+              <Anchor
+                content="twitter"
+                href="https://twitter.com/prrfbeauty"
+                spaceBefore
+                spaceAfter
+              />
+              |
+              <Anchor
+                content="pob.mirror.xyz"
+                href="https://pob.mirror.xyz"
+                spaceBefore
+                spaceAfter
+              />
+              |
+              <Anchor
+                content="pob.studio"
+                href="https://www.pob.studio"
+                spaceBefore
+              />
             </p>
           </div>
         </section>
