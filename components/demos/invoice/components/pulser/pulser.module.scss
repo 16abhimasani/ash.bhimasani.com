@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin pulse($width, $name, $opacity: 1) {
   animation: $name 2s linear infinite;
   @keyframes #{$name} {
@@ -30,14 +32,14 @@
     border-radius: 50%;
     $base: 100px;
     &__0 {
-      width: $base / 4;
-      height: $base / 4;
-      @include pulse($base / 4, pulse0);
+      width: math.div($base, 4);
+      height: math.div($base, 4);
+      @include pulse(math.div($base, 4), pulse0);
     }
     &__1 {
-      width: $base / 2;
-      height: $base / 2;
-      @include pulse($base / 2, pulse1);
+      width: math.div($base, 2);
+      height: math.div($base, 2);
+      @include pulse(math.div($base, 2), pulse1);
     }
     &__2 {
       width: $base;
