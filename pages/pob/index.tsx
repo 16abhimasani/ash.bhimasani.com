@@ -92,6 +92,9 @@ const POB: React.FC = () => {
         </section>
 
         <section className="begin-section wrapper-center v-align col">
+          <Tweet src="https://twitter.com/prrfbeauty/status/1403061251748532227" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1386713061332078593" />
           <br />
           <br />
@@ -102,21 +105,6 @@ const POB: React.FC = () => {
           <br />
           <br />
           <Tweet src="https://twitter.com/viamirror/status/1395160909300084742" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/ash_bhimasani/status/1398105628351082497" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/prrfbeauty/status/1395757706699497474" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/prrfbeauty/status/1394693724567973893" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/prrfbeauty/status/1392233492893810690" />
-          <br />
-          <br />
-          <Tweet src="https://twitter.com/ash_bhimasani/status/1394702095819886595" />
           <br />
           <br />
           <Tweet src="https://twitter.com/deanna_mosca/status/1392134299445436422" />
