@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo, DefaultSeoProps } from "next-seo";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
@@ -15,7 +15,7 @@ interface TagsOverride {
   description?: string;
   banner?: string;
 }
-export const DefaultTags = (custom?: TagsOverride) => ({
+export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
   title: custom?.title ?? SITE_TITLE,
   description: custom?.description ?? SITE_DESCRIPTION,
   openGraph: {
