@@ -19,9 +19,9 @@ const POB: React.FC = () => {
           <h1 className="begin-section pt-0">Proof of Beauty &nbsp;💄</h1>
           <div className="lead">
             <p>
-              We are a{" "}
+              We are an{" "}
               <Anchor
-                content="digital experience studio"
+                content="experimental token studio"
                 href="https://pob.studio/projects"
                 spaceBefore
               />
@@ -30,6 +30,10 @@ const POB: React.FC = () => {
             <p>
               Our first project archives Ethereum's units of history
               (transactions) with generative art.
+            </p>
+            <p>
+              Our second project celebrates the London network upgrade (EIP
+              1559) by fighting the gas market.
             </p>
             <p>
               <Anchor
@@ -64,6 +68,14 @@ const POB: React.FC = () => {
 
         <section className="end-section">
           <h3 className="begin-section">Projects</h3>
+          <PostBox
+            icon="/logos/pob.svg"
+            title="$LONDON &nbsp;⛽"
+            caption="Maximize your token output @ 15.59 gwei"
+            link="https://london.pob.studio/"
+            date="Summer 2021"
+            newTab
+          />
           <PostBox
             icon="/logos/pob.svg"
             title="$HASH &nbsp;#️⃣"
