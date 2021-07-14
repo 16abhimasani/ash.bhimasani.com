@@ -22,11 +22,11 @@
     "swr": "0.5.6"
   },
   "devDependencies": {
-    "@types/node": "16.0.1",
+    "@types/node": "16.3.2",
     "@types/react": "17.0.14",
     "@types/resize-observer-browser": "0.1.6",
-    "@typescript-eslint/eslint-plugin": "4.28.2",
-    "@typescript-eslint/parser": "4.28.2",
+    "@typescript-eslint/eslint-plugin": "4.28.3",
+    "@typescript-eslint/parser": "4.28.3",
     "babel-plugin-transform-define": "2.0.0",
     "eslint": "7.30.0",
     "eslint-config-airbnb": "18.2.1",

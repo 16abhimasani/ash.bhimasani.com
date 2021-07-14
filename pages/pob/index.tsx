@@ -104,6 +104,18 @@ const POB: React.FC = () => {
         </section>
 
         <section className="begin-section wrapper-center v-align col">
+          <iframe
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmemoriesbunbury%2Fposts%2F1853479958158819&show_text=true&width=500"
+            width="500"
+            height="790"
+            style={{ border: "none", overflow: "hidden" }}
+            scrolling="no"
+            frameBorder="0"
+            allowFullScreen={true}
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/prrfbeauty/status/1403061251748532227" />
           <br />
           <br />
