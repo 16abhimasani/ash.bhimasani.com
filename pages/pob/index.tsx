@@ -33,12 +33,12 @@ const POB: React.FC = () => {
             </p>
             <p>
               Our second project celebrates the London network upgrade (EIP
-              1559) by fighting the gas market.
+              1559) with a social currency, generative art mementos, and a DAO.
             </p>
             <p>
               <Anchor
                 content="opensea"
-                href="https://opensea.io/collection/proof-of-beauty"
+                href="https://app.singlelink.co/u/pob"
                 spaceBefore
                 spaceAfter
               />
@@ -70,8 +70,8 @@ const POB: React.FC = () => {
           <h3 className="begin-section">Projects</h3>
           <PostBox
             icon="/logos/pob.svg"
-            title="$LONDON &nbsp;⛽"
-            caption="Maximize your token output @ 15.59 gwei"
+            title="$LONDON &nbsp;🏙🌙💃🏻"
+            caption="Celebrating EIP 1559"
             link="https://london.pob.studio/"
             date="Summer 2021"
             newTab
@@ -85,6 +85,14 @@ const POB: React.FC = () => {
             newTab
           />
           <h5 className="begin-section">Releases</h5>
+          <PostBox
+            icon="/logos/pob.svg"
+            title="$LONDON Gift Shoppe"
+            caption="8888 generative art mementos"
+            link="https://london.pob.studio/shoppe"
+            date="Aug 5 2021"
+            newTab
+          />
           <PostBox
             icon="/logos/pob.svg"
             title="S1: SAGA"
@@ -104,6 +112,15 @@ const POB: React.FC = () => {
         </section>
 
         <section className="begin-section wrapper-center v-align col">
+          <Tweet src="https://twitter.com/prrfbeauty/status/1415367461591863299" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1423297575474524169" />
+          <br />
+          <br />
+          <Tweet src="https://twitter.com/prrfbeauty/status/1423294032625557506" />
+          <br />
+          <br />
           <iframe
             src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmemoriesbunbury%2Fposts%2F1853479958158819&show_text=true&width=500"
             width="500"
