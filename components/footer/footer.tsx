@@ -5,7 +5,7 @@ import classes from "./footer.module.scss";
 const Header: React.FC = () => (
   <footer className={classes.footer}>
     <div className={classes.nav}>
-      <Anchor content="Email" href="mailto:ash@bhimasani.com" />
+      <Anchor content="Email" href="mailto:16abhimasani@gmail.com" />
       <div className={classes.dot}>·</div>
       <Anchor
         content="Calendly"
