@@ -12,22 +12,12 @@ const Portfolio: React.FC = () => (
       <section className="end-section">
         <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
         <div className="lead">
+          <p>product designer & software engineer</p>
           <p>
-            I am a product designer & software engineer with special interests
-            in user experience, growth, and strategy.
-          </p>
-          <p>
-            Working on
+            currently building
             <Anchor
-              content="@pob.studio"
+              content="@prrfbeauty"
               href="https://twitter.com/prrfbeauty"
-              spaceBefore
-              spaceAfter
-            />
-            &
-            <Anchor
-              content="@coinbase.custody"
-              href="https://twitter.com/CoinbaseInsto"
               spaceBefore
             />
           </p>
@@ -39,7 +29,7 @@ const Portfolio: React.FC = () => (
         <PostBox
           icon="/logos/pob.svg"
           title="Proof of Beauty"
-          caption="NFT Experiences ✨"
+          caption="experimental web3 / nft / token projects"
           date="2021"
           link="/pob"
           newTab

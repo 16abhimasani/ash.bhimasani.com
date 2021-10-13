@@ -9,19 +9,16 @@ const Home: React.FC = () => (
   <motion.main className="body" {...fadeInPage}>
     <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
     <div className="lead end-section">
+      <p>product designer & software engineer</p>
       <p>
-        I am a product designer & software engineer with special interests in
-        user experience, growth, and strategy.
-      </p>
-      <p>
-        Building
+        co-creator
         <Anchor
-          content="@pob.studio"
+          content="@prrfbeauty"
           href="https://twitter.com/prrfbeauty"
           spaceBefore
         />
         <br />
-        Designer & engineer
+        prev
         <Anchor
           content="@coinbase"
           href="https://twitter.com/coinbase"
@@ -30,7 +27,7 @@ const Home: React.FC = () => (
         />
         |
         <Anchor
-          content="@0x"
+          content="@0xProject"
           href="https://twitter.com/0xProject"
           spaceBefore
           spaceAfter

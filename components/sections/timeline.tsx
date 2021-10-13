@@ -7,7 +7,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/pob.svg"
       title="Proof of Beauty"
-      caption="Experimental token studio"
+      caption="experimental web3 / nft / token projects"
       date="2021"
       link="/pob"
       newTab

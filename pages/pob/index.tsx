@@ -21,7 +21,7 @@ const POB: React.FC = () => {
             <p>
               We are an{" "}
               <Anchor
-                content="experimental token studio"
+                content="experimental web3 / nft / token studio"
                 href="https://pob.studio/projects"
                 spaceBefore
               />
