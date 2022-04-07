@@ -78,49 +78,66 @@ const POB: React.FC = () => {
           <h3 className="begin-section">Projects</h3>
           <PostBox
             icon="/logos/pob.svg"
-            title="PUBLICO &nbsp;🎹"
-            caption="Anthology series of crypto-art installations"
-            link="https://publico.pob.studio/"
-            date="Fall 2021"
+            title="HASH &nbsp;#️⃣"
+            caption="1 ETH TX = 1 NFT / Powered by on-chain metadata"
+            link="https://hash.pob.studio/"
+            date="2021 / 2022"
             newTab
           />
           <PostBox
             icon="/logos/pob.svg"
             title="LONDON &nbsp;🏙🌙💃🏻"
-            caption="Celebrating EIP 1559"
+            caption="Celebrating EIP-1559"
             link="https://london.pob.studio/"
             date="Summer 2021"
             newTab
           />
           <PostBox
             icon="/logos/pob.svg"
-            title="HASH &nbsp;#️⃣"
-            caption="1 ETH TX = 1 NFT / Powered by on-chain metadata"
-            link="https://hash.pob.studio/"
-            date="2021"
+            title="PUBLICO &nbsp;🎹"
+            caption="Anthology series of crypto-art installations"
+            link="https://publico.pob.studio/"
+            date="Fall 2021"
             newTab
           />
+
           <h5 className="begin-section">Releases</h5>
           <PostBox
             icon="/logos/pob.svg"
-            title="PUBLICO Open Piano"
-            caption="Enjoy the performance"
-            link="https://publico.pob.studio/piano"
-            date="Oct 8 2021"
+            title="HASH S2 HUNT"
+            caption="Happy hunting | 888 supply"
+            link="https://hash.pob.studio"
+            date="Spring 2022"
             newTab
           />
           <PostBox
             icon="/logos/pob.svg"
-            title="LONDON Gift Shoppe"
-            caption="8888 generative art mementos"
+            title="London Embers"
+            caption="The party never ends | 2000+ minted"
+            link="https://publico.pob.studio/piano"
+            date="Winter 2021"
+            newTab
+          />
+          <PostBox
+            icon="/logos/pob.svg"
+            title="Public Piano"
+            caption="Enjoy the performance | 64 supply"
+            link="https://publico.pob.studio/piano"
+            date="Fall 2021"
+            newTab
+          />
+          <PostBox
+            icon="/logos/pob.svg"
+            title="London Gift"
+            caption="Ultra sound mementos | 8888 supply"
             link="https://london.pob.studio/shoppe"
-            date="Aug 5 2021"
+            date="Summer 2021"
             newTab
           />
           <PostBox
             icon="/logos/pob.svg"
             title="HASH S1 SAGA"
-            caption="Your history | Only 10,312 will exist"
+            caption="Your history | 4037 minted"
             link="https://hash.pob.studio/"
             date="Summer 2021"
             newTab
@@ -128,9 +145,9 @@ const POB: React.FC = () => {
           <PostBox
             icon="/logos/pob.svg"
             title="HASH S0 GENESIS"
-            caption="Our history | Only 2,555 will exist"
+            caption="Our history | 2,555 supply"
             link="https://hash.pob.studio/"
-            date="Q1 2021"
+            date="Spring 2021"
             newTab
           />
         </section>
