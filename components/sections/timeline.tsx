@@ -8,7 +8,7 @@ const Timeline: React.FC = () => (
       icon="/logos/pob.svg"
       title="Proof of Beauty"
       caption="experimental web3 / nft / token projects"
-      date="2021"
+      date="2021 ~ 2022"
       link="/pob"
       newTab
     />

@@ -78,6 +78,22 @@ const POB: React.FC = () => {
           <h3 className="begin-section">Projects</h3>
           <PostBox
             icon="/logos/pob.svg"
+            title="EPICS // MERGE  &nbsp;⚡️"
+            caption="Advanced on-chain generative pixel art"
+            link="https://merge.pob.studio/"
+            date="Summer 2022"
+            newTab
+          />
+          <PostBox
+            icon="https://www.abf.dev/assets/logo-round.svg"
+            title="Absolute Brain F**k  &nbsp;🧠"
+            caption="On-chain rendering codepen. The future of NFT metadata architecture"
+            link="https://abf.dev"
+            date="2022"
+            newTab
+          />
+          <PostBox
+            icon="https://hash.pob.studio/assets/logos/hash.png"
             title="HASH &nbsp;#️⃣"
             caption="1 ETH TX = 1 NFT / Powered by on-chain metadata"
             link="https://hash.pob.studio/"
@@ -85,11 +101,19 @@ const POB: React.FC = () => {
             newTab
           />
           <PostBox
-            icon="/logos/pob.svg"
+            icon="/logos/london.png"
             title="LONDON &nbsp;🏙🌙💃🏻"
             caption="Celebrating EIP-1559"
             link="https://london.pob.studio/"
             date="Summer 2021"
+            newTab
+          />
+          <PostBox
+            icon="/logos/pob.svg"
+            title="SHOP &nbsp;🏙🌙💃🏻"
+            caption="Homebrewed web3 print service / ecommerce site"
+            link="https://shop.pob.studio/"
+            date="Winter 2021"
             newTab
           />
           <PostBox
@@ -103,7 +127,7 @@ const POB: React.FC = () => {
 
           <h5 className="begin-section">Releases</h5>
           <PostBox
-            icon="/logos/pob.svg"
+            icon="https://hash.pob.studio/assets/logos/hash.png"
             title="HASH S2 HUNT"
             caption="Happy hunting | 888 supply"
             link="https://hash.pob.studio"
@@ -111,7 +135,7 @@ const POB: React.FC = () => {
             newTab
           />
           <PostBox
-            icon="/logos/pob.svg"
+            icon="/logos/london-embers.png"
             title="London Embers"
             caption="The party never ends | 2000+ minted"
             link="https://publico.pob.studio/piano"
@@ -127,7 +151,7 @@ const POB: React.FC = () => {
             newTab
           />
           <PostBox
-            icon="/logos/pob.svg"
+            icon="/logos/london-gifts.png"
             title="London Gift"
             caption="Ultra sound mementos | 8888 supply"
             link="https://london.pob.studio/shoppe"
