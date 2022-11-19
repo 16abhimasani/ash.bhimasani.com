@@ -11,7 +11,7 @@ const Home: React.FC = () => (
     <div className="lead end-section">
       <p>product designer & software engineer</p>
       <p>
-        co-creator
+        building
         <Anchor
           content="@prrfbeauty"
           href="https://twitter.com/prrfbeauty"

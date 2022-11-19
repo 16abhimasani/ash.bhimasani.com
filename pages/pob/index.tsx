@@ -77,7 +77,7 @@ const POB: React.FC = () => {
         <section className="end-section">
           <h3 className="begin-section">Projects</h3>
           <PostBox
-            icon="/logos/pob.svg"
+            icon="/imgs/pob/merge-vfx-1.svg"
             title="EPICS // MERGE  &nbsp;⚡️"
             caption="Advanced on-chain generative pixel art"
             link="https://merge.pob.studio/"
@@ -88,7 +88,7 @@ const POB: React.FC = () => {
             icon="https://www.abf.dev/assets/logo-round.svg"
             title="Absolute Brain F**k  &nbsp;🧠"
             caption="On-chain rendering codepen. The future of NFT metadata architecture"
-            link="https://abf.dev"
+            link="https://abf.dev/app"
             date="2022"
             newTab
           />
@@ -104,7 +104,7 @@ const POB: React.FC = () => {
             icon="/logos/london.png"
             title="LONDON &nbsp;🏙🌙💃🏻"
             caption="Celebrating EIP-1559"
-            link="https://london.pob.studio/"
+            link="https://opensea.io/collection/london-gift-v2"
             date="Summer 2021"
             newTab
           />

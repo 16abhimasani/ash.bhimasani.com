@@ -14,10 +14,31 @@ const Portfolio: React.FC = () => (
         <div className="lead">
           <p>product designer & software engineer</p>
           <p>
-            currently building
+            building
             <Anchor
               content="@prrfbeauty"
               href="https://twitter.com/prrfbeauty"
+              spaceBefore
+            />
+            <br />
+            prev
+            <Anchor
+              content="@coinbase"
+              href="https://twitter.com/coinbase"
+              spaceBefore
+              spaceAfter
+            />
+            |
+            <Anchor
+              content="@0xProject"
+              href="https://twitter.com/0xProject"
+              spaceBefore
+              spaceAfter
+            />
+            |
+            <Anchor
+              content="@bitpay"
+              href="https://twitter.com/BitPay"
               spaceBefore
             />
           </p>
