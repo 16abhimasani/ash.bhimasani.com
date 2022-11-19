@@ -10,36 +10,32 @@ const Header: React.FC = () => {
   const router = useRouter();
   return (
     <header className={classes.header}>
-      <Link href="/about">
-        <a
-          className={cx({
-            link: true,
-            link__active: router.pathname === "/about",
-          })}
-          style={{ textAlign: "left" }}
-        >
-          <h6>About Me</h6>
-        </a>
+      <Link
+        href="/about"
+        className={cx({
+          link: true,
+          link__active: router.pathname === "/about",
+        })}
+        style={{ textAlign: "left" }}
+      >
+        <h6>About Me</h6>
       </Link>
       <Link href="/">
-        <a>
-          <img
-            className={classes.logo}
-            src="/logos/ab-logo.svg"
-            alt="Ash's Logo"
-          />
-        </a>
+        <img
+          className={classes.logo}
+          src="/logos/ab-logo.svg"
+          alt="Ash's Logo"
+        />
       </Link>
-      <Link href="/portfolio">
-        <a
-          className={cx({
-            link: true,
-            link__active: router.pathname === "/portfolio",
-          })}
-          style={{ textAlign: "right" }}
-        >
-          <h6>Portfolio</h6>
-        </a>
+      <Link
+        href="/portfolio"
+        className={cx({
+          link: true,
+          link__active: router.pathname === "/portfolio",
+        })}
+        style={{ textAlign: "right" }}
+      >
+        <h6>Portfolio</h6>
       </Link>
     </header>
   );

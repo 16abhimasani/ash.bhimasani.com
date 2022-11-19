@@ -42,32 +42,28 @@ const SideBar: React.FC = () => {
       <>
         {route.header ? (
           <div className={classes.major}>
-            <Link href="/">
-              <a style={{ opacity: theme.dark ? 0.4 : 0.25 }}>
-                Ash &nbsp;/&nbsp;&nbsp;
-              </a>
+            <Link href="/" style={{ opacity: theme.dark ? 0.4 : 0.25 }}>
+              Ash &nbsp;/&nbsp;&nbsp;
             </Link>
-            <Link href={route.path}>
-              <a
-                target={isLink(route.path) ? "_blank" : ""}
-                rel="noopener noreferrer"
-              >
-                {route.label}
-              </a>
-            </Link>
-          </div>
-        ) : (
-          <Link href={route.path}>
-            <a
-              className={cx({
-                minor: true,
-                active: router.pathname === route.path,
-              })}
+            <Link
+              href={route.path}
               target={isLink(route.path) ? "_blank" : ""}
               rel="noopener noreferrer"
             >
               {route.label}
-            </a>
+            </Link>
+          </div>
+        ) : (
+          <Link
+            href={route.path}
+            className={cx({
+              minor: true,
+              active: router.pathname === route.path,
+            })}
+            target={isLink(route.path) ? "_blank" : ""}
+            rel="noopener noreferrer"
+          >
+            {route.label}
           </Link>
         )}
 

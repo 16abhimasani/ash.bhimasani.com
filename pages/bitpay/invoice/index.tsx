@@ -155,15 +155,13 @@ const BitPayInvoice: React.FC = () => (
         </div>
       </div>
       <Link href="/bitpay/invoice/demos">
-        <a>
-          <h4
-            className="begin-section"
-            style={{ cursor: "pointer", color: "#1f7af7" }}
-            id="demos"
-          >
-            V4 Interactive Demos
-          </h4>
-        </a>
+        <h4
+          className="begin-section"
+          style={{ cursor: "pointer", color: "#1f7af7" }}
+          id="demos"
+        >
+          V4 Interactive Demos
+        </h4>
       </Link>
       <section className="begin-section end-section wrapper-center">
         <InvoiceUniversalModeDemo />

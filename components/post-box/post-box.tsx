@@ -96,7 +96,15 @@ const PostBox: React.FC<{
     </motion.div>
   );
   return (
-    <>{link.includes("://") ? <> {Box} </> : <Link href={link}>{Box}</Link>}</>
+    <>
+      {link.includes("://") ? (
+        <> {Box} </>
+      ) : (
+        <Link legacyBehavior href={link}>
+          {Box}
+        </Link>
+      )}
+    </>
   );
 };
 
