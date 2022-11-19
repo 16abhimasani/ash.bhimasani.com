@@ -38,7 +38,7 @@ const Portfolio: React.FC = () => (
           icon="https://www.abf.dev/assets/logo-round.svg"
           title="Absolute Brain F**k  &nbsp;🧠"
           caption="On-chain rendering CodePen"
-          link="https://abf.dev"
+          link="https://abf.dev/app"
           date="Q2 2022"
           newTab
         />
