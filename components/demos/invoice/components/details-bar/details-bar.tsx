@@ -1,10 +1,10 @@
-import React, { useState, useRef, useCallback } from "react";
-import classes from "./details-bar.module.scss";
-import { motion } from "framer-motion";
 import classNames from "classnames/bind";
-const cx = classNames.bind(classes);
+import { motion } from "framer-motion";
+import React, { useCallback, useRef, useState } from "react";
 import copyUtil from "../../../../../utils/copy-to-clipboard";
 import BitpayLogo from "../../../extension/bp-logo/bp-logo";
+import classes from "./details-bar.module.scss";
+const cx = classNames.bind(classes);
 
 const detailsTransition = {
   transition: {

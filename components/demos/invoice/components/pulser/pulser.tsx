@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./pulser.module.scss";
 import classNames from "classnames/bind";
+import React from "react";
 import { hexToRGB } from "../../../../../utils/utils";
+import classes from "./pulser.module.scss";
 const cx = classNames.bind(classes);
 
 const InvoicePulser: React.FC<{ icon: string; theme: string }> = ({

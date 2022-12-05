@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import classNames from "classnames/bind";
-import classes from "./ext-nav.module.scss";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
+import classes from "./ext-nav.module.scss";
 
 import BitpayLogo from "../bp-logo/bp-logo";
 import ExtensionBackButton from "./back-button/back-button";

@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { ThemeContext } from "../_app";
+import React, { useContext } from "react";
 import { fadeInPage } from "../../animations/page";
-import Anchor from "../../components/utils/anchor";
 import PostBox from "../../components/post-box/post-box";
-import Tweet from "../../components/utils/tweet";
-import SideBar from "../../components/sidebar/sidebar";
 import { ZeroXHead } from "../../components/seo-heads";
+import SideBar from "../../components/sidebar/sidebar";
+import Anchor from "../../components/utils/anchor";
+import Tweet from "../../components/utils/tweet";
+import { ThemeContext } from "../_app";
 
 const ZeroX: React.FC = () => {
   const theme = useContext(ThemeContext);

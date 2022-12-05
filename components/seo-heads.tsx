@@ -1,14 +1,14 @@
-import React from "react";
 import { DefaultSeo, DefaultSeoProps } from "next-seo";
+import Head from "next/head";
+import React from "react";
 import {
-  SITE_TITLE,
+  BANNER_ROOT,
+  OG_BANNER_LINK,
   SITE_DESCRIPTION,
   SITE_LINK,
-  OG_BANNER_LINK,
+  SITE_TITLE,
   TWITTER_HANDLE,
-  BANNER_ROOT,
 } from "../utils/constants";
-import Head from "next/head";
 
 interface TagsOverride {
   title?: string;

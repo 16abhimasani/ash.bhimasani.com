@@ -1,5 +1,5 @@
-import React from "react";
 import NextLink from "next/link";
+import React from "react";
 
 const assetPrefix = process.env.BACKEND_URL;
 

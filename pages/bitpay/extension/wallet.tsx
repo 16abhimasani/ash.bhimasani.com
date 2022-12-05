@@ -1,9 +1,9 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
+import { BitPayExtHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import { BitPayExtHead } from "../../../components/seo-heads";
 
 const BitPayExtensionWallet: React.FC = () => (
   <>

@@ -1,18 +1,18 @@
-import React, { useCallback, useState } from "react";
-import classes from "../invoice.module.scss";
 import { motion } from "framer-motion";
+import React, { useCallback, useState } from "react";
 import { wait } from "../../../../utils/utils";
+import classes from "../invoice.module.scss";
 
+import InvoiceCopySheet from "../components/copy/copy-sheet";
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
 import InvoiceLaunchBar from "../components/launch-bar/launch-bar";
+import InvoiceQR from "../components/qr/qr";
 import InvoiceSuperToast, {
   closeToast,
   handleToast,
   SuperToastController,
 } from "../components/super-toast/super-toast";
 import InvoiceTimer from "../components/timer/timer";
-import InvoiceQR from "../components/qr/qr";
-import InvoiceCopySheet from "../components/copy/copy-sheet";
 
 const BIP21_URI = (): string => {
   const address = "bitcoincash:qp4m6jn77h4jyf5rz8kflx2p55xtcthrpyau7x02ej";

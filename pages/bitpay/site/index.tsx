@@ -1,10 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
-import Anchor from "../../../components/utils/anchor";
 import PostBox from "../../../components/post-box/post-box";
-import SideBar from "../../../components/sidebar/sidebar";
 import { BitPayHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
+import Anchor from "../../../components/utils/anchor";
 
 const BitPaySite: React.FC = () => (
   <>

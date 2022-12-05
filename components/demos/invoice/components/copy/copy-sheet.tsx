@@ -1,8 +1,8 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import classes from "./copy.module.scss";
-import InvoiceCopyField from "./copy-field";
 import InvoiceOverlay from "../overlay/overlay";
+import InvoiceCopyField from "./copy-field";
+import classes from "./copy.module.scss";
 
 const animateSheet = {
   visible: {

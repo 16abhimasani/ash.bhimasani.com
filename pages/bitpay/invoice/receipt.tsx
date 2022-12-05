@@ -1,10 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
-import SideBar from "../../../components/sidebar/sidebar";
-import WideScreen from "../../../components/wide-screen/wide-screen";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
 import { BitPayInvoiceHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
+import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayInvoiceReceipt: React.FC = () => (
   <>

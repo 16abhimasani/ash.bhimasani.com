@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import classes from "./back-button.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
 
 const ExtensionBackButton: React.FC<{ show: boolean; onClick: () => void }> = ({
   show,

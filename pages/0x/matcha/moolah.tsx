@@ -1,11 +1,11 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
+import { MatchaHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
 import Tweet from "../../../components/utils/tweet";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import SideBar from "../../../components/sidebar/sidebar";
-import { MatchaHead } from "../../../components/seo-heads";
 
 const MatchaMoolah: React.FC = () => (
   <>

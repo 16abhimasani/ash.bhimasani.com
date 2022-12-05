@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
-import classes from "./ext-amount.module.scss";
 import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import classes from "./ext-amount.module.scss";
 
-import ExtensionNavDemo from "../nav/ext-nav";
 import PayWithBitpayButton from "../bp-button/bp-button";
+import ExtensionNavDemo from "../nav/ext-nav";
 
 const shkAmp = 12;
 const precision = 2;

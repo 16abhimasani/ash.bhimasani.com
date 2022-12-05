@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
 import { AnimationProps, motion, MotionStyle } from "framer-motion";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../pages/_app";
 import Link from "../utils/link";
 
-import classes from "./post-box.module.scss";
 import classNames from "classnames/bind";
+import classes from "./post-box.module.scss";
 const cx = classNames.bind(classes);
 
 interface LogoConfig extends AnimationProps {

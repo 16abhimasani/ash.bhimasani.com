@@ -1,10 +1,10 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import classes from "../invoice.module.scss";
-import { motion } from "framer-motion";
 
+import { FIAT, InvoiceFiatBalances } from "../components/balances/balances";
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
 import InvoiceTimer from "../components/timer/timer";
-import { InvoiceFiatBalances, FIAT } from "../components/balances/balances";
 
 const InvoiceFiatConnectModeDemo: React.FC = () => {
   const [SELECTED_CURRENCY, SET_CURRENCY] = useState(FIAT[0]);

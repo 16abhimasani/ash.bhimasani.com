@@ -1,7 +1,7 @@
+import classNames from "classnames/bind";
+import { motion } from "framer-motion";
 import React from "react";
 import classes from "./launch-bar.module.scss";
-import { motion } from "framer-motion";
-import classNames from "classnames/bind";
 const cx = classNames.bind(classes);
 
 const animateLaunchBar = {

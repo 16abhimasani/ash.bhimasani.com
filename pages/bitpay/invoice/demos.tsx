@@ -1,24 +1,24 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
-import Anchor from "../../../components/utils/anchor";
-import SideBar from "../../../components/sidebar/sidebar";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
-import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
+import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceFiatConnectModeDemo from "../../../components/demos/invoice/pay/invoice-fiat";
-import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
+import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
+import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
+import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
+import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
+import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
-import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
-import InvoiceVerifyDemo from "../../../components/demos/invoice/select/invoice-verify";
-import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
-import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
-import InvoiceRefundAddressDemo from "../../../components/demos/invoice/receipt/invoice-refund";
-import InvoiceExpiredDemo from "../../../components/demos/invoice/receipt/invoice-expired";
 import { BitPayInvoiceHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
+import Anchor from "../../../components/utils/anchor";
 
 const BitPayInvoiceDemos: React.FC = () => (
   <>

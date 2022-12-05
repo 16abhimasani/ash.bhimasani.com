@@ -1,16 +1,16 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
-import Anchor from "../../../components/utils/anchor";
-import SideBar from "../../../components/sidebar/sidebar";
-import WideScreen from "../../../components/wide-screen/wide-screen";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
-import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
-import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
-import Tweet from "../../../components/utils/tweet";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
 import InvoicePayProModeDemo from "../../../components/demos/invoice/pay/invoice-paypro";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
 import { BitPayInvoiceHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
+import Anchor from "../../../components/utils/anchor";
+import Tweet from "../../../components/utils/tweet";
+import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayInvoicePay: React.FC = () => (
   <>

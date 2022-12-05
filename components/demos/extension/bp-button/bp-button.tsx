@@ -1,7 +1,7 @@
-import React from "react";
 import classNames from "classnames/bind";
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 import classes from "./bp-button.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
 import PayWithBitpayImage from "./pay-with-bitpay-image";
 
 const cx = classNames.bind(classes);

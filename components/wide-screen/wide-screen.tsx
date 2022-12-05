@@ -1,3 +1,13 @@
+import classNames from "classnames/bind";
+import {
+  CarouselProvider,
+  DotGroup,
+  Image as ImageWithoutZoom,
+  ImageWithZoom,
+  Slide,
+  Slider,
+  SliderProps,
+} from "pure-react-carousel";
 import React, {
   useCallback,
   useContext,
@@ -5,19 +15,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import {
-  CarouselProvider,
-  DotGroup,
-  Slider,
-  SliderProps,
-  Slide,
-  Image as ImageWithoutZoom,
-  ImageWithZoom,
-} from "pure-react-carousel";
+import { ThemeContext } from "../../pages/_app";
 import { useRefSize } from "../../utils/hooks";
 import classes from "./wide-screen.module.scss";
-import classNames from "classnames/bind";
-import { ThemeContext } from "../../pages/_app";
 const cx = classNames.bind(classes);
 
 interface SliderInterfaceEnhanced extends SliderProps {

@@ -1,8 +1,8 @@
-import React, { useState, useCallback } from "react";
-import classes from "./copy.module.scss";
 import { motion } from "framer-motion";
+import React, { useCallback, useState } from "react";
 import copyUtil from "../../../../../utils/copy-to-clipboard";
 import { wait } from "../../../../../utils/utils";
+import classes from "./copy.module.scss";
 
 const InvoiceCopyField: React.FC<{
   label: string;

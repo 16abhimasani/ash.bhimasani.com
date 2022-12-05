@@ -1,15 +1,15 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
-import Anchor from "../../../components/utils/anchor";
-import SideBar from "../../../components/sidebar/sidebar";
-import WideScreen from "../../../components/wide-screen/wide-screen";
+import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
+import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
 import InvoiceSelectWalletPairDemo from "../../../components/demos/invoice/select/invoice-wallet-pair";
-import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
-import Tweet from "../../../components/utils/tweet";
-import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import { BitPayInvoiceHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
+import Anchor from "../../../components/utils/anchor";
+import Tweet from "../../../components/utils/tweet";
+import WideScreen from "../../../components/wide-screen/wide-screen";
 
 const BitPayInvoiceWalletSelection: React.FC = () => (
   <>

@@ -1,5 +1,5 @@
-import { useEffect, useState, useLayoutEffect, useCallback } from "react";
 import { ResizeObserver as Ponyfill } from "@juggle/resize-observer";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 // gets the current size of browser window
 export const useWindowSize = (): { width: number; height: number } => {

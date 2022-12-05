@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import classNames from "classnames/bind";
 import { useRouter } from "next/router";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../pages/_app";
 import Link from "../utils/link";
-import classNames from "classnames/bind";
 import classes from "./sidebar.module.scss";
 const cx = classNames.bind(classes);
 
-import BitPayNav from "./navs/bitpay";
 import ZeroXNav from "./navs/0x";
+import BitPayNav from "./navs/bitpay";
 import Portfolio from "./navs/portfolio";
 
 interface PagePath {

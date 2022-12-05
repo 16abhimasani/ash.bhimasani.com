@@ -1,11 +1,11 @@
-import React from "react";
-import classes from "../select/invoice-select.module.scss";
-import invoiceClasses from "../invoice.module.scss";
 import { motion } from "framer-motion";
+import React from "react";
+import invoiceClasses from "../invoice.module.scss";
+import classes from "../select/invoice-select.module.scss";
 
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
-import InvoiceTimer from "../components/timer/timer";
 import InvoicePulser from "../components/pulser/pulser";
+import InvoiceTimer from "../components/timer/timer";
 
 const InvoiceAwaitingConfDemo: React.FC<{ type: string }> = ({ type }) => {
   const theme = (): string => {

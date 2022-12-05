@@ -1,8 +1,8 @@
-import React from "react";
-import classes from "./super-toast.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
-import { wait } from "../../../../../utils/utils";
 import classNames from "classnames/bind";
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { wait } from "../../../../../utils/utils";
+import classes from "./super-toast.module.scss";
 const cx = classNames.bind(classes);
 
 const InvoiceSuperToast: React.FC<{

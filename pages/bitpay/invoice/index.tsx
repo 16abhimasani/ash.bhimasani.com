@@ -1,16 +1,16 @@
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 import { fadeInPage } from "../../../animations/page";
+import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
+import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
+import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
+import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
+import PostBox from "../../../components/post-box/post-box";
+import { BitPayInvoiceHead } from "../../../components/seo-heads";
+import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
 import Link from "../../../components/utils/link";
-import PostBox from "../../../components/post-box/post-box";
-import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
-import InvoiceUniversalModeDemo from "../../../components/demos/invoice/pay/invoice-universal";
-import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
-import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
-import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
-import { BitPayInvoiceHead } from "../../../components/seo-heads";
 
 const BitPayInvoice: React.FC = () => (
   <>

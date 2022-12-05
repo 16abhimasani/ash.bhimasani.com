@@ -1,7 +1,7 @@
-import React from "react";
-import { useRouter } from "next/router";
-import Link from "../utils/link";
 import classNames from "classnames/bind";
+import { useRouter } from "next/router";
+import React from "react";
+import Link from "../utils/link";
 import classes from "./header.module.scss";
 
 const cx = classNames.bind(classes);

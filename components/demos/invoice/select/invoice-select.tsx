@@ -1,10 +1,10 @@
-import React, { useState, useCallback, useRef } from "react";
-import classes from "./invoice-select.module.scss";
-import invoiceClasses from "../invoice.module.scss";
-import buttonClasses from "../components/button/button.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import React, { useCallback, useRef, useState } from "react";
+import buttonClasses from "../components/button/button.module.scss";
+import invoiceClasses from "../invoice.module.scss";
+import classes from "./invoice-select.module.scss";
 
-import { RECENT, POPULAR, WALLETS, CURRENCIES } from "./wallets";
+import { CURRENCIES, POPULAR, RECENT, WALLETS } from "./wallets";
 
 const animateSelected = {
   initial: { borderRadius: 10 },

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import classNames from "classnames/bind";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
 import classes from "./button.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
 
 const cx = classNames.bind(classes);
 

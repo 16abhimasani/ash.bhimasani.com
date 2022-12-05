@@ -1,18 +1,18 @@
+import { motion } from "framer-motion";
 import React, {
   Dispatch,
   SetStateAction,
-  useState,
   useCallback,
   useRef,
+  useState,
 } from "react";
 import classes from "./balances.module.scss";
-import { motion } from "framer-motion";
 
-import InvoiceSelected from "./selected";
+import { useRefSize } from "../../../../../utils/hooks";
+import { wait } from "../../../../../utils/utils";
 import InvoiceButton from "../button/button";
 import InvoiceOverlay from "../overlay/overlay";
-import { wait } from "../../../../../utils/utils";
-import { useRefSize } from "../../../../../utils/hooks";
+import InvoiceSelected from "./selected";
 
 export const InvoiceCryptoBalances: React.FC<{
   selected: CryptoBalanceInterface;

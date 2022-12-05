@@ -1,9 +1,9 @@
-import React from "react";
-import classes from "./invoice-select.module.scss";
-import invoiceClasses from "../invoice.module.scss";
 import { motion } from "framer-motion";
-import { WALLETS } from "./wallets";
+import React from "react";
 import InvoiceButton from "../components/button/button";
+import invoiceClasses from "../invoice.module.scss";
+import classes from "./invoice-select.module.scss";
+import { WALLETS } from "./wallets";
 
 const InvoiceSelectOauthPairDemo: React.FC<{ type: string }> = ({ type }) => {
   return (

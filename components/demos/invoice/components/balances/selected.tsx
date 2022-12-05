@@ -1,8 +1,8 @@
-import React, { useCallback, useRef } from "react";
-import classes from "./balances.module.scss";
-import { motion } from "framer-motion";
 import classNames from "classnames/bind";
+import { motion } from "framer-motion";
+import React, { useCallback, useRef } from "react";
 import { useRefSize } from "../../../../../utils/hooks";
+import classes from "./balances.module.scss";
 const cx = classNames.bind(classes);
 
 const animateChevron = {

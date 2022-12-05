@@ -1,17 +1,17 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import classes from "../invoice.module.scss";
-import { motion } from "framer-motion";
 
+import copyUtil from "../../../../utils/copy-to-clipboard";
 import InvoiceDetailsBar from "../components/details-bar/details-bar";
 import InvoiceLaunchBar from "../components/launch-bar/launch-bar";
+import InvoiceQR from "../components/qr/qr";
 import InvoiceSuperToast, {
   closeToast,
   handleToast,
   SuperToastController,
 } from "../components/super-toast/super-toast";
 import InvoiceTimer from "../components/timer/timer";
-import InvoiceQR from "../components/qr/qr";
-import copyUtil from "../../../../utils/copy-to-clipboard";
 
 const paymentLink = "https://ash.bhimasani.com/bitpay/invoice";
 const BIP21_URI = (): string => {

@@ -1,7 +1,7 @@
-import React from "react";
-import classes from "./invoice-select.module.scss";
-import invoiceClasses from "../invoice.module.scss";
 import { motion } from "framer-motion";
+import React from "react";
+import invoiceClasses from "../invoice.module.scss";
+import classes from "./invoice-select.module.scss";
 import { WALLETS } from "./wallets";
 
 const InvoiceSelectWalletPairDemo: React.FC<{ type: string }> = ({ type }) => {

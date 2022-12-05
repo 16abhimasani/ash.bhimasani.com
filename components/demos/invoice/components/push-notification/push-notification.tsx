@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import classes from "./push-notification.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
 
 const animateToast = {
   visible: {

@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
 import classNames from "classnames/bind";
-import classes from "./code-box.module.scss";
 import { motion } from "framer-motion";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import copyUtil from "../../../../../utils/copy-to-clipboard";
 import { wait } from "../../../../../utils/utils";
+import classes from "./code-box.module.scss";
 
 const cx = classNames.bind(classes);
 

@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import React from "react";
 import classes from "./ext-receipt.module.scss";
-import { motion } from "framer-motion";
 
 import ExtensionNavDemo from "../nav/ext-nav";
 import ExtensionCodeBox from "./code-box/code-box";

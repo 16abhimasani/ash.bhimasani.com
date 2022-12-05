@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./copy.module.scss";
 import InvoiceCopyField from "./copy-field";
+import classes from "./copy.module.scss";
 
 const InvoiceCopyBar: React.FC<{
   fields: { label: string; value: string; toastTitle: string }[];
