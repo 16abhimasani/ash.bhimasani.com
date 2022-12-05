@@ -73,3 +73,9 @@
     display: block;
   }
 }
+
+.hide-mobile {
+  @include mobile {
+    display: none;
+  }
+}

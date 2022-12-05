@@ -110,7 +110,7 @@ const POB: React.FC = () => {
           />
           <PostBox
             icon="/logos/pob.svg"
-            title="SHOP &nbsp;🏙🌙💃🏻"
+            title="SHOP &nbsp;🛍️"
             caption="Homebrewed web3 print service / ecommerce site"
             link="https://shop.pob.studio/"
             date="Winter 2021"

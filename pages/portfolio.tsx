@@ -4,46 +4,13 @@ import { fadeInPage } from "../animations/page";
 import Anchor from "../components/utils/anchor";
 import PostBox from "../components/post-box/post-box";
 import SideBar from "../components/sidebar/sidebar";
+import Intro from "../components/sections/intro";
 
 const Portfolio: React.FC = () => (
   <>
     <SideBar />
     <motion.main className="body" {...fadeInPage}>
-      <section className="end-section">
-        <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
-        <div className="lead">
-          <p>product designer & software engineer</p>
-          <p>
-            building
-            <Anchor
-              content="@prrfbeauty"
-              href="https://twitter.com/prrfbeauty"
-              spaceBefore
-            />
-            <br />
-            prev
-            <Anchor
-              content="@coinbase"
-              href="https://twitter.com/coinbase"
-              spaceBefore
-              spaceAfter
-            />
-            |
-            <Anchor
-              content="@0xProject"
-              href="https://twitter.com/0xProject"
-              spaceBefore
-              spaceAfter
-            />
-            |
-            <Anchor
-              content="@bitpay"
-              href="https://twitter.com/BitPay"
-              spaceBefore
-            />
-          </p>
-        </div>
-      </section>
+      <Intro />
 
       <section>
         <h3 className="begin-section">Cool Stuff</h3>

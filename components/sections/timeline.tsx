@@ -5,9 +5,17 @@ const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
     <PostBox
+      icon="/logos/phantom.svg"
+      title="Phantom"
+      caption="Software Engineer"
+      date="2023"
+      link="https://www.phantom.app/"
+      newTab
+    />
+    <PostBox
       icon="/logos/pob.svg"
       title="Proof of Beauty"
-      caption="experimental web3 / nft / token projects"
+      caption="Experimental web3 / NFT / token projects"
       date="2021 ~ 2022"
       link="/pob"
       newTab
@@ -17,13 +25,13 @@ const Timeline: React.FC = () => (
       title="Coinbase"
       caption="Software Engineer"
       date="Summer 2021"
-      link="https://www.coinbase.com/"
+      link="https://www.coinbase.com/prime/custody"
       newTab
     />
     <PostBox
       icon="/logos/0x.svg"
       title="0x Labs"
-      caption="Software Engineer & Product Designer"
+      caption="Software Engineer"
       date="Spring 2021"
       link="/0x"
     />
