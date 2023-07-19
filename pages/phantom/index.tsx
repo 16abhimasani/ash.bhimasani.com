@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
-import React, { useContext } from "react";
+import React from "react";
 import { fadeInPage } from "../../animations/page";
 import PostBox from "../../components/post-box/post-box";
 import { PhantomHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
 import Anchor from "../../components/utils/anchor";
 import Tweet from "../../components/utils/tweet";
-import { ThemeContext } from "../_app";
 
 const Phantom: React.FC = () => {
-  const theme = useContext(ThemeContext);
   return (
     <>
       {PhantomHead}
