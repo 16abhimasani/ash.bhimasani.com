@@ -117,3 +117,10 @@ export const POBHead = (
     banner={`${BANNER_ROOT}/pob-holo.jpg`}
   />
 );
+
+export const PhantomHead = (
+  <WebsiteHead
+    title={`Ash - Phantom - Future of Self-Custody`}
+    banner={`${BANNER_ROOT}/phantom.jpg`}
+  />
+);

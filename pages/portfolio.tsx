@@ -14,6 +14,13 @@ const Portfolio: React.FC = () => (
       <section>
         <h3 className="begin-section">Cool Stuff</h3>
         <PostBox
+          icon="/logos/phantom.svg"
+          title="Phantom"
+          caption="Product Engineer"
+          date="2023"
+          link="/phantom"
+        />
+        <PostBox
           icon="/imgs/pob/merge-vfx-1.svg"
           title="EPICS // MERGE  &nbsp;⚡️"
           caption="Advanced on-chain gen-art & VFX"

@@ -7,10 +7,9 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/phantom.svg"
       title="Phantom"
-      caption="Software Engineer"
+      caption="Product Engineer"
       date="2023"
-      link="https://www.phantom.app/"
-      newTab
+      link="/phantom"
     />
     <PostBox
       icon="/logos/pob.svg"
@@ -18,7 +17,6 @@ const Timeline: React.FC = () => (
       caption="Experimental web3 / NFT / token projects"
       date="2021 ~ 2022"
       link="/pob"
-      newTab
     />
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
