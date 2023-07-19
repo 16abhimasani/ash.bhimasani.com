@@ -12,7 +12,7 @@ import InvoiceTimer from "../components/timer/timer";
 
 const InvoiceConnectModeDemo: React.FC<{ web3?: boolean }> = ({ web3 }) => {
   const [SELECTED_CURRENCY, SET_CURRENCY] = useState(
-    web3 ? WEB3[0] : EXCHANGE[0]
+    web3 ? WEB3[0] : EXCHANGE[0],
   );
   return (
     <div>

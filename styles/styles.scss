@@ -12,7 +12,9 @@ body {
   overflow-x: hidden;
   scroll-behavior: "smooth";
   background-color: white;
-  transition: background-color 400ms ease, color 400ms ease;
+  transition:
+    background-color 400ms ease,
+    color 400ms ease;
 }
 
 .layout {

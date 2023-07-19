@@ -64,7 +64,7 @@ export const useRefSize = (ref: React.RefObject<HTMLElement>): RefSize => {
 
 export const useLocalStorage = (
   key: string,
-  initialValue: unknown
+  initialValue: unknown,
 ): [storedValue: unknown, setValue: (value: unknown) => void] => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once

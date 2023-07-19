@@ -25,7 +25,9 @@ $dayBtn: #ff85b4;
       position: relative;
       box-shadow: inset 16px -16px 0 0 $nightBtn;
       transform: scale(1) rotate(-2deg);
-      transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
+      transition:
+        box-shadow 0.5s ease 0s,
+        transform 0.4s ease 0.1s;
       &:before {
         content: "";
         width: inherit;
@@ -45,9 +47,15 @@ $dayBtn: #ff85b4;
         position: absolute;
         top: 50%;
         left: 50%;
-        box-shadow: 0 -23px 0 $dayBtn, 0 23px 0 $dayBtn, 23px 0 0 $dayBtn,
-          -23px 0 0 $dayBtn, 15px 15px 0 $dayBtn, -15px 15px 0 $dayBtn,
-          15px -15px 0 $dayBtn, -15px -15px 0 $dayBtn;
+        box-shadow:
+          0 -23px 0 $dayBtn,
+          0 23px 0 $dayBtn,
+          23px 0 0 $dayBtn,
+          -23px 0 0 $dayBtn,
+          15px 15px 0 $dayBtn,
+          -15px 15px 0 $dayBtn,
+          15px -15px 0 $dayBtn,
+          -15px -15px 0 $dayBtn;
         transform: scale(0);
         transition: all 0.3s ease;
       }
@@ -55,7 +63,9 @@ $dayBtn: #ff85b4;
     &:checked + div {
       box-shadow: inset 32px -32px 0 0 $nightBtn;
       transform: scale(0.5) rotate(0deg);
-      transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
+      transition:
+        transform 0.3s ease 0.1s,
+        box-shadow 0.2s ease 0s;
       &:before {
         background: $dayBtn;
         transition: background-color 0.3s ease 0.1s;

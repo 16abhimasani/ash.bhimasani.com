@@ -26,7 +26,7 @@ export const InvoiceCryptoBalances: React.FC<{
       await wait(350);
       select(balance);
     },
-    []
+    [],
   );
   return (
     <>

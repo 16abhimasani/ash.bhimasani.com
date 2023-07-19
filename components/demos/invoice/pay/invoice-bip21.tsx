@@ -20,7 +20,7 @@ const BIP21_URI = (): string => {
   const label = "Ash Bhimasani";
   const message = "🍓🤠🚀";
   return `${address}?amount=${amount}&label=${encodeURI(
-    label
+    label,
   )}&message=${encodeURI(message)}`;
 };
 

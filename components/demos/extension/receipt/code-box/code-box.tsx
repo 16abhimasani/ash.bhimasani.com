@@ -36,13 +36,13 @@ const ExtensionCodeBox: React.FC<{ code: string; label: string }> = ({
     (val: boolean) => (): void => {
       setHovering(val);
     },
-    []
+    [],
   );
   useEffect(
     () => (): void => {
       mountedRef.current = false;
     },
-    []
+    [],
   );
   return (
     <div className={classes.box__wrapper}>

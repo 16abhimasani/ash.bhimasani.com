@@ -7,7 +7,7 @@ export const removeProtocolAndWww = (url: string): string =>
 export async function post(
   url: string,
   params: unknown,
-  opts?: { headers?: { [name: string]: string } }
+  opts?: { headers?: { [name: string]: string } },
 ): Promise<unknown> {
   const response = await fetch(url, {
     method: "POST",

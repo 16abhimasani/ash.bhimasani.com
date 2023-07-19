@@ -154,7 +154,7 @@ export interface SuperToastController {
 export const handleToast = async (
   content: SuperToastController,
   TOAST_CONTENT: SuperToastController,
-  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>
+  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>,
 ): Promise<void> => {
   if (TOAST_CONTENT) {
     closeToast(TOAST_CONTENT, SET_TOAST);
@@ -166,7 +166,7 @@ export const handleToast = async (
 };
 export const closeToast = (
   TOAST_CONTENT: SuperToastController,
-  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>
+  SET_TOAST: React.Dispatch<React.SetStateAction<SuperToastController>>,
 ): void => {
   SET_TOAST({ ...TOAST_CONTENT, showToast: false });
 };

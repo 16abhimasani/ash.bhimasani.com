@@ -64,19 +64,19 @@ const InvoiceSelectDemo: React.FC = () => {
   };
   const Wallets = useCallback((): string[] => {
     return Object.keys(WALLETS).sort((a, b) =>
-      WALLETS[a].displayName.localeCompare(WALLETS[b].displayName)
+      WALLETS[a].displayName.localeCompare(WALLETS[b].displayName),
     );
   }, [WALLETS]);
   const searchResults = useCallback((): string[] => {
     if (scrollRef && scrollRef.current) scrollRef.current.scrollTop = 0;
     return currencyFilter
       ? Wallets().filter((wallet: string) =>
-          WALLETS[wallet].currencies.includes(currencyFilter.code)
+          WALLETS[wallet].currencies.includes(currencyFilter.code),
         )
       : Wallets().filter((wallet: string) =>
           WALLETS[wallet].displayName
             .toLocaleLowerCase()
-            .includes(inputValue.toLocaleLowerCase())
+            .includes(inputValue.toLocaleLowerCase()),
         );
   }, [inputValue, currencyFilter]);
   return (
@@ -155,13 +155,13 @@ const InvoiceSelectDemo: React.FC = () => {
                       icon={WALLETS[wallet].icon}
                     />
                   </React.Fragment>
-                )
+                ),
               )}
               <div className={classes.wallets__title}>Other Wallets</div>
               {Wallets()
                 .filter(
                   (wallet) =>
-                    !RECENT.includes(wallet) && !POPULAR.includes(wallet)
+                    !RECENT.includes(wallet) && !POPULAR.includes(wallet),
                 )
                 .map((wallet) => (
                   <React.Fragment key={`others-${wallet}`}>
