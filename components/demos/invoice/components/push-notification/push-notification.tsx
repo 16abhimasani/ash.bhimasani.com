@@ -36,7 +36,7 @@ const animateToast = {
 
 const InvoicePushNotification: React.FC<{ open: boolean }> = ({ open }) => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       {open && (
         <motion.div
           className={classes.cell}

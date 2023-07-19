@@ -76,7 +76,7 @@ const PayWithBitpayButton: React.FC<{
   return (
     <>
       <div className={classes.button}>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           {awaiting ? (
             <motion.div
               className={cx({

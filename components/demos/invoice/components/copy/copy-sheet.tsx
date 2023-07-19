@@ -41,7 +41,7 @@ const InvoiceCopySheet: React.FC<{
       }}
     >
       <InvoiceOverlay open={open} click={close} />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {open && (
           <motion.div
             className={classes.sheet__wrapper}

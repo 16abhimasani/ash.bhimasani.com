@@ -31,7 +31,7 @@ const InvoiceSuperToast: React.FC<{
     }
   };
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       {open && (
         <motion.div
           key="super-toast"

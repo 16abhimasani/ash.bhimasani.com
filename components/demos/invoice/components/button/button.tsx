@@ -78,7 +78,7 @@ const InvoiceButton: React.FC<{ main: string; async: string }> = ({
         action: awaiting,
       })}
     >
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         {awaiting ? (
           <motion.div
             style={{ display: "flex" }}

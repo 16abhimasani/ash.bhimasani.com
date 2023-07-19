@@ -16,7 +16,7 @@ const InvoiceOverlay: React.FC<{
   click: Dispatch<SetStateAction<boolean>>;
 }> = ({ open, click }) => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode="wait">
       {open && (
         <motion.div
           className={classes.overlay}

@@ -94,7 +94,7 @@ const InvoiceSelectDemo: React.FC = () => {
             style={currencyFilter ? { cursor: "pointer" } : {}}
           >
             {currencyFilter ? (
-              <AnimatePresence exitBeforeEnter>
+              <AnimatePresence mode="wait">
                 <motion.div
                   className={classes.search__selected}
                   initial="selectedInitial"
