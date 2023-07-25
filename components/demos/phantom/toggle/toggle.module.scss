@@ -1,0 +1,17 @@
+.header_bar {
+  &__controls {
+    position: absolute;
+    right: 13px;
+    transform: translateY(1px);
+    user-select: none;
+    svg {
+      g,
+      path,
+      circle {
+        transition:
+          fill,
+          opacity 200ms ease-in-out;
+      }
+    }
+  }
+}
