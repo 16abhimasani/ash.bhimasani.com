@@ -1,0 +1,35 @@
+.bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 400px;
+  height: 64px;
+  border-radius: 12px;
+  // background: linear-gradient(153deg, #ce9cff 0%, #8058cb 100%);
+  background: linear-gradient(153deg, darken(#ce9cff, 50%) 0%, darken(#8058cb, 40%) 80%);
+  // background: linear-gradient(180deg, rgba(118, 89, 19, 0.00) 0%, rgba(48, 41, 122, 0.00) 0.01%, rgba(48, 41, 122, 0.20) 100%), radial-gradient(28.81% 54.29% at 26.63% 33.13%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(82.29% 81.33% at 50.00% 52.21%, #534BA1 0%, #312974 100%);
+  background-blend-mode: multiply, normal, normal;
+  box-shadow:
+    0px 0px 10.694445610046387px 0px #342d7a inset,
+    0 4px 12px 4px rgba(0, 0, 0, 0.25);
+
+  transition: all 300ms ease;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  &:active {
+    cursor: grabbing;
+  }
+  &__dark {
+
+    &__theme {
+      box-shadow: 0 4px 12px 4px rgba(255, 255, 255, 0.05);
+    }
+  }
+  &__expanded {
+    border-radius: 0px;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(black, 0.05);
+  }
+}
