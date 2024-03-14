@@ -52,47 +52,45 @@ const Phantom: React.FC = () => {
           </div>
 
           <h5 className="begin-section">Contributions</h5>
-          {/* <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
+          <PostBox
+            icon="/imgs/phantom/purple-badge.png"
             title="Onboarding V2"
             caption="Enhanced onboarding flow for new & existing web3 users"
             link=""
-            date="Q4 2023"
+            date="Q1 2024"
             locked
           />
-          <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
+          {/* <PostBox
+            icon="/imgs/phantom/purple-badge.png"
             title="Wallet Skins"
             caption="True black mode, customizable themes, & more"
             link=""
             date="Q4 2023"
             locked
-          />
+          /> */}
           <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
-            title="Bitcoin & Ordinals Support"
-            caption="Enhanced settings page for better discovery & user experience"
+            icon="/imgs/phantom/purple-badge.png"
+            title="Bitcoin & Ordinals"
+            caption="Updating all infrastructure to support Bitcoin & more chains"
             link=""
-            date="Q3 2023"
-            locked
+            date="Q4 2023"
           />
           <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
+            icon="/imgs/phantom/purple-badge.png"
             title="Settings V2"
             caption="Enhanced settings page for better discovery & user experience"
             link=""
             date="Q3 2023"
-            locked
-          /> */}
+          />
           <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
+            icon="/imgs/phantom/purple-badge.png"
             title="Banners & Interstitials"
             caption="Dynamic & personalized CTAs for onboarding, on-chain actions, & more"
             link=""
             date="Q2 2023"
           />
           <PostBox
-            icon="/imgs/phantom/phantom-badge.png"
+            icon="/imgs/phantom/purple-badge.png"
             title="Import Multiple Seeds"
             caption="Import & upgrade your mnemonic from wallets like MetaMask"
             link=""
