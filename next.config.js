@@ -5,4 +5,5 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   crossOrigin: "anonymous",
+  output: "export",
 };
