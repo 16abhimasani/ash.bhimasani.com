@@ -54,20 +54,18 @@ const Phantom: React.FC = () => {
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/phantom/purple-badge.png"
+            title="Buy Crypto V2"
+            caption="Enhanced onramp flow w/ smarter quotes & global support"
+            link=""
+            date="Q2 2024"
+          />
+          <PostBox
+            icon="/imgs/phantom/purple-badge.png"
             title="Onboarding V2"
             caption="Enhanced onboarding flow for new & existing web3 users"
             link=""
             date="Q1 2024"
-            locked
           />
-          {/* <PostBox
-            icon="/imgs/phantom/purple-badge.png"
-            title="Wallet Skins"
-            caption="True black mode, customizable themes, & more"
-            link=""
-            date="Q4 2023"
-            locked
-          /> */}
           <PostBox
             icon="/imgs/phantom/purple-badge.png"
             title="Bitcoin & Ordinals"

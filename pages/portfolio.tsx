@@ -29,10 +29,10 @@ const Portfolio: React.FC = () => (
           newTab
         />
         <PostBox
-          icon="https://www.abf.dev/assets/logo-round.svg"
+          icon="https://pbs.twimg.com/profile_images/1515494084323987464/W8IIwY8m_400x400.png"
           title="Absolute Brain F**k  &nbsp;🧠"
           caption="On-chain rendering CodePen"
-          link="https://abf.dev/app"
+          link="https://x.com/abf_dev"
           date="Q2 2022"
           newTab
         />
@@ -71,7 +71,7 @@ const Portfolio: React.FC = () => (
           title="BitPay Invoice: V4 System"
           caption="Flagship payment gateway powering the network"
           date="2019 ~ 2020"
-          link="/bitpay/invoice/demos"
+          link="/bitpay/invoice"
         />
         <PostBox
           icon="/logos/bitpay-light-gradient.svg"
