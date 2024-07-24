@@ -6,6 +6,7 @@ import { PhantomHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
 import Anchor from "../../components/utils/anchor";
 import Tweet from "../../components/utils/tweet";
+import PhantomNavDemo from "../../components/demos/phantom/nav";
 
 const Phantom: React.FC = () => {
   return (
@@ -94,6 +95,13 @@ const Phantom: React.FC = () => {
             link=""
             date="Q1 2023"
           />
+        </section>
+
+        <h4 className="begin-section" id="demos">
+          Interactive Demos
+        </h4>
+        <section className="begin-section end-section wrapper-center">
+          <PhantomNavDemo />
         </section>
 
         <section className="begin-section wrapper-center v-align col">
