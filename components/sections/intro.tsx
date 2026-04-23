@@ -12,6 +12,7 @@ const Intro: React.FC = () => (
           content="@phantom"
           href="https://twitter.com/phantom"
           spaceBefore
+          spaceAfter
         />
         |
         <Anchor
