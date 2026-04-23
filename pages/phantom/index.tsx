@@ -29,7 +29,7 @@ const Phantom: React.FC = () => {
               Phantom raised $109M at a $1.2 billion valuation in January 2022
               for their Series B via Andreessen Horowitz, Paradigm, & more.
             </p>
-            <p>I work on the Identity & Onboarding team.</p>
+            <p>I worked on the Money Movement team and the Identity & Onboarding team.</p>
           </div>
         </section>
 
@@ -54,23 +54,37 @@ const Phantom: React.FC = () => {
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/phantom/purple-badge.png"
+            title="Phantom Auth Management"
+            caption="Designed & integrated Phantom Auth mangement"
+            link="https://phantom.com/learn/blog/buying-crypto-in-phantom-just-got-faster-and-easier"
+            date="Q4 2024"
+          />
+          <PostBox
+            icon="/imgs/phantom/purple-badge.png"
+            title="Phantom Usernames"
+            caption="Integrated Phantom Social onboarding into all surfaces"
+            link="https://phantom.com/learn/blog/buying-crypto-in-phantom-just-got-faster-and-easier"
+            date="Q3 2024"
+          />
+          <PostBox
+            icon="/imgs/phantom/purple-badge.png"
             title="Buy Crypto V2"
             caption="Enhanced onramp flow w/ smarter quotes & global support"
-            link=""
+            link="https://phantom.com/learn/blog/buying-crypto-in-phantom-just-got-faster-and-easier"
             date="Q2 2024"
           />
           <PostBox
             icon="/imgs/phantom/purple-badge.png"
             title="Onboarding V2"
             caption="Enhanced onboarding flow for new & existing web3 users"
-            link=""
+            link="https://phantom.com/learn/blog/phantom-acquires-bitski"
             date="Q1 2024"
           />
           <PostBox
             icon="/imgs/phantom/purple-badge.png"
             title="Bitcoin & Ordinals"
             caption="Updating all infrastructure to support Bitcoin & more chains"
-            link=""
+            link="https://phantom.com/learn/blog/bitcoin-phantom"
             date="Q4 2023"
           />
           <PostBox
@@ -91,7 +105,7 @@ const Phantom: React.FC = () => {
             icon="/imgs/phantom/purple-badge.png"
             title="Import Multiple Seeds"
             caption="Import & upgrade your mnemonic from wallets like MetaMask"
-            link=""
+            link="https://phantom.com/learn/blog/import-and-manage-multiple-wallets-with-phantom"
             date="Q1 2023"
           />
         </section>

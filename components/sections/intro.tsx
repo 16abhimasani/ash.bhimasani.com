@@ -7,14 +7,13 @@ const Intro: React.FC = () => (
     <div className="lead">
       <p>product designer & software engineer</p>
       <p>
-        currently
+        prev
         <Anchor
           content="@phantom"
           href="https://twitter.com/phantom"
           spaceBefore
         />
-        <br />
-        prev
+        |
         <Anchor
           content="@prrfbeauty"
           href="https://twitter.com/prrfbeauty"

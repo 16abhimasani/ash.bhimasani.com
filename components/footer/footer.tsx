@@ -26,7 +26,7 @@ const Header: React.FC = () => (
         <div className={classes.dot}>·</div>
         <Anchor
           content="Resume"
-          href="https://drive.google.com/file/d/1O-RwPuMubSNX45dI3U_8y50Rku0ZJHjP/view"
+          href="/Ash_Bhimasani_Resume.pdf"
         />
       </div>
     </div>
