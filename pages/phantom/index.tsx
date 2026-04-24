@@ -150,6 +150,9 @@ const Phantom: React.FC = () => {
         </section>
 
         <section className="begin-section wrapper-center v-align col">
+          <Tweet src="https://twitter.com/phantom/status/2047778104039682068" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/willums_/status/2042329476407730191" />
           <br />
           <br />
