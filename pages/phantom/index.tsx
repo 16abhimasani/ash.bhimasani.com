@@ -142,7 +142,7 @@ const Phantom: React.FC = () => {
           />
           <PostBox
             icon="/imgs/phantom/phantom-brand/Icons/Phantom-Icon_Circle.svg"
-            title="Multi-Mnemonic + ObfuscatedBytes"
+            title="Multi-Mnemonic"
             caption="Multi-seed import (MetaMask migration) across Extension + Mobile · ObfuscatedBytes refactor eliminating race conditions in cryptographic data handling"
             link="https://phantom.com/learn/blog/import-and-manage-multiple-wallets-with-phantom"
             date="Q1 2023"
