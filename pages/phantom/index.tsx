@@ -153,6 +153,9 @@ const Phantom: React.FC = () => {
           <Tweet src="https://twitter.com/willums_/status/2042329476407730191" />
           <br />
           <br />
+          <Tweet src="https://twitter.com/phantom/status/2047429213284860189" />
+          <br />
+          <br />
           <Tweet src="https://twitter.com/BChillman/status/2033913119756714298" />
           <br />
           <br />
