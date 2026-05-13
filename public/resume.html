@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ash Bhimasani — Resume</title>
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --muted: #3a3a3a;
+    --faint: #6e6e6e;
+    --accent: #0a0a0a;
+    --rule: #c9c9c9;
+  }
+
+  @page {
+    size: letter;
+    margin: 0.6in 0.65in;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10.25pt;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    max-width: 7.1in;
+    margin: 0 auto;
+    padding: 0.6in 0.65in;
+  }
+
+  @media print {
+    body {
+      padding: 0;
+      max-width: none;
+    }
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--rule);
+  }
+  @media print {
+    a { border-bottom: none; }
+  }
+
+  h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0 0 4pt 0;
+    line-height: 1.1;
+  }
+
+  .contact {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-bottom: 20pt;
+    line-height: 1.55;
+  }
+  .contact a { color: var(--muted); border-bottom: none; }
+  .contact a:hover { color: var(--accent); }
+
+  h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 18pt 0 8pt 0;
+    padding-bottom: 4pt;
+    border-bottom: 0.5pt solid var(--rule);
+  }
+
+  h3 {
+    font-size: 11pt;
+    font-weight: 600;
+    margin: 10pt 0 1pt 0;
+    line-height: 1.35;
+  }
+  h3 .at {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  h3 .team {
+    color: var(--faint);
+    font-weight: 400;
+    font-size: 10pt;
+    font-style: italic;
+  }
+
+  .meta {
+    font-size: 9.5pt;
+    color: var(--faint);
+    margin-bottom: 4pt;
+    font-style: italic;
+  }
+
+  ul {
+    margin: 4pt 0 6pt 0;
+    padding-left: 16pt;
+  }
+  li {
+    margin-bottom: 4pt;
+  }
+  li::marker {
+    color: var(--faint);
+  }
+
+  .highlights {
+    margin-bottom: 4pt;
+  }
+  .highlights li {
+    margin-bottom: 5pt;
+  }
+
+  b, strong { font-weight: 600; }
+
+  .role {
+    page-break-inside: avoid;
+    margin-bottom: 6pt;
+  }
+
+  .projects-block p {
+    margin: 4pt 0 0 0;
+    line-height: 1.5;
+  }
+
+  .skills p {
+    margin: 4pt 0;
+    line-height: 1.55;
+  }
+  .skills .label {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 9.25pt;
+    background: #f4f4f6;
+    padding: 0.5pt 3pt;
+    border-radius: 2pt;
+  }
+  @media print {
+    code { background: transparent; padding: 0; }
+  }
+
+  .inline-sep {
+    color: var(--faint);
+    margin: 0 5pt;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ash Bhimasani</h1>
+  <div class="contact">
+    <a href="mailto:ash@bhimasani.com">ash@bhimasani.com</a>
+    <span class="inline-sep">·</span> (610) 425-8976
+    <span class="inline-sep">·</span> NYC
+    <span class="inline-sep">·</span> US Citizen
+    <br>
+    <a href="https://ash.bhimasani.com">ash.bhimasani.com</a>
+    <span class="inline-sep">·</span>
+    <a href="https://github.com/16abhimasani">github.com/16abhimasani</a>
+    <span class="inline-sep">·</span>
+    <a href="https://linkedin.com/in/ash-bhimasani">linkedin.com/in/ash-bhimasani</a>
+    <span class="inline-sep">·</span>
+    <a href="https://twitter.com/ash_bhimasani">@ash_bhimasani</a>
+  </div>
+</header>
+
+<section class="highlights">
+  <h2>Highlights</h2>
+  <ul>
+    <li><b>Shipped Phantom CASH</b> to public GA (March 2026) — Bridge-issued stablecoin inside a top-3 wallet. Owned Stripe partnership from kickoff; executed 8-month production integration.</li>
+    <li><b>Architected Phantom's Web Onramp Aggregator</b> (Meld + MoonPay) — scaled 0 → <b>$134M peak monthly</b>, <b>40% of wallet-wide onramp volume</b>, ~70% Solana; full global provider coverage in a single in-wallet flow</li>
+    <li><b>8 years compounding in crypto payments</b> — BitPay → 0x Matcha → Coinbase Institutional → Phantom. Production integrations with Stripe, Bridge, Plaid, Astra, Footprint, Meld</li>
+    <li><b>Authoring an onchain money-movement SDK</b> — <b>KYC orchestration with consent-based replay</b>; plugin-based provider &amp; rails orchestration; markdown-defined policies routed by an AI solver; agent-native MPP / x402 support; chain-agnostic settlement</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="role">
+    <h3>Phantom <span class="at">· Senior Product Engineer — Cash / Money Movement</span></h3>
+    <div class="meta">2022 – 2026 · NYC</div>
+    <ul>
+      <li><b>Phantom CASH</b> — Bridge-issued in-wallet stablecoin; public GA March 2026. Owned Stripe relationship from partnership kickoff through 8-month production integration. Monetized via T-bill yield on idle balances · <a href="https://dune.com/phantom/cash">dune.com/phantom/cash</a> · <a href="https://help.phantom.com/hc/en-us/articles/44799497237395-About-Phantom-Cash">More info</a></li>
+      <li>CASH onboarding: <b>Stripe Link SDK</b> (headless KYC, Apple Pay / Card / Bank connection) → <b>Stripe Crypto Onramp API</b> (fiat→crypto) → <b>Bridge</b> (KYC handoff, Bridge Account, Virtual Accounts, ACH offramp, debit-card issuance). Mission-critical payments flow behind a top-3 wallet</li>
+      <li><b>Resolved Stripe fraud-system outage blocking 99% of Phantom CASH onramps</b> — escalated, coordinated directly with Stripe engineering, drove fix delivery within one week to unblock Cash Early Access launch</li>
+      <li><b>Re-architected Stripe Link OAuth token refresh</b> — eliminated concurrent-refresh races causing token corruption and spurious user re-authentications; <b>dropped corrupted-token errors by 99%</b>; real-time correctness at the auth boundary of the CASH pipeline</li>
+      <li><b>Web Onramp Aggregator</b> (Meld + MoonPay) — architected unified fiat→crypto flow with full global provider coverage; scaled 0 → <b>$134M peak monthly (Dec 2024)</b>, <b>40% of wallet-wide onramp volume</b>, ~70% Solana</li>
+      <li><b>Architected Synced Settings</b> — cross-device sync with platform-agnostic storage wrapper and conflict-resolution pattern; unlocked Phantom's multi-platform vision and reused by other teams</li>
+      <li><b>Identity &amp; Onboarding</b> (2022–23) — shipped Onboarding V2 (<b>12% lift in onboarding</b>), Buy Crypto V2 (quotes + global coverage), full Bitcoin + Ordinals infrastructure (ChainSelector, Address Book, Import/Export Private Key), multi-seed MetaMask migration; wallet cryptography hardening and concurrency fixes</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Proof of Beauty Studios <span class="at">· Cofounder</span></h3>
+    <div class="meta">2021 – 2022 · NYC</div>
+    <ul>
+      <li><b>Zero-to-one cofounder</b>: shipped <b>6 public products in 22 months</b> — <a href="https://hash.pob.studio">hash.pob.studio</a> (blockchain-history generative art), <a href="https://merge.pob.studio">merge.pob.studio</a> (on-chain pixel art), <a href="https://shop.pob.studio">shop.pob.studio</a> (homebrewed web3 commerce), <a href="https://london.pob.studio">london.pob.studio</a> (Ethereum London commemorative). Owned full stack: Solidity contracts, React frontends, mint mechanics, pricing curves, post-mint economics.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>Coinbase <span class="at">· Software Engineer, Institutional Custody / Prime Security</span></h3>
+    <div class="meta">2021 · SF</div>
+    <ul>
+      <li>Shipped <b>account-takeover detection</b> (Castle, Sift) for Prime Brokerage + Custody — institutional-scale compliance and privacy constraints; adversarial threat modeling across fraud and identity-verification surfaces</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>0x Labs <span class="at">· Software Engineer, Matcha (DEX)</span></h3>
+    <div class="meta">2020 – 2021 · SF</div>
+    <ul>
+      <li>Shipped the <b>Fiat Onramp</b>, Referral Contest, and Enhanced Onboarding on <a href="https://matcha.xyz">matcha.xyz</a> — early crypto-native fiat ramp inside a major DEX UI · <a href="https://ash.bhimasani.com/0x">More info</a></li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <h3>BitPay <span class="at">· Software Engineer + Product Designer</span></h3>
+    <div class="meta">2018 – 2020 · Atlanta</div>
+    <ul>
+      <li>Shipped <b>consumer KYC/AML onboarding</b> dashboard gating every payment over $3K and all debit-card issuance · <a href="https://ash.bhimasani.com/bitpay/id">case study</a></li>
+      <li>Owned <b>Invoice V4</b> — merchant payment-acceptance gateway; expanded rails (P2P, Coinbase, ETH, ERC20, XRP); authored V4 design system · <a href="https://ash.bhimasani.com/bitpay/invoice">case study</a></li>
+      <li>Shipped open-source <b>Browser Extension</b> for instant crypto → prepaid-card redemption — <b>5,000+ users</b> (React / TypeScript / Framer Motion) · <a href="https://ash.bhimasani.com/bitpay/extension">case study</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p style="margin: 4pt 0;"><b>Georgia Institute of Technology</b> · B.S. Computer Science, AI + HCI concentration</p>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <p><span class="label">Languages:</span> TypeScript, JavaScript, Solidity, Rust, Python, Go</p>
+  <p><span class="label">Frameworks / Tools:</span> React Native, Vue, Angular, Expo, Node, NestJS, MikroORM, CockroachDB, Redis, OrbStack, Docker, Kubernetes, DataDog, Sentry, Maestro, Playwright</p>
+</section>
+
+</body>
+</html>
