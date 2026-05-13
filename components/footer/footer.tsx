@@ -5,16 +5,18 @@ import classes from "./footer.module.scss";
 const Header: React.FC = () => (
   <footer className={classes.footer}>
     <div className={classes.nav}>
-      <Anchor content="Email" href="mailto:16abhimasani@gmail.com" />
+      <div className={classes.nav__hide}>
+        <Anchor content="Email" href="mailto:16abhimasani@gmail.com" />
+        <div className={classes.dot}>·</div>
+      </div>
+      <Anchor
+        content="Calendly"
+        href="https://calendly.com/ash-bhimasani/30min"
+      />
       <div className={classes.nav__hide}>
         <div className={classes.dot}>·</div>
-        <Anchor
-          content="Calendly"
-          href="https://calendly.com/ash-bhimasani/30min"
-        />
+        <Anchor content="GitHub" href="https://github.com/16abhimasani" />
       </div>
-      <div className={classes.dot}>·</div>
-      <Anchor content="GitHub" href="https://github.com/16abhimasani" />
       <div className={classes.dot}>·</div>
       <Anchor content="Twitter" href="https://twitter.com/ash_bhimasani" />
       <div className={classes.dot}>·</div>
@@ -22,13 +24,8 @@ const Header: React.FC = () => (
         content="LinkedIn"
         href="https://www.linkedin.com/in/ash-bhimasani/"
       />
-      <div className={classes.nav__hide}>
-        <div className={classes.dot}>·</div>
-        <Anchor
-          content="Resume"
-          href="/Ash_Bhimasani_Resume_2026_HTML.pdf"
-        />
-      </div>
+      <div className={classes.dot}>·</div>
+      <Anchor content="Resume" href="/Ash_Bhimasani_Resume_2026_HTML.pdf" />
     </div>
     <cite className={classes.copyright}>
       Made with 💖 by Ash Bhimasani © 2020
