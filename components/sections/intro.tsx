@@ -3,7 +3,7 @@ import Anchor from "../utils/anchor";
 
 const Intro: React.FC = () => (
   <section className="end-section">
-    <h2 className="begin-section pt-0">I'm Ash Bhimasani</h2>
+    <h2 className="begin-section pt-0 f-700">I'm Ash Bhimasani</h2>
     <div className="lead">
       <p>product designer & software engineer</p>
       <p>
