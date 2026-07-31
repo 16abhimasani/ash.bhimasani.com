@@ -30,11 +30,6 @@ const LogoConfigs: {
     transition: {},
     invertible: true,
   },
-  "/logos/polymarket.svg": {
-    animate: {},
-    transition: {},
-    invertible: true,
-  },
 };
 
 const PostBox: React.FC<{
