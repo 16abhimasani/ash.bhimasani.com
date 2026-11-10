@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import { MatchaHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
@@ -11,7 +9,7 @@ const MatchaMoolah: React.FC = () => (
   <>
     {MatchaHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h2 className="begin-section pt-0">Matcha Moolah</h2>
         <time>UI Engineering</time>
@@ -71,7 +69,7 @@ const MatchaMoolah: React.FC = () => (
         <br />
         <Tweet src="https://twitter.com/matchaxyz/status/1360358206841626624" />
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 
 const Photography: React.FC = () => (
-  <motion.main className="body" {...fadeInPage}>
+  <main id="content" className="body">
     <h1 className="begin-section pt-0">Photography &nbsp;🍬</h1>
     <div className="lead end-section">
       <p>
@@ -85,7 +83,7 @@ const Photography: React.FC = () => (
         alt="Beads"
       />
     </a>
-  </motion.main>
+  </main>
 );
 
 export default Photography;

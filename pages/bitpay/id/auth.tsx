@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import { BitPayHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
@@ -10,7 +8,7 @@ const BitPayIDAuth: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h1 className="begin-section pt-0">Log In & Sign Up Breakdown</h1>
         <h5 className="end-section">Modular, single-purpose states</h5>
@@ -207,7 +205,7 @@ const BitPayIDAuth: React.FC = () => (
           </p>
         </div>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

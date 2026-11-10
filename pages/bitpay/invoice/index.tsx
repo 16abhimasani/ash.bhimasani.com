@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
@@ -16,7 +14,7 @@ const BitPayInvoice: React.FC = () => (
   <>
     {BitPayInvoiceHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay Invoice V4</h1>
       <h5 className="end-section">
         Flagship gateway powering the payment network
@@ -213,7 +211,7 @@ const BitPayInvoice: React.FC = () => (
       >
         <source src="/vids/invoice/v3-oauth.mp4" type="video/mp4" />
       </video>
-    </motion.main>
+    </main>
   </>
 );
 

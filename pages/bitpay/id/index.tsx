@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import PostBox from "../../../components/post-box/post-box";
 import { BitPayHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
@@ -11,7 +9,7 @@ const BitPayID: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay ID</h1>
       <h5 className="end-section">Consumer onboarding and verification</h5>
       <WideScreen src="/imgs/id/mobile/verify/address-iso.png" />
@@ -176,7 +174,7 @@ const BitPayID: React.FC = () => (
           <source src="/vids/id/v2/login.mp4" type="video/mp4" />
         </video>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

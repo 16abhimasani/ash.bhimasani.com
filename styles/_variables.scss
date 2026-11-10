@@ -1,19 +1,28 @@
-/* Colors: Brights */
-$Blue: #1f7af7;
+/* Text and UI. Demo components keep their own product colors. */
+$Blue: #0b57d0;
 $Liquid: #9ce8f8;
 $Aqua: #40c8e0;
 $Cyan: #50e3c2;
-$Pink: #ff1f75;
+$Pink: #be185d;
 $Salmon: #ffaab9;
 
-/* Colors: Neutrals */
-$Pale: #f5f5f5;
-$Wire: #ececef;
-$Grey: #626769;
-$Black: #292e31;
-$Blacker: #1a1a1b;
+$Pale: #f3f3f3;
+$Wire: #e7e7e7;
+$Grey: #525252;
+$Black: #161616;
+$Blacker: #101010;
 
-/* Interface */
-$MAX_WIDTH: 600px;
+$MAX_WIDTH: 680px;
 $WIDE_MAX_WIDTH: 1200px;
 $MOBILE_WIDTH: 576px;
+
+/* 8px rhythm */
+$s-1: 4px;
+$s-2: 8px;
+$s-3: 12px;
+$s-4: 16px;
+$s-5: 24px;
+$s-6: 32px;
+$s-7: 48px;
+$s-8: 64px;
+$s-9: 96px;

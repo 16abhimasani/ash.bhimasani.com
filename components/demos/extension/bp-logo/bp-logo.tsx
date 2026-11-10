@@ -1,3 +1,4 @@
+import "../../../../utils/reduced-motion";
 import { motion } from "framer-motion";
 import React from "react";
 import classes from "./bp-logo.module.scss";

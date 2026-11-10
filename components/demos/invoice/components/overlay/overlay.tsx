@@ -1,3 +1,4 @@
+import "../../../../../utils/reduced-motion";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { Dispatch, SetStateAction } from "react";
 import classes from "./overlay.module.scss";

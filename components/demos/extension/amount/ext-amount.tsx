@@ -1,3 +1,4 @@
+import "../../../../utils/reduced-motion";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./ext-amount.module.scss";
@@ -30,8 +31,8 @@ const ExtensionAmountDemo: React.FC = () => {
       newValue > maxAmount
         ? maxAmount
         : newValue < minAmount
-        ? minAmount
-        : newValue;
+          ? minAmount
+          : newValue;
     setAmount(parseFloat(newAmount.toFixed(precision)));
     setInputValue(`${newAmount.toFixed(precision)}`);
   };

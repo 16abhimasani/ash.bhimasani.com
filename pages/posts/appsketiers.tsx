@@ -1,9 +1,7 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 
 const Appsketiers: React.FC = () => (
-  <motion.main className="body" {...fadeInPage}>
+  <main id="content" className="body">
     <h2 className="begin-section pt-0">Appsketiers &nbsp;⚔️</h2>
     <time>Director of Development & UX</time>
     <div className="lead begin-section">
@@ -30,7 +28,7 @@ const Appsketiers: React.FC = () => (
       </p>
       <p>I eventually left Appsketiers as I decided to focus more on BitPay.</p>
     </div>
-  </motion.main>
+  </main>
 );
 
 export default Appsketiers;

@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import InvoiceSelectOauthPairDemo from "../../../components/demos/invoice/select/invoice-oauth-pair";
 import InvoiceSelectDemo from "../../../components/demos/invoice/select/invoice-select";
 import InvoiceSelectWalletConnectDemo from "../../../components/demos/invoice/select/invoice-wallet-connect";
@@ -15,7 +13,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
   <>
     {BitPayInvoiceHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h1 className="begin-section pt-0">Wallet Selection</h1>
         <h5 className="end-section">User experience tailoring and analytics</h5>
@@ -267,7 +265,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
           <InvoiceSelectWalletConnectDemo type="trezor" />
         </div>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

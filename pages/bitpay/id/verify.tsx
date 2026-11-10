@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import { BitPayHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
 import WideScreen from "../../../components/wide-screen/wide-screen";
@@ -9,7 +7,7 @@ const BitPayIDVerification: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h1 className="begin-section pt-0">Verification Breakdown</h1>
         <h5 className="end-section">
@@ -179,7 +177,7 @@ const BitPayIDVerification: React.FC = () => (
           </p>
         </div>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

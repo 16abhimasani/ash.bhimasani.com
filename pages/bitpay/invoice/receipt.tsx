@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import InvoiceReceiptDemo from "../../../components/demos/invoice/receipt/invoice-receipt";
 import { BitPayInvoiceHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
@@ -10,7 +8,7 @@ const BitPayInvoiceReceipt: React.FC = () => (
   <>
     {BitPayInvoiceHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h1 className="begin-section pt-0">Payment Receipt</h1>
         <h5>Post-payment handling</h5>
@@ -242,7 +240,7 @@ const BitPayInvoiceReceipt: React.FC = () => (
           alt="V3 Low Fee"
         />
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

@@ -5,33 +5,23 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 24px auto;
-
-  @include mobile {
-    margin-bottom: 40px;
-  }
+  gap: $s-4;
+  margin: $s-8 auto $s-7;
+  padding-top: $s-5;
+  border-top: 1px solid var(--line);
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  font-size: 16px;
   flex-wrap: wrap;
-  line-height: 26px;
-  &__hide {
-    display: flex;
-    @include mobile {
-      display: none;
-    }
-  }
+  gap: $s-1 $s-4;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .copyright {
-  font-size: 14px;
-  color: $Grey;
-  margin-top: 20px;
-}
-
-.dot {
-  margin: auto 10px;
+  font-size: 0.8125rem;
+  font-style: normal;
+  color: var(--muted);
 }

@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import PostBox from "../../../components/post-box/post-box";
 import { BitPayHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
@@ -10,7 +8,7 @@ const BitPaySite: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay Website</h1>
       <h5 className="end-section">Landing, operational, & product pages</h5>
       <div className="lead mb-0 end-section">
@@ -55,7 +53,7 @@ const BitPaySite: React.FC = () => (
         link="/bitpay/site/card"
         locked
       />
-    </motion.main>
+    </main>
   </>
 );
 

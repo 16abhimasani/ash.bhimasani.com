@@ -1,84 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "variables";
-
 html,
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans), "Inter", sans-serif;
+  font-variant-numeric: tabular-nums lining-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--ink);
 }
 
 h1 {
-  font-size: 28px;
-  font-weight: 600;
-  color: $Black;
-  line-height: 32px;
-  letter-spacing: -0.02em;
+  font-size: 2.5rem;
+  font-weight: 560;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   text-wrap: balance;
+
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: $Black;
-  line-height: 34px;
+  font-size: 1.375rem;
+  font-weight: 560;
+  color: var(--ink);
+  line-height: 1.25;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: $Black;
-  line-height: 30px;
-  letter-spacing: -0.01em;
+  font-size: 1.125rem;
+  font-weight: 560;
+  color: var(--ink);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  color: $Black;
-  background-color: $Pale;
-  padding: 12px !important;
-  border-radius: 8px;
-  width: fit-content;
-  height: fit-content;
-
-  &,
-  .begin-section {
-    margin-top: 56px;
-    @include mobile {
-      margin-top: 46px;
-    }
-  }
-  &,
-  .end-section {
-    margin-bottom: 56px;
-    @include mobile {
-      margin-bottom: 46px;
-    }
-  }
+  letter-spacing: -0.011em;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-top: $s-7;
+  margin-bottom: $s-3;
 }
 
-h5 {
-  font-size: 16px;
+h5,
+h6 {
+  font-size: 0.875rem;
   font-weight: 400;
-  color: $Grey;
-  line-height: 26px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: $s-8;
+  margin-bottom: $s-3;
+
+  @include mobile {
+    margin-top: $s-7;
+  }
 }
 
 .lead {
-  font-size: 16px;
-  color: $Black;
-  line-height: 28px;
+  font-size: 1.0625rem;
+  color: var(--ink);
+  line-height: 1.65;
   text-wrap: pretty;
 
   p:not(:first-child) {
-    margin-top: 26px;
+    margin-top: $s-5;
   }
   .link {
     display: inline;
@@ -86,18 +86,24 @@ h5 {
 }
 
 .link {
-  color: $Blue;
+  color: var(--ink);
   font-weight: 500;
-  text-decoration: none;
-  transition: all 250ms ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.18em;
+  transition:
+    text-decoration-color 140ms ease,
+    color 140ms ease;
+
   &:hover {
-    text-decoration: none;
-    color: darken($Blue, 25%);
+    text-decoration-color: var(--ink);
+    color: var(--ink);
   }
   &--pink {
-    color: $Pink;
+    color: var(--pink);
+    text-decoration-color: var(--pink);
     &:hover {
-      color: darken($Pink, 15%);
+      color: var(--pink);
     }
   }
 }
@@ -106,22 +112,21 @@ h5 {
   display: block;
   &__item {
     display: flex;
-    color: $Black;
-    font-size: 16px;
+    color: var(--ink);
+    font-size: 1rem;
     font-weight: 500;
-    margin: 28px auto;
+    margin: $s-5 auto;
     &__number {
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50vh;
-      background-color: $Wire;
-      color: $Black;
-      font-size: 14px;
+      background-color: var(--hover);
+      color: var(--ink);
+      font-size: 0.875rem;
       min-width: 28px;
       height: 28px;
       margin-right: 18px;
-      transform: translateY(0.5px);
     }
   }
 }
@@ -136,19 +141,19 @@ h5 {
   }
   hgroup {
     h5 {
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 0.1em;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #2222229e;
+      color: var(--muted);
       margin-bottom: 4px;
     }
-    color: #222;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 300;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
     &:not(:first-child) {
-      margin-top: 32px;
+      margin-top: $s-6;
     }
   }
 }
@@ -158,11 +163,12 @@ blockquote {
   justify-content: center;
   text-align: center;
   position: relative;
-  margin: 64px auto 80px;
+  margin: $s-8 auto;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 32px;
-  color: $Black;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 
   &:before,
   &:after {
@@ -172,18 +178,19 @@ blockquote {
     left: 0;
     margin: auto auto;
     width: 32px;
-    height: 2px;
-    background: $Pink;
+    height: 1px;
+    background: var(--line-strong);
   }
   &:before {
-    top: -36px;
+    top: -28px;
   }
   &:after {
-    bottom: -40px;
+    bottom: -28px;
   }
 }
 
 time {
-  font-size: 16px;
-  color: $Grey;
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }

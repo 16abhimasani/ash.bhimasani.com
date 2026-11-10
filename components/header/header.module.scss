@@ -5,41 +5,85 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 0;
+  gap: $s-4;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: 0 -8px;
+  padding: 0 8px;
+  min-height: 64px;
+  background: var(--bg);
 
   @include mobile {
-    padding: 24px 0;
+    min-height: 56px;
   }
 }
 
-.logo {
-  width: 56px;
-  cursor: pointer;
-}
-
-.link {
-  font-weight: 700;
-  font-size: 12px;
+.mark {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: $Grey;
-  transition: all 250ms ease-in-out;
-  width: 100px;
-  &:hover {
-    color: $Blue;
-  }
 
-  &__active {
-    color: $Blue;
+  &:hover {
+    color: var(--ink);
   }
 }
 
-.name {
-  margin: 20px auto;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 200;
-  color: lighten($Grey, 10%);
-  text-transform: uppercase;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $s-1;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 $s-3;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--ink);
+  }
+
+  &--active {
+    color: var(--ink);
+  }
+}
+
+.theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  margin-left: $s-1;
+  padding: 0 $s-2;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
+.when-dark {
+  display: none;
+}
+
+:global(html.dark) .when-light {
+  display: none;
+}
+
+:global(html.dark) .when-dark {
+  display: inline;
 }

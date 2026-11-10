@@ -1,3 +1,4 @@
+import "../../../../../utils/reduced-motion";
 import { motion } from "framer-motion";
 import React, { useCallback, useState } from "react";
 import copyUtil from "../../../../../utils/copy-to-clipboard";

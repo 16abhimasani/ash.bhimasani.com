@@ -1,28 +1,40 @@
-import React, { Dispatch, SetStateAction, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../pages/_app";
 import { useLocalStorage } from "../../utils/hooks";
-import classes from "./dark-mode.module.scss";
+import classes from "../header/header.module.scss";
 
-const DarkModeToggle: React.FC<{
-  setTheme: Dispatch<SetStateAction<{ dark: boolean }>>;
-}> = ({ setTheme }) => {
+const ThemeToggle: React.FC = () => {
   const theme = useContext(ThemeContext);
-  const [savedTheme, saveTheme] = useLocalStorage("theme", "light");
+  const [, saveTheme] = useLocalStorage("theme", "light");
+
   const toggle = () => {
-    setTheme({ dark: !theme.dark });
-    saveTheme(theme.dark ? "light" : "dark");
+    const next = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", next);
+    document.documentElement.style.colorScheme = next ? "dark" : "light";
+    theme.setDark(next);
+    saveTheme(next ? "dark" : "light");
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", next ? "#0e0e0e" : "#fafafa");
   };
-  useEffect(() => {
-    setTheme({ dark: savedTheme === "dark" });
-  }, []);
+
   return (
-    <div className={classes.wrapper}>
-      <label className={classes.toggle}>
-        <input type="checkbox" checked={!theme.dark} onChange={toggle} />
-        <div></div>
-      </label>
-    </div>
+    <button
+      type="button"
+      className={classes.theme}
+      aria-pressed={theme.ready ? theme.dark : undefined}
+      aria-label={
+        theme.ready
+          ? theme.dark
+            ? "Switch to light mode"
+            : "Switch to dark mode"
+          : "Theme"
+      }
+      onClick={toggle}
+    >
+      <span className={classes["when-light"]}>Dark</span>
+      <span className={classes["when-dark"]}>Light</span>
+    </button>
   );
 };
 
-export default DarkModeToggle;
+export default ThemeToggle;

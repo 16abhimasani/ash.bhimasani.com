@@ -1,3 +1,4 @@
+import "../../../../utils/reduced-motion";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useCallback, useRef, useState } from "react";
 import buttonClasses from "../components/button/button.module.scss";

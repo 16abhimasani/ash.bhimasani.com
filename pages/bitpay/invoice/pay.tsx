@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
 import InvoiceAddressModeDemo from "../../../components/demos/invoice/pay/invoice-p2p";
@@ -16,7 +14,7 @@ const BitPayInvoicePay: React.FC = () => (
   <>
     {BitPayInvoiceHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <section>
         <h1 className="begin-section pt-0">Pay with Crypto</h1>
         <h5>A compact utility for acceptance</h5>
@@ -485,7 +483,7 @@ const BitPayInvoicePay: React.FC = () => (
           alt="Universal Mode Mobile Toast"
         />
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

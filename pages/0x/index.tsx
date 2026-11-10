@@ -1,20 +1,16 @@
-import { motion } from "framer-motion";
-import React, { useContext } from "react";
-import { fadeInPage } from "../../animations/page";
+import React from "react";
 import PostBox from "../../components/post-box/post-box";
 import { ZeroXHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
 import Anchor from "../../components/utils/anchor";
 import Tweet from "../../components/utils/tweet";
-import { ThemeContext } from "../_app";
 
 const ZeroX: React.FC = () => {
-  const theme = useContext(ThemeContext);
   return (
     <>
       {ZeroXHead}
       <SideBar />
-      <motion.main className="body" {...fadeInPage}>
+      <main id="content" className="body">
         <section className="end-section">
           <h1 className="begin-section pt-0">0x Labs &nbsp;🍵</h1>
           <div className="lead">
@@ -124,12 +120,21 @@ const ZeroX: React.FC = () => {
 
         <section className="wrapper-center">
           <img
+            className="theme-img theme-img--light"
             width={312}
-            height="100%"
-            src={`/imgs/matcha/0x-${theme.dark ? "dark" : "light"}.png`}
+            height={312}
+            alt=""
+            src="/imgs/matcha/0x-light.png"
+          />
+          <img
+            className="theme-img theme-img--dark"
+            width={312}
+            height={312}
+            alt=""
+            src="/imgs/matcha/0x-dark.png"
           />
         </section>
-      </motion.main>
+      </main>
     </>
   );
 };

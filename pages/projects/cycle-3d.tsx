@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 import Anchor from "../../components/utils/anchor";
 
 const Cycle3D: React.FC = () => (
-  <motion.main className="body" {...fadeInPage}>
+  <main id="content" className="body">
     <h1 className="begin-section pt-0">Cycle 3D &nbsp;♻️</h1>
     <time>Dec 12 2016</time>
     <div className="lead begin-section">
@@ -350,7 +348,7 @@ const Cycle3D: React.FC = () => (
       src="/imgs/cycle-3d/gear-printed-2.jpg"
       alt="Gears Printed"
     />
-  </motion.main>
+  </main>
 );
 
 export default Cycle3D;

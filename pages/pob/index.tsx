@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 import PostBox from "../../components/post-box/post-box";
 import { POBHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
@@ -11,7 +9,7 @@ const POB: React.FC = () => {
     <>
       {POBHead}
       <SideBar />
-      <motion.main className="body" {...fadeInPage}>
+      <main id="content" className="body">
         <section className="end-section">
           <h1 className="begin-section pt-0">Proof of Beauty &nbsp;💄</h1>
           <div className="lead">
@@ -175,7 +173,7 @@ const POB: React.FC = () => {
             newTab
           />
         </section>
-      </motion.main>
+      </main>
     </>
   );
 };

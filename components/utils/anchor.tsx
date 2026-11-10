@@ -24,6 +24,7 @@ const Anchor: React.FC<{
     rel="noopener noreferrer"
   >
     {`${spaceBefore ? " " : ""}${content}${spaceAfter ? " " : ""}`}
+    {newTab ? <span className="sr-only"> (opens in a new tab)</span> : null}
   </a>
 );
 

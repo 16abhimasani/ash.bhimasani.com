@@ -2,41 +2,39 @@ import classNames from "classnames/bind";
 import { useRouter } from "next/router";
 import React from "react";
 import Link from "../utils/link";
+import ThemeToggle from "../dark-mode/dark-mode";
 import classes from "./header.module.scss";
 
 const cx = classNames.bind(classes);
 
 const Header: React.FC = () => {
-  const router = useRouter();
+  const { pathname } = useRouter();
+  const about = pathname === "/about";
+  const workIndex = pathname === "/work" || pathname === "/portfolio";
+  const inWork = !about && pathname !== "/";
+
   return (
     <header className={classes.header}>
-      <Link
-        href="/about"
-        className={cx({
-          link: true,
-          link__active: router.pathname === "/about",
-        })}
-        style={{ textAlign: "left" }}
-      >
-        <h6>About Me</h6>
+      <Link href="/" className={classes.mark}>
+        Ash Bhimasani
       </Link>
-      <Link href="/">
-        <img
-          className={classes.logo}
-          src="/logos/ab-logo.svg"
-          alt="Ash's Logo"
-        />
-      </Link>
-      <Link
-        href="/portfolio"
-        className={cx({
-          link: true,
-          link__active: router.pathname === "/portfolio",
-        })}
-        style={{ textAlign: "right" }}
-      >
-        <h6>Portfolio</h6>
-      </Link>
+      <nav className={classes.nav} aria-label="Primary">
+        <Link
+          href="/work"
+          aria-current={workIndex ? "page" : undefined}
+          className={cx("nav__link", { "nav__link--active": inWork })}
+        >
+          Work
+        </Link>
+        <Link
+          href="/about"
+          aria-current={about ? "page" : undefined}
+          className={cx("nav__link", { "nav__link--active": about })}
+        >
+          About
+        </Link>
+        <ThemeToggle />
+      </nav>
     </header>
   );
 };

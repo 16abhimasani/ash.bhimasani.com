@@ -1,3 +1,4 @@
+import "../../../../utils/reduced-motion";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import classes from "../invoice.module.scss";

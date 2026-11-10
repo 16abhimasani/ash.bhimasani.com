@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import { BitPayHead } from "../../../components/seo-heads";
 import SideBar from "../../../components/sidebar/sidebar";
 import Anchor from "../../../components/utils/anchor";
@@ -10,7 +8,7 @@ const BitPayTeamSite: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay Careers Page</h1>
       <h5 className="end-section">
         <Anchor
@@ -75,7 +73,7 @@ const BitPayTeamSite: React.FC = () => (
           a lot so this was a good excuse to throw some in there.
         </p>
       </div>
-    </motion.main>
+    </main>
   </>
 );
 

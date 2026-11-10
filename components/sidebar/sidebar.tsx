@@ -1,7 +1,6 @@
 import classNames from "classnames/bind";
 import { useRouter } from "next/router";
-import React, { useContext } from "react";
-import { ThemeContext } from "../../pages/_app";
+import React from "react";
 import Link from "../utils/link";
 import classes from "./sidebar.module.scss";
 const cx = classNames.bind(classes);
@@ -22,7 +21,6 @@ const isLink = (link: string): boolean => {
 };
 
 const SideBar: React.FC = () => {
-  const theme = useContext(ThemeContext);
   const router = useRouter();
   const navigation = (): PagePath[] => {
     if (router.pathname.includes("bitpay")) return BitPayNav;
@@ -30,25 +28,30 @@ const SideBar: React.FC = () => {
     if (router.pathname.includes("portfolio")) return Portfolio;
     return [];
   };
+  const routes = navigation();
+  if (routes.length === 0) return null;
+
   const nav = (route: PagePath) => {
-    const nested = (children: PagePath[]): React.ReactChild => (
+    const nested = (children: PagePath[]): React.ReactNode => (
       <>
-        {children.map((route: PagePath, index: number) => (
-          <React.Fragment key={index}>{nav(route)}</React.Fragment>
+        {children.map((child: PagePath) => (
+          <React.Fragment key={child.path}>{nav(child)}</React.Fragment>
         ))}
       </>
     );
+    const external = isLink(route.path);
+    const current = router.pathname === route.path;
     return (
       <>
         {route.header ? (
           <div className={classes.major}>
-            <Link href="/" style={{ opacity: theme.dark ? 0.4 : 0.25 }}>
-              Ash &nbsp;/&nbsp;&nbsp;
-            </Link>
+            <Link href="/">Ash</Link>
+            <span aria-hidden="true"> / </span>
             <Link
               href={route.path}
-              target={isLink(route.path) ? "_blank" : ""}
-              rel="noopener noreferrer"
+              aria-current={current ? "page" : undefined}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
             >
               {route.label}
             </Link>
@@ -56,12 +59,13 @@ const SideBar: React.FC = () => {
         ) : (
           <Link
             href={route.path}
+            aria-current={current ? "page" : undefined}
             className={cx({
               minor: true,
-              active: router.pathname === route.path,
+              active: current,
             })}
-            target={isLink(route.path) ? "_blank" : ""}
-            rel="noopener noreferrer"
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
           >
             {route.label}
           </Link>
@@ -74,14 +78,9 @@ const SideBar: React.FC = () => {
     );
   };
   return (
-    <nav
-      className={cx({
-        nav: true,
-        dark: theme.dark,
-      })}
-    >
-      {navigation().map((route: PagePath, index: number) => (
-        <React.Fragment key={index}>{nav(route)}</React.Fragment>
+    <nav className={classes.nav} aria-label="Section">
+      {routes.map((route: PagePath) => (
+        <React.Fragment key={route.path}>{nav(route)}</React.Fragment>
       ))}
     </nav>
   );

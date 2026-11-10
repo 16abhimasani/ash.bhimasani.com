@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 import { BitPayHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
 import WideScreen from "../../components/wide-screen/wide-screen";
@@ -9,7 +7,7 @@ const BitPayEmails: React.FC = () => (
   <>
     {BitPayHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">Emails V2</h1>
       <h5 className="end-section">A brand refresh for platform emails</h5>
       <WideScreen
@@ -142,7 +140,7 @@ const BitPayEmails: React.FC = () => (
           </li>
         </ol>
       </div>
-    </motion.main>
+    </main>
   </>
 );
 

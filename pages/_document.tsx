@@ -65,7 +65,12 @@ export default class extends Document {
               name="msapplication-config"
               content="/favicon/browserconfig.xml"
             />
-            <meta name="theme-color" content="#ffffff"></meta>
+            <meta name="theme-color" content="#fafafa" />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(){try{var s=localStorage.getItem("theme");var t=s?JSON.parse(s):null;var d=t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches);var h=document.documentElement;h.classList.toggle("dark",d);h.style.colorScheme=d?"dark":"light";h.style.background=d?"#0e0e0e":"#fafafa";var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",d?"#0e0e0e":"#fafafa");}catch(e){}})();`,
+              }}
+            />
             <script
               async
               src="https://www.googletagmanager.com/gtag/js?id=UA-49532918-1"

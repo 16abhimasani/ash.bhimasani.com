@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import InvoiceAwaitingConfDemo from "../../../components/demos/invoice/pay/invoice-await-conf";
 import InvoiceBIP21ModeDemo from "../../../components/demos/invoice/pay/invoice-bip21";
 import InvoiceConnectModeDemo from "../../../components/demos/invoice/pay/invoice-connect";
@@ -24,7 +22,7 @@ const BitPayInvoiceDemos: React.FC = () => (
   <>
     {BitPayInvoiceHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay Invoice V4 Demos</h1>
       <h5 className="end-section">
         Reference UI
@@ -206,7 +204,7 @@ const BitPayInvoiceDemos: React.FC = () => (
           <InvoiceExpiredDemo refund />
         </div>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

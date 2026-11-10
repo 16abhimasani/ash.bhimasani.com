@@ -1,5 +1,6 @@
 import { DefaultSeo, DefaultSeoProps } from "next-seo";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 import {
   BANNER_ROOT,
@@ -15,48 +16,70 @@ interface TagsOverride {
   description?: string;
   banner?: string;
 }
-export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
-  title: custom?.title ?? SITE_TITLE,
-  description: custom?.description ?? SITE_DESCRIPTION,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: SITE_LINK,
+
+const BANNER_SIZE: Record<string, { width: number; height: number }> = {
+  [OG_BANNER_LINK]: { width: 2563, height: 1458 },
+  [`${BANNER_ROOT}/bitpay.jpg`]: { width: 3726, height: 1863 },
+  [`${BANNER_ROOT}/bitpay-ext.jpg`]: { width: 2101, height: 1051 },
+  [`${BANNER_ROOT}/phantom.jpg`]: { width: 1200, height: 630 },
+  [`${BANNER_ROOT}/pob-holo.jpg`]: { width: 3840, height: 2160 },
+  [`${BANNER_ROOT}/0x.png`]: { width: 1200, height: 630 },
+  [`${BANNER_ROOT}/matcha-3.png`]: { width: 2060, height: 1000 },
+};
+
+export const DefaultTags = (
+  custom?: TagsOverride,
+  url: string = SITE_LINK,
+): DefaultSeoProps => {
+  const banner = custom?.banner ?? OG_BANNER_LINK;
+  const size = BANNER_SIZE[banner];
+  return {
     title: custom?.title ?? SITE_TITLE,
     description: custom?.description ?? SITE_DESCRIPTION,
-    site_name: custom?.title ?? SITE_TITLE,
-    images: [
+    canonical: url,
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url,
+      title: custom?.title ?? SITE_TITLE,
+      description: custom?.description ?? SITE_DESCRIPTION,
+      site_name: SITE_TITLE,
+      images: [
+        {
+          url: banner,
+          alt: custom?.title ?? SITE_TITLE,
+          ...(size ?? {}),
+        },
+      ],
+    },
+    twitter: {
+      handle: TWITTER_HANDLE,
+      site: TWITTER_HANDLE,
+      cardType: "summary_large_image",
+    },
+    additionalMetaTags: [
       {
-        url: custom?.banner ?? OG_BANNER_LINK,
-        alt: custom?.title ?? SITE_TITLE,
+        name: "twitter:image",
+        content: banner,
+      },
+      {
+        name: "twitter:url",
+        content: url,
+      },
+      {
+        property: "og:image",
+        content: banner,
       },
     ],
-  },
-  twitter: {
-    handle: TWITTER_HANDLE,
-    site: TWITTER_HANDLE,
-    cardType: "summary_large_image",
-  },
-  additionalMetaTags: [
-    {
-      name: "twitter:image",
-      content: custom?.banner ?? OG_BANNER_LINK,
-    },
-    {
-      name: "twitter:url",
-      content: SITE_LINK,
-    },
-    {
-      property: "og:image",
-      content: custom?.banner ?? OG_BANNER_LINK,
-    },
-  ],
-});
-export const WebsiteHead: React.FC<TagsOverride> = (custom: TagsOverride) => (
-  <>
-    <DefaultSeo {...DefaultTags(custom)} />
-  </>
-);
+  };
+};
+export const WebsiteHead: React.FC<TagsOverride> = (custom: TagsOverride) => {
+  const router = useRouter();
+  const path = (router.asPath || "/").split("?")[0].split("#")[0];
+  const canonicalPath = path === "/portfolio" ? "/work" : path;
+  const url = `${SITE_LINK}${canonicalPath === "/" ? "" : canonicalPath}`;
+  return <DefaultSeo {...DefaultTags(custom, url)} />;
+};
 
 export const BitPayScripts = (
   <Head>

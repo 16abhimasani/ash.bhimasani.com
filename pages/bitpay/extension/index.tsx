@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../../animations/page";
 import ExtensionAmountDemo from "../../../components/demos/extension/amount/ext-amount";
 import ExtensionNavDemo from "../../../components/demos/extension/nav/ext-nav";
 import ExtensionReceiptDemo from "../../../components/demos/extension/receipt/ext-receipt";
@@ -13,7 +11,7 @@ const BitPayExtension: React.FC = () => (
   <>
     {BitPayExtHead}
     <SideBar />
-    <motion.main className="body" {...fadeInPage}>
+    <main id="content" className="body">
       <h1 className="begin-section pt-0">BitPay Extension</h1>
       <h5 className="end-section">Redefining the crypto payment experience</h5>
       <div
@@ -258,7 +256,7 @@ const BitPayExtension: React.FC = () => (
           <ExtensionReceiptDemo />
         </section>
       </section>
-    </motion.main>
+    </main>
   </>
 );
 

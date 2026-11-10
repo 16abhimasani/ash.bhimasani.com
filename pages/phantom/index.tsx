@@ -1,6 +1,4 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../../animations/page";
 import PostBox from "../../components/post-box/post-box";
 import { PhantomHead } from "../../components/seo-heads";
 import SideBar from "../../components/sidebar/sidebar";
@@ -12,7 +10,7 @@ const Phantom: React.FC = () => {
     <>
       {PhantomHead}
       <SideBar />
-      <motion.main className="body" {...fadeInPage}>
+      <main id="content" className="body">
         <section className="end-section">
           <h1 className="begin-section pt-0">Phantom &nbsp;👻</h1>
           <div className="lead">
@@ -29,7 +27,10 @@ const Phantom: React.FC = () => {
               Phantom raised $109M at a $1.2 billion valuation in January 2022
               for their Series B via Andreessen Horowitz, Paradigm, & more.
             </p>
-            <p>I worked on the Money Movement team and the Identity & Onboarding team (Dec 2022 – April 2026).</p>
+            <p>
+              I worked on the Money Movement team and the Identity & Onboarding
+              team (Dec 2022 – April 2026).
+            </p>
             <p>
               If you take a look at the product, it's really incredible to see
               how one app can redefine and propel an entire ecosystem. Phantom
@@ -42,19 +43,22 @@ const Phantom: React.FC = () => {
                 href="https://help.phantom.com/hc/en-us/articles/44799497237395-About-Phantom-Cash"
                 newTab
               />
-              &nbsp;is the wallet's first-party stablecoin — Bridge-issued, Stripe-onboarded, Apple Pay / Card / Bank funded. I led the integration end-to-end from partnership kickoff through public GA, with
+              &nbsp;is the wallet's first-party stablecoin — Bridge-issued,
+              Stripe-onboarded, Apple Pay / Card / Bank funded. I led the
+              integration end-to-end from partnership kickoff through public GA,
+              with
               <Anchor
                 content="live metrics on Dune"
                 href="https://dune.com/phantom/cash"
                 spaceBefore
                 newTab
-              />.
+              />
+              .
             </p>
           </div>
         </section>
 
         <section className="end-section">
-
           <h5 className="begin-section">Contributions</h5>
           <PostBox
             icon="/imgs/phantom/phantom-cash-brand/3%20CASH-AVATAR/SVG/CASH-AVATAR-CIRCLE.svg"
@@ -212,7 +216,7 @@ const Phantom: React.FC = () => {
           <br />
           <Tweet src="https://twitter.com/phantom/status/1782471729928880340" />
         </section>
-      </motion.main>
+      </main>
     </>
   );
 };

@@ -1,10 +1,13 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../animations/page";
+import { WebsiteHead } from "../components/seo-heads";
 
 const AboutMe: React.FC = () => (
-  <motion.main className="body" {...fadeInPage}>
-    <h2 className="begin-section pt-0">Konnichi wa, I'm Ash &nbsp;👋🏼</h2>
+  <main id="content" className="body">
+    <WebsiteHead
+      title="About — Ash Bhimasani"
+      description="I am a product designer & software engineer interested in building experiences people love."
+    />
+    <h1 className="begin-section pt-0">Konnichi wa, I'm Ash &nbsp;👋🏼</h1>
     <div className="lead end-section">
       <p>
         I am a product designer & software engineer interested in building
@@ -14,11 +17,13 @@ const AboutMe: React.FC = () => (
     </div>
     <img
       className="end-section"
-      width="100%"
+      width={1334}
+      height={750}
       src="/imgs/baby-ash.jpeg"
       alt="Baby Ash"
+      style={{ width: "100%", height: "auto" }}
     />
-  </motion.main>
+  </main>
 );
 
 export default AboutMe;

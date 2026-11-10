@@ -1,3 +1,4 @@
+import "../../../../../utils/reduced-motion";
 import classNames from "classnames/bind";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
