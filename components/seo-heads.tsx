@@ -29,6 +29,12 @@ export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
       {
         url: custom?.banner ?? OG_BANNER_LINK,
         alt: custom?.title ?? SITE_TITLE,
+        ...(custom?.banner
+          ? {}
+          : {
+              width: 2563,
+              height: 1458,
+            }),
       },
     ],
   },

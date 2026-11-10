@@ -5,16 +5,16 @@ export default [
     header: true,
     children: [
       {
-        path: "/pob",
-        label: "Proof of Beauty",
+        path: "/bitpay",
+        label: "BitPay",
       },
       {
         path: "/0x",
         label: "Matcha",
       },
       {
-        path: "/bitpay",
-        label: "BitPay",
+        path: "/pob",
+        label: "Proof of Beauty",
       },
     ],
   },

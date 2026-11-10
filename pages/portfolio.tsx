@@ -14,11 +14,46 @@ const Portfolio: React.FC = () => (
       <section>
         <h3 className="begin-section">Cool Stuff</h3>
         <PostBox
+          icon="/favicon/apple-touch-icon-180x180.png"
+          title="Onchain money-movement SDK"
+          caption="KYC orchestration, rails, and agent-native settlement"
+          link="/Ash_Bhimasani_Resume_2026_HTML.pdf"
+          newTab
+        />
+        <PostBox
           icon="/logos/phantom.svg"
           title="Phantom"
-          caption="Product Engineer"
+          caption="Wallets, stablecoin accounts, and fiat onramps"
           date="2023"
           link="/phantom"
+        />
+        <PostBox
+          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
+          title="BitPay Invoice: V4 System"
+          caption="Merchant payment gateway across crypto rails"
+          date="2019 ~ 2020"
+          link="/bitpay/invoice"
+        />
+        <PostBox
+          icon="/logos/bitpay-light-gradient.svg"
+          title="BitPay ID: V2 System"
+          caption="KYC / AML onboarding for payments and cards"
+          date="2019"
+          link="/bitpay/id/v2"
+        />
+        <PostBox
+          icon="/logos/bitpay-ext.svg"
+          title="BitPay Extension"
+          caption="Convert crypto to prepaid cards instantly & anonymously"
+          date="2020"
+          link="/bitpay/extension"
+        />
+        <PostBox
+          icon="/logos/matcha.png"
+          title="Matcha &nbsp;🍵"
+          caption="DEX trading, fiat onramp, and onboarding"
+          date="Q1-2 2021"
+          link="/0x"
         />
         <PostBox
           icon="/imgs/pob/merge-vfx-1.svg"
@@ -51,34 +86,6 @@ const Portfolio: React.FC = () => (
           link="https://shop.pob.studio/"
           date="Q4 2021"
           newTab
-        />
-        <PostBox
-          icon="/logos/matcha.png"
-          title="Matcha &nbsp;🍵"
-          caption="Decentralized crypto trading for the masses"
-          date="Q1-2 2021"
-          link="/0x"
-        />
-        <PostBox
-          icon="/logos/bitpay-ext.svg"
-          title="BitPay Extension"
-          caption="Convert crypto to prepaid cards instantly & anonymously"
-          date="2020"
-          link="/bitpay/extension"
-        />
-        <PostBox
-          icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
-          title="BitPay Invoice: V4 System"
-          caption="Flagship payment gateway powering the network"
-          date="2019 ~ 2020"
-          link="/bitpay/invoice"
-        />
-        <PostBox
-          icon="/logos/bitpay-light-gradient.svg"
-          title="BitPay ID: V2 System"
-          caption="Consumer onboarding + KYC / AML"
-          date="2019"
-          link="/bitpay/id/v2"
         />
       </section>
     </motion.main>

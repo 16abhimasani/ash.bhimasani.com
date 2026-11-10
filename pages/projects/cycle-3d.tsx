@@ -13,7 +13,7 @@ const Cycle3D: React.FC = () => (
         cover article on
         <Anchor
           content="Makerbot"
-          href="https://www.makerbot.com/https://www.makerbot.com/"
+          href="https://www.makerbot.com/"
           spaceBefore
         />
         . The machine looked crude and roughly pieced together, flimsy plastic
@@ -27,7 +27,7 @@ const Cycle3D: React.FC = () => (
         into 3D printing began with the purchase of a
         <Anchor
           content="da Vinci 1.0"
-          href="https://www.xyzprinting.com/en-US/product/da-vinci-1-0"
+          href="https://web.archive.org/web/20180418040940/https://www.xyzprinting.com/en-US/product/da-vinci-1-0"
           spaceBefore
           spaceAfter
         />

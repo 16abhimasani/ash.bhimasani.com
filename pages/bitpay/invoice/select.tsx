@@ -133,7 +133,7 @@ const BitPayInvoiceWalletSelection: React.FC = () => (
             Coinbase's
             <Anchor
               content="Connect API"
-              href="https://developers.coinbase.com/docs/wallet/coinbase-connect"
+              href="https://web.archive.org/web/20220412155321/https://developers.coinbase.com/docs/wallet/coinbase-connect"
               spaceBefore
               spaceAfter
             />

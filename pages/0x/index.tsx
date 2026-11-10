@@ -20,7 +20,7 @@ const ZeroX: React.FC = () => {
           <div className="lead">
             <p>
               <Anchor content="0x" href="https://0x.org/" spaceAfter />
-              is an liquidity aggregation API for decentralized exchange.
+              is a liquidity aggregation API for decentralized exchange.
             </p>
             <p>
               The protocol is
@@ -51,14 +51,12 @@ const ZeroX: React.FC = () => {
               their own trading platform in mid 2020.
             </p>
             <p>
-              I worked on
+              I shipped the fiat onramp, referral contest, and onboarding on
               <Anchor
-                content="matcha.xyz"
+                content="matcha.xyz."
                 href="https://matcha.xyz/"
                 spaceBefore
-                spaceAfter
               />
-              ~
             </p>
           </div>
         </section>
@@ -68,7 +66,7 @@ const ZeroX: React.FC = () => {
           <PostBox
             icon="/logos/matcha.png"
             title="Matcha &nbsp;🍵"
-            caption="Decentralized crypto trading for the masses"
+            caption="DEX trading, fiat onramp, and onboarding"
             link="https://matcha.xyz/"
             newTab
           />

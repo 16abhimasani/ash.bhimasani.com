@@ -7,7 +7,7 @@ const Projects: React.FC = () => (
     <PostBox
       icon="/logos/dribbble.svg"
       title="Product Design"
-      caption="Some design highlights on Dribbble"
+      caption="Product design highlights"
       link="https://dribbble.com/ash-bhimasani"
       newTab
     />

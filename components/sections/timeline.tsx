@@ -5,6 +5,13 @@ const Timeline: React.FC = () => (
   <section className="begin-section end-section">
     <h3 id="timeline">Timeline</h3>
     <PostBox
+      icon="/favicon/apple-touch-icon-180x180.png"
+      title="Onchain money-movement SDK"
+      caption="KYC orchestration, rails, and agent-native settlement"
+      link="/Ash_Bhimasani_Resume_2026_HTML.pdf"
+      newTab
+    />
+    <PostBox
       icon="/logos/polymarket.svg"
       title="Polymarket"
       caption="Product"
@@ -15,7 +22,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/phantom.svg"
       title="Phantom"
-      caption="Product Engineer"
+      caption="Product Engineer, wallets & money movement"
       date="2022 ~ 2026"
       link="/phantom"
     />
@@ -29,7 +36,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="https://bitpay.com/img/wallet-logos/coinbase.svg"
       title="Coinbase"
-      caption="Software Engineer"
+      caption="Software Engineer, institutional custody"
       date="Summer 2021"
       link="https://www.coinbase.com/prime/custody"
       newTab
@@ -37,7 +44,7 @@ const Timeline: React.FC = () => (
     <PostBox
       icon="/logos/0x.svg"
       title="0x Labs"
-      caption="Software Engineer"
+      caption="Software Engineer, DEX trading"
       date="Spring 2021"
       link="/0x"
     />

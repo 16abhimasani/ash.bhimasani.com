@@ -1,5 +1,29 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import React from "react";
+import { SITE_DESCRIPTION, SITE_LINK } from "../utils/constants";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ash Bhimasani",
+  url: SITE_LINK,
+  jobTitle: "Product Designer & Software Engineer",
+  email: "16abhimasani@gmail.com",
+  description: SITE_DESCRIPTION,
+  homeLocation: {
+    "@type": "Place",
+    name: "NYC",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Georgia Institute of Technology",
+  },
+  sameAs: [
+    "https://github.com/16abhimasani",
+    "https://twitter.com/ash_bhimasani",
+    "https://www.linkedin.com/in/ash-bhimasani/",
+  ],
+};
 
 export default class extends Document {
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -66,6 +90,10 @@ export default class extends Document {
               content="/favicon/browserconfig.xml"
             />
             <meta name="theme-color" content="#ffffff"></meta>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+            />
             <script
               async
               src="https://www.googletagmanager.com/gtag/js?id=UA-49532918-1"

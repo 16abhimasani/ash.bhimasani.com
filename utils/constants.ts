@@ -1,7 +1,8 @@
-export const SITE_TITLE = "Ash Bhimasani - Designer & Engineer";
+export const SITE_TITLE =
+  "Ash Bhimasani - Product Designer & Software Engineer";
 
 export const SITE_DESCRIPTION =
-  "I am a product designer & software engineer. I build my designs.";
+  "Product designer and software engineer in NYC. Payments, wallets, and trading infrastructure, including an onchain money-movement SDK.";
 
 export const SITE_LINK = "https://ash.bhimasani.com";
 

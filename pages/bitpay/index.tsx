@@ -31,6 +31,10 @@ const BitPay: React.FC = () => (
             />
             .
           </p>
+          <p>
+            I was a software engineer and lead product designer on the payment
+            gateway, prepaid-card redemption, and KYC / AML onboarding.
+          </p>
           <p>Below are my major contributions with a deep dive for each ~</p>
         </div>
       </section>
@@ -40,7 +44,7 @@ const BitPay: React.FC = () => (
         <PostBox
           icon="https://bitpay.com/img/wallet-logos/bitpay-wallet.svg"
           title="Invoice V4"
-          caption="Flagship payment gateway powering the network"
+          caption="Merchant payment gateway across crypto rails"
           date="2019 ~ 2020"
           link="/bitpay/invoice"
         />
@@ -54,7 +58,7 @@ const BitPay: React.FC = () => (
         <PostBox
           icon="/logos/bitpay-light-gradient.svg"
           title="BitPay ID"
-          caption="Consumer onboarding + KYC / AML"
+          caption="KYC / AML onboarding for payments and cards"
           date="2019"
           link="/bitpay/id"
         />
