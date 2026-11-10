@@ -1,27 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "variables";
 
 html,
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans), "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
+  font-family: var(--font-serif), Georgia, "Iowan Old Style", serif;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
   color: $Black;
-  line-height: 32px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 
 h2 {
+  font-family: var(--font-serif), Georgia, "Iowan Old Style", serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   color: $Black;
-  line-height: 34px;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }

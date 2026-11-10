@@ -1,16 +1,22 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { fadeInPage } from "../animations/page";
-import Intro from "../components/sections/intro";
-import Projects from "../components/sections/projects";
-import Timeline from "../components/sections/timeline";
+import HomeView from "../components/folio/home";
+import { PageMeta } from "../components/seo-heads";
+import { OG_ABOUT, SITE_TITLE } from "../utils/constants";
+
+const description =
+  "Ash Bhimasani is a product designer and software engineer in New York and Austin. Previously at Polymarket and Phantom. He builds his designs.";
 
 const Home: React.FC = () => (
-  <motion.main className="body" {...fadeInPage}>
-    <Intro />
-    <Timeline />
-    <Projects />
-  </motion.main>
+  <>
+    <PageMeta
+      title={SITE_TITLE}
+      description={description}
+      path="/"
+      image={OG_ABOUT}
+      imageAlt="Ash Bhimasani, product designer and software engineer"
+    />
+    <HomeView />
+  </>
 );
 
 export default Home;

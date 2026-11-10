@@ -1,4 +1,4 @@
-import { DefaultSeo, DefaultSeoProps } from "next-seo";
+import { DefaultSeo, DefaultSeoProps, NextSeo } from "next-seo";
 import Head from "next/head";
 import React from "react";
 import {
@@ -10,13 +10,17 @@ import {
   TWITTER_HANDLE,
 } from "../utils/constants";
 
+const absolute = (src: string): string =>
+  src.startsWith("http") ? src : `${SITE_LINK}${src}`;
+
 interface TagsOverride {
   title?: string;
   description?: string;
   banner?: string;
 }
 export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
-  title: custom?.title ?? SITE_TITLE,
+  title: custom?.title,
+  defaultTitle: custom?.title ? undefined : SITE_TITLE,
   description: custom?.description ?? SITE_DESCRIPTION,
   openGraph: {
     type: "website",
@@ -27,7 +31,9 @@ export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
     site_name: custom?.title ?? SITE_TITLE,
     images: [
       {
-        url: custom?.banner ?? OG_BANNER_LINK,
+        url: absolute(custom?.banner ?? OG_BANNER_LINK),
+        width: 1200,
+        height: 630,
         alt: custom?.title ?? SITE_TITLE,
       },
     ],
@@ -40,23 +46,91 @@ export const DefaultTags = (custom?: TagsOverride): DefaultSeoProps => ({
   additionalMetaTags: [
     {
       name: "twitter:image",
-      content: custom?.banner ?? OG_BANNER_LINK,
+      content: absolute(custom?.banner ?? OG_BANNER_LINK),
     },
     {
       name: "twitter:url",
       content: SITE_LINK,
     },
-    {
-      property: "og:image",
-      content: custom?.banner ?? OG_BANNER_LINK,
-    },
   ],
 });
-export const WebsiteHead: React.FC<TagsOverride> = (custom: TagsOverride) => (
-  <>
-    <DefaultSeo {...DefaultTags(custom)} />
-  </>
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ash Bhimasani",
+  url: SITE_LINK,
+  jobTitle: "Product designer and software engineer",
+  email: "ash@bhimasani.com",
+  homeLocation: [
+    { "@type": "Place", name: "New York" },
+    { "@type": "Place", name: "Austin" },
+  ],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Georgia Institute of Technology",
+  },
+  sameAs: [
+    "https://github.com/16abhimasani",
+    "https://twitter.com/ash_bhimasani",
+    "https://www.linkedin.com/in/ash-bhimasani/",
+  ],
+};
+
+export const PersonJsonLd: React.FC = () => (
+  <Head>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+    />
+  </Head>
 );
+
+export const WebsiteHead: React.FC<TagsOverride> = (custom: TagsOverride) => {
+  const tags = DefaultTags(custom);
+  const overrides = Boolean(
+    custom?.title || custom?.description || custom?.banner,
+  );
+  if (overrides) return <NextSeo {...tags} />;
+  return <DefaultSeo {...tags} title={undefined} defaultTitle={undefined} />;
+};
+
+export const PageMeta: React.FC<{
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+  imageAlt?: string;
+}> = ({ title, description, path, image, imageAlt }) => {
+  const url = `${SITE_LINK}${path === "/" ? "" : path}`;
+  const banner = absolute(image ?? OG_BANNER_LINK);
+  return (
+    <NextSeo
+      title={title}
+      description={description}
+      canonical={url}
+      openGraph={{
+        type: "website",
+        locale: "en_US",
+        url,
+        title,
+        description,
+        siteName: SITE_TITLE,
+        images: [
+          { url: banner, width: 1200, height: 630, alt: imageAlt ?? title },
+        ],
+      }}
+      twitter={{
+        handle: TWITTER_HANDLE,
+        site: TWITTER_HANDLE,
+        cardType: "summary_large_image",
+      }}
+      additionalMetaTags={[
+        { name: "twitter:image", content: banner },
+        { name: "twitter:url", content: url },
+      ]}
+    />
+  );
+};
 
 export const BitPayScripts = (
   <Head>

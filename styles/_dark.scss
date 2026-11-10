@@ -2,7 +2,8 @@
 @import "variables";
 
 .dark-mode {
-  background-color: black;
+  background-color: var(--bg);
+  color: var(--ink);
   h1,
   h2,
   h3,
@@ -37,5 +38,5 @@
 }
 
 .black-out {
-  background-color: black;
+  background-color: var(--bg);
 }

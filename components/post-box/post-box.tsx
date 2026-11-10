@@ -1,4 +1,4 @@
-import { AnimationProps, motion, MotionStyle } from "framer-motion";
+import { motion, MotionStyle } from "framer-motion";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../pages/_app";
 import Link from "../utils/link";
@@ -7,27 +7,13 @@ import classNames from "classnames/bind";
 import classes from "./post-box.module.scss";
 const cx = classNames.bind(classes);
 
-interface LogoConfig extends AnimationProps {
-  invertible?: boolean;
-}
 const LogoConfigs: {
-  [icon: string]: LogoConfig;
+  [icon: string]: { invertible?: boolean };
 } = {
   "/logos/0x.svg": {
-    animate: { rotate: 90 },
-    transition: {
-      delay: 2,
-      repeatDelay: 2,
-      repeat: Infinity,
-      type: "spring",
-      mass: 2,
-      damping: 20,
-    },
     invertible: true,
   },
   "/logos/pob.svg": {
-    animate: {},
-    transition: {},
     invertible: true,
   },
 };
@@ -60,21 +46,13 @@ const PostBox: React.FC<{
         rel={newTab ? "noopener noreferrer" : ""}
       >
         {icon && (
-          <motion.img
-            animate={
-              LogoConfigs.hasOwnProperty(icon) ? LogoConfigs[icon].animate : {}
-            }
-            transition={
-              LogoConfigs.hasOwnProperty(icon)
-                ? LogoConfigs[icon].transition
-                : {}
-            }
+          <img
             className={cx({
               box__icon: true,
               invert: LogoConfigs[icon]?.invertible && theme.dark,
             })}
             src={icon}
-            alt={title}
+            alt=""
           />
         )}
         <div className={classes.box__content}>
