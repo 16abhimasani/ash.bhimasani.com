@@ -124,3 +124,5 @@ export const PhantomHead = (
     banner={`${BANNER_ROOT}/phantom.jpg`}
   />
 );
+
+export const PolymarketHead = <WebsiteHead title={`Ash - Polymarket`} />;
